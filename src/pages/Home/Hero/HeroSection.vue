@@ -2,6 +2,8 @@
 import './HeroSection.css'
 import { rowOne, rowTwo } from './HeroProjects.js'
 
+const base = import.meta.env.BASE_URL
+
 const rows = [
   { items: rowOne, reverse: false },
   { items: rowTwo, reverse: true }
@@ -19,15 +21,15 @@ const cardBackground = (item) =>
           <div class="hero-trust">
       <div class="hero-avatars">
         <span class="hero-avatar hero-avatar-logo hero-trust-item trust-1">
-          <img src="/cart.png" alt="Cartinno" />
+          <img :src="`${base}cart.png`" alt="Cartinno" />
         </span>
 
         <span class="hero-avatar hero-trust-item trust-2">
-          <img src="/bag.jpg" alt="" />
+          <img :src="`${base}bag.jpg`" alt="" />
         </span>
 
         <span class="hero-avatar hero-trust-item trust-3">
-          <img src="/location.jpg" alt="" />
+          <img :src="`${base}location.jpg`" alt="" />
         </span>
       </div>
 

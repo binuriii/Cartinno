@@ -3,6 +3,8 @@ import { RouterLink } from 'vue-router'
 import './CustomerStories.css'
 import { useCustomerStories } from './CustomerStories.js'
 
+const base = import.meta.env.BASE_URL
+
 const {
   root,
   grid,
@@ -224,11 +226,7 @@ const {
           style="--d:.16s"
         >
           <div class="cl-photo__img">
-            <img
-              :src="customerImage.image"
-              :alt="customerImage.alt"
-              loading="lazy"
-            />
+            <img :src="`${base}food-delivery.jpg`" alt="food delivery" />
           </div>
 
           <div class="cl-photo__copy">
