@@ -605,7 +605,7 @@
 .footer-credit {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 
   color: var(--light-muted);
   font-size: 13px;
