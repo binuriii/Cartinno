@@ -11,7 +11,7 @@
 }
 
 .trusted-title{
-  padding:0 20px;font-size:clamp(20px,2vw,28px);font-weight:600;letter-spacing:-.025em;color:#23232b;
+  padding:0 20px;font-size:clamp(24px,2.8vw,38px);font-weight:600;letter-spacing:-.025em;color:#23232b;
 }
 
 .trusted-rows{
@@ -20,15 +20,59 @@
   mask-image:linear-gradient(to right,transparent,#000 14%,#000 86%,transparent);
 }
 
-.trusted-track{display:flex;align-items:center;gap:clamp(56px,7vw,110px);width:max-content;animation:trusted-scroll var(--logo-speed-1) linear infinite}
+.trusted-track{
+  display:flex;align-items:center;
+  gap:clamp(56px,7vw,110px);              /* equal space between logos */
+  width:max-content;
+  animation:trusted-scroll var(--logo-speed-1) linear infinite;
+}
 .trusted-track.rev{animation-direction:reverse;animation-duration:var(--logo-speed-2)}
 @keyframes trusted-scroll{to{transform:translateX(-50%)}}
 
-.trusted-logo img{height:100%;width:auto;display:block}
-.trusted-logo{flex:none;display:flex;align-items:center;height:36px;opacity:.55;filter:grayscale(1)}
-.trusted-logo span{font-size:clamp(16px,1.5vw,22px);font-weight:600;letter-spacing:-.02em;color:#6b6b74;white-space:nowrap}
+/* pause the scroll while hovering so logos are easy to click */
+.trusted-track:hover{animation-play-state:paused}
+
+.trusted-logo{
+  flex:none;
+  display:flex;align-items:center;
+  height:var(--h, 32px);                  /* per-logo height, set from TrustedLogos.js */
+  text-decoration:none;
+
+  /* every logo becomes the same soft grey */
+  filter:brightness(0);
+  opacity:.4;
+
+  transition:opacity .25s ease, filter .25s ease, transform .25s ease;
+}
+
+.trusted-logo img{
+  height:100%;
+  width:auto;                             /* natural width, no fixed box */
+  max-width:220px;
+  display:block;
+}
+
+.trusted-logo span{
+  font-size:clamp(16px,1.5vw,22px);font-weight:600;letter-spacing:-.02em;color:#6b6b74;white-space:nowrap;
+}
+
+/* hover: real colours, lift slightly */
+.trusted-logo:hover{
+  filter:none;
+  opacity:1;
+  transform:translateY(-2px);
+}
+
+.trusted-logo:focus-visible{
+  outline:3px solid #f0b3b7;
+  outline-offset:6px;
+  border-radius:6px;
+  filter:none;
+  opacity:1;
+}
 
 @media (max-width:640px){
   .trusted{margin-top:-16px;padding-top:56px;border-radius:24px 24px 0 0}
+  .trusted-logo{height:calc(var(--h, 32px) * .75)}
 }
 @media (prefers-reduced-motion:reduce){.trusted-track{animation:none}}

@@ -1,11 +1,12 @@
-// Each item: { name } shows as grey text. Add `image: '/logos/name.svg'` (file in /public/logos/) to show a real logo.
-// These names are placeholders. Replace them with your real clients.
+// image: path inside public/   |   h: logo height in px (tune by eye)
 export const logosOne = [
-  { name: 'Spice Route' }, { name: 'Kadey.lk' }, { name: 'Homefare' }, { name: 'Urban Bites' },
-  { name: 'Lanka Mart' }, { name: 'Fresh Basket' }, { name: 'Cafe Nova' }, { name: 'StyleHub' }
+  { name: 'Nilkamal', image: 'nilkamal.png', href: 'https://nilkamal.lk/',  h: 84 },
+  { name: 'STC',      image: 'stc.png',      href: 'https://www.stc.lk/',   h: 56 },
+  { name: 'Quickee',  image: 'quickee.webp',  href: 'https://quickee.com/',  h: 54 }
 ]
 
 export const logosTwo = [
-  { name: 'GreenLeaf' }, { name: 'QuickCart' }, { name: 'Bloom & Co' }, { name: 'TechNest' },
-  { name: 'Ceylon Fresh' }, { name: 'PetPlanet' }, { name: 'DailyMeal' }, { name: 'Craftly' }
+  { name: 'Hotel Tree of Life', image: 'tree-of-life.png', href: 'https://hoteltreeoflife.com/', h: 98 },
+  { name: 'NA Stars',           image: 'nastars.png',      href: 'https://nastars.com/',         h: 20 },
+  { name: 'Be Waxed Global',    image: 'bewaxed.png',      href: 'https://bewaxedglobal.com/',   h: 74 }
 ]
