@@ -1,0 +1,742 @@
+.cl,
+.cl * {
+  box-sizing: border-box;
+}
+
+.cl {
+  --brand: #D7454E;
+  --ink: #23232b;
+  --muted: #5b5b66;
+
+  width: 100%;
+  padding: 5vh 3vw 10vh;
+
+  background: #fff;
+  color: var(--ink);
+}
+
+/* =========================================
+   WRAPPER
+========================================= */
+
+.cl-wrap {
+  position: relative;
+
+  width: 100%;
+  max-width: 1320px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  background: #fff;
+
+  overflow: visible;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.cl-head {
+  position: relative;
+
+  max-width: 900px;
+
+  margin:
+    0
+    auto
+    clamp(40px, 5vw, 64px);
+
+  text-align: center;
+}
+
+.cl-head h2 {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  color: var(--ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+
+  letter-spacing: -0.045em;
+}
+
+.cl-head p {
+  max-width: 620px;
+
+  margin:
+    18px
+    auto
+    0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.cl-grid {
+  position: relative;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  grid-template-rows:
+    290px
+    390px;
+
+  gap: clamp(14px, 1.5vw, 20px);
+}
+
+.cl-span2 {
+  grid-column: span 2;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.cl-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #fff;
+
+  border: 1px solid #ece8ee;
+
+  box-shadow:
+    0 8px 26px rgba(30, 20, 60, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.cl-card:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(215, 69, 78, 0.16);
+
+  box-shadow:
+    0 16px 36px rgba(30, 20, 60, 0.09);
+}
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.cl-quote {
+  display: flex;
+
+  flex-direction: column;
+
+  padding:
+    clamp(24px, 2.2vw, 30px);
+}
+
+.cl-mark {
+  height: 28px;
+
+  margin-bottom: 14px;
+
+  color: #d8d4da;
+
+  font:
+    600
+    44px
+    / 1
+    Georgia,
+    serif;
+}
+
+.cl-qtext {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.cl-foot {
+  margin-top: auto;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+/* =========================================
+   CUSTOMER
+========================================= */
+
+.cl-person {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.cl-person b {
+  display: block;
+
+  color: var(--ink);
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cl-person small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+/* =========================================
+   REAL FACE AVATAR
+========================================= */
+
+.cl-avatar {
+  flex: none;
+
+  width: 44px;
+  height: 44px;
+
+  display: block;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background: #f3f1f2;
+
+  border: 1px solid #ece8ee;
+
+  box-shadow:
+    0 3px 10px rgba(30, 20, 60, 0.05);
+}
+
+.cl-avatar img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: inherit;
+}
+
+/* =========================================
+   RATING
+========================================= */
+
+.cl-rating {
+  text-align: right;
+}
+
+.cl-stars {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 3px;
+
+  color: var(--brand);
+}
+
+.cl-rating span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--ink);
+
+  font-size: 19px;
+  font-weight: 500;
+
+  letter-spacing: -0.02em;
+}
+
+.cl-rating em {
+  color: #a09da4;
+
+  font-style: normal;
+}
+
+/* =========================================
+   METRIC CARDS
+========================================= */
+
+.cl-metric {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  padding:
+    0
+    26px
+    26px;
+}
+
+.cl-glow {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: 68%;
+
+  filter: blur(10px);
+
+  animation:
+    cl-glow
+    8s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+.cl-glow::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 45%,
+      #fff 100%
+    ),
+    linear-gradient(
+      90deg,
+      #fff 0,
+      rgba(255, 255, 255, 0) 30%
+    );
+}
+
+.cl-glow--warm {
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      #fbe1e2 0,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 85% 25%,
+      #f48383 0,
+      transparent 48%
+    ),
+    radial-gradient(
+      circle at 60% 70%,
+      #f48383 0,
+      transparent 45%
+    ),
+    #f7ecee;
+}
+
+.cl-glow--lilac {
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      #d4d4d5 0,
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 75% 45%,
+      #f48383 0,
+      transparent 46%
+    ),
+    radial-gradient(
+      circle at 50% 85%,
+      #f5e5df 0,
+      transparent 30%
+    ),
+    #f2eef6;
+}
+
+@keyframes cl-glow {
+  to {
+    transform:
+      scale(1.12)
+      translate(-3%, 3%);
+  }
+}
+
+.cl-num {
+  position: relative;
+
+  margin-bottom: 12px;
+
+  color: var(--ink);
+
+  font-size: clamp(38px, 4vw, 54px);
+  font-weight: 450;
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+
+  font-variant-numeric: tabular-nums;
+}
+
+.cl-metric p {
+  position: relative;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.cl-photo {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.cl-photo__img {
+  position: relative;
+
+  flex: 1;
+
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+.cl-photo__img img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform
+    0.7s
+    cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.cl-photo:hover .cl-photo__img img {
+  transform: scale(1.04);
+}
+
+.cl-photo__img::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 45%;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0),
+      #fff
+    );
+}
+
+/* =========================================
+   PHOTO TEXT
+========================================= */
+
+.cl-photo__copy {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+    0
+    28px
+    26px;
+}
+
+.cl-photo__copy h3 {
+  max-width: 400px;
+
+  margin:
+    0
+    0
+    10px;
+
+  color: var(--ink);
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+
+  letter-spacing: -0.03em;
+}
+
+.cl-photo__copy p {
+  max-width: 340px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   ARROW
+========================================= */
+
+.cl-arrow {
+  flex: none;
+
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  border: 1px solid #ece8ee;
+
+  color: var(--ink);
+
+  text-decoration: none;
+
+  box-shadow:
+    0 3px 10px rgba(30, 20, 60, 0.04);
+
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.cl-arrow:hover {
+  background: var(--brand);
+
+  border-color: var(--brand);
+
+  color: #fff;
+
+  transform: translateX(3px);
+}
+
+.cl-arrow:focus-visible {
+  outline: 3px solid #f0b3b7;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.cl [data-r] {
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition:
+    opacity
+    0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    var(--d, 0s),
+
+    transform
+    0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    var(--d, 0s),
+
+    box-shadow
+    0.4s ease;
+}
+
+.cl [data-r].in {
+  opacity: 1;
+
+  transform: none;
+}
+
+.cl .cl-card[data-r].in:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .cl {
+    padding: 5vh 4%;
+  }
+
+  .cl-head {
+    margin-bottom: 36px;
+  }
+
+  .cl-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    grid-template-rows: none;
+
+    grid-auto-rows:
+      minmax(260px, auto);
+
+    gap: 16px;
+  }
+
+  .cl-photo {
+    min-height: 360px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 430px) {
+
+  .cl {
+    padding: 5vh 5%;
+  }
+
+  .cl-head {
+    margin-bottom: 30px;
+  }
+
+  .cl-head h2 {
+    font-size:
+      clamp(
+        22px,
+        6.6vw,
+        28px
+      );
+  }
+
+  .cl-head p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .cl-grid {
+    grid-template-columns: 1fr;
+
+    grid-template-rows: none;
+
+    grid-auto-rows: auto;
+
+    gap: 14px;
+  }
+
+  .cl-span2 {
+    grid-column: auto;
+  }
+
+  .cl-card {
+    min-height: 250px;
+
+    border-radius: 22px;
+  }
+
+  .cl-quote {
+    padding: 22px;
+  }
+
+  .cl-qtext {
+    font-size: 15px;
+  }
+
+  .cl-metric {
+    min-height: 250px;
+
+    padding:
+      0
+      22px
+      22px;
+  }
+
+  .cl-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cl-photo {
+    min-height: 350px;
+  }
+
+  .cl-photo__copy {
+    padding:
+      0
+      22px
+      22px;
+  }
+
+  .cl-photo__copy h3 {
+    font-size: 18px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cl [data-r] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .cl-glow {
+    animation: none;
+  }
+}

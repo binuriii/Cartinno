@@ -1,0 +1,867 @@
+.vs,
+.vs * {
+  box-sizing: border-box;
+}
+
+.vs {
+  --brand: #D7454E;
+  --ink: #23232b;
+  --muted: #5b5b66;
+  --line: rgba(35, 35, 43, 0.11);
+  width: 100%;
+  overflow: hidden;
+  padding: 5vh 3vw;
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.vs-title,
+.vs-grid {
+  width: 100%;
+  max-width: 1500px;
+  margin-inline: auto;
+}
+
+.vs-title {
+  margin-top: 0;
+
+  color: var(--ink);
+
+  font-size: clamp(36px, 3.8vw, 54px);
+  font-weight: 450;
+  line-height: 1.1;
+
+  letter-spacing: -0.045em;
+}
+
+.vs-grid {
+  margin-top: clamp(40px, 5vw, 72px);
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(0, 0.92fr);
+
+  align-items: stretch;
+
+  gap: clamp(24px, 3.5vw, 56px);
+}
+
+/* =========================================
+   BIG VIDEO CARD
+========================================= */
+
+.vs-main {
+  position: relative;
+
+  min-width: 0;
+
+  min-height: clamp(460px, 39vw, 620px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding:
+    clamp(24px, 2.2vw, 40px);
+
+  border-radius:
+    clamp(24px, 2.2vw, 36px);
+
+  overflow: hidden;
+
+  background: #d9d3d4;
+
+  isolation: isolate;
+
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* =========================================
+   MEDIA
+========================================= */
+
+.vs-main-media {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: inherit;
+}
+
+.vs-main-poster {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: translateZ(0) scale(1.002);
+
+  transition:
+    transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+.vs-main:hover .vs-main-poster {
+  transform: translateZ(0) scale(1.04);
+}
+
+.vs-main-iframe {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+
+  border-radius: inherit;
+}
+
+/* =========================================
+   DARK IMAGE OVERLAY
+   SAME FEEL AS WHAT WE DO CARDS
+========================================= */
+
+.vs-main-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  border-radius: inherit;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 7, 8, 0.03) 5%,
+      rgba(8, 7, 8, 0.06) 40%,
+      rgba(8, 7, 8, 0.38) 67%,
+      rgba(8, 7, 8, 0.9) 100%
+    );
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.vs-main-body {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+  max-width: 560px;
+
+  transition:
+    opacity .25s ease,
+    transform .25s ease;
+}
+
+.vs-main-body.is-playing {
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform: translateY(10px);
+}
+
+/* =========================================
+   PLAY BUTTON
+========================================= */
+
+.vs-play {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom:
+    clamp(14px, 1.3vw, 20px);
+
+  padding:
+    6px
+    16px
+    6px
+    6px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.18);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,.9);
+
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  color: var(--ink);
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 24px rgba(30,20,60,.08);
+
+  transition:
+    background .25s ease,
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.vs-play:hover {
+  transform: translateY(-2px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 28px rgba(30,20,60,.12);
+}
+
+.vs-play-icon {
+  width: 42px;
+  height: 42px;
+
+  flex: none;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--brand);
+
+  color: #ffffff;
+
+  font-size: 12px;
+}
+
+.vs-play-icon i {
+  transform: translateX(1px);
+}
+
+.vs-play-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* =========================================
+   MAIN HEADING
+   MATCH WHAT WE DO CARD TYPOGRAPHY
+========================================= */
+
+.vs-main-body h3 {
+  max-width: 15ch;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      26px,
+      1.9vw,
+      38px
+    );
+
+  font-weight: 500;
+  line-height: 1.08;
+
+  letter-spacing: -0.04em;
+
+  text-shadow:
+    0 2px 16px rgba(0,0,0,.2);
+}
+
+/* =========================================
+   MAIN PARAGRAPH
+========================================= */
+
+.vs-main-body p {
+  max-width: 46ch;
+
+  margin:
+    clamp(12px, 1.1vw, 17px)
+    0
+    0;
+
+  color:
+    rgba(255,255,255,.72);
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   PILLS
+========================================= */
+
+.vs-pills {
+  margin-top:
+    clamp(14px, 1.3vw, 20px);
+
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.vs-pill {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  min-height: 42px;
+
+  padding: 0 16px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.18);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,.92);
+
+  color: var(--ink);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  box-shadow:
+    0 5px 18px rgba(0,0,0,.07);
+}
+
+.vs-pill-icon {
+  width: 42px;
+
+  padding: 0;
+
+  justify-content: center;
+}
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.vs-side {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: clamp(20px, 2vw, 30px);
+}
+
+/* =========================================
+   SMALL CARDS
+========================================= */
+
+.vs-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap:
+    clamp(
+      14px,
+      1.35vw,
+      22px
+    );
+}
+
+.vs-card {
+  position: relative;
+
+  min-width: 0;
+
+  min-height:
+    clamp(
+      250px,
+      19vw,
+      320px
+    );
+
+  padding:
+    clamp(
+      20px,
+      1.8vw,
+      30px
+    );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius:
+    clamp(
+      24px,
+      2.2vw,
+      36px
+    );
+
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+
+  isolation: isolate;
+
+  cursor: pointer;
+}
+
+.vs-card.is-light {
+  background-color: #d9d3d4;
+}
+
+.vs-card.is-brand {
+  background-color: var(--brand);
+}
+
+/* =========================================
+   SMALL CARD OVERLAY
+========================================= */
+
+.vs-card::before {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8,7,8,.04) 5%,
+      rgba(8,7,8,.08) 40%,
+      rgba(8,7,8,.38) 70%,
+      rgba(8,7,8,.72) 100%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================
+   SMALL CARD TITLE
+========================================= */
+
+.vs-card h4 {
+  position: relative;
+
+  z-index: 3;
+
+  max-width: 15ch;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      18px,
+      1.2vw,
+      24px
+    );
+
+  font-weight: 500;
+  line-height: 1.15;
+
+  letter-spacing: -0.03em;
+
+  text-shadow:
+    0 2px 12px rgba(0,0,0,.18);
+}
+
+/* =========================================
+   CARD ARROW
+========================================= */
+
+.vs-card-arrow {
+  position: relative;
+
+  z-index: 3;
+
+  width: 46px;
+  height: 46px;
+
+  flex: none;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,.9);
+
+  color: var(--ink);
+
+  font-size: 13px;
+
+  text-decoration: none;
+
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 5px 18px rgba(0,0,0,.07);
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    transform .25s ease;
+}
+
+.vs-card-arrow:hover {
+  transform: translateY(-2px);
+
+  background: var(--brand);
+
+  color: #ffffff;
+}
+
+/* =========================================
+   RIGHT DESCRIPTION
+========================================= */
+
+.vs-text {
+  max-width: 62ch;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   EXPLORE LINK
+   SAME SCALE AS WHAT WE DO LINK
+========================================= */
+
+.vs-link {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 14px 28px;
+
+  border-radius: 999px;
+
+  background: var(--ink);
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    background .25s ease,
+    transform .25s ease;
+}
+
+.vs-link:hover {
+  transform: translateY(-2px);
+
+  background: var(--brand);
+}
+
+.vs-link i {
+  font-size: 12px;
+}
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.vs-play:focus-visible,
+.vs-card-arrow:focus-visible,
+.vs-link:focus-visible {
+  outline:
+    3px solid #f0b3b7;
+
+  outline-offset: 3px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .vs-grid {
+    grid-template-columns: 1fr;
+
+    gap:
+      clamp(
+        20px,
+        3vw,
+        40px
+      );
+  }
+
+  .vs-main {
+    min-height:
+      clamp(
+        440px,
+        54vw,
+        560px
+      );
+  }
+
+  .vs-cards {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .vs-card {
+    min-height:
+      clamp(
+        300px,
+        34vw,
+        440px
+      );
+  }
+}
+
+/* =========================================
+   MOBILE
+   SAME BREAKPOINT/SPACE AS WHAT WE DO
+========================================= */
+
+@media (max-width: 760px) {
+
+  .vs {
+    padding: 5vh 4%;
+  }
+
+  .vs-title {
+    font-size:
+      clamp(
+        24px,
+        6.5vw,
+        34px
+      );
+  }
+
+  .vs-grid {
+    margin-top: 34px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+  .vs-main {
+    min-height:
+      clamp(
+        440px,
+        116vw,
+        570px
+      );
+
+    padding:
+      24px
+      22px;
+
+    border-radius:
+      clamp(
+        24px,
+        7vw,
+        30px
+      );
+  }
+
+  .vs-main-body h3 {
+    font-size:
+      clamp(
+        24px,
+        6.5vw,
+        32px
+      );
+  }
+
+  .vs-main-body p {
+    max-width: 35ch;
+
+    font-size: 13px;
+  }
+
+  .vs-cards {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .vs-card {
+    min-height:
+      clamp(
+        360px,
+        95vw,
+        500px
+      );
+  }
+
+  .vs-card h4 {
+    font-size:
+      clamp(
+        24px,
+        6.5vw,
+        32px
+      );
+  }
+
+  .vs-text {
+    max-width: 35ch;
+
+    font-size: 13px;
+  }
+
+  .vs-link {
+    padding:
+      13px
+      24px;
+
+    font-size: 14px;
+  }
+
+  .vs-play {
+    margin-bottom: 16px;
+  }
+
+  .vs-play-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .vs-title {
+    font-size:
+      clamp(
+        22px,
+        6vw,
+        28px
+      );
+  }
+
+  .vs-grid {
+    margin-top: 28px;
+  }
+
+  .vs-main {
+    min-height: 500px;
+
+    padding:
+      24px
+      22px;
+  }
+
+  .vs-main-body h3 {
+    font-size:
+      clamp(
+        22px,
+        7vw,
+        28px
+      );
+  }
+
+  .vs-card {
+    min-height: 420px;
+
+    padding: 22px;
+
+    border-radius: 24px;
+  }
+
+  .vs-card h4 {
+    font-size:
+      clamp(
+        22px,
+        7vw,
+        28px
+      );
+  }
+
+  .vs-link {
+    padding:
+      12px
+      22px;
+  }
+}
+
+/* =========================================
+   TOUCH
+========================================= */
+
+@media (hover: none) {
+
+  .vs-main:hover .vs-main-poster {
+    transform:
+      translateZ(0)
+      scale(1.002);
+  }
+
+  .vs-card-arrow:hover {
+    transform: none;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .vs-main-poster,
+  .vs-play,
+  .vs-card-arrow,
+  .vs-link {
+    transition: none;
+  }
+}

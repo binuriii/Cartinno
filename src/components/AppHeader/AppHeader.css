@@ -1,0 +1,315 @@
+.site-header {
+  position: fixed;
+  top: 18px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 0 16px;
+}
+
+.site-bar {
+  width: 100%;
+  max-width: 1180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  padding: 12px 12px 12px 24px;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  -webkit-backdrop-filter: blur(16px) saturate(170%);
+  backdrop-filter: blur(16px) saturate(170%);
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  box-shadow: 0 8px 30px rgba(30, 20, 60, 0.08);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.site-logo {
+  flex: none;
+
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+
+  color: #23232b;
+  text-decoration: none;
+}
+
+.site-logo span {
+  color: #D7454E;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.site-nav {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+}
+
+
+/* IMPORTANT:
+   Makes each dropdown position
+   relative to its own nav item.
+*/
+
+.nav-item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 10px 0;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #23232b;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #D7454E;
+}
+
+.nav-chevron {
+  font-size: 11px;
+  opacity: 0.6;
+  transition: transform 0.2s ease;
+}
+
+
+/* Rotate arrow when hovering */
+
+.nav-item:hover .nav-chevron {
+  transform: rotate(180deg);
+}
+
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown {
+  position: absolute;
+
+  /*
+   Position relative to .nav-item
+  */
+  top: calc(100% + 4px);
+  left: 50%;
+
+  min-width: 210px;
+
+  /*
+   Start centered below nav item
+  */
+  transform: translate(-50%, 6px);
+
+  padding-top: 8px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+
+  z-index: 1001;
+}
+
+
+/* Show dropdown */
+
+.nav-item:hover .dropdown,
+.nav-item:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translate(-50%, 0);
+}
+
+
+/* =========================
+   DROPDOWN INNER
+========================= */
+
+.dropdown-inner {
+  display: flex;
+  flex-direction: column;
+
+  padding: 8px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #f0edf3;
+
+  box-shadow:
+    0 12px 32px rgba(30, 20, 60, 0.12),
+    0 4px 12px rgba(30, 20, 60, 0.05);
+}
+
+
+/* Dropdown links */
+
+.dropdown-inner a {
+  display: block;
+
+  padding: 11px 14px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #23232b;
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.dropdown-inner a:hover {
+  background: #fff1f3;
+  color: #D7454E;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.site-actions {
+  flex: none;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* Demo */
+
+.site-demo {
+  flex: none;
+
+  padding: 14px 22px;
+
+  border-radius: 999px;
+
+  background: transparent;
+  color: #23232b;
+
+  border: 1px solid #e6e3ea;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.site-demo:hover {
+  background: #f5f3f4;
+  border-color: #dcd8de;
+}
+
+
+/* Get Started */
+
+.site-cta {
+  flex: none;
+
+  padding: 15px 26px;
+
+  border-radius: 999px;
+
+  background: #D7454E;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.site-cta:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 10px 24px rgba(215, 69, 78, 0.4);
+}
+
+
+/* =========================
+   FOCUS STATES
+========================= */
+
+.site-logo:focus-visible,
+.nav-link:focus-visible,
+.site-cta:focus-visible,
+.site-demo:focus-visible,
+.dropdown-inner a:focus-visible {
+  outline: 3px solid #f0b3b7;
+  outline-offset: 3px;
+}
+
+
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .site-nav {
+    display: none;
+  }
+}

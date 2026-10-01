@@ -1,0 +1,707 @@
+/* =========================================
+   WHAT WE DO
+========================================= */
+
+.wwd-process,
+.wwd-process * {
+  box-sizing: border-box;
+}
+
+.wwd-process {
+  --brand: #D7454E;
+  --ink: #23232b;
+  --muted: #5b5b66;
+  --line: rgba(35, 35, 43, 0.11);
+
+  width: 100%;
+  overflow: hidden;
+
+  padding: 5vh 3vw;
+
+  background: #ffffff;
+
+  color: var(--ink);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.wwd-process-container {
+  width: 100%;
+  max-width: 1500px;
+  margin-inline: auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.wwd-process-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: clamp(40px, 5vw, 72px);
+}
+
+.wwd-process-header h2 {
+  margin: 0;
+
+  /* smaller than the hero title (clamp(34px,4.3vw,68px)) */
+  font-size: clamp(36px, 3.8vw, 54px);
+
+  font-weight: 450;
+  line-height: 1.1;
+
+  letter-spacing: -0.045em;
+
+  color: var(--ink);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.wwd-process-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(210px, 0.28fr)
+    minmax(0, 1fr);
+
+  align-items: stretch;
+
+  gap: clamp(24px, 3.5vw, 56px);
+}
+
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.wwd-process-info {
+  min-height: clamp(460px, 39vw, 620px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 4px 0;
+}
+
+
+/* =========================================
+   COUNTER
+========================================= */
+
+.wwd-process-counter {
+  display: flex;
+  align-items: baseline;
+}
+
+.wwd-process-counter-current {
+  color: var(--ink);
+  font-size: clamp(48px, 4vw, 72px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.07em;
+}
+
+.wwd-process-counter-total {
+  margin-left: 5px;
+  color: #a09da4;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================
+   DESCRIPTION
+   (matches hero-text: 15px / 1.7 / muted)
+========================================= */
+
+.wwd-process-description {
+  max-width: 24ch;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   ARROWS
+========================================= */
+
+.wwd-process-arrows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wwd-process-arrow {
+  width: 56px;
+  height: 56px;
+
+  display: grid;
+  place-items: center;
+  padding: 0;
+
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--ink);
+  cursor: pointer;
+
+  box-shadow: 0 8px 24px rgba(30, 20, 60, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.wwd-process-arrow svg {
+  width: 38%;
+  height: 38%;
+}
+
+.wwd-process-arrow:hover {
+  transform: translateY(-3px);
+  background: #f7f5f7;
+  box-shadow: 0 12px 28px rgba(30, 20, 60, 0.08);
+}
+
+.wwd-process-arrow-dark {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #ffffff;
+}
+
+.wwd-process-arrow-dark:hover {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #ffffff;
+}
+
+
+/* =========================================
+   CAROUSEL
+========================================= */
+
+.wwd-process-carousel {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.wwd-process-track {
+  width: 100%;
+
+  display: flex;
+  align-items: stretch;
+  gap: clamp(14px, 1.35vw, 22px);
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 2px 2px 12px;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.wwd-process-track::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.wwd-process-card {
+  position: relative;
+
+  flex: 0 0 calc(50% - clamp(7px, 0.675vw, 11px));
+  min-width: 0;
+
+  height: clamp(460px, 39vw, 620px);
+  border-radius: clamp(24px, 2.2vw, 36px);
+  overflow: hidden;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  background: #d9d3d4;
+  cursor: pointer;
+  isolation: isolate;
+
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  contain: paint;
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+
+/* =========================================
+   MEDIA WRAPPER
+========================================= */
+
+.wwd-process-card-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.wwd-process-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+
+  user-select: none;
+  pointer-events: none;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  transform: translateZ(0) scale(1.002);
+  -webkit-transform: translateZ(0) scale(1.002);
+
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.wwd-process-card:hover .wwd-process-card-img,
+.wwd-process-card-active .wwd-process-card-img {
+  transform: translateZ(0) scale(1.04);
+  -webkit-transform: translateZ(0) scale(1.04);
+}
+
+
+/* =========================================
+   DARK IMAGE OVERLAY
+========================================= */
+
+.wwd-process-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(8, 7, 8, 0.03) 5%,
+    rgba(8, 7, 8, 0.06) 40%,
+    rgba(8, 7, 8, 0.38) 67%,
+    rgba(8, 7, 8, 0.9) 100%
+  );
+}
+
+
+/* =========================================
+   CARTINNO TINT
+========================================= */
+
+.wwd-process-card-brand {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(215, 69, 78, 0.015),
+    rgba(215, 69, 78, 0.09)
+  );
+
+  mix-blend-mode: soft-light;
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.wwd-process-card-top {
+  position: absolute;
+  z-index: 5;
+
+  top: clamp(20px, 1.8vw, 30px);
+  left: clamp(20px, 1.8vw, 30px);
+  right: clamp(20px, 1.8vw, 30px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+
+/* =========================================
+   ICON CHIP
+========================================= */
+
+.wwd-process-card-chip {
+  width: clamp(37px, 3vw, 46px);
+  height: clamp(37px, 3vw, 46px);
+
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+
+  font-size: clamp(11px, 0.8vw, 14px);
+}
+
+
+/* =========================================
+   CARD NUMBER
+========================================= */
+
+.wwd-process-card-number {
+  width: clamp(34px, 2.7vw, 44px);
+  height: clamp(34px, 2.7vw, 44px);
+
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  color: #ffffff;
+  font-size: clamp(8px, 0.58vw, 10px);
+  font-weight: 600;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.wwd-process-card-content {
+  position: absolute;
+  z-index: 5;
+
+  left: clamp(24px, 2.2vw, 40px);
+  right: clamp(24px, 2.2vw, 40px);
+  bottom: clamp(25px, 2.2vw, 40px);
+
+  color: #ffffff;
+}
+
+.wwd-process-card-content h3 {
+  max-width: 15ch;
+  margin: 0;
+  color: #ffffff;
+
+  font-size: clamp(26px, 1.2vw, 38px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.wwd-process-card-content p {
+  max-width: 46ch;
+  margin: clamp(12px, 1.1vw, 17px) 0 0;
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.wwd-process-card-content .wwd-process-note {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   EXPLORE LINK
+   (matches hero-btn: 14px / 999px pill)
+========================================= */
+
+.wwd-process-link {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: clamp(14px, 1.3vw, 20px);
+  padding: 14px 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.wwd-process-link svg {
+  width: 14px;
+  height: 14px;
+}
+
+.wwd-process-link:hover {
+  background: var(--brand);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.wwd-process-card-progress {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: clamp(14px, 1.2vw, 19px);
+  color: rgba(255, 255, 255, 0.62);
+  font-size: clamp(8px, 0.58vw, 10px);
+  letter-spacing: 0.08em;
+}
+
+.wwd-process-card-progress-line {
+  width: clamp(24px, 2vw, 34px);
+  height: 1px;
+  background: var(--brand);
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.wwd-process-arrow:focus-visible,
+.wwd-process-link:focus-visible {
+  outline: 3px solid #f0b3b7;
+  outline-offset: 3px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .wwd-process-layout {
+    grid-template-columns: minmax(175px, 0.25fr) minmax(0, 1fr);
+    gap: clamp(20px, 3vw, 40px);
+  }
+
+  .wwd-process-card {
+    flex: 0 0 clamp(330px, 47vw, 470px);
+    height: clamp(440px, 54vw, 560px);
+  }
+
+  .wwd-process-info {
+    min-height: clamp(440px, 54vw, 560px);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+  .wwd-process {
+    padding: 5vh 4%;
+  }
+
+  .wwd-process-header {
+    margin-bottom: 34px;
+  }
+
+  .wwd-process-header h2 {
+    font-size: clamp(24px, 6.5vw, 34px);
+  }
+
+  .wwd-process-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .wwd-process-info {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .wwd-process-counter-current {
+    font-size: clamp(42px, 11vw, 58px);
+  }
+
+  .wwd-process-counter-total {
+    font-size: 16px;
+  }
+
+  .wwd-process-description {
+    max-width: 30ch;
+    margin-top: 12px;
+    font-size: 13px;
+  }
+
+  .wwd-process-arrow {
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+  }
+
+  .wwd-process-carousel {
+    width: calc(100% + 4vw);
+  }
+
+  .wwd-process-track {
+    gap: 12px;
+    padding-right: 4vw;
+  }
+
+  .wwd-process-card {
+    flex: 0 0 82vw;
+    height: clamp(440px, 116vw, 570px);
+  }
+
+  .wwd-process-card-content h3 {
+    font-size: clamp(24px, 6.5vw, 32px);
+  }
+
+  .wwd-process-card-content p {
+    max-width: 35ch;
+    font-size: 13px;
+  }
+
+  .wwd-process-link {
+    padding: 13px 24px;
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .wwd-process-header {
+    margin-bottom: 28px;
+  }
+
+  .wwd-process-header h2 {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+
+  .wwd-process-info {
+    grid-template-columns: 1fr;
+  }
+
+  .wwd-process-arrows {
+    margin-top: 4px;
+  }
+
+  .wwd-process-card {
+    flex: 0 0 87vw;
+    height: 500px;
+  }
+
+  .wwd-process-card-top {
+    top: 18px;
+    left: 18px;
+    right: 18px;
+  }
+
+  .wwd-process-card-content {
+    left: 22px;
+    right: 22px;
+    bottom: 24px;
+  }
+
+  .wwd-process-card-content h3 {
+    font-size: clamp(22px, 7vw, 28px);
+  }
+
+  .wwd-process-link {
+    padding: 12px 22px;
+  }
+}
+
+
+/* =========================================
+   TOUCH
+========================================= */
+
+@media (hover: none) {
+  .wwd-process-arrow:hover {
+    transform: none;
+  }
+
+  .wwd-process-card:hover .wwd-process-card-img {
+    transform: translateZ(0) scale(1.002);
+    -webkit-transform: translateZ(0) scale(1.002);
+  }
+
+  .wwd-process-card-active .wwd-process-card-img {
+    transform: translateZ(0) scale(1.025);
+    -webkit-transform: translateZ(0) scale(1.025);
+  }
+}

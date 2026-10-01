@@ -1,0 +1,858 @@
+/* =========================================================
+   CARTINNO FOOTER
+   White + Red / Clean Minimal Design
+   ========================================================= */
+
+.site-footer,
+.site-footer * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+.site-footer {
+  --brand: #d7454e;
+  --brand-dark: #bd323b;
+
+  --ink: #23232b;
+  --muted: #6f6b74;
+  --light-muted: #99959e;
+
+  --line: #e9e6eb;
+
+  width: 100%;
+  padding: 5vh 3vw;
+
+  background: #ffffff;
+
+  color: var(--ink);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   OUTER FOOTER SHELL
+   ========================================================= */
+
+.footer-shell {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: clamp(14px, 2vw, 24px);
+
+  border: 1px solid #e8e5ea;
+
+  border-radius: clamp(24px, 2.2vw, 32px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 16px 40px rgba(25, 20, 35, 0.04);
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.footer-cta {
+  position: relative;
+
+  min-height: clamp(280px, 24vw, 360px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  overflow: hidden;
+
+  border-radius: clamp(22px, 2vw, 28px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #fffafa 48%,
+      #fdebed 100%
+    );
+
+  border: 1px solid #f1d9dc;
+
+  color: var(--ink);
+}
+
+
+/* Soft red glow */
+
+.footer-cta::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 10% 85%,
+      rgba(215, 69, 78, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 12%,
+      rgba(215, 69, 78, 0.16),
+      transparent 30%
+    );
+
+  pointer-events: none;
+}
+
+
+/* Small red center glow */
+
+.footer-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 180px;
+
+  left: 50%;
+  bottom: -110px;
+
+  transform: translateX(-50%);
+
+  background: rgba(215, 69, 78, 0.10);
+
+  filter: blur(70px);
+
+  pointer-events: none;
+}
+
+
+.footer-cta-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(720px, 90%);
+
+  text-align: center;
+}
+
+
+.footer-cta h2 {
+  margin: 0;
+
+  color: #23232b;
+
+  font-size: clamp(34px, 3.8vw, 54px);
+
+  font-weight: 500;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.045em;
+}
+
+
+.footer-cta p {
+  max-width: 560px;
+
+  margin: 18px auto 28px;
+
+  color: #66636b;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+.footer-cta-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 48px;
+
+  padding: 0 25px;
+
+  border-radius: 999px;
+
+  background: var(--brand);
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 24px rgba(215, 69, 78, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.footer-cta-button:hover {
+  transform: translateY(-2px);
+
+  background: var(--brand-dark);
+
+  box-shadow:
+    0 12px 30px rgba(215, 69, 78, 0.27);
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+   ========================================================= */
+
+.footer-main {
+  padding:
+    clamp(44px, 5vw, 64px)
+    clamp(8px, 2vw, 18px)
+    0;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   TOP CONTENT
+   ========================================================= */
+
+.footer-top {
+  display: grid;
+
+  grid-template-columns:
+    minmax(230px, 1.1fr)
+    minmax(420px, 1.5fr)
+    minmax(230px, 1fr);
+
+  gap: clamp(32px, 4vw, 64px);
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.footer-brand {
+  max-width: 360px;
+}
+
+
+.footer-logo {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: var(--ink);
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+  letter-spacing: -1px;
+
+  text-decoration: none;
+}
+
+
+.footer-logo span {
+  color: var(--brand);
+}
+
+
+.footer-brand p {
+  margin: 0;
+
+  max-width: 340px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+   ========================================================= */
+
+.footer-socials {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 24px;
+}
+
+
+.footer-socials a {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #f5f3f5;
+
+  color: var(--ink);
+
+  font-size: 13px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.footer-socials a:hover {
+  transform: translateY(-2px);
+
+  background: var(--brand);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   LINK AREA
+   ========================================================= */
+
+.footer-links {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(110px, 1fr));
+
+  gap: clamp(24px, 3vw, 44px);
+}
+
+
+.footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+.footer-column h4 {
+  margin: 0 0 18px;
+
+  color: var(--ink);
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+.footer-column a {
+  margin-bottom: 12px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.footer-column a:hover {
+  color: var(--brand);
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
+
+.footer-newsletter {
+  max-width: 360px;
+}
+
+
+.footer-newsletter h4 {
+  margin: 0 0 18px;
+
+  color: var(--ink);
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+.footer-newsletter p {
+  max-width: 320px;
+
+  margin: 0 0 18px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+
+/* Newsletter form */
+
+.footer-subscribe {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 5px;
+
+  border: 1px solid #e7e3e8;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.footer-subscribe:focus-within {
+  border-color: rgba(215, 69, 78, 0.45);
+
+  box-shadow:
+    0 0 0 3px rgba(215, 69, 78, 0.08);
+}
+
+
+.footer-subscribe input {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 40px;
+
+  padding: 0 14px;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  color: var(--ink);
+
+  font-family: inherit;
+
+  font-size: 13px;
+}
+
+
+.footer-subscribe input::placeholder {
+  color: #9a97a0;
+}
+
+
+.footer-subscribe button {
+  min-height: 40px;
+
+  padding: 0 18px;
+
+  border: 0;
+
+  border-radius: 999px;
+
+  background: var(--brand);
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.footer-subscribe button:hover {
+  transform: translateY(-1px);
+
+  background: var(--brand-dark);
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.footer-divider {
+  width: 100%;
+
+  height: 1px;
+
+  margin:
+    clamp(34px, 4vw, 50px)
+    0
+    20px;
+
+  background: var(--line);
+}
+
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 24px;
+
+  padding-bottom: 4px;
+}
+
+
+.footer-bottom p {
+  margin: 0;
+
+  color: var(--light-muted);
+
+  font-size: 11px;
+}
+
+
+.footer-legal {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 18px 24px;
+}
+
+
+.footer-legal a {
+  color: var(--muted);
+
+  font-size: 11px;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+
+.footer-legal a:hover {
+  color: var(--brand);
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.footer-logo:focus-visible,
+.footer-column a:focus-visible,
+.footer-socials a:focus-visible,
+.footer-legal a:focus-visible,
+.footer-cta-button:focus-visible,
+.footer-subscribe input:focus-visible,
+.footer-subscribe button:focus-visible {
+  outline: 3px solid #f1aeb3;
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .footer-top {
+    grid-template-columns:
+      minmax(220px, 1fr)
+      minmax(350px, 1.5fr);
+
+    gap: 40px;
+  }
+
+  .footer-newsletter {
+    grid-column: 1 / -1;
+
+    max-width: 560px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .site-footer {
+    padding: 4vh 4%;
+  }
+
+  .footer-shell {
+    padding: 12px;
+
+    border-radius: 24px;
+  }
+
+  .footer-cta {
+    min-height: 300px;
+
+    padding: 38px 20px;
+
+    border-radius: 20px;
+  }
+
+  .footer-cta h2 {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+
+  .footer-cta p {
+    max-width: 36ch;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+  .footer-cta-button {
+    min-height: 46px;
+
+    padding: 0 22px;
+
+    font-size: 13px;
+  }
+
+  .footer-main {
+    padding:
+      40px
+      10px
+      0;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+
+    gap: 36px;
+  }
+
+  .footer-brand {
+    max-width: 440px;
+  }
+
+  .footer-links {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 28px 22px;
+  }
+
+  .footer-column:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-newsletter {
+    grid-column: auto;
+
+    max-width: 500px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 14px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 24px 12px;
+  }
+
+  .footer-shell {
+    padding: 8px;
+
+    border-radius: 20px;
+  }
+
+  .footer-cta {
+    min-height: 280px;
+
+    padding: 32px 16px;
+
+    border-radius: 18px;
+  }
+
+  .footer-cta h2 {
+    font-size: clamp(25px, 8vw, 34px);
+
+    line-height: 1.1;
+  }
+
+  .footer-cta p {
+    margin:
+      15px auto
+      22px;
+
+    font-size: 12px;
+  }
+
+  .footer-cta-button {
+    min-height: 44px;
+
+    padding: 0 20px;
+
+    font-size: 12px;
+  }
+
+  .footer-main {
+    padding:
+      34px
+      10px
+      0;
+  }
+
+  .footer-logo {
+    margin-bottom: 14px;
+
+    font-size: 26px;
+  }
+
+  .footer-brand p {
+    font-size: 12px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+
+    gap: 26px;
+  }
+
+  .footer-column:last-child {
+    grid-column: auto;
+  }
+
+  .footer-column h4,
+  .footer-newsletter h4 {
+    margin-bottom: 14px;
+
+    font-size: 13px;
+  }
+
+  .footer-column a {
+    margin-bottom: 10px;
+
+    font-size: 12px;
+  }
+
+  .footer-newsletter p {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    gap: 12px;
+  }
+
+  .footer-bottom p,
+  .footer-legal a {
+    font-size: 10px;
+  }
+
+  .footer-legal {
+    gap: 12px 18px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .footer-cta h2 {
+    font-size: 25px;
+  }
+
+  .footer-subscribe {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 6px;
+
+    border-radius: 18px;
+  }
+
+  .footer-subscribe input {
+    width: 100%;
+  }
+
+  .footer-subscribe button {
+    width: 100%;
+  }
+}
