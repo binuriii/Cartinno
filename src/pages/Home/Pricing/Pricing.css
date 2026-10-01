@@ -32,7 +32,7 @@
   font-size: clamp(36px, 3.8vw, 54px);
   font-weight: 450;
   line-height: 1.1;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.045em;
   color: var(--ink);
 }
 
