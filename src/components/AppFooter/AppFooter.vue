@@ -1,6 +1,8 @@
 <script setup>
 import './AppFooter.css'
 
+const base = import.meta.env.BASE_URL
+
 const footerLinks = [
   {
     title: 'Products',
@@ -84,11 +86,8 @@ const year = new Date().getFullYear()
           <!-- BRAND -->
           <div class="footer-brand">
 
-            <RouterLink
-              to="/"
-              class="footer-logo"
-            >
-              cartinn<span>o</span>
+            <RouterLink to="/" class="footer-logo" aria-label="Cartinno home">
+              <img :src="`${base}cartinno-logo.webp`" alt="Cartinno" class="footer-logo-img" />
             </RouterLink>
 
             <p>
@@ -205,30 +204,25 @@ const year = new Date().getFullYear()
         <!-- BOTTOM -->
         <div class="footer-bottom">
 
-          <p>
-            © {{ year }} Cartinno. All rights reserved.
-          </p>
+          <div class="footer-copy">
+            <p>© {{ year }} Cartinno. All rights reserved.</p>
+
+            <span class="footer-credit">
+              Designed and developed by
+              <RouterLink to="/" class="footer-credit-logo" aria-label="Cartinno">
+                <img :src="`${base}cartinno-logo.webp`" alt="Cartinno" />
+              </RouterLink>
+            </span>
+          </div>
 
           <div class="footer-legal">
-            <a href="#privacy">
-              Privacy Policy
-            </a>
-
-            <a href="#terms">
-              Terms of Service
-            </a>
-
-            <a href="#security">
-              Security
-            </a>
-
-            <a href="#cookies">
-              Cookies
-            </a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#security">Security</a>
+            <a href="#cookies">Cookies</a>
           </div>
 
         </div>
-
       </div>
 
     </div>

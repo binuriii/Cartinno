@@ -1,6 +1,8 @@
 <script setup>
 import './AppHeader.css'
 
+const base = import.meta.env.BASE_URL
+
 const links = [
   {
     label: 'Home',
@@ -47,13 +49,9 @@ const links = [
   <header class="site-header">
     <div class="site-bar">
 
-      <RouterLink
-        to="/"
-        class="site-logo"
-      >
-        cartinn<span>o</span>
+      <RouterLink to="/" class="site-logo" aria-label="Cartinno home">
+        <img :src="`${base}cartinno-logo.webp`" alt="Cartinno" class="site-logo-img" />
       </RouterLink>
-
 
       <nav
         class="site-nav"

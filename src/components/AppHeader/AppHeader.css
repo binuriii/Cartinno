@@ -303,6 +303,24 @@
   outline-offset: 3px;
 }
 
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-logo-img {
+  display: block;
+  height: 32px;   /* adjust to taste */
+  width: auto;    /* keeps the aspect ratio */
+}
+
+.footer-credit {
+  gap: 2;               /* was 8px */
+}
+
+.footer-credit-logo {
+  margin-left: -10.5px;    /* pulls the logo closer; adjust as needed */
+}
 
 /* =========================
    TABLET / MOBILE
