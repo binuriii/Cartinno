@@ -190,11 +190,11 @@
 }
 
 .growth-panel--0 {
-  background: #f9e6e8;
+  background: #ffe6e9;
 }
 
 .growth-panel--1 {
-  background: #e6e0f7;
+  background: #dadadb;
 
   grid-template-columns:
     minmax(0, 1.15fr)
@@ -202,7 +202,7 @@
 }
 
 .growth-panel--2 {
-  background: #fcc0c0;
+  background: #ffd8d8;
 }
 
 .growth-panel--1 .gp-copy {

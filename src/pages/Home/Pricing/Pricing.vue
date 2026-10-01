@@ -1,6 +1,7 @@
 <script setup>
 import './Pricing.css'
 import { badge, headline, plans, footnote } from './PricingData.js'
+const base = import.meta.env.BASE_URL
 </script>
 
 <template>
@@ -8,7 +9,13 @@ import { badge, headline, plans, footnote } from './PricingData.js'
     <h2 class="pr-title">{{ headline.pre }}<span class="pr-accent">{{ headline.highlight }}</span><br>{{ headline.post }}</h2>
 
     <div class="pr-cards">
-      <article v-for="plan in plans" :key="plan.name" class="pr-card" :class="`is-${plan.tone}`">
+      <article
+          v-for="plan in plans"
+          :key="plan.name"
+          class="pr-card"
+          :class="[`is-${plan.tone}`, { 'has-bg': plan.image }]"
+          :style="plan.image ? { '--card-bg': `url(${base}${plan.image})` } : null"
+        >
         <header class="pr-card-head">
           <h3>{{ plan.name }}</h3>
           <p>{{ plan.tagline }}</p>

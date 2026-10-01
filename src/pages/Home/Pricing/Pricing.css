@@ -52,7 +52,48 @@
   border: 1px solid var(--line);
 }
 .pr-card.is-light{background:#fff;box-shadow: 0 8px 24px rgba(30, 20, 60, 0.04)}
-.pr-card.is-dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.pr-card.is-dark{
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+/* ---------------------------------
+   Dark card with background image
+   (image comes from --card-bg, set
+   inline in Pricing.vue)
+---------------------------------- */
+.pr-card.has-bg{
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-color: transparent;
+  background:
+    /* light shade only, for text contrast */
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.10) 0%,
+      rgba(0, 0, 0, 0.22) 100%
+    ),
+    var(--card-bg) center / cover no-repeat;
+}
+
+/* delete the old .pr-card.has-bg::before rule */
+
+/* optional soft brand glow in the corner */
+.pr-card.has-bg::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    circle at 100% 0%,
+    rgba(215, 69, 78, 0.28),
+    transparent 45%
+  );
+  pointer-events: none;
+}
 
 .pr-card-head h3{margin:0;font-size:19px;font-weight:600;letter-spacing:-.01em}
 .pr-card-head p{
@@ -80,7 +121,9 @@
 .pr-card.is-dark .pr-features li{border-bottom-color:rgba(255,255,255,.08)}
 .pr-features li:last-child{border-bottom:0}
 .pr-features i{flex:none;color:var(--brand);font-size:12px}
-
+.pr-card.is-dark .pr-features i{
+  color: #ff9e9e;
+}
 
 /* =========================================
    BUTTON

@@ -25,6 +25,7 @@ export const plans = [
   {
     tone: 'dark',
     name: 'Growth',
+    image: 'pricing-bg.png', 
     tagline: 'Everything in Starter, plus marketing & voice tools.',
     oldPrice: '$65',
     price: '$39',

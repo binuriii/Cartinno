@@ -599,7 +599,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px 20px;
+  gap: 8px 10px;
 }
 
 .footer-credit {
