@@ -300,9 +300,19 @@ const handleScroll = () => {
                 class="wwd-process-card-content"
               >
 
-                <h3>
-                  {{ service.title }}
-                </h3>
+                <!-- TITLE + STATUS BADGE -->
+                <div class="wwd-process-card-heading">
+                  <h3>
+                    {{ service.title }}
+                  </h3>
+
+                  <span
+                    v-if="service.badge"
+                    class="wwd-process-badge"
+                  >
+                    {{ service.badge }}
+                  </span>
+                </div>
 
                 <p>
                   {{ service.text }}
@@ -344,8 +354,6 @@ const handleScroll = () => {
                     />
                   </svg>
                 </a>
-
-              
 
               </div>
 

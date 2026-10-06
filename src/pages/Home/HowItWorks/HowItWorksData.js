@@ -12,7 +12,7 @@ export const steps = [
     text:
       'Share your products, brand and goals — we scope the right mix of tools.',
     image:
-      'https://plus.unsplash.com/premium_photo-1681486952139-82f21bbc8060?w=1200&auto=format&fit=crop&q=80'
+      'https://images.unsplash.com/photo-1695653422952-93bf055732fe?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRlbGl2ZXJ5JTIwd29tZW4lMjB3b3JrZXJzfGVufDB8fDB8fHww'
   },
   {
     tag: '2',
@@ -20,7 +20,7 @@ export const steps = [
     text:
       'Design, storefront, POS and apps configured around how you actually sell.',
     image:
-      'https://plus.unsplash.com/premium_photo-1682146655678-4ac8bb5c369a?w=1200&auto=format&fit=crop&q=80'
+      'https://images.unsplash.com/photo-1695653422881-6372da5e29e5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D'
   },
   {
     tag: '3',
@@ -28,6 +28,6 @@ export const steps = [
     text:
       'Launch with training, marketing support and 365-day care included.',
     image:
-      'https://images.unsplash.com/photo-1711397544921-98cbc9042ab8?w=1200&auto=format&fit=crop&q=80'
+      'https://images.unsplash.com/photo-1695653422259-8a74ffe90401?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D'
   }
 ]

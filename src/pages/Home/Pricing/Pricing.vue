@@ -1,43 +1,124 @@
 <script setup>
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import './Pricing.css'
-import { badge, headline, plans, footnote } from './PricingData.js'
+import { headline, columns, rows, cta, footnote } from './PricingData.js'
+
 const base = import.meta.env.BASE_URL
+
+const table = ref(null)
+const visible = ref(false)
+let observer = null
+
+const themIcon = {
+  yes: 'fa-check',
+  no: 'fa-xmark',
+  partial: 'fa-minus'
+}
+
+const themLabel = {
+  yes: 'Yes',
+  no: 'No',
+  partial: 'Partially'
+}
+
+// hide a logo quietly if the file is missing
+const hideBroken = (event) => {
+  event.target.style.display = 'none'
+}
+
+onMounted(() => {
+  if (!('IntersectionObserver' in window) || !table.value) {
+    visible.value = true
+    return
+  }
+
+  observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        visible.value = true
+        observer.disconnect()
+      }
+    },
+    { threshold: 0.15 }
+  )
+
+  observer.observe(table.value)
+})
+
+onBeforeUnmount(() => {
+  if (observer) observer.disconnect()
+})
 </script>
 
 <template>
   <section class="pr" id="pricing">
     <h2 class="pr-title">{{ headline.pre }}<span class="pr-accent">{{ headline.highlight }}</span><br>{{ headline.post }}</h2>
 
-    <div class="pr-cards">
-      <article
-          v-for="plan in plans"
-          :key="plan.name"
-          class="pr-card"
-          :class="[`is-${plan.tone}`, { 'has-bg': plan.image }]"
-          :style="plan.image ? { '--card-bg': `url(${base}${plan.image})` } : null"
-        >
-        <header class="pr-card-head">
-          <h3>{{ plan.name }}</h3>
-          <p>{{ plan.tagline }}</p>
-        </header>
+    <div
+      ref="table"
+      class="pr-table"
+      :class="{ 'is-visible': visible }"
+      role="table"
+    >
 
-        <div class="pr-price">
-          <span class="pr-old">{{ plan.oldPrice }}</span>
-          <span class="pr-new">{{ plan.price }}</span>
-          <span class="pr-period">{{ plan.period }}</span>
+      <!-- highlighted Cartinno column (one continuous gradient card) -->
+      <div class="pr-hl" aria-hidden="true"></div>
+
+      <!-- HEADER -->
+      <div class="pr-row pr-row-head" role="row" :style="{ '--i': 0 }">
+        <div class="pr-cell pr-cell-label" role="columnheader"></div>
+
+        <div class="pr-cell pr-cell-us pr-cell-first" role="columnheader">
+          <span class="pr-brand">{{ columns.us }}</span>
         </div>
 
-        <ul class="pr-features">
-          <li v-for="f in plan.features" :key="f">
-            <i class="fa-solid fa-check" aria-hidden="true"></i>
-            <span>{{ f }}</span>
-          </li>
-        </ul>
+        <div class="pr-cell pr-cell-them" role="columnheader">
+          <span class="pr-them-title">{{ columns.them }}</span>
+        </div>
+      </div>
 
-        <a href="#contact" class="pr-btn">{{ plan.cta }}</a>
-      </article>
+      <!-- ROWS -->
+      <div
+        v-for="(row, i) in rows"
+        :key="row.label"
+        class="pr-row"
+        role="row"
+        :style="{ '--i': i + 1 }"
+      >
+        <div class="pr-cell pr-cell-label" role="rowheader">
+          {{ row.label }}
+        </div>
+
+        <div class="pr-cell pr-cell-us" role="cell">
+          <span class="pr-yes" aria-hidden="true">
+            <i class="fa-solid fa-check"></i>
+          </span>
+
+          <span class="pr-text">
+            <strong v-if="row.value" class="pr-value">{{ row.value }}</strong>
+
+            <template v-if="row.logo && row.text.includes('{logo}')">
+              {{ row.text.split('{logo}')[0].trimEnd() }}<span class="pr-logo-chip"><img
+                :src="`${base}${row.logo}`"
+                alt="3CX"
+                class="pr-logo"
+                loading="lazy"
+                @error="hideBroken"
+              /></span>{{ row.text.split('{logo}')[1].trimStart() }}
+            </template>
+
+            <template v-else>{{ row.text }}</template>
+          </span>
+        </div>
+
+        <div class="pr-cell pr-cell-them" role="cell">
+          <span class="pr-them-chip" :class="`is-${row.them}`" aria-hidden="true">
+            <i class="fa-solid" :class="themIcon[row.them]"></i>
+          </span>
+          <span class="pr-sr">{{ themLabel[row.them] }}</span>
+        </div>
+      </div>
+
     </div>
-
-    <p class="pr-footnote"><i class="fa-solid fa-check" aria-hidden="true"></i> {{ footnote }}</p>
   </section>
 </template>
