@@ -37,7 +37,7 @@ export const rows = [
   {
     label: 'Free business phone system',
     text: 'Free {logo} integration with a number, so calls and orders live in one place.', // {logo} = where the image appears
-    logo: '3cx-logo.png', // file placed in /public (official 3CX logo)
+    logo: 'pbx-logo.png', // file placed in /public (official 3CX logo)
     them: 'no'
   },
   {
