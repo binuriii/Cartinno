@@ -3,7 +3,7 @@ export const services = [
     title: 'E-commerce Website & POS Solutions',
     icon: 'fa-store',
     text:
-      'Build a platform where multiple sellers can sell, offering customers a wide range of choices while you manage everything seamlessly.',
+      'Create a powerful online store combined with a smart POS system to manage products, orders, payments, inventory, and sales from one platform.',
     href: '#marketplace',
     image:
       'https://plus.unsplash.com/premium_photo-1661963192586-b9d38b218658?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -16,7 +16,7 @@ export const services = [
     title: 'Multi-Vendor Food Website & POS',
     icon: 'fa-cash-register',
     text:
-      'Manage in-store and online sales effortlessly with our cloud-powered Point of Sale (POS) system.',
+      'Manage multiple food vendors, online orders, in-store sales, payments, and daily operations with a complete food website and POS solution.',
     note: '',
     href: '#pos',
     image:
@@ -30,7 +30,7 @@ export const services = [
     title: 'E-commerce Multi-Vendor Marketplace',
     icon: 'fa-utensils',
     text:
-      'Run your own food marketplace, enabling multiple sellers to list their products and provide customers with endless food choices.',
+      'Launch a multi-vendor marketplace where multiple sellers can showcase their products, manage orders, and reach more customers through one platform.',
     note: '',
     cta: 'icon',
     href: '#food',
@@ -46,7 +46,7 @@ export const services = [
     badge: 'In Development',
     icon: 'fa-motorcycle',
     text:
-      'Designed to streamline the entire delivery process, our app allows businesses to manage orders, track deliveries in real-time, and communicate seamlessly with customers.',
+      'Simplify deliveries with an app that helps businesses manage orders, assign deliveries, track drivers in real time, and keep customers updated.',
     note: '',
     cta: 'icon',
     href: '#delivery',
