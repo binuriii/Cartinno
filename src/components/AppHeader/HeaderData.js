@@ -136,7 +136,7 @@ export const corporateSolutions = [
   {
     id: 'marketplace',
     colors: ['#5d5d5fff', '#0a0a0aff'],
-    title: 'Multivendor Ecommerce Portal',
+    title: 'Multivendor E-Commerce Portal',
     href: MV_ECOMMERCE_URL,
     icon: 'fa-solid fa-store',
     label: 'ECOMMERCE MARKETPLACE',
@@ -148,6 +148,22 @@ export const corporateSolutions = [
     imagePosition: 'center',
     related: 'multivendor-pos',
     relatedTitle: 'Connected POS'
+  },
+  {
+    id: 'multivendor-pos',
+    colors: ['#f83232ff', '#060606ff'],
+    title: 'Multivendor E-Commerce POS',
+    href: MV_ECOMMERCE_URL,
+    icon: 'fa-solid fa-desktop',
+    label: 'MULTIVENDOR POS',
+    designTitle: 'Connect vendors and sales.',
+    description: 'Support vendor sales and everyday operations across your marketplace.',
+    photoTitle: 'A connected view of vendor operations.',
+    image: 'food-delivery.jpg',
+    alt: 'Multivendor point of sale',
+    imagePosition: '75% center',
+    related: 'marketplace',
+    relatedTitle: 'Connected portal'
   },
   {
     id: 'food-portal',
@@ -179,22 +195,6 @@ export const corporateSolutions = [
     alt: 'Restaurant point of sale',
     imagePosition: '25% center',
     related: 'food-portal',
-    relatedTitle: 'Connected portal'
-  },
-  {
-    id: 'multivendor-pos',
-    colors: ['#f83232ff', '#060606ff'],
-    title: 'Multivendor POS',
-    href: MV_ECOMMERCE_URL,
-    icon: 'fa-solid fa-desktop',
-    label: 'MULTIVENDOR POS',
-    designTitle: 'Connect vendors and sales.',
-    description: 'Support vendor sales and everyday operations across your marketplace.',
-    photoTitle: 'A connected view of vendor operations.',
-    image: 'food-delivery.jpg',
-    alt: 'Multivendor point of sale',
-    imagePosition: '75% center',
-    related: 'marketplace',
     relatedTitle: 'Connected portal'
   }
 ]
