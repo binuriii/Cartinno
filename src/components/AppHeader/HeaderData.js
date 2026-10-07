@@ -167,7 +167,7 @@ export const corporateSolutions = [
   },
   {
     id: 'food-portal',
-    colors: ['#f83232ff', '#060606ff'],
+    colors: ['#5d5d5fff', '#0a0a0aff'],
     title: 'Multivendor Food Portal',
     href: MV_FOOD_URL,
     icon: 'fa-solid fa-store',
@@ -183,7 +183,7 @@ export const corporateSolutions = [
   },
   {
     id: 'food-pos',
-    colors: ['#5d5d5fff', '#0a0a0aff'],
+    colors: ['#f83232ff', '#060606ff'],
     title: 'Multivendor Food POS',
     href: MV_FOOD_URL,
     icon: 'fa-solid fa-desktop',
