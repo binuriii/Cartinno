@@ -111,13 +111,10 @@
 
   border-radius: 22px;
 
-  background:
-    radial-gradient(circle at 100% 0%, rgba(215, 69, 78, 0.12), transparent 45%),
-    radial-gradient(circle at 0% 100%, rgba(247, 169, 160, 0.2), transparent 50%),
-    linear-gradient(180deg, #ffffff 0%, #fff6f6 100%);
+  background:#ffffff;
 
   box-shadow:
-    0 34px 70px -24px rgba(215, 69, 78, 0.3),
+    0 34px 70px -24px rgba(0, 0, 0, 0.3),
     0 0 0 1px rgba(215, 69, 78, 0.08);
 
   opacity: 0;
@@ -253,8 +250,8 @@
 }
 
 .pr-them-chip.is-yes { color: #5cd733; }
-.pr-them-chip.is-no { color: #e72d10; }
-.pr-them-chip.is-partial { color: #535be8; }
+.pr-them-chip.is-no { color: #000000; }
+.pr-them-chip.is-partial { color: #000000; }
 
 .pr-sr {
   position: absolute;
