@@ -10,7 +10,7 @@
   --line: rgba(35, 35, 43, 0.11);
   width: 100%;
   overflow: hidden;
-  padding: 5vh 3vw;
+  padding: 5vh 3vw 10vh;
   background: #ffffff;
   color: var(--ink);
 }
@@ -291,7 +291,7 @@
   font-weight: 500;
   line-height: 1.08;
 
-  letter-spacing: -0.04em;
+  letter-spacing: 0.02em;
 
   text-shadow:
     0 2px 16px rgba(0,0,0,.2);

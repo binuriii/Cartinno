@@ -12,7 +12,7 @@
   --stack-top: 104px;
   --stack-peek: 24px;
   width: 100%;
-  padding: 5vh 3vw;
+  padding: 5vh 3vw 10vh;
   background: #ffffff;
   color: var(--ink);
 

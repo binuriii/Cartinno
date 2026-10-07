@@ -511,7 +511,7 @@
   font-weight: 500;
   line-height: 1.25;
 
-  letter-spacing: -0.03em;
+  letter-spacing: 0.02em;
 }
 
 .cl-photo__copy p {
