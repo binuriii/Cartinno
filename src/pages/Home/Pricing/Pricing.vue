@@ -1,33 +1,15 @@
-<script setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue'
-import './Pricing.css'
-import { headline, columns, rows, cta, footnote } from './PricingData.js'
 
-const base = import.meta.env.BASE_URL
+<script setup>
+import { onMounted, onBeforeUnmount, ref } from 'vue'
+import './Pricing.css'
+import { headline, columns, rows } from './PricingData.js'
 
 const table = ref(null)
 const visible = ref(false)
 let observer = null
 
-const themIcon = {
-  yes: 'fa-check',
-  no: 'fa-xmark',
-  partial: 'fa-minus'
-}
-
-const themLabel = {
-  yes: 'Yes',
-  no: 'No',
-  partial: 'Partially'
-}
-
-// hide a logo quietly if the file is missing
-const hideBroken = (event) => {
-  event.target.style.display = 'none'
-}
-
 onMounted(() => {
-  if (!('IntersectionObserver' in window) || !table.value) {
+  if (!table.value || typeof IntersectionObserver === 'undefined') {
     visible.value = true
     return
   }
@@ -36,87 +18,184 @@ onMounted(() => {
     ([entry]) => {
       if (entry.isIntersecting) {
         visible.value = true
-        observer.disconnect()
+        observer?.disconnect()
       }
     },
-    { threshold: 0.15 }
+    { threshold: 0.1 }
   )
 
   observer.observe(table.value)
 })
 
-onBeforeUnmount(() => {
-  if (observer) observer.disconnect()
-})
+onBeforeUnmount(() => observer?.disconnect())
+
+const statusLabel = (status) =>
+  status === 'yes' ? 'Included' : 'Not included'
 </script>
 
 <template>
   <section class="pr" id="pricing">
-    <h2 class="pr-title">{{ headline.pre }}<span class="pr-accent">{{ headline.highlight }}</span><br>{{ headline.post }}</h2>
+    <div class="pr-container">
 
-    <div
-      ref="table"
-      class="pr-table"
-      :class="{ 'is-visible': visible }"
-      role="table"
-    >
+      <div class="pr-heading">
+        <h2 class="pr-title">
+          Why Cartinno stands out
+          <span class="pr-title-line">
+            from the rest?
+          </span>
+        </h2>
 
-      <!-- highlighted Cartinno column (one continuous gradient card) -->
-      <div class="pr-hl" aria-hidden="true"></div>
-
-      <!-- HEADER -->
-      <div class="pr-row pr-row-head" role="row" :style="{ '--i': 0 }">
-        <div class="pr-cell pr-cell-label" role="columnheader"></div>
-
-        <div class="pr-cell pr-cell-us pr-cell-first" role="columnheader">
-          <span class="pr-brand">{{ columns.us }}</span>
-        </div>
-
-        <div class="pr-cell pr-cell-them" role="columnheader">
-          <span class="pr-them-title">{{ columns.them }}</span>
-        </div>
       </div>
 
-      <!-- ROWS -->
       <div
-        v-for="(row, i) in rows"
-        :key="row.label"
-        class="pr-row"
-        role="row"
-        :style="{ '--i': i + 1 }"
+        ref="table"
+        class="pr-table"
+        :class="{ 'is-visible': visible }"
+        role="table"
+        aria-label="Cartinno comparison"
       >
-        <div class="pr-cell pr-cell-label" role="rowheader">
-          {{ row.label }}
+        <!-- HEADER -->
+        <div class="pr-row pr-row-head" role="row">
+
+          <!-- FEATURES INTRO -->
+          <div
+            class="pr-cell pr-feature-head"
+            role="columnheader"
+          >
+            <div class="pr-feature-intro">
+
+
+              <p>
+                Compare the essentials and discover
+                how Cartinno helps your business
+                save more, work smarter and grow.
+              </p>
+
+              <span class="pr-feature-heading">
+                7 KEY AREAS
+              </span>
+
+            </div>
+          </div>
+
+          <!-- OTHERS -->
+          <div
+            class="pr-cell pr-other-head"
+            role="columnheader"
+          >
+            <div class="pr-panel-top">
+              <span class="pr-panel-badge">
+                TYPICAL PLATFORM
+              </span>
+            </div>
+
+            <div class="pr-panel-intro">
+              <h3>Built around the platform</h3>
+
+              <p>
+                Your brand and workflow adapt to a
+                predefined ecosystem.
+              </p>
+            </div>
+
+            <div class="pr-panel-divider"></div>
+          </div>
+
+          <!-- CARTINNO -->
+          <div
+            class="pr-cell pr-us-head"
+            role="columnheader"
+          >
+            <div class="pr-panel-top">
+              <span class="pr-company">
+                {{ columns.us }}
+              </span>
+
+              <span class="pr-panel-badge pr-panel-badge-us">
+                BUILT FOR BUSINESS
+              </span>
+            </div>
+
+            <div class="pr-panel-intro">
+              <h3>Built around your business</h3>
+
+              <p>
+                More control, fewer fees and everything
+                you need to grow.
+              </p>
+            </div>
+
+            <div class="pr-panel-divider"></div>
+          </div>
+
         </div>
 
-        <div class="pr-cell pr-cell-us" role="cell">
-          <span class="pr-yes" aria-hidden="true">
-            <i class="fa-solid fa-check"></i>
-          </span>
+        <!-- FEATURE ROWS -->
+        <div
+          v-for="(row, index) in rows"
+          :key="row.label"
+          class="pr-row pr-data-row"
+          role="row"
+        >
+          <div
+            class="pr-cell pr-feature"
+            role="rowheader"
+          >
+            {{ row.label }}
+          </div>
 
-          <span class="pr-text">
-            <strong v-if="row.value" class="pr-value">{{ row.value }}</strong>
+          <!-- OTHERS RESULT -->
+          <div class="pr-cell pr-other" role="cell">
+            <div class="pr-result-card pr-result-other">
 
-            <template v-if="row.logo && row.text.includes('{logo}')">
-              {{ row.text.split('{logo}')[0].trimEnd() }}<span class="pr-logo-chip"><img
-                :src="`${base}${row.logo}`"
-                alt="3CX"
-                class="pr-logo"
-                loading="lazy"
-                @error="hideBroken"
-              /></span>{{ row.text.split('{logo}')[1].trimStart() }}
-            </template>
+              <span class="pr-result-number">
+                {{ String(index + 1).padStart(2, '0') }}
+              </span>
 
-            <template v-else>{{ row.text }}</template>
-          </span>
+              <span
+                class="pr-result-mark"
+                :class="row.them === 'yes' ? 'is-yes' : 'is-no'"
+              >
+                <i
+                  class="fa-solid"
+                  :class="row.them === 'yes' ? 'fa-check' : 'fa-xmark'"
+                  aria-hidden="true"
+                ></i>
+
+                <span class="pr-sr">
+                  {{ statusLabel(row.them) }}
+                </span>
+              </span>
+
+            </div>
+          </div>
+
+          <!-- CARTINNO RESULT -->
+          <div class="pr-cell pr-us" role="cell">
+            <div class="pr-result-card pr-result-us">
+
+              <span class="pr-result-number">
+                {{ String(index + 1).padStart(2, '0') }}
+              </span>
+
+              <span class="pr-result-mark is-us">
+                <i
+                  class="fa-solid fa-check"
+                  aria-hidden="true"
+                ></i>
+
+                <span class="pr-sr">Included</span>
+              </span>
+
+            </div>
+          </div>
+
         </div>
 
-        <div class="pr-cell pr-cell-them" role="cell">
-          <span class="pr-them-chip" :class="`is-${row.them}`" aria-hidden="true">
-            <i class="fa-solid" :class="themIcon[row.them]"></i>
-          </span>
-          <span class="pr-sr">{{ themLabel[row.them] }}</span>
+        <div class="pr-vs" aria-hidden="true">
+          VS
         </div>
+
       </div>
 
     </div>
