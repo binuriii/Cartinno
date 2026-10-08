@@ -190,11 +190,11 @@
 }
 
 .growth-panel--0 {
-  background: #ffe6e9;
+  background: #e1f8ce;
 }
 
 .growth-panel--1 {
-  background: #dadadb;
+  background: #e0e2e2;
 
   grid-template-columns:
     minmax(0, 1.15fr)
@@ -202,7 +202,7 @@
 }
 
 .growth-panel--2 {
-  background: #ffd8d8;
+  background: #dff6fa;
 }
 
 .growth-panel--1 .gp-copy {
@@ -289,7 +289,7 @@
   line-height: 1.08;
 
   letter-spacing:
-    -0.04em;
+    0.01em;
 }
 
 .gp-copy > p {
