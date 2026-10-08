@@ -6,7 +6,7 @@
   --pad-top:clamp(96px, 15vw, 150px);
   --ink:#23232b;--muted:#5b5b66;--brand:#D7454E;
   position:relative;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;
-  background:#fff url('/hero-bg.png') center/cover no-repeat;
+  background:#ffff;
   color:var(--ink);
 }
 

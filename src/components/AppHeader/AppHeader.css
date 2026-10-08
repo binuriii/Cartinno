@@ -150,8 +150,7 @@
 .site-header i.fa-regular { font-family: "Font Awesome 6 Free"; font-style: normal; font-weight: 400; }
 .site-cta {
   padding: 0 24px; color: #ffffff; background: #d7454e; border: 1px solid #d7454e;
-  box-shadow: 0 7px 18px rgba(215, 69, 78, 0.22); transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+  }
 .site-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 25px rgba(215, 69, 78, 0.3); }
 
 /* FOCUS */
