@@ -16,10 +16,9 @@ import VideoSection from './VideoSection/VideoSection.vue';
     <HeroSection />
     <TrustedBrands />
     <WhatWeDo/>
-    <Pricing/>
-    <GrowthSection/>
-    <HowItWorks/>
     <VideoSection />
+    <GrowthSection/>
+    <Pricing/>
     <CustomerStories/>
   </main>
 </template>
