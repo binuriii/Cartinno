@@ -1,8 +1,8 @@
 <script setup>
 import { computed, onMounted, onBeforeUnmount, ref } from 'vue'
 import { RouterLink } from 'vue-router'
-import './VideoSection.css'
-import { showcase } from './VideoSectionData.js'
+import './Industries.css'
+import { showcase } from './Industries.js'
 
 const showcaseRef = ref(null)
 const activeIndex = ref(0)

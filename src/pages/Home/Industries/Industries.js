@@ -1,14 +1,3 @@
-/*
-  IMAGE PATHS
-  Files inside the Vite "public" folder are served from the site root,
-  so do NOT write "public/" in the path.
-    public/Meeting scheduler on a silver laptop.png
-    ->  'Meeting scheduler on a silver laptop.png'
-  Spaces in file names are encoded automatically by the component.
-
-  TIP: for the section to read clearly, give every item its own pair of
-  images (desktop + mobile) instead of reusing the same picture.
-*/
 
 export const showcase = {
   eyebrow: 'Built Around Your Business',
