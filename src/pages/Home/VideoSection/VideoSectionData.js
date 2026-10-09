@@ -1,51 +1,119 @@
-export const badge = 'Customer Success'
+/*
+  IMAGE PATHS
+  Files inside the Vite "public" folder are served from the site root,
+  so do NOT write "public/" in the path.
+    public/Meeting scheduler on a silver laptop.png
+    ->  'Meeting scheduler on a silver laptop.png'
+  Spaces in file names are encoded automatically by the component.
 
-export const headline = 'See Cartinno in Action'
+  TIP: for the section to read clearly, give every item its own pair of
+  images (desktop + mobile) instead of reusing the same picture.
+*/
 
-export const paragraph =
-  'Explore how Cartinno helps businesses move from disconnected tools to one connected commerce platform — bringing online selling, POS, ordering, delivery and day-to-day operations together.'
+export const showcase = {
+  eyebrow: 'Built Around Your Business',
 
-export const linkText = 'Explore Our Solutions'
-export const linkHref = '/products'
+  title: 'Connected solutions. More ways to grow.',
 
-export const main = {
-  title:
-    'From Storefront to Checkout',
+  ctaText: 'Let’s Talk About Your Business',
 
-  text:
-    'See how Cartinno connects e-commerce, orders, inventory and sales in one platform designed to help businesses sell more efficiently.',
+  ctaHref: '/contact',
 
-  video:
-    'cartinno-video.mp4',
+  items: [
+    {
+      id: 'ecommerce',
+      title: 'E-Commerce Websites',
+      accent: '#f07880',
+      description:
+        'Bring your products online with a storefront built around your brand. Connect product browsing, checkout, orders and inventory in one clear shopping experience.',
+      linkText: 'Explore E-Commerce',
+      href: '/products/e-commerce',
+      images: [
+        {
+          src: 'Meeting scheduler on a silver laptop.png',
+          alt: 'E-commerce website on a desktop display',
+          background: '#f0e5e2',
+          position: 'center'
+        },
+        {
+          src: 'Meeting scheduler on a silver laptop.jpg',
+          alt: 'Mobile shopping and product browsing',
+          background: '#f3e8e9',
+          position: 'center'
+        }
+      ]
+    },
 
-  poster:
-    'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/c0/01/55/93/72/v1_E10/E10HKL1J.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=12e7d5547084c866fa583cd2318ef1334792398698b7279b6d59bb1ba25ca629',
+    {
+      id: 'food',
+      title: 'Food Ordering Websites',
+      accent: '#f5a65b',
+      description:
+        'Give customers a simple way to discover your menu and place an order. Bring online ordering, pickup and delivery into a connected experience for your restaurant.',
+      linkText: 'Explore Food Ordering',
+      href: '/products/food-website',
+      images: [
+        {
+          src: 'Meeting scheduler on a silver laptop.jpg',
+          alt: 'Restaurant website and digital menu',
+          background: '#f7e5d7',
+          position: 'center'
+        },
+        {
+          src: 'Nexora CRM Dashboard on Tablet.png',
+          alt: 'Food ordering experience on a smartphone',
+          background: '#f6edce',
+          position: 'center'
+        }
+      ]
+    },
 
-  stat: 'All-in-One'
+    {
+      id: 'pos',
+      title: 'Cloud POS',
+      accent: '#6fcfa5',
+      description:
+        'Keep in-store selling organised with connected products, payments and inventory. Bring your counter and online store together so everyday sales are easier to manage.',
+      linkText: 'Explore Cloud POS',
+      href: '/products/cloud-pos',
+      images: [
+        {
+          src: 'Meeting scheduler on a silver laptop.png',
+          alt: 'Cloud POS product selection and checkout',
+          background: '#e3ece8',
+          position: 'center'
+        },
+        {
+          src: 'Meeting scheduler on a silver laptop.jpg',
+          alt: 'Cloud POS orders and inventory dashboard',
+          background: '#e6edf3',
+          position: 'center'
+        }
+      ]
+    },
+
+    {
+      id: 'marketplace',
+      title: 'Multi-Vendor Marketplaces',
+      accent: '#8fb4f2',
+      description:
+        'Bring multiple sellers together in one marketplace. Create a shared shopping destination with tools to organise sellers, products and orders as your business grows.',
+      linkText: 'Explore Corporate Solutions',
+      href: '/corporate-solutions',
+      images: [
+        {
+          src: 'Lime Green Banking Card o.png',
+          alt: 'Multi-vendor marketplace storefront',
+          background: '#ede7e1',
+          position: 'center'
+        },
+        {
+          src: 'Lime Green Banking Card on Titanium Phone.png',
+          alt: 'Marketplace shopping on a mobile device',
+          background: '#f1e5e8',
+          position: 'center'
+        }
+      ]
+    }
+  ]
 }
-
-export const cards = [
-  {
-    title:
-      'Run In-Store and Online Sales with Cloud POS',
-
-    image:
-      'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/9c/37/cf/19/47/v1_E10/E109RQFV.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=40bcaa45d74eff42f8d1fa4a0fcba14a8bbb8d56a5bdb4365446afeffbcf85a3',
-
-    tone: 'light',
-
-    link: '/products/cloud-pos'
-  },
-
-  {
-    title:
-      'Build and Manage Your Own Multi-Seller Marketplace',
-
-    image:
-      'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/6d/4c/44/83/d7/v1_E10/E1044DN2.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=54cd4a43b24e77042f8041c40323911ce79d997da9a63f37c4f24af5882f8e07',
-
-    tone: 'brand',
-
-    link: '/corporate-solutions'
-  }
-]
