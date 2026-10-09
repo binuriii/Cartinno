@@ -1,9 +1,7 @@
+
 <script setup>
-import { RouterLink } from 'vue-router'
 import './CustomerStories.css'
 import { useCustomerStories } from './CustomerStories.js'
-
-const base = import.meta.env.BASE_URL
 
 const {
   root,
@@ -16,16 +14,11 @@ const {
 </script>
 
 <template>
-  <section ref="root" class="cl">
+  <section ref="root" class="cl" id="customer-stories">
     <div class="cl-wrap">
 
-      <header
-        class="cl-head"
-        data-r
-      >
-        <h2>
-          People Love Cartinno!
-        </h2>
+      <header class="cl-head" data-r>
+        <h2>People Love Cartinno!</h2>
 
         <p>
           Store, POS, food ordering and marketplaces on one platform.
@@ -33,12 +26,10 @@ const {
         </p>
       </header>
 
-      <div
-        ref="grid"
-        class="cl-grid"
-      >
+      <div ref="grid" class="cl-grid">
 
-        <!-- 01 -->
+        <!-- TESTIMONIAL 1 -->
+
         <article
           class="cl-card cl-quote cl-span2"
           data-r
@@ -47,13 +38,12 @@ const {
           <span class="cl-mark">“</span>
 
           <p class="cl-qtext">
-            Moving our shop and website onto one platform changed everything.
-            Stock, orders and reports finally match, and we handle far more
-            orders with the same team.
+            Moving our shop and website onto one platform changed
+            everything. Stock, orders and reports finally match,
+            and we handle far more orders with the same team.
           </p>
 
           <div class="cl-foot">
-
             <div class="cl-person">
               <span class="cl-avatar">
                 <img
@@ -64,18 +54,12 @@ const {
               </span>
 
               <div>
-                <b>
-                  {{ customers[0].name }}
-                </b>
-
-                <small>
-                  {{ customers[0].role }}
-                </small>
+                <b>{{ customers[0].name }}</b>
+                <small>{{ customers[0].role }}</small>
               </div>
             </div>
 
             <div class="cl-rating">
-
               <div class="cl-stars">
                 <svg
                   v-for="n in 5"
@@ -92,37 +76,42 @@ const {
                 </svg>
               </div>
 
-              <span>
-                5.0
-                <em>Ratings</em>
-              </span>
-
+              <span>5.0 <em>Ratings</em></span>
             </div>
-
           </div>
         </article>
 
-        <!-- 02 -->
+        <!-- 1000+ BRANDS -->
+
         <article
-          class="cl-card cl-metric"
+          class="cl-card cl-metric cl-metric--brands"
           data-r
           style="--d:.08s"
         >
           <div
-            class="cl-glow cl-glow--warm"
+            class="cl-metric-bg"
+            :style="{
+              backgroundImage: `url('${metrics[0].image}')`
+            }"
             aria-hidden="true"
           ></div>
 
-          <strong class="cl-num">
-            {{ fmt(metrics[0]) }}
-          </strong>
+          <div
+            class="cl-metric-overlay"
+            aria-hidden="true"
+          ></div>
 
-          <p>
-            {{ metrics[0].label }}
-          </p>
+          <div class="cl-metric-content">
+            <strong class="cl-num">
+              {{ fmt(metrics[0]) }}
+            </strong>
+
+            <p>{{ metrics[0].label }}</p>
+          </div>
         </article>
 
-        <!-- 03 -->
+        <!-- TESTIMONIAL 2 -->
+
         <article
           class="cl-card cl-quote"
           data-r
@@ -131,12 +120,11 @@ const {
           <span class="cl-mark">“</span>
 
           <p class="cl-qtext">
-            The dashboard shows me where sales come from, so I know which
-            channel is working every single day.
+            The dashboard shows me where sales come from,
+            so I know which channel is working every single day.
           </p>
 
           <div class="cl-foot">
-
             <div class="cl-person">
               <span class="cl-avatar">
                 <img
@@ -147,40 +135,44 @@ const {
               </span>
 
               <div>
-                <b>
-                  {{ customers[1].name }}
-                </b>
-
-                <small>
-                  {{ customers[1].role }}
-                </small>
+                <b>{{ customers[1].name }}</b>
+                <small>{{ customers[1].role }}</small>
               </div>
             </div>
-
           </div>
         </article>
 
-        <!-- 04 -->
+        <!-- 365-DAY SUPPORT -->
+
         <article
-          class="cl-card cl-metric"
+          class="cl-card cl-metric cl-metric--support"
           data-r
           style="--d:0s"
         >
           <div
-            class="cl-glow cl-glow--lilac"
+            class="cl-metric-bg"
+            :style="{
+              backgroundImage: `url('${metrics[1].image}')`
+            }"
             aria-hidden="true"
           ></div>
 
-          <strong class="cl-num">
-            {{ fmt(metrics[1]) }}
-          </strong>
+          <div
+            class="cl-metric-overlay"
+            aria-hidden="true"
+          ></div>
 
-          <p>
-            {{ metrics[1].label }}
-          </p>
+          <div class="cl-metric-content">
+            <strong class="cl-num">
+              {{ fmt(metrics[1]) }}
+            </strong>
+
+            <p>{{ metrics[1].label }}</p>
+          </div>
         </article>
 
-        <!-- 05 -->
+        <!-- TESTIMONIAL 3 -->
+
         <article
           class="cl-card cl-quote cl-quote--tall"
           data-r
@@ -189,13 +181,12 @@ const {
           <span class="cl-mark">“</span>
 
           <p class="cl-qtext">
-            Launching our marketplace felt easy. Sellers, catalogues and
-            payouts were set up in days, and support answers whenever we
-            need them.
+            Launching our marketplace felt easy. Sellers,
+            catalogues and payouts were set up in days,
+            and support answers whenever we need them.
           </p>
 
           <div class="cl-foot">
-
             <div class="cl-person">
               <span class="cl-avatar">
                 <img
@@ -206,43 +197,45 @@ const {
               </span>
 
               <div>
-                <b>
-                  {{ customers[2].name }}
-                </b>
-
-                <small>
-                  {{ customers[2].role }}
-                </small>
+                <b>{{ customers[2].name }}</b>
+                <small>{{ customers[2].role }}</small>
               </div>
             </div>
-
           </div>
         </article>
 
-        <!-- 06 -->
+        <!-- TRUSTED BRANDS PHOTO CARD -->
+
         <article
-          class="cl-card cl-photo cl-span2"
+          class="cl-card cl-photo cl-span2 cl-photo--trusted"
           data-r
           style="--d:.16s"
         >
           <div class="cl-photo__img">
-            <img :src="`${base}food-delivery.jpg`" alt="food delivery" />
+            <img
+              :src="customerImage.image"
+              :alt="customerImage.alt"
+              loading="lazy"
+            />
           </div>
 
-          <div class="cl-photo__copy">
+          <div
+            class="cl-photo__overlay"
+            aria-hidden="true"
+          ></div>
 
+          <div class="cl-photo__copy">
             <div>
               <h3>
-                Trusted by 1,000+ brands across retail, food and marketplaces
+                Trusted by 1,000+ brands across retail,
+                food and marketplaces
               </h3>
 
               <p>
-                Cartinno keeps your store, POS and delivery in sync,
-                so every order lands in the right place.
+                Cartinno keeps your store, POS and delivery
+                in sync, so every order lands in the right place.
               </p>
             </div>
-
-
           </div>
         </article>
 

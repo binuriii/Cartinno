@@ -6,7 +6,7 @@ export const services = [
       'Create a powerful online store combined with a smart POS system to manage products, orders, payments, inventory, and sales from one platform.',
     href: '#marketplace',
     image:
-      'https://plus.unsplash.com/premium_photo-1661963192586-b9d38b218658?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/ef/6a/b3/7f/03/v1_E10/E10A2C6X.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=74378405bd948908ed7592275d67b00cd90d7ac11050e4f27b6887b5a0db2bdb',
 
     c1: '#D7454E',
     c2: '#f7a9a0'
