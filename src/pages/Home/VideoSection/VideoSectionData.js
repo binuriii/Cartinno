@@ -16,7 +16,7 @@ export const main = {
     'See how Cartinno connects e-commerce, orders, inventory and sales in one platform designed to help businesses sell more efficiently.',
 
   video:
-    'https://www.youtube.com/embed/d0Ftwf0NXJc?si=fGoimYIeCcVjlwAR',
+    'cartinno-video.mp4',
 
   poster:
     'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/c0/01/55/93/72/v1_E10/E10HKL1J.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=12e7d5547084c866fa583cd2318ef1334792398698b7279b6d59bb1ba25ca629',

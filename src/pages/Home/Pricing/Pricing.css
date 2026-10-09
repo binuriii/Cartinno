@@ -18,14 +18,14 @@
 }
 
 .pr-container {
-  max-width: 1450px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
 /* MAIN HEADING */
 
 .pr-heading {
-  text-align: center;
+  text-align: left;
   margin-bottom: 65px;
 }
 
@@ -190,7 +190,7 @@
 
 .pr-us-head,
 .pr-us {
-  background-color: #080000;
+  background-color: #262525;
 
   background-size:
     100% 100%,

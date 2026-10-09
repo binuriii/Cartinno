@@ -1,5 +1,11 @@
+
 <script setup>
-import { ref, computed } from 'vue'
+import {
+  ref,
+  onMounted,
+  onBeforeUnmount
+} from 'vue'
+
 import './HowItWorks.css'
 
 import {
@@ -9,117 +15,164 @@ import {
   steps
 } from './HowItWorksData.js'
 
-const active = ref(0)
+const section = ref(null)
+const visible = ref(false)
+const activeStep = ref(0)
+const reducedMotion = ref(false)
 
-const activeStep = computed(() => {
-  return steps[active.value]
+const ANIMATION_DURATION = 3000
+
+let animationTimer = null
+let observer = null
+let motionQuery = null
+
+const stopAnimation = () => {
+  if (animationTimer !== null) {
+    clearInterval(animationTimer)
+    animationTimer = null
+  }
+}
+
+const startAnimation = () => {
+  stopAnimation()
+
+  if (
+    !visible.value ||
+    reducedMotion.value ||
+    document.hidden ||
+    steps.length < 2
+  ) {
+    return
+  }
+
+  animationTimer = setInterval(() => {
+    activeStep.value =
+      (activeStep.value + 1) % steps.length
+  }, ANIMATION_DURATION)
+}
+
+const handleVisibility = () => {
+  startAnimation()
+}
+
+const handleMotionChange = (event) => {
+  reducedMotion.value = event.matches
+  startAnimation()
+}
+
+onMounted(() => {
+  motionQuery = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  )
+
+  reducedMotion.value = motionQuery.matches
+
+  motionQuery.addEventListener?.(
+    'change',
+    handleMotionChange
+  )
+
+  document.addEventListener(
+    'visibilitychange',
+    handleVisibility
+  )
+
+  if (
+    section.value &&
+    'IntersectionObserver' in window
+  ) {
+    observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          visible.value = true
+          observer.disconnect()
+          startAnimation()
+        }
+      },
+      {
+        threshold: 0.12
+      }
+    )
+
+    observer.observe(section.value)
+  } else {
+    visible.value = true
+    startAnimation()
+  }
+
+  if (reducedMotion.value) {
+    visible.value = true
+  }
+})
+
+onBeforeUnmount(() => {
+  stopAnimation()
+  observer?.disconnect()
+
+  motionQuery?.removeEventListener?.(
+    'change',
+    handleMotionChange
+  )
+
+  document.removeEventListener(
+    'visibilitychange',
+    handleVisibility
+  )
 })
 </script>
 
 <template>
   <section
-    class="hiw"
+    ref="section"
     id="how-it-works"
+    class="hiw"
+    :class="{ 'is-visible': visible }"
   >
-    <div class="hiw-grid">
+    <div class="hiw-container">
 
-      <!-- LEFT -->
-      <div class="hiw-left">
-
-        <ul class="hiw-tags">
-          <li
-            v-for="(s, i) in steps"
-            :key="s.tag"
-          >
-            <button
-              type="button"
-              class="hiw-tag-btn"
-              :class="{ on: i === active }"
-              :aria-pressed="i === active"
-              @click="active = i"
-            >
-              {{ s.tag }}
-            </button>
-          </li>
-        </ul>
-
-        <p class="hiw-label">
-          {{ label }}
-        </p>
-
+      <div class="hiw-header">
         <h2 class="hiw-title">
-          {{ headline }}
+          {{ headline.first }}
+          <span>{{ headline.second }}</span>
         </h2>
 
         <p class="hiw-intro">
           {{ intro }}
         </p>
-
       </div>
 
-      <!-- MIDDLE -->
-      <div class="hiw-phone">
-
-        <div class="hiw-phone-frame">
-
-          <Transition
-            name="hiw-swap"
-            mode="out-in"
-          >
-            <div
-              class="hiw-card"
-              :key="active"
-            >
-
-              <div class="hiw-card-head">
-                <h3>
-                  {{ activeStep.title }}
-                </h3>
-              </div>
-
-              <p>
-                {{ activeStep.text }}
-              </p>
-
-              <div class="hiw-card-media">
-
-                <img
-                  v-if="activeStep.image"
-                  :src="activeStep.image"
-                  :alt="activeStep.title"
-                />
-
-                <i
-                  v-else
-                  class="fa-solid fa-shop"
-                  aria-hidden="true"
-                ></i>
-
-              </div>
-
-            </div>
-          </Transition>
-
-        </div>
-
-      </div>
-
-      <!-- RIGHT -->
-      <div class="hiw-right">
-
-        <Transition
-          name="hiw-swap"
-          mode="out-in"
+      <div
+        class="hiw-timeline"
+        aria-label="Cartinno four-step process"
+      >
+        <article
+          v-for="(step, index) in steps"
+          :key="step.tag"
+          class="hiw-step"
+          :class="{
+            'is-active': activeStep === index
+          }"
+          :style="{
+            '--step-index': index
+          }"
         >
-          <p :key="active">
-            <strong>
-              {{ activeStep.title }}
-            </strong>
+          <div class="hiw-step-content">
+            <div class="hiw-step-heading">
+              <h3>{{ step.title }}</h3>
 
-            — {{ activeStep.text }}
-          </p>
-        </Transition>
+              <span class="hiw-step-badge">
+                Step {{ index + 1 }}
+              </span>
+            </div>
 
+            <p>{{ step.text }}</p>
+          </div>
+
+          <span
+            class="hiw-step-line"
+            aria-hidden="true"
+          ></span>
+        </article>
       </div>
 
     </div>
