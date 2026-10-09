@@ -52,7 +52,7 @@ export function useCustomerStories() {
         'care and support, every day of the year',
 
       image:
-        'https://plus.unsplash.com/premium_photo-1667223723210-7f906c1e41b2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D'
+        'https://images.unsplash.com/photo-1714266974683-887ad3b94255?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI4N3x8fGVufDB8fHx8fA%3D%3D'
     }
   ]
 
