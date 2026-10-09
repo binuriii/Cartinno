@@ -1,3 +1,4 @@
+```vue
 <script setup>
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
@@ -7,6 +8,8 @@ import {
   links,
   logoImage
 } from '../AppHeader/HeaderData.js'
+
+import SilkBackground from './SilkBackground.vue'
 import './AppFooter.css'
 
 const base = import.meta.env.BASE_URL
@@ -45,6 +48,20 @@ const resolveHref = (href) => {
       class="footer-banner"
       aria-labelledby="footer-banner-title"
     >
+      <!-- Animated red silk background -->
+      <SilkBackground
+        class="footer-silk"
+        color="#D7454E"
+        :speed="0.65"
+        :scale="1.2"
+        :noise-intensity="0.8"
+        :rotation="0.12"
+        :light-mode="true"
+      />
+
+      <!-- Soft red overlays -->
+      <div class="footer-banner-overlay" aria-hidden="true"></div>
+
       <svg
         class="footer-banner-lines"
         viewBox="0 0 1600 520"
@@ -136,10 +153,7 @@ const resolveHref = (href) => {
                 >
                   <span>{{ item.label }}</span>
 
-                  <span
-                    v-if="item.badge"
-                    class="footer-badge"
-                  >
+                  <span v-if="item.badge" class="footer-badge">
                     {{ item.badge }}
                   </span>
                 </a>
@@ -156,10 +170,7 @@ const resolveHref = (href) => {
             <h3>Products</h3>
 
             <ul>
-              <li
-                v-for="product in products"
-                :key="product.id"
-              >
+              <li v-for="product in products" :key="product.id">
                 <a
                   :href="resolveHref(product.href)"
                   class="footer-text-link"
@@ -174,10 +185,7 @@ const resolveHref = (href) => {
             <h3>Corporate Solutions</h3>
 
             <ul>
-              <li
-                v-for="solution in corporateSolutions"
-                :key="solution.id"
-              >
+              <li v-for="solution in corporateSolutions" :key="solution.id">
                 <a
                   :href="resolveHref(solution.href)"
                   class="footer-text-link"
@@ -192,10 +200,7 @@ const resolveHref = (href) => {
             <h3>Company</h3>
 
             <ul>
-              <li
-                v-for="link in companyLinks"
-                :key="link.label"
-              >
+              <li v-for="link in companyLinks" :key="link.label">
                 <a
                   :href="resolveHref(link.href)"
                   class="footer-text-link"
@@ -210,10 +215,7 @@ const resolveHref = (href) => {
             <h3>Let’s talk</h3>
 
             <ul>
-              <li
-                v-for="link in contactLinks"
-                :key="link.label"
-              >
+              <li v-for="link in contactLinks" :key="link.label">
                 <a
                   :href="resolveHref(link.href)"
                   class="footer-text-link"
@@ -234,26 +236,23 @@ const resolveHref = (href) => {
             <p>© {{ year }} Cartinno. All rights reserved.</p>
 
             <p class="footer-credit">
-  <span>Designed and developed by</span>
+              <span>Designed and developed by</span>
 
-  <RouterLink
-    to="/"
-    class="footer-credit-logo"
-    aria-label="Cartinno home"
-  >
-    <img
-      :src="`${base}${logoImage}`"
-      alt="Cartinno"
-      loading="lazy"
-    />
-  </RouterLink>
-</p>
+              <RouterLink
+                to="/"
+                class="footer-credit-logo"
+                aria-label="Cartinno home"
+              >
+                <img
+                  :src="`${base}${logoImage}`"
+                  alt="Cartinno"
+                  loading="lazy"
+                />
+              </RouterLink>
+            </p>
           </div>
 
-          <nav
-            class="footer-legal"
-            aria-label="Legal information"
-          >
+          <nav class="footer-legal" aria-label="Legal information">
             <a
               v-for="link in legalLinks"
               :key="link.label"
@@ -267,3 +266,4 @@ const resolveHref = (href) => {
     </div>
   </footer>
 </template>
+```

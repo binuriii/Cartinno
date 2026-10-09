@@ -5,14 +5,20 @@ import {
   onMounted,
   ref
 } from 'vue'
+import { RouterLink } from 'vue-router'
 import HeaderIcon from './HeaderIcon.vue'
 import './AppHeader.css'
 import { products, corporateSolutions, links, logoImage } from './HeaderData.js'
 const base = import.meta.env.BASE_URL
+const resolveHref = (href) => {
+  if (href === '/') return base
+  if (href.startsWith('#')) return `${base}${href}`
+  return href
+}
 const headerRef = ref(null)
 const mobileOpen = ref(false)
 const openMenu = ref(null)
-const activeProduct = ref('food')
+const activeProduct = ref(products[0].id)
 const activeCorporate = ref(corporateSolutions[0].id)
 const activeCorporateData = computed(() => corporateSolutions.find(item => item.id === activeCorporate.value) || corporateSolutions[0])
 let closeTimer
@@ -109,7 +115,7 @@ const activeProductData = computed(() => {
           <!-- NORMAL LINKS -->
           <a
             v-if="!link.menu"
-            :href="link.label === 'Home' ? base : link.href"
+            :href="resolveHref(link.href)"
             class="nav-link"
             @click="closeMenu"
           >
@@ -132,7 +138,6 @@ const activeProductData = computed(() => {
               aria-hidden="true"
             ></span>
           </button>
-
           <!-- =================================================
                PRODUCTS MEGA MENU
                [ product list ] | [ groups ] | [ image card ]
@@ -145,7 +150,10 @@ const activeProductData = computed(() => {
             @pointerenter="cancelClose"
             @click.stop
           >
-            <div class="products-mega-inner">
+            <div
+              class="products-mega-inner"
+              :class="{ 'is-food': activeProduct === 'food' }"
+            >
               <!-- COLUMN 1 : PRODUCT LIST -->
               <div class="product-tabs">
                 <button
@@ -180,22 +188,20 @@ const activeProductData = computed(() => {
                       <a
                         v-for="item in group.items"
                         :key="item.label"
-                        :href="item.href"
+                        :href="resolveHref(item.href)"
                         class="group-link"
                         @click="closeMenu"
                       >
                         <span class="group-icon">
                           <HeaderIcon :name="item.icon" />
                         </span>
-                        <span class="group-link-name">
-                          {{ item.label }}
-                        </span>
-                        <span
-                          v-if="item.badge"
-                          class="item-badge"
-                          :class="`badge-${item.badge.toLowerCase()}`"
-                        >
-                          {{ item.badge }}
+                        <span class="group-link-copy">
+                          <span class="group-link-name">{{ item.label }}</span>
+                          <span
+                            v-if="item.badge"
+                            class="item-badge"
+                            :class="`badge-${item.badge.toLowerCase()}`"
+                          >{{ item.badge }}</span>
                         </span>
                       </a>
                     </div>
@@ -205,7 +211,7 @@ const activeProductData = computed(() => {
               <!-- COLUMN 3 : IMAGE CARD -->
               <aside class="mega-side" :key="`feature-${activeProductData.id}`">
                 <a
-                  :href="activeProductData.href"
+                  :href="resolveHref(activeProductData.href)"
                   class="mega-feature"
                   :aria-label="`Explore ${activeProductData.title}`"
                   @click="closeMenu"
@@ -234,7 +240,6 @@ const activeProductData = computed(() => {
             </div>
           </div>
           </Transition>
-
           <!-- =================================================
                CORPORATE SOLUTIONS
                [ list ] | [ design card ] [ photo card ]
@@ -264,9 +269,7 @@ const activeProductData = computed(() => {
                   <span>{{ item.title }}</span>
                 </button>
               </div>
-
               <div id="corporate-preview" class="corporate-feature-grid">
-
                 <!-- CARD 1 : colour design card -->
                 <a
                   :href="activeCorporateData.href"
@@ -291,7 +294,6 @@ const activeProductData = computed(() => {
                     </span>
                   </div>
                 </a>
-
                 <!-- CARD 2 : photo card -->
                 <a
                   :href="activeCorporateData.href"
@@ -309,7 +311,6 @@ const activeProductData = computed(() => {
                     class="corporate-feature-title"
                   >{{ activeCorporateData.photoTitle }}</span>
                 </a>
-
               </div>
             </div>
           </Transition>
@@ -323,10 +324,10 @@ const activeProductData = computed(() => {
       </button>
       <!-- ACTION BUTTONS -->
       <div class="site-actions">
-        <a href="#demo" class="site-demo" @click="closeMenu">
+        <a :href="resolveHref('#demo')" class="site-demo" @click="closeMenu">
           Get a Demo
         </a>
-        <a href="#contact" class="site-cta" @click="closeMenu">
+        <a :href="resolveHref('#contact')" class="site-cta" @click="closeMenu">
           Get Started
         </a>
       </div>
