@@ -62,36 +62,6 @@ const resolveHref = (href) => {
       <!-- Soft red overlays -->
       <div class="footer-banner-overlay" aria-hidden="true"></div>
 
-      <svg
-        class="footer-banner-lines"
-        viewBox="0 0 1600 520"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-        focusable="false"
-      >
-        <path
-          v-for="n in 12"
-          :key="`left-${n}`"
-          :d="`
-            M ${-160 + n * 65} -80
-            C ${-80 + n * 65} 120,
-              ${180 + n * 42} 240,
-              ${-120 + n * 62} 620
-          `"
-        />
-
-        <path
-          v-for="n in 12"
-          :key="`right-${n}`"
-          :d="`
-            M ${1760 - n * 65} -80
-            C ${1680 - n * 65} 120,
-              ${1420 - n * 42} 240,
-              ${1720 - n * 62} 620
-          `"
-        />
-      </svg>
-
       <div class="footer-banner-content">
         <h2 id="footer-banner-title">
           A smarter way to grow your business online.
