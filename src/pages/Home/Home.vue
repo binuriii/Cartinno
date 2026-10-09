@@ -8,6 +8,7 @@ import HowItWorks from './HowItWorks/HowItWorks.vue';
 import Pricing from './Pricing/Pricing.vue'
 import CustomerStories from './CustomerStories/CustomerStories.vue';
 import VideoSection from './VideoSection/VideoSection.vue';
+import Industries from './Industries/Industries.vue';
 
 </script>
 
@@ -20,6 +21,7 @@ import VideoSection from './VideoSection/VideoSection.vue';
     <VideoSection />
     <GrowthSection/>
     <Pricing/>
+    <Industries
     <CustomerStories/>
   </main>
 </template>
