@@ -7,8 +7,8 @@ import GrowthSection from './GrowthSection/GrowthSection.vue';
 import HowItWorks from './HowItWorks/HowItWorks.vue';
 import Pricing from './Pricing/Pricing.vue'
 import CustomerStories from './CustomerStories/CustomerStories.vue';
-
-import Industries from './Industries/Industries.vue'; 
+import VideoSection from './VideoSection/VideoSection.vue';
+import Industries from './Industries/Industries.vue';
 
 </script>
 
@@ -18,10 +18,10 @@ import Industries from './Industries/Industries.vue';
     <TrustedBrands />
     <WhatWeDo/>
     <HowItWorks/>
- 
+    <VideoSection />
     <GrowthSection/>
     <Pricing/>
-    <Industries/>
+    <Industries
     <CustomerStories/>
   </main>
 </template>
