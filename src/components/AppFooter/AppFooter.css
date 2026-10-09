@@ -1,3 +1,4 @@
+
 .site-footer,
 .site-footer *,
 .site-footer *::before,
@@ -7,18 +8,15 @@
 
 .site-footer {
   --footer-brand: #d7454e;
-  --footer-brand-dark: #b8323c;
+  --footer-brand-dark: #a62f3c;
   --footer-ink: #202229;
   --footer-muted: #73757d;
   --footer-line: #e9e9ec;
   --footer-side-padding: clamp(24px, 7vw, 140px);
 
   width: 100%;
-  max-width: none;
   margin: 0;
   padding: 0;
-  border: 0;
-  border-radius: 0;
   background: var(--footer-brand);
   color: var(--footer-ink);
   font-family: inherit;
@@ -35,8 +33,7 @@
   list-style: none;
 }
 
-/* Red banner */
-
+/* Red silk CTA banner */
 .site-footer .footer-banner {
   position: relative;
   isolation: isolate;
@@ -46,22 +43,33 @@
   min-height: 390px;
   overflow: hidden;
   padding: 90px var(--footer-side-padding) 140px;
+  background: linear-gradient(115deg, #a62f3c, #d7454e 52%, #ed727a);
+}
+
+/* Vue silk component */
+.site-footer .footer-silk {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+}
+
+/* Red overlay keeps the background on-brand */
+.site-footer .footer-banner-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
   background:
     radial-gradient(
-      ellipse at 88% 85%,
-      rgba(255, 171, 173, 0.62),
-      transparent 58%
-    ),
-    radial-gradient(
-      ellipse at 5% 0%,
-      rgba(34, 18, 24, 0.55),
-      transparent 60%
+      ellipse at 85% 75%,
+      rgba(255, 171, 173, 0.2),
+      transparent 55%
     ),
     linear-gradient(
-      115deg,
-      #a62f3c 0%,
-      #d7454e 48%,
-      #ed727a 100%
+      110deg,
+      rgba(92, 13, 28, 0.28),
+      rgba(215, 69, 78, 0.08) 55%,
+      rgba(255, 130, 137, 0.14)
     );
 }
 
@@ -73,12 +81,14 @@
   width: 100%;
   height: 100%;
   fill: none;
-  stroke: rgba(255, 255, 255, 0.17);
+  stroke: rgba(255, 255, 255, 0.13);
   stroke-width: 1;
   pointer-events: none;
 }
 
 .site-footer .footer-banner-content {
+  position: relative;
+  z-index: 1;
   width: 100%;
   text-align: center;
 }
@@ -86,7 +96,7 @@
 .site-footer .footer-banner h2 {
   max-width: 1100px;
   margin: 0 auto 30px;
-  color: #ffffff;
+  color: #fff;
   font-size: clamp(30px, 3.7vw, 56px);
   font-weight: 500;
   line-height: 1.17;
@@ -94,8 +104,7 @@
   text-wrap: balance;
 }
 
-/* Both buttons inside the banner */
-
+/* CTA buttons */
 .site-footer .footer-banner-actions {
   display: flex;
   align-items: center;
@@ -120,9 +129,10 @@
   text-align: center;
   white-space: nowrap;
   transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .site-footer .footer-button:hover {
@@ -130,22 +140,21 @@
 }
 
 .site-footer .footer-button-white {
-  background: #ffffff;
-  color: var(--footer-ink);
+  background: #fff;
+  color: #202229;
 }
 
 .site-footer .footer-button-white:hover {
   background: #fff0f1;
+  color: #202229;
 }
 
 .site-footer .footer-button-dark {
   background: rgba(255, 255, 255, 0.14);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
-
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.25),
     0 4px 16px rgba(100, 20, 30, 0.08);
@@ -154,18 +163,17 @@
 .site-footer .footer-button-dark:hover {
   background: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.7);
-  color: #ffffff;
+  color: #fff;
 }
 
-/* Rounded white footer */
-
+/* Rounded white footer panel */
 .site-footer .footer-panel {
   position: relative;
   z-index: 1;
   width: 100%;
   margin-top: -64px;
   border-radius: 64px 64px 0 0;
-  background: #ffffff;
+  background: #fff;
 }
 
 .site-footer .footer-inner {
@@ -175,8 +183,7 @@
   padding: 72px var(--footer-side-padding) 28px;
 }
 
-/* Logo only */
-
+/* Logo */
 .site-footer .footer-heading-row {
   display: flex;
   align-items: center;
@@ -198,8 +205,7 @@
   object-fit: contain;
 }
 
-/* Navigation */
-
+/* Navigation grids */
 .site-footer .footer-feature-grid,
 .site-footer .footer-secondary-grid {
   display: grid;
@@ -240,7 +246,7 @@
   max-width: 100%;
   padding: 5px 0;
   color: var(--footer-ink);
-  font-size: clamp(14px, 1.15vw, 18px);
+  font-size: clamp(14px, 1.15vw, 15px);
   font-weight: 500;
   line-height: 1.55;
   letter-spacing: -0.2px;
@@ -276,8 +282,7 @@
   line-height: 1.8;
 }
 
-/* Bottom row */
-
+/* Copyright and legal links */
 .site-footer .footer-bottom {
   display: flex;
   align-items: center;
@@ -301,13 +306,23 @@
   line-height: 1.7;
 }
 
-.site-footer .footer-credit a {
-  color: var(--footer-ink);
-  font-weight: 500;
+.site-footer .footer-credit {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.site-footer .footer-credit a:hover {
-  color: var(--footer-brand);
+.site-footer .footer-credit-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-footer .footer-credit-logo img {
+  display: block;
+  width: auto;
+  height: 20px;
+  object-fit: contain;
 }
 
 .site-footer .footer-legal {
@@ -331,36 +346,16 @@
 }
 
 /* Keyboard focus */
-
 .site-footer a:focus-visible {
   outline: 2px solid var(--footer-brand);
   outline-offset: 5px;
 }
 
 .site-footer .footer-banner a:focus-visible {
-  outline-color: #ffffff;
-}
-.site-footer .footer-credit {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.site-footer .footer-credit-logo {
-  display: inline-flex;
-  align-items: center;
-}
-
-.site-footer .footer-credit-logo img {
-  display: block;
-  width: auto;
-  height: 20px;
-  object-fit: contain;
+  outline-color: #fff;
 }
 
 /* Laptop */
-
 @media (max-width: 1180px) {
   .site-footer {
     --footer-side-padding: 40px;
@@ -377,7 +372,6 @@
 }
 
 /* Tablet */
-
 @media (max-width: 950px) {
   .site-footer {
     --footer-side-padding: 32px;
@@ -424,7 +418,6 @@
 }
 
 /* Mobile */
-
 @media (max-width: 600px) {
   .site-footer {
     --footer-side-padding: 24px;
@@ -512,7 +505,6 @@
 }
 
 /* Small phones */
-
 @media (max-width: 380px) {
   .site-footer {
     --footer-side-padding: 20px;
@@ -533,12 +525,12 @@
   }
 }
 
+/* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
   .site-footer *,
   .site-footer *::before,
   .site-footer *::after {
     transition: none !important;
-    animation: none !important;
   }
 
   .site-footer .footer-button:hover {
