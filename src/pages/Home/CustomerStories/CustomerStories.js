@@ -52,13 +52,13 @@ export function useCustomerStories() {
         'care and support, every day of the year',
 
       image:
-        'https://plus.unsplash.com/premium_photo-1667223723210-7f906c1e41b2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D'
+        'https://images.unsplash.com/photo-1742737801357-dcd6449fa317?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI5fHx8ZW58MHx8fHx8'
     }
   ]
 
   const customerImage = {
     image:
-      'https://images.unsplash.com/photo-1789758489753-ad8055d141d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1626387753307-5a329fa44578?q=80&w=3131&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     alt: 'Business using digital payment technology'
   }
 
