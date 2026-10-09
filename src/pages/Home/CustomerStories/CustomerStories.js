@@ -1,3 +1,4 @@
+
 import {
   onMounted,
   onUnmounted,
@@ -36,37 +37,43 @@ export function useCustomerStories() {
 
   const metrics = [
     {
-      value: 1000,
-      suffix: '+',
+      value: 10,
+      suffix: '%',
       label:
-        'brands powered across retail, food and marketplaces'
+        'brands powered across retail, food and marketplaces',
+
+      image:
+        'https://images.unsplash.com/photo-1598880940017-f22eabf81a59?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzN3x8fGVufDB8fHx8fA%3D%3D'
     },
     {
       value: 365,
       suffix: '-day',
       label:
-        'care and support, every day of the year'
+        'care and support, every day of the year',
+
+      image:
+        'https://plus.unsplash.com/premium_photo-1667223723210-7f906c1e41b2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D'
     }
   ]
 
   const customerImage = {
-    image: '/food-delivery.jpg',
-    alt: 'Customer service at a checkout'
+    image:
+      'https://images.unsplash.com/photo-1789758489753-ad8055d141d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Business using digital payment technology'
   }
 
   function fmt(metric) {
     return (
-      Math
-        .round(
-          metric.value * progress.value
-        )
-        .toLocaleString('en-US')
-      +
+      Math.round(
+        metric.value * progress.value
+      ).toLocaleString('en-US') +
       metric.suffix
     )
   }
 
   function runCounter() {
+    cancelAnimationFrame(frame)
+
     const start = performance.now()
     const duration = 1600
 
@@ -80,20 +87,19 @@ export function useCustomerStories() {
         1 - Math.pow(1 - t, 3)
 
       if (t < 1) {
-        frame =
-          requestAnimationFrame(tick)
+        frame = requestAnimationFrame(tick)
+      } else {
+        progress.value = 1
       }
     }
 
-    frame =
-      requestAnimationFrame(tick)
+    frame = requestAnimationFrame(tick)
   }
 
   onMounted(() => {
-    const elements =
-      root.value
-        ? root.value.querySelectorAll('[data-r]')
-        : []
+    const elements = root.value
+      ? root.value.querySelectorAll('[data-r]')
+      : []
 
     const reducedMotion =
       window.matchMedia &&
@@ -110,48 +116,39 @@ export function useCustomerStories() {
       })
 
       progress.value = 1
-
       return
     }
 
-    io =
-      new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('in')
-
-              io.unobserve(
-                entry.target
-              )
-            }
-          })
-        },
-        {
-          threshold: 0.15,
-          rootMargin:
-            '0px 0px -6% 0px'
-        }
-      )
+    io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in')
+            io?.unobserve(entry.target)
+          }
+        })
+      },
+      {
+        threshold: 0.15,
+        rootMargin: '0px 0px -6% 0px'
+      }
+    )
 
     elements.forEach((element) => {
       io.observe(element)
     })
 
-    counter =
-      new IntersectionObserver(
-        (entries) => {
-          if (
-            entries[0]?.isIntersecting
-          ) {
-            runCounter()
-            counter.disconnect()
-          }
-        },
-        {
-          threshold: 0.25
+    counter = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          runCounter()
+          counter?.disconnect()
         }
-      )
+      },
+      {
+        threshold: 0.25
+      }
+    )
 
     if (grid.value) {
       counter.observe(grid.value)
@@ -159,14 +156,8 @@ export function useCustomerStories() {
   })
 
   onUnmounted(() => {
-    if (io) {
-      io.disconnect()
-    }
-
-    if (counter) {
-      counter.disconnect()
-    }
-
+    io?.disconnect()
+    counter?.disconnect()
     cancelAnimationFrame(frame)
   })
 

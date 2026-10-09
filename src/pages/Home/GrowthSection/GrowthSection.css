@@ -28,7 +28,7 @@
 .growth-intro,
 .growth-stack {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1350px;
 
   margin-inline: auto;
 }
@@ -190,11 +190,11 @@
 }
 
 .growth-panel--0 {
-  background: #fce8de;
+  background: #fcf7de;
 }
 
 .growth-panel--1 {
-  background: #e0e2e2;
+  background: #e0f8f8;
 
   grid-template-columns:
     minmax(0, 1.15fr)
@@ -202,7 +202,7 @@
 }
 
 .growth-panel--2 {
-  background: #dccdc2;
+  background: #dcf8da;
 }
 
 .growth-panel--1 .gp-copy {
