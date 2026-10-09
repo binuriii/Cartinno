@@ -67,7 +67,7 @@ const statusLabel = (status) =>
 
               <p>
                 Compare the essentials and discover
-                how Cartinno helps your business
+                how Cartinno helps your <br> business
                 save more, work smarter and grow.
               </p>
 
