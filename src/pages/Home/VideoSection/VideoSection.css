@@ -675,9 +675,9 @@
 
 @media (max-width: 760px) {
 
-  .vs {
-    padding: 5vh 4%;
-  }
+  section#case-studies.vs {
+  padding: 5vh 4% 10vh;
+}
 
   .vs-title {
     font-size: clamp(24px, 6.5vw, 34px);
@@ -860,4 +860,9 @@
   .vs-link {
     transition: none;
   }
+}
+
+/* VideoSection.css – replace the .vs padding line */
+section#case-studies.vs {
+  padding: 5vh 3vw 10vh;
 }
