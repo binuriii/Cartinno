@@ -21,7 +21,7 @@ import Industries from './Industries/Industries.vue';
     <VideoSection />
     <GrowthSection/>
     <Pricing/>
-    <Industries
-    <CustomerStories/>
+    <Industries/>
+    <CustomerStories/>  
   </main>
 </template>

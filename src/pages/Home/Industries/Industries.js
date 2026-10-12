@@ -2,7 +2,7 @@
 export const showcase = {
   eyebrow: 'Built Around Your Business',
 
-  title: 'Connected solutions. More ways to grow.',
+  title: 'One Platform. Endless Ways to Grow.',
 
   ctaText: 'Let’s Talk About Your Business',
 
