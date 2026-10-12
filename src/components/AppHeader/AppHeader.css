@@ -152,6 +152,85 @@
 .nav-link:focus-visible, .product-tab:focus-visible, .group-link:focus-visible, .mega-feature:focus-visible,
 .site-demo:focus-visible, .site-cta:focus-visible { outline: 3px solid rgba(215, 69, 78, 0.28); outline-offset: 3px; }
 /* SMALL LAPTOP */
+
+/* =====================================================
+   PREMIUM GLASS HEADER
+===================================================== */
+.site-header .site-bar {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.82) 0%,
+    rgba(255, 255, 255, 0.62) 100%
+  );
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 1) inset,          /* bright top edge */
+    0 -1px 0 rgba(20, 18, 30, 0.04) inset,          /* soft bottom edge */
+    0 2px 6px rgba(20, 18, 30, 0.05),
+    0 14px 40px rgba(20, 18, 30, 0.12),             /* main lift */
+    0 30px 70px rgba(215, 69, 78, 0.10);            /* faint brand-red glow */
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Thin gradient outline for a premium edge */
+.site-header .site-bar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(215, 69, 78, 0.22) 50%,
+    rgba(255, 255, 255, 0.6)
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Stronger glass once the user scrolls over the images */
+.site-header .site-bar:hover {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 1) inset,
+    0 -1px 0 rgba(20, 18, 30, 0.04) inset,
+    0 4px 10px rgba(20, 18, 30, 0.06),
+    0 18px 48px rgba(20, 18, 30, 0.16),
+    0 34px 80px rgba(215, 69, 78, 0.14);
+}
+
+/* "Get a Demo" button: frosted look */
+.site-header .site-demo {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(20, 18, 30, 0.10);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 1) inset, 0 2px 8px rgba(20, 18, 30, 0.06);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.site-header .site-demo:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* "Get Started" button: 3D gradient */
+.site-header .site-cta {
+  background: linear-gradient(180deg, #e8545d 0%, #d7454e 55%, #c23a43 100%);
+  border: 1px solid #c23a43;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.35) inset,
+    0 6px 16px rgba(215, 69, 78, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.site-header .site-cta:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.4) inset,
+    0 10px 24px rgba(215, 69, 78, 0.45);
+}
+
 @media (max-width: 1180px) {
   .site-nav { gap: 16px; }
   .nav-link { font-size: 12.5px; }
