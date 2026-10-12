@@ -6,7 +6,7 @@ export const products = [
     "title": "E-Commerce Website",
     "label": "E-COMMERCE",
     "href": "#ecommerce",
-    "image": "d048535a6e2bae037b6f7f0f14ceffec.jpg",
+    "image": "ecommerce.jpg",
     "imageTitle": "Create a modern online store built to convert.",
     "groups": [
       {
@@ -76,7 +76,7 @@ export const products = [
     "title": "Cloud POS",
     "label": "CLOUD POS",
     "href": "#pos",
-    "image": "customer-business.jpg",
+    "image": "CloudPOS.webp",
     "imageTitle": "Keep sales and everyday operations connected.",
     "groups": [
       {
@@ -141,7 +141,7 @@ export const products = [
     "title": "Food Website",
     "label": "FOOD",
     "href": "#food",
-    "image": "foodwebsite.jpeg",
+    "image": "food.jpg",
     "imageTitle": "Build a better digital experience for your restaurant.",
     "groups": [
       {
@@ -276,7 +276,7 @@ export const products = [
     "title": "Cloud Food POS",
     "label": "CLOUD FOOD POS",
     "href": "#cloud-food-pos",
-    "image": "customer-business.jpg",
+    "image": "CloudPOS.jpg",
     "imageTitle": "Keep restaurant sales connected.",
     "groups": [
       {
@@ -349,7 +349,7 @@ export const corporateSolutions = [
     "designTitle": "Connect vendors and sales.",
     "description": "Support vendor sales and everyday operations across your marketplace.",
     "photoTitle": "A connected view of vendor operations.",
-    "image": "food-delivery.jpg",
+    "image": "enterprise-team.jpg",
     "alt": "Multivendor point of sale",
     "imagePosition": "75% center",
     "related": "marketplace",
