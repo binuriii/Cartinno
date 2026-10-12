@@ -80,6 +80,13 @@ const activeProductData = computed(() => {
     ) || products[0]
   )
 })
+// E-Commerce uses 2 stacked columns (group.column). Other tabs keep the normal grid flow.
+const hasColumns = computed(() => activeProductData.value.groups.some(g => g.column))
+const productColumns = computed(() => {
+  const groups = activeProductData.value.groups
+  if (!hasColumns.value) return groups.map(g => [g])
+  return [1, 2].map(col => groups.filter(g => g.column === col))
+})
 </script>
 <template>
   <header ref="headerRef" class="site-header">
@@ -176,36 +183,43 @@ const activeProductData = computed(() => {
                 :key="activeProductData.id"
               >
                 <div class="product-groups">
-                  <section
-                    v-for="group in activeProductData.groups"
-                    :key="group.title"
-                    class="product-group"
+                  <div
+                    v-for="(column, i) in productColumns"
+                    :key="i"
+                    class="product-column"
+                    :class="{ 'is-stacked': hasColumns }"
                   >
-                    <h3 class="group-title">
-                      {{ group.title }}
-                    </h3>
-                    <div class="group-links">
-                      <a
-                        v-for="item in group.items"
-                        :key="item.label"
-                        :href="resolveHref(item.href)"
-                        class="group-link"
-                        @click="closeMenu"
-                      >
-                        <span class="group-icon">
-                          <HeaderIcon :name="item.icon" />
-                        </span>
-                        <span class="group-link-copy">
-                          <span class="group-link-name">{{ item.label }}</span>
-                          <span
-                            v-if="item.badge"
-                            class="item-badge"
-                            :class="`badge-${item.badge.toLowerCase()}`"
-                          >{{ item.badge }}</span>
-                        </span>
-                      </a>
-                    </div>
-                  </section>
+                    <section
+                      v-for="group in column"
+                      :key="group.title"
+                      class="product-group"
+                    >
+                      <h3 class="group-title">
+                        {{ group.title }}
+                      </h3>
+                      <div class="group-links">
+                        <a
+                          v-for="item in group.items"
+                          :key="item.label"
+                          :href="resolveHref(item.href)"
+                          class="group-link"
+                          @click="closeMenu"
+                        >
+                          <span class="group-icon">
+                            <HeaderIcon :name="item.icon" />
+                          </span>
+                          <span class="group-link-copy">
+                            <span class="group-link-name">{{ item.label }}</span>
+                            <span
+                              v-if="item.badge"
+                              class="item-badge"
+                              :class="`badge-${item.badge.toLowerCase()}`"
+                            >{{ item.badge }}</span>
+                          </span>
+                        </a>
+                      </div>
+                    </section>
+                  </div>
                 </div>
               </div>
               <!-- COLUMN 3 : IMAGE CARD -->

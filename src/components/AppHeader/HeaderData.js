@@ -10,63 +10,55 @@ export const products = [
     "imageTitle": "Create a modern online store built to convert.",
     "groups": [
       {
-        "title": "Build your store",
+        "title": "Grow Online Discovery",
+        "column": 1,
         "items": [
-          {
-            "label": "Modern Storefront",
-            "href": "#ecommerce",
-            "icon": "fa-solid fa-store"
-          },
-          {
-            "label": "Product Catalogue",
-            "href": "#ecommerce",
-            "icon": "fa-solid fa-box-open"
-          },
-          {
-            "label": "Mobile Commerce",
-            "href": "#ecommerce",
-            "icon": "fa-solid fa-mobile-screen"
-          }
+          { "label": "E-Commerce Website", "href": "#ecommerce", "icon": "fa-solid fa-globe" },
+          { "label": "SEO", "href": "#seo", "icon": "fa-solid fa-magnifying-glass" },
+          { "label": "Review Engine", "href": "#review-engine", "icon": "fa-regular fa-star" }
         ]
       },
       {
-        "title": "Improve shopping",
+        "title": "Grow Online Sales",
+        "column": 1,
         "items": [
-          {
-            "label": "Product Discovery",
-            "href": "#ecommerce",
-            "icon": "fa-solid fa-magnifying-glass"
-          },
-          {
-            "label": "Easy Navigation",
-            "href": "#ecommerce",
-            "icon": "fa-solid fa-compass"
-          }
+          { "label": "Retail & Wholesale Pricing", "href": "#retail-wholesale-pricing", "icon": "fa-solid fa-tag" },
+          { "label": "Smart Upsells", "href": "#smart-upsells", "icon": "fa-solid fa-chart-line" },
+          { "label": "Delivery", "href": "#delivery", "icon": "fa-solid fa-truck-fast" },
+          { "label": "Gift Cards", "href": "#gift-cards", "icon": "fa-regular fa-credit-card" },
+          { "label": "Loyalty Management System", "href": "#loyalty", "icon": "fa-solid fa-award" }
         ]
       },
       {
-        "title": "Grow online sales",
+        "title": "Unique to Cartinno",
+        "column": 1,
         "items": [
-          {
-            "label": "Online Selling",
-            "href": "#ecommerce",
-            "icon": "fa-solid fa-cart-shopping"
-          },
-          {
-            "label": "Conversion Focused",
-            "href": "#ecommerce",
-            "icon": "fa-solid fa-arrow-trend-up"
-          }
+          { "label": "Sell with Reseller Network", "href": "#reseller-network", "icon": "fa-solid fa-users" },
+          { "label": "Gift Registry", "href": "#gift-registry", "icon": "fa-solid fa-gift" },
+          { "label": "Sell with Marketplace", "href": "#marketplace", "icon": "fa-solid fa-store" }
         ]
       },
       {
-        "title": "Manage your store",
+        "title": "Grow Your Business",
+        "column": 2,
         "items": [
-          {
-            "label": "Store Management",
-            "href": "#ecommerce",
-            "icon": "fa-solid fa-sliders"
-          }
+          { "label": "Cloud POS", "href": "#pos", "icon": "fa-solid fa-desktop" },
+          { "label": "Marketing Campaigns", "href": "#marketing-campaigns", "icon": "fa-solid fa-bullhorn" },
+          { "label": "Push Notification Marketing", "href": "#push-notifications", "icon": "fa-regular fa-bell" },
+          { "label": "Inventory Management System", "href": "#inventory", "icon": "fa-solid fa-boxes-stacked" }
+        ]
+      },
+      {
+        "title": "Manage Your Business",
+        "column": 2,
+        "items": [
+          { "label": "Cloud Phone System", "href": "#cloud-phone", "icon": "fa-solid fa-phone" },
+          { "label": "Reporting & Analytics", "href": "#reporting-analytics", "icon": "fa-solid fa-chart-pie" },
+          { "label": "POS Integrations", "href": "#pos-integrations", "icon": "fa-solid fa-gears" },
+          { "label": "Enquiry Management System", "href": "#enquiry-management", "icon": "fa-regular fa-message-square" },
+          { "label": "Lead Manager", "href": "#lead-manager", "icon": "fa-solid fa-user-plus" },
+          { "label": "Facebook Integration", "href": "#facebook-integration", "icon": "fa-brands fa-facebook" },
+          { "label": "WhatsApp Business API", "href": "#whatsapp-api", "icon": "fa-brands fa-whatsapp" }
         ]
       }
     ]
