@@ -53,7 +53,6 @@
 .hero-btn:hover{transform:translateY(-2px)}
 .hero-btn:focus-visible{outline:3px solid #ffb3bf;outline-offset:3px}
 .hero-btn-primary{background:var(--brand);color:#fff;}
-.hero-btn-primary:hover{box-shadow:0 14px 30px rgba(255,45,77,.42)}
 .hero-btn-light{background:#fff;color:var(--ink);border:1px solid #e6e3ea}
 .hero-btn-light:hover{background:#dedcdd;}
 

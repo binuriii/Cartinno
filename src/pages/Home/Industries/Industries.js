@@ -25,7 +25,7 @@ export const showcase = {
           position: 'center'
         },
         {
-          src: 'Meeting scheduler on a silver laptop.jpg',
+          src: 'girl.jpg',
           alt: 'Mobile shopping and product browsing',
           background: '#f3e8e9',
           position: 'center'
@@ -43,7 +43,7 @@ export const showcase = {
       href: '/products/food-website',
       images: [
         {
-          src: 'Meeting scheduler on a silver laptop.jpg',
+          src: 'food2.jpg',
           alt: 'Restaurant website and digital menu',
           background: '#f7e5d7',
           position: 'center'
@@ -67,13 +67,13 @@ export const showcase = {
       href: '/products/cloud-pos',
       images: [
         {
-          src: 'Meeting scheduler on a silver laptop.png',
+          src: 'Cartinno restaurant ordering on a golden tablet.webp',
           alt: 'Cloud POS product selection and checkout',
           background: '#e3ece8',
           position: 'center'
         },
         {
-          src: 'Meeting scheduler on a silver laptop.jpg',
+          src: 'yellow.jpg',
           alt: 'Cloud POS orders and inventory dashboard',
           background: '#e6edf3',
           position: 'center'
@@ -91,7 +91,7 @@ export const showcase = {
       href: '/corporate-solutions',
       images: [
         {
-          src: 'Lime Green Banking Card o.png',
+          src: 'green.jpeg',
           alt: 'Multi-vendor marketplace storefront',
           background: '#ede7e1',
           position: 'center'
