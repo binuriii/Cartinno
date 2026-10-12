@@ -48,6 +48,14 @@
   padding-top: 0px; transform: translateX(-50%); pointer-events: auto;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; animation: megaOpen 0.22s ease;
 }
+/* E-Commerce tab: two stacked columns. Other tabs are unaffected (display: contents). */
+.site-header .product-column { display: contents; }
+.site-header .product-column.is-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
 @keyframes megaOpen {
   from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
   to { opacity: 1; transform: translateX(-50%) translateY(0); }
@@ -300,21 +308,33 @@
 .site-header .group-link-name, .site-header .group-icon { transition: color .18s ease; }
 .site-header .group-link:hover .group-link-name,
 .site-header .group-link:focus-visible .group-link-name { color: #d7454e; }
-.site-header .products-mega { width: min(1180px, calc(100vw - 48px)); }
-.site-header .products-mega-inner { grid-template-columns: 170px minmax(0, 1fr) 210px; padding: 28px; }
+.site-header .products-mega {   width: min(1240px, calc(100vw - 48px)); }
+.site-header .products-mega-inner {
+  grid-template-columns: 170px minmax(0, 1fr) 310px;
+  padding: 28px;
+}
+.site-header .mega-feature {
+  min-height: 360px;
+}
+.site-header .mega-feature-copy h3 {
+  font-size: 18px;
+}
 .site-header .mega-main { padding: 0 22px; }
 .site-header .product-groups { gap: 24px; }
-.site-header .mega-side { padding-left: 22px; }
+.site-header .mega-side { padding-left: 28px; }
 .nav-corporate { position: static; }
 @media (max-width: 1180px) and (min-width: 1051px) {
-  .site-header .products-mega-inner { grid-template-columns: 160px minmax(0, 1fr) 170px; padding: 22px; }
+  .site-header .products-mega-inner {
+    grid-template-columns: 160px minmax(0, 1fr) 250px;
+    padding: 22px;
+  }
   .site-header .mega-main { padding: 0 18px; }
   .site-header .product-groups { gap: 20px 18px; }
 }
 @media (max-width: 1050px) and (min-width: 821px) {
   .site-header .products-mega-inner { grid-template-columns: 160px minmax(0, 1fr); }
   .site-header .product-tabs { flex-direction: column; }
-  .site-header .mega-side { display: none; }
+ .site-header .mega-side { display: none; }
   .site-header .mega-main { border-left: 1px solid #e8e9eb; border-right: 0; }
 }
 @media (max-width: 820px) {
