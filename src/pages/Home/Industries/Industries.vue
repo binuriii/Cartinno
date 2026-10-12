@@ -11,6 +11,13 @@ const activeItem = computed(
   () => showcase.items[activeIndex.value]
 )
 
+// "Connected solutions. More ways to grow." -> one line per sentence
+const titleLines = computed(() =>
+  (showcase.title.match(/[^.!?]+[.!?]?/g) || [showcase.title])
+    .map((line) => line.trim())
+    .filter(Boolean)
+)
+
 const base = import.meta.env.BASE_URL
 
 // Handles "public/" prefixes, leading slashes and spaces in file names
@@ -105,7 +112,7 @@ const handleImageError = (event) => {
   const image = event.target
   image.hidden = true
   image
-    .closest('.vs-showcase-image-card')
+    .closest('.ind-image-card')
     ?.classList.add('is-missing')
 }
 
@@ -113,11 +120,11 @@ onMounted(() => {
   motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
 
   showcaseRows = Array.from(
-    showcaseRef.value.querySelectorAll('.vs-showcase-project')
+    showcaseRef.value.querySelectorAll('.ind-project')
   )
 
   showcaseImages = showcaseRows.map((row) =>
-    Array.from(row.querySelectorAll('.vs-showcase-image'))
+    Array.from(row.querySelectorAll('.ind-image'))
   )
 
   motionQuery.addEventListener('change', requestUpdate)
@@ -142,171 +149,158 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <!-- id="case-studies" kept so any existing #case-studies links still work -->
-  <div id="case-studies" class="vs">
-    <!-- SCROLLING PRODUCT SHOWCASE -->
-    <section
-      ref="showcaseRef"
-      class="vs-showcase"
-      id="commerce-showcase"
-      aria-labelledby="vs-showcase-heading"
-    >
-      <div class="vs-showcase-container">
-        <header class="vs-showcase-header">
-          <span class="vs-badge">
-            {{ showcase.eyebrow }}
-          </span>
+  <section
+    ref="showcaseRef"
+    class="ind"
+    id="commerce-showcase"
+    aria-labelledby="ind-heading"
+  >
+    <div class="ind-container">
 
-          <h2
-            id="vs-showcase-heading"
-            class="vs-showcase-title"
+      <!-- CENTERED HEADER -->
+      <header class="ind-header">
+        <h2 id="ind-heading" class="ind-title">
+          <span
+            v-for="line in titleLines"
+            :key="line"
+            class="ind-title-line"
+          >{{ line }}</span>
+        </h2>
+      </header>
+
+      <div class="ind-layout">
+
+        <!-- STICKY TEXT: NO TEXT ANIMATION -->
+        <div class="ind-copy-column">
+          <div
+            class="ind-copy"
+            :style="{ '--accent': activeItem.accent }"
           >
-            {{ showcase.title }}
-          </h2>
-        </header>
+            <span class="ind-counter">
+              {{ String(activeIndex + 1).padStart(2, '0') }}
+              <span>
+                / {{ String(showcase.items.length).padStart(2, '0') }}
+              </span>
+            </span>
 
-        <div class="vs-showcase-layout">
-          <!-- STICKY TEXT: NO TEXT ANIMATION -->
-          <div class="vs-showcase-copy-column">
-            <div
-              class="vs-showcase-copy"
-              :style="{ '--accent': activeItem.accent }"
+            <h3 class="ind-copy-title">
+              {{ activeItem.title }}
+            </h3>
+
+            <div class="ind-divider"></div>
+
+            <p class="ind-description">
+              {{ activeItem.description }}
+            </p>
+
+            <RouterLink
+              :to="activeItem.href"
+              class="ind-link"
             >
-              <span class="vs-showcase-counter">
-                {{ String(activeIndex + 1).padStart(2, '0') }}
+              {{ activeItem.linkText }}
+
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 12h15M13 5l7 7-7 7"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </RouterLink>
+
+            <!-- Item list: shows which project the images belong to -->
+            <ul class="ind-nav" aria-label="Solutions">
+              <li
+                v-for="(item, index) in showcase.items"
+                :key="item.id"
+              >
+                <button
+                  type="button"
+                  class="ind-nav-button"
+                  :class="{ 'is-active': index === activeIndex }"
+                  :style="{ '--accent': item.accent }"
+                  :aria-current="index === activeIndex ? 'true' : undefined"
+                  @click="goToItem(index)"
+                >
+                  <span class="ind-nav-dot" aria-hidden="true"></span>
+                  {{ item.title }}
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SCROLLING IMAGES -->
+        <div class="ind-projects">
+          <article
+            v-for="(item, itemIndex) in showcase.items"
+            :key="item.id"
+            class="ind-project"
+            :aria-label="item.title"
+            :style="{ '--accent': item.accent }"
+          >
+            <!-- STATIC COPY FOR MOBILE / REDUCED MOTION -->
+            <div class="ind-mobile-copy">
+              <span class="ind-counter">
+                {{ String(itemIndex + 1).padStart(2, '0') }}
                 <span>
                   / {{ String(showcase.items.length).padStart(2, '0') }}
                 </span>
               </span>
 
-              <h3 class="vs-showcase-copy-title">
-                {{ activeItem.title }}
-              </h3>
-
-              <div class="vs-showcase-divider"></div>
-
-              <p class="vs-showcase-description">
-                {{ activeItem.description }}
-              </p>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.description }}</p>
 
               <RouterLink
-                :to="activeItem.href"
-                class="vs-showcase-link"
+                :to="item.href"
+                class="ind-link"
               >
-                {{ activeItem.linkText }}
-
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M4 12h15M13 5l7 7-7 7"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                {{ item.linkText }}
+                <span aria-hidden="true">→</span>
               </RouterLink>
-
-              <!-- Item list: shows which project the images belong to -->
-              <ul class="vs-showcase-nav" aria-label="Solutions">
-                <li
-                  v-for="(item, index) in showcase.items"
-                  :key="item.id"
-                >
-                  <button
-                    type="button"
-                    class="vs-showcase-nav-button"
-                    :class="{ 'is-active': index === activeIndex }"
-                    :style="{ '--accent': item.accent }"
-                    :aria-current="index === activeIndex ? 'true' : undefined"
-                    @click="goToItem(index)"
-                  >
-                    <span class="vs-showcase-nav-dot" aria-hidden="true"></span>
-                    {{ item.title }}
-                  </button>
-                </li>
-              </ul>
             </div>
-          </div>
 
-          <!-- SCROLLING IMAGES -->
-          <div class="vs-showcase-projects">
-            <article
-              v-for="(item, itemIndex) in showcase.items"
-              :key="item.id"
-              class="vs-showcase-project"
-              :aria-label="item.title"
-              :style="{ '--accent': item.accent }"
-            >
-              <!-- STATIC COPY FOR MOBILE / REDUCED MOTION -->
-              <div class="vs-showcase-mobile-copy">
-                <span class="vs-showcase-counter">
-                  {{ String(itemIndex + 1).padStart(2, '0') }}
-                  <span>
-                    / {{ String(showcase.items.length).padStart(2, '0') }}
-                  </span>
-                </span>
-
-                <h3>{{ item.title }}</h3>
-                <p>{{ item.description }}</p>
-
-                <RouterLink
-                  :to="item.href"
-                  class="vs-showcase-link"
-                >
-                  {{ item.linkText }}
-                  <span aria-hidden="true">→</span>
-                </RouterLink>
-              </div>
-
-              <div class="vs-showcase-image-pair">
-                <figure
-                  v-for="(image, imageIndex) in item.images"
-                  :key="image.src + imageIndex"
-                  class="vs-showcase-image-card"
-                  :class="{
-                    'vs-showcase-image-card--second': imageIndex === 1
-                  }"
+            <div class="ind-image-pair">
+              <figure
+                v-for="(image, imageIndex) in item.images"
+                :key="image.src + imageIndex"
+                class="ind-image-card"
+                :class="{
+                  'ind-image-card--second': imageIndex === 1
+                }"
+                :style="{
+                  '--image-background': image.background
+                }"
+              >
+                <img
+                  class="ind-image"
+                  :src="assetUrl(image.src)"
+                  :alt="image.alt"
                   :style="{
-                    '--image-background': image.background
+                    objectPosition: image.position || 'center'
                   }"
-                >
-                  <img
-                    class="vs-showcase-image"
-                    :src="assetUrl(image.src)"
-                    :alt="image.alt"
-                    :style="{
-                      objectPosition: image.position || 'center'
-                    }"
-                    loading="lazy"
-                    decoding="async"
-                    @error="handleImageError"
-                  />
+                  loading="lazy"
+                  decoding="async"
+                  @error="handleImageError"
+                />
 
-                  <figcaption class="vs-showcase-image-fallback">
-                    {{ image.alt }}
-                  </figcaption>
-                </figure>
-              </div>
-            </article>
-          </div>
+                <figcaption class="ind-image-fallback">
+                  {{ image.alt }}
+                </figcaption>
+              </figure>
+            </div>
+          </article>
         </div>
-
-        <footer class="vs-showcase-footer">
-          <RouterLink
-            :to="showcase.ctaHref"
-            class="vs-showcase-button"
-          >
-            {{ showcase.ctaText }}
-            <span aria-hidden="true">↗</span>
-          </RouterLink>
-        </footer>
       </div>
-    </section>
-  </div>
+
+    </div>
+  </section>
 </template>
