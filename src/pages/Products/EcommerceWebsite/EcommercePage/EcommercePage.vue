@@ -1,0 +1,22 @@
+
+<script setup>
+import './EcommercePage.css'
+
+import FAQ from '../../../../components/InnerPages/FAQ/FAQ.vue'
+
+import {
+  ecommerceFAQs
+} from './EcommercePage.js'
+</script>
+
+<template>
+  <main class="ec-page">
+
+    <!-- REUSABLE FAQ -->
+    <FAQ
+      title="Frequently Ask Questions"
+      :items="ecommerceFAQs"
+    />
+
+  </main>
+</template>
