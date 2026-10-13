@@ -4,13 +4,13 @@ export const logos = [
     name: 'Nilkamal',
     image: 'nilkamal.png',
     href: 'https://nilkamal.lk/',
-    h: 84
+    h: 66
   },
   {
     name: 'Hotel Tree of Life',
     image: 'tree-of-life.png',
     href: 'https://hoteltreeoflife.com/',
-    h: 98
+    h: 66
   },
   {
     name: 'Be Waxed Global',
@@ -28,6 +28,6 @@ export const logos = [
     name: 'STC',
     image: 'stc.png',
     href: 'https://www.stc.lk/',
-    h: 56
+    h: 66
   }
 ]

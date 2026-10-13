@@ -93,16 +93,7 @@
   pointer-events: none;
 }
 
-.hiw-tab-bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 22px;
-  right: 22px;
-  height: 3px;
-  border-radius: 0 0 3px 3px;
-  background: var(--ink);
-}
+
 
 .hiw-tab {
   appearance: none;
@@ -1004,9 +995,7 @@
 .hiw .hiw-tab-bg {
   background: var(--panel);
 }
-.hiw .hiw-tab-bg::before {
-  background: var(--ink);
-}
+
 
 /* Keep the panel's upper corners joined to the selected tab. */
 @media (min-width: 1101px) {
