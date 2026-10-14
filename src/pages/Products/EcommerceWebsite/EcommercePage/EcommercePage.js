@@ -28,5 +28,6 @@ export const ecommerceFAQs = [
     question: 'Can I connect my online store with a POS?',
     answer:
       'POS integration options can help connect online selling with your everyday business operations.'
-  }
+  },
+  
 ]

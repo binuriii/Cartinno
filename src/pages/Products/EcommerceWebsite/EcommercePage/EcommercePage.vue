@@ -3,6 +3,7 @@
 import './EcommercePage.css'
 
 import FAQ from '../../../../components/InnerPages/FAQ/FAQ.vue'
+import Testimonials from '../../../../components/InnerPages/Testimonials/Testimonials.vue'
 
 import {
   ecommerceFAQs
@@ -17,6 +18,8 @@ import {
       title="Frequently Ask Questions"
       :items="ecommerceFAQs"
     />
+
+    <Testimonials />
 
   </main>
 </template>

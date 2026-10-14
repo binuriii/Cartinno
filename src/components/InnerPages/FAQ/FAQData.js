@@ -1,87 +1,45 @@
 
-export const restaurantFAQs = [
-  {
-    id: 'restaurant-1',
-    question: 'What happens to my current website?',
-    answer:
-      'We can help you transition from your existing website to your new restaurant website while keeping your business information and branding consistent.'
-  },
-  {
-    id: 'restaurant-2',
-    question: 'How much can I customize my design?',
-    answer:
-      'Your restaurant website can be tailored to reflect your brand, including colors, imagery, menus, content and layout options.'
-  },
-  {
-    id: 'restaurant-3',
-    question: 'How long will this take?',
-    answer:
-      'The delivery timeline depends on your design requirements, content and the features you need.'
-  },
-  {
-    id: 'restaurant-4',
-    question: 'Can customers order directly from my website?',
-    answer:
-      'Online ordering can be integrated into your website so customers can browse your menu and place orders directly.'
-  },
-  {
-    id: 'restaurant-5',
-    question: 'Will my website work on mobile devices?',
-    answer:
-      'Yes. Your website can be designed responsively to work across desktop, tablet and mobile screens.'
-  }
-]
-
 export const ecommerceFAQs = [
   {
-    id: 'ecommerce-1',
-    question: 'Can I customize my online store?',
+    id: 1,
+    question: 'Can I customize my e-commerce website?',
     answer:
-      'Your storefront can be customized to reflect your brand identity, product categories and business requirements.'
+      'Your e-commerce website can be customized to reflect your business branding, products, and design requirements.'
   },
   {
-    id: 'ecommerce-2',
-    question: 'Can customers pay online?',
-    answer:
-      'Supported payment gateways can be integrated to allow customers to complete purchases online.'
-  },
-  {
-    id: 'ecommerce-3',
+    id: 2,
     question: 'Can I manage products and inventory?',
     answer:
-      'Your e-commerce solution can include tools to manage product information, stock levels and customer orders.'
+      'Product and inventory management tools can help you organize your catalog and stock levels.'
   },
   {
-    id: 'ecommerce-4',
-    question: 'Will my store work on mobile devices?',
+    id: 3,
+    question: 'Can customers shop using mobile devices?',
     answer:
-      'Yes. Responsive layouts help customers browse and shop across different screen sizes.'
-  }
-]
-
-export const posFAQs = [
-  {
-    id: 'pos-1',
-    question: 'What is a cloud POS system?',
-    answer:
-      'A cloud POS system helps businesses manage sales, transactions and operations through connected software.'
+      'A responsive online store allows customers to browse and shop on desktop, tablet, and mobile devices.'
   },
   {
-    id: 'pos-2',
-    question: 'Can I manage multiple locations?',
+    id: 4,
+    question: 'Can I connect my online store with a POS?',
     answer:
-      'Multi-location support can allow businesses to manage operations across different branches.'
+      'POS integration options can help connect online sales with your everyday business operations.'
   },
   {
-    id: 'pos-3',
-    question: 'Can I track sales and inventory?',
+    id: 5,
+    question: 'Can I offer delivery to customers?',
     answer:
-      'Sales reporting and inventory management features can help you monitor business performance.'
+      'Delivery features can support order fulfillment and help customers receive their purchases.'
   },
   {
-    id: 'pos-4',
-    question: 'Is the POS system suitable for small businesses?',
+    id: 6,
+    question: 'Can I create loyalty programs?',
     answer:
-      'Cloud POS solutions can support businesses of different sizes, depending on their operational requirements.'
+      'Loyalty features can support repeat purchases and customer engagement.'
+  },
+  {
+    id: 7,
+    question: 'Can I track business performance?',
+    answer:
+      'Reporting and analytics tools can help you understand sales trends and business activity.'
   }
 ]
