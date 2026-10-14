@@ -7,7 +7,7 @@ import Testimonials from '../../../../components/InnerPages/Testimonials/Testimo
 
 import {
   ecommerceFAQs
-} from './EcommercePage.js'
+} from '../../../../components/InnerPages/FAQ/FAQData.js'
 </script>
 
 <template>
