@@ -1,0 +1,442 @@
+
+.bs-section,
+.bs-section * {
+  box-sizing: border-box;
+}
+
+.bs-section {
+  --bs-red: #d7454e;
+  --bs-ink: #23232b;
+  --bs-muted: #5b5b66;
+
+  width: 100%;
+  padding: 5vh 3vw 3vh;
+
+  background:
+    radial-gradient(
+      ellipse at 75% 0%,
+      rgba(215, 69, 78, 0.09),
+      transparent 38%
+    ),
+    #ffffff;
+
+  color: var(--bs-ink);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.bs-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* HEADER */
+
+.bs-header {
+  display: grid;
+  grid-template-columns: 1fr 0.65fr;
+  gap: clamp(30px, 5vw, 80px);
+  align-items: end;
+
+  margin-bottom: clamp(28px, 3vw, 42px);
+}
+
+.bs-heading {
+  min-width: 0;
+}
+
+.bs-title {
+  max-width: 650px;
+  margin: 0;
+  color: var(--bs-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+/* HEADING ICON */
+
+.bs-heading-icon {
+  display: inline-grid;
+  place-items: center;
+  vertical-align: middle;
+
+  width: 45px;
+  height: 45px;
+
+  margin-left: 10px;
+
+  border-radius: 12px;
+  background: var(--bs-red);
+  color: #ffffff;
+
+  font-size: 19px;
+  transform: rotate(-10deg);
+}
+
+.bs-heading-icon i {
+  transform: rotate(10deg);
+}
+
+/* DESCRIPTION */
+
+.bs-description {
+  max-width: 440px;
+  margin: 0;
+
+  color: var(--bs-muted);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: normal;
+}
+
+/* CAROUSEL */
+
+.bs-track {
+  display: flex;
+  align-items: flex-start;
+
+  gap: clamp(16px, 2vw, 28px);
+
+  width: 100%;
+  padding: 5px 2px 8px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bs-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD */
+
+.bs-card {
+  position: relative;
+
+  flex: 0 0 clamp(270px, 29vw, 380px);
+  height: 385px;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  border-radius: 24px;
+  background: #efdfd4;
+
+  scroll-snap-align: start;
+}
+
+/* STAGGERED CARDS */
+
+.bs-card-offset {
+  margin-top: 24px;
+}
+
+/* IMAGE */
+
+.bs-card-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+.bs-card:hover .bs-card-image {
+  transform: scale(1.06);
+}
+
+/* IMAGE OVERLAY */
+
+.bs-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.02) 10%,
+    rgba(0, 0, 0, 0.18) 42%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+}
+
+/* CARD ICON */
+
+.bs-card-icon {
+  position: absolute;
+  z-index: 3;
+
+  top: 18px;
+  right: 18px;
+
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--bs-red);
+
+  font-size: 17px;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* CARD CONTENT */
+
+.bs-card-content {
+  position: absolute;
+  z-index: 2;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 28px;
+  color: #ffffff;
+}
+
+.bs-card-number {
+  display: inline-block;
+  margin-bottom: 14px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.bs-card-content h3 {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: clamp(20px, 1.8vw, 25px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+.bs-card-content p {
+  margin: 12px 0 0;
+
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* CONTROLS */
+
+.bs-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 10px;
+}
+
+.bs-counter {
+  color: var(--bs-muted);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.bs-arrows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bs-arrow {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+
+  background: #f5f5f5;
+  color: var(--bs-ink);
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.bs-arrow-next {
+  background: var(--bs-red);
+  border-color: var(--bs-red);
+  color: #ffffff;
+}
+
+.bs-arrow:hover {
+  background: var(--bs-red);
+  border-color: var(--bs-red);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.bs-arrow:focus-visible {
+  outline: 3px solid rgba(215, 69, 78, 0.3);
+  outline-offset: 3px;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .bs-section {
+    padding: 5vh 4vw 3vh;
+  }
+
+  .bs-header {
+    grid-template-columns: 1fr 0.85fr;
+    gap: 30px;
+  }
+
+  .bs-card {
+    flex-basis: 310px;
+    height: 365px;
+  }
+
+  .bs-card-offset {
+    margin-top: 20px;
+  }
+
+  .bs-card-content {
+    padding: 24px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .bs-section {
+    padding: 65px 14px 25px;
+  }
+
+  .bs-header {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 30px;
+  }
+
+  .bs-title {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .bs-heading-icon {
+    width: 29px;
+    height: 29px;
+
+    margin-left: 6px;
+
+    border-radius: 8px;
+    font-size: 13px;
+  }
+
+  .bs-description {
+    max-width: 620px;
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .bs-track {
+    gap: 14px;
+    padding: 5px 2px 8px;
+  }
+
+  .bs-card {
+    flex: 0 0 min(80vw, 330px);
+    height: 350px;
+    border-radius: 18px;
+  }
+
+  .bs-card-offset {
+    margin-top: 15px;
+  }
+
+  .bs-card-icon {
+    width: 38px;
+    height: 38px;
+
+    top: 14px;
+    right: 14px;
+
+    font-size: 15px;
+  }
+
+  .bs-card-content {
+    padding: 22px;
+  }
+
+  .bs-card-content h3 {
+    font-size: 21px;
+  }
+
+  .bs-card-content p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .bs-controls {
+    margin-top: 10px;
+  }
+
+  .bs-arrow {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+    font-size: 14px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .bs-track {
+    scroll-behavior: auto;
+  }
+
+  .bs-card-image,
+  .bs-arrow {
+    transition: none;
+  }
+}
