@@ -7,6 +7,7 @@ import BusinessSupport from './BusinessSupportData/BusinessSupport.vue';
 import {
   ecommerceFAQs
 } from '../../../../components/InnerPages/FAQ/FAQData.js'
+import Comparison from './Comparison/Comparison.vue';
 
 
 </script>
@@ -15,6 +16,7 @@ import {
   <main class="ec-page">
 
     <BusinessSupport />
+    <Comparison />
     <!-- REUSABLE FAQ -->
     <FAQ
       title="Frequently Ask Questions"
