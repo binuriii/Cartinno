@@ -1,37 +1,59 @@
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, computed } from 'vue'
 import './FAQ.css'
 
 const props = defineProps({
   title: {
     type: String,
-    default: 'Frequently Ask Questions'
+    default: 'Frequently asked questions'
+  },
+  description: {
+    type: String,
+    default: 'Everything you need to know about our services.'
   },
   items: {
     type: Array,
     default: () => []
+  },
+  openFirst: {
+    type: Boolean,
+    default: true
   }
 })
 
-const openItems = ref([0])
+const activeIndex = ref(
+  props.openFirst && props.items.length ? 0 : null
+)
 
-const isOpen = (index) => openItems.value.includes(index)
+const splitIndex = computed(() =>
+  Math.ceil(props.items.length / 2)
+)
+
+const leftItems = computed(() =>
+  props.items.slice(0, splitIndex.value)
+    .map((item, index) => ({ ...item, index }))
+)
+
+const rightItems = computed(() =>
+  props.items.slice(splitIndex.value)
+    .map((item, index) => ({
+      ...item,
+      index: index + splitIndex.value
+    }))
+)
+
+const isOpen = (index) => activeIndex.value === index
 
 const toggleFAQ = (index) => {
-  if (isOpen(index)) {
-    openItems.value = openItems.value.filter(
-      (item) => item !== index
-    )
-  } else {
-    openItems.value = [...openItems.value, index]
-  }
+  activeIndex.value = isOpen(index) ? null : index
 }
 
 watch(
-  () => props.items,
+  [() => props.items, () => props.openFirst],
   () => {
-    openItems.value = props.items.length ? [0] : []
+    activeIndex.value =
+      props.openFirst && props.items.length ? 0 : null
   }
 )
 </script>
@@ -39,49 +61,64 @@ watch(
 <template>
   <section class="faq-section">
     <div class="faq-container">
-      <h2 class="faq-heading">
-        {{ title }}
-      </h2>
+
+      <div class="faq-header">
+        <h2 class="faq-heading">
+          {{ title }}
+        </h2>
+
+        <p class="faq-description">
+          {{ description }}
+        </p>
+      </div>
 
       <div class="faq-grid">
+
         <div
-          v-for="(item, index) in items"
-          :key="item.id ?? index"
-          class="faq-card"
-          :class="{ 'faq-card-open': isOpen(index) }"
+          v-for="(column, columnIndex) in [leftItems, rightItems]"
+          :key="columnIndex"
+          class="faq-column"
         >
-          <button
-            class="faq-question"
-            type="button"
-            :aria-expanded="isOpen(index)"
-            :aria-controls="`faq-answer-${index}`"
-            @click="toggleFAQ(index)"
+          <article
+            v-for="item in column"
+            :key="item.id ?? item.index"
+            class="faq-card"
+            :class="{ 'faq-card-open': isOpen(item.index) }"
           >
-            <span
-              class="faq-icon"
-              :class="{ 'faq-icon-open': isOpen(index) }"
-              aria-hidden="true"
+            <button
+              type="button"
+              class="faq-question"
+              :aria-expanded="isOpen(item.index)"
+              :aria-controls="`faq-answer-${item.index}`"
+              @click="toggleFAQ(item.index)"
             >
-              {{ isOpen(index) ? '−' : '+' }}
-            </span>
+              <span class="faq-question-text">
+                {{ item.question }}
+              </span>
 
-            <span class="faq-question-text">
-              {{ item.question }}
-            </span>
-          </button>
+              <span
+                class="faq-icon"
+                :class="{ 'faq-icon-open': isOpen(item.index) }"
+                aria-hidden="true"
+              >
+                {{ isOpen(item.index) ? '×' : '+' }}
+              </span>
+            </button>
 
-          <div
-            :id="`faq-answer-${index}`"
-            class="faq-answer-wrapper"
-            :class="{ 'is-open': isOpen(index) }"
-          >
-            <div class="faq-answer-inner">
-              <p class="faq-answer">
-                {{ item.answer }}
-              </p>
+            <div
+              :id="`faq-answer-${item.index}`"
+              class="faq-answer-wrapper"
+              :class="{ 'is-open': isOpen(item.index) }"
+            >
+              <div class="faq-answer-inner">
+                <p class="faq-answer">
+                  {{ item.answer }}
+                </p>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
+
       </div>
     </div>
   </section>

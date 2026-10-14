@@ -540,3 +540,11 @@
 .site-header .product-group .group-link:focus-visible .group-icon {
   color: #d7454e;
 }
+
+/* Logo pointer cursor */
+.site-logo,
+.site-logo-img,
+.site-logo:hover,
+.site-logo-img:hover {
+  cursor: pointer !important;
+}

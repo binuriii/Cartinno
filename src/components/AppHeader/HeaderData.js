@@ -13,7 +13,7 @@ export const products = [
         "title": "Grow Online Discovery",
         "column": 1,
         "items": [
-          { "label": "E-Commerce Website", "href": "#ecommerce", "icon": "fa-solid fa-globe" },
+          { "label": "E-Commerce Website", "href": "/ecommerce-website", "icon": "fa-solid fa-globe" },
           { "label": "SEO", "href": "#seo", "icon": "fa-solid fa-magnifying-glass" },
           { "label": "Review Engine", "href": "#review-engine", "icon": "fa-regular fa-star" }
         ]

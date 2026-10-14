@@ -1,0 +1,374 @@
+
+.ec-compare,
+.ec-compare * {
+  box-sizing: border-box;
+}
+
+.ec-compare {
+  --cc-red: #d7454e;
+  --cc-ink: #23232b;
+  --cc-muted: #5b5b66;
+  --cc-line: #e6e6e6;
+
+  width: 100%;
+  padding: 5vh 3vw 8vh;
+
+  background: #ffffff;
+  color: var(--cc-ink);
+  font-family: inherit;
+}
+
+/* CONTAINER */
+
+.ec-compare-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* CENTER HEADING AND DESCRIPTION */
+
+.ec-compare-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+
+.ec-compare-title {
+  margin: 0;
+
+  color: var(--cc-ink);
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+
+  text-align: center;
+}
+
+.ec-compare-description {
+  max-width: 620px;
+  margin: 28px auto 0;
+
+  color: var(--cc-muted);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: normal;
+
+  text-align: center;
+}
+
+/* TABLE WRAPPER */
+
+.ec-compare-scroll {
+  width: 100%;
+  overflow-x: auto;
+
+  border: 1px solid var(--cc-line);
+  border-radius: 24px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #d3d3d3 transparent;
+}
+
+.ec-compare-scroll:focus-visible {
+  outline: 3px solid rgba(215, 69, 78, 0.3);
+  outline-offset: 3px;
+}
+
+/* TABLE */
+
+.ec-compare-table {
+  width: 100%;
+  min-width: 760px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+
+  background: #ffffff;
+}
+
+.ec-compare-table th,
+.ec-compare-table td {
+  border-right: 1px solid var(--cc-line);
+  border-bottom: 1px solid var(--cc-line);
+}
+
+.ec-compare-table tr > :last-child {
+  border-right: none;
+}
+
+.ec-compare-table tbody tr:last-child > * {
+  border-bottom: none;
+}
+
+/* COLUMN WIDTHS */
+
+.ec-compare-table th:first-child {
+  width: 36%;
+}
+
+.ec-compare-table thead th:not(:first-child) {
+  width: 16%;
+}
+
+/* TABLE HEADER */
+
+.ec-compare-table thead th {
+  height: 76px;
+  padding: 16px 14px;
+
+  background: #29292d;
+  color: #ffffff;
+
+  font-size: clamp(14px, 1.3vw, 18px);
+  font-weight: 450;
+  line-height: 1.3;
+
+  text-align: center;
+  vertical-align: middle;
+
+  border-right-color: rgba(255, 255, 255, 0.16);
+}
+
+.ec-compare-feature-head {
+  text-align: left !important;
+  padding-left: 28px !important;
+}
+
+.ec-compare-column-name {
+  display: block;
+}
+
+/* CARTINNO HEADER */
+
+.ec-compare-table thead .ec-compare-brand-head {
+  background: var(--cc-red);
+  color: #ffffff;
+
+  border-left: 2px solid var(--cc-red);
+  border-right: none;
+}
+
+.ec-compare-brand-caption {
+  display: block;
+  width: fit-content;
+
+  margin: 7px auto 0;
+  padding: 4px 9px;
+
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.17);
+
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+/* FEATURE ROWS */
+
+.ec-compare-table tbody tr {
+  height: 64px;
+}
+
+.ec-compare-table tbody tr:nth-child(odd) {
+  background: #fafafa;
+}
+
+.ec-compare-table tbody tr:nth-child(even) {
+  background: #ffffff;
+}
+
+.ec-compare-table tbody tr:hover {
+  background: #f8f6f6;
+}
+
+/* FEATURE LABEL */
+
+.ec-compare-table tbody .ec-compare-feature {
+  padding: 14px 24px;
+
+  color: #44444a;
+  font-size: 15px;
+  font-weight: 450;
+  line-height: 1.5;
+
+  text-align: left;
+  vertical-align: middle;
+}
+
+.ec-compare-feature-number {
+  display: inline-block;
+  min-width: 32px;
+  margin-right: 12px;
+
+  color: #b1afb3;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* COMPARISON VALUES */
+
+.ec-compare-table tbody td {
+  padding: 10px 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* CHECK / CROSS ICONS */
+
+.ec-compare-mark {
+  width: 32px;
+  height: 32px;
+
+  display: inline-grid;
+  place-items: center;
+
+  border-radius: 10px;
+}
+
+.ec-compare-mark svg {
+  width: 19px;
+  height: 19px;
+}
+
+.ec-compare-mark.is-yes {
+  color: #29292d;
+}
+
+.ec-compare-mark.is-no {
+  color: #b9b9bd;
+}
+
+/* CARTINNO COLUMN */
+
+.ec-compare-table tbody .ec-compare-brand-cell {
+  background: rgba(215, 69, 78, 0.045);
+  border-left: 2px solid rgba(215, 69, 78, 0.18);
+}
+
+.ec-compare-mark.is-brand.is-yes {
+  background: var(--cc-red);
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.ec-compare-mark.is-brand.is-no {
+  color: var(--cc-red);
+}
+
+.ec-compare-table tbody tr:hover .ec-compare-brand-cell {
+  background: rgba(215, 69, 78, 0.085);
+}
+
+/* BOTTOM NOTE */
+
+.ec-compare-note {
+  margin: 22px 0 0;
+
+  color: #888888;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .ec-compare {
+    padding: 5vh 4vw 8vh;
+  }
+
+  .ec-compare-table tbody .ec-compare-feature {
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+
+  .ec-compare-feature-number {
+    min-width: 25px;
+    margin-right: 7px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .ec-compare {
+    padding: 45px 14px 70px;
+  }
+
+  .ec-compare-heading {
+    margin-bottom: 30px;
+  }
+
+  .ec-compare-title {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .ec-compare-description {
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .ec-compare-scroll {
+    border-radius: 16px;
+  }
+
+  .ec-compare-table {
+    min-width: 700px;
+  }
+
+  .ec-compare-table thead th {
+    height: 66px;
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+
+  .ec-compare-table tbody tr {
+    height: 62px;
+  }
+
+  .ec-compare-table tbody .ec-compare-feature {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .ec-compare-feature-number {
+    display: none;
+  }
+
+  .ec-compare-mark {
+    width: 28px;
+    height: 28px;
+  }
+
+  .ec-compare-mark svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .ec-compare-note {
+    margin-top: 16px;
+    font-size: 11px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .ec-compare-table tbody tr,
+  .ec-compare-mark {
+    transition: none;
+  }
+}
