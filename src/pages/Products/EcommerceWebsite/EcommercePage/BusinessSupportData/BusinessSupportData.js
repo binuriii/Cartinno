@@ -20,7 +20,7 @@ export const supportServices = [
     title: 'Maintenance',
     description:
       'We handle updates, optimizations, and checks to keep your platform running smoothly and securely.',
-    image: 'https://images.unsplash.com/photo-1647507489299-bb819aa65802?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
+    image: 'https://images.unsplash.com/photo-1621570171784-29f3a911570d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
     imageAlt: 'Website maintenance',
     icon: 'fa-solid fa-screwdriver-wrench'
   },
@@ -29,7 +29,7 @@ export const supportServices = [
     title: 'Help & Support',
     description:
       'Get expert help anytime with fast issue resolution and guidance to keep your e-commerce running smoothly.',
-    image: 'https://images.unsplash.com/photo-1461532257246-777de18cd58b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
+    image: 'https://images.unsplash.com/photo-1781145854105-9930923becf9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
     imageAlt: 'Customer support',
     icon: 'fa-solid fa-headset'
   },
