@@ -15,6 +15,13 @@ const routes = [
     import('./pages/Products/EcommerceWebsite/EcommercePage/EcommercePage.vue')
   },
 
+  {
+    path: '/review-engine',
+    name: 'review-engine',
+    component: () =>
+      import('./pages/Products/ReviewEngine/ReviewEngine.vue')
+  },
+
 
 
 
