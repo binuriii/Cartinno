@@ -13,6 +13,7 @@ const activeIndex = ref(0)
 
 const scrollToCard = async (index) => {
   const track = trackRef.value
+
   if (!track || !supportServices.length) return
 
   const next =
@@ -82,7 +83,6 @@ const updateActive = () => {
         <div class="bs-heading">
           <h2 class="bs-title">
             {{ supportContent.title }}
-
           </h2>
         </div>
 
@@ -131,7 +131,6 @@ const updateActive = () => {
         v-if="supportServices.length > 1"
         class="bs-controls"
       >
-
         <div class="bs-arrows">
           <button
             type="button"
