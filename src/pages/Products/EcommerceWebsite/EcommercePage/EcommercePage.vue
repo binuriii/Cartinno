@@ -8,6 +8,7 @@ import {
   ecommerceFAQs
 } from '../../../../components/InnerPages/FAQ/FAQData.js'
 import Comparison from './Comparison/Comparison.vue';
+import RetailChange from './RetailChange/RetailChange.vue';
 
 
 </script>
@@ -17,6 +18,7 @@ import Comparison from './Comparison/Comparison.vue';
 
     <BusinessSupport />
     <Comparison />
+    <RetailChange />
     <!-- REUSABLE FAQ -->
     <FAQ
       title="Frequently Ask Questions"
