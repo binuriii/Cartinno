@@ -234,11 +234,6 @@ export const products = [
         "title": "Run your restaurant",
         "items": [
           {
-            "label": "Owner App",
-            "href": "#owner-app",
-            "icon": "fa-solid fa-laptop"
-          },
-          {
             "label": "Reporting & Analytics",
             "href": "#reporting-analytics",
             "icon": "fa-solid fa-chart-pie"
@@ -274,11 +269,6 @@ export const products = [
       {
         "title": "Run your restaurant",
         "items": [
-          {
-            "label": "Owner App",
-            "href": "#owner-app",
-            "icon": "fa-solid fa-laptop"
-          },
           {
             "label": "Reporting & Analytics",
             "href": "#reporting-analytics",
