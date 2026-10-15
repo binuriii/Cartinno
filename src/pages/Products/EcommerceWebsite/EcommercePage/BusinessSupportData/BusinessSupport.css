@@ -9,15 +9,21 @@
   --bs-ink: #23232b;
   --bs-muted: #5b5b66;
 
+  position: relative;
+  z-index: 2;
+
   width: 100%;
-  padding: 5vh 3vw 3vh;
+
+  /* OVERLAP PREVIOUS HERO SECTION */
+  margin-top: -24px;
+
+  /* SAME TOP CORNERS AS TRUSTED BRANDS */
+  border-radius: 50px 50px 0 0;
+
+  /* SPACING */
+  padding: 10vh 3vw 3vh;
 
   background:
-    radial-gradient(
-      ellipse at 75% 0%,
-      rgba(215, 69, 78, 0.09),
-      transparent 38%
-    ),
     #ffffff;
 
   color: var(--bs-ink);
@@ -59,7 +65,7 @@
   letter-spacing: -0.045em;
 }
 
-/* HEADING ICON */
+/* OPTIONAL HEADING ICON */
 
 .bs-heading-icon {
   display: inline-grid;
@@ -68,7 +74,6 @@
 
   width: 45px;
   height: 45px;
-
   margin-left: 10px;
 
   border-radius: 12px;
@@ -182,7 +187,7 @@
   );
 }
 
-/* CARD ICON */
+/* OPTIONAL CARD ICON */
 
 .bs-card-icon {
   position: absolute;
@@ -255,16 +260,9 @@
 .bs-controls {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   margin-top: 10px;
-}
-
-.bs-counter {
-  color: var(--bs-muted);
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.06em;
 }
 
 .bs-arrows {
@@ -320,7 +318,9 @@
 
 @media (max-width: 1024px) {
   .bs-section {
-    padding: 5vh 4vw 3vh;
+    margin-top: -24px;
+    padding: 8vh 4vw 3vh;
+    border-radius: 40px 40px 0 0;
   }
 
   .bs-header {
@@ -346,7 +346,9 @@
 
 @media (max-width: 640px) {
   .bs-section {
-    padding: 65px 14px 25px;
+    margin-top: -16px;
+    padding: 56px 14px 25px;
+    border-radius: 24px 24px 0 0;
   }
 
   .bs-header {
@@ -438,5 +440,40 @@
   .bs-card-image,
   .bs-arrow {
     transition: none;
+  }
+}
+
+
+/* PERMANENT ROUNDED OVERLAP */
+
+.bs-section {
+  position: relative;
+  z-index: 20;
+
+  margin-top: -55px;
+  border-radius: 70px 70px 0 0;
+
+  background: #ffffff;
+  background-clip: padding-box;
+
+  isolation: isolate;
+  transform: translateZ(0);
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .bs-section {
+    margin-top: -70px;
+    border-radius: 40px 40px 0 0;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .bs-section {
+    margin-top: -45px;
+    border-radius: 24px 24px 0 0;
   }
 }
