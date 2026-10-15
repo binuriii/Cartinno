@@ -1,12 +1,12 @@
 
 export const googleReviewContent = {
-  title: 'The easiest way to get more Google reviews',
-
+  title1: 'The easiest way to get more',
+  title2: 'Google reviews',
   description:
     'Build a stronger online reputation, connect with more customers, and turn great experiences into lasting trust.',
 
   featuredImage:
-    'https://images.unsplash.com/photo-1789758386134-01c0f5316597?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDE%3D',
+    'https://images.unsplash.com/photo-1790274742392-083002458455?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDE%3D',
 
   featuredImageAlt:
     'People working together and sharing a positive experience'

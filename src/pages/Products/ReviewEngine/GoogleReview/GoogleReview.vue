@@ -15,7 +15,9 @@ import {
       <!-- CENTERED HEADING -->
       <header class="gr-header">
         <h2 class="gr-title">
-          {{ googleReviewContent.title }}
+          {{ googleReviewContent.title1 }}
+          <br/>
+          {{ googleReviewContent.title2 }}
         </h2>
 
         <p class="gr-description">
