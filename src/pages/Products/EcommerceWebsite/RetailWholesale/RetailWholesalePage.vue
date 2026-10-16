@@ -6,11 +6,11 @@ import Testimonials from '../../../../components/InnerPages/Testimonials/Testimo
 import RetailGrowth from './RetailGrowth/RetailGrowth.vue'
 import {
   retailPOSHero
-} from '../../../../components/InnerPages/Hero/Hero.js'
+} from './RetailWholesalePage.js'
 
 import {
   retailPOSFAQs
-} from '../../../../components/InnerPages/FAQ/FAQData.js'
+} from './RetailWholesalePage.js'
 import RetailOperations from './RetailOperations/RetailOperations.vue'
 import RetailExpansion from './RetailExpansion/RetailExpansion.vue'
 </script>

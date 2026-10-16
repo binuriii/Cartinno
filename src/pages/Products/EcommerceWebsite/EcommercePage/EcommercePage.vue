@@ -8,8 +8,8 @@ import BusinessSupport from './BusinessSupportData/BusinessSupport.vue'
 import Comparison from './Comparison/Comparison.vue'
 import RetailChange from './RetailChange/RetailChange.vue'
 
-import { ecommerceHero } from '../../../../components/InnerPages/Hero/Hero.js'
-import { ecommerceFAQs } from '../../../../components/InnerPages/FAQ/FAQData.js'
+import { ecommerceHero } from './EcommercePage.js'
+import { ecommerceFAQs } from './EcommercePage.js'
 
 </script>
 
