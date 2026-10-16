@@ -44,49 +44,48 @@ export const ecommerceFAQs = [
   }
 ]
 
-
-export const reviewEngineFAQs = [
+export const seoFAQs = [
   {
     id: 1,
-    question: 'How does the Review Engine work?',
+    question: 'What is SEO, and why does my business need it?',
     answer:
-      'The Review Engine helps businesses encourage customers to share feedback and leave Google reviews, making it easier to build a stronger online reputation.'
+      'SEO (Search Engine Optimization) improves how clearly your website communicates its content to search engines and visitors. It can help relevant customers discover your business through organic search.'
   },
   {
     id: 2,
-    question: 'Can I collect Google reviews automatically?',
+    question: 'How long does SEO take to show results?',
     answer:
-      'Automated review requests can help encourage customers to leave feedback without having to ask each customer individually.'
+      'SEO is a long-term process. Changes can take weeks or months to have an impact, depending on competition, your website, and the type of improvements made. Rankings or traffic increases cannot be guaranteed.'
   },
   {
     id: 3,
-    question: 'Can Google reviews help my business attract more customers?',
+    question: 'Can SEO help customers find my local business?',
     answer:
-      'Positive Google reviews can help build customer trust, strengthen your online reputation, and encourage new customers to choose your business.'
+      'Yes. Relevant location pages, accurate business information, and a well-maintained Google Business Profile can support visibility for local searches.'
   },
   {
     id: 4,
-    question: 'Can the Review Engine help improve my Google rating?',
+    question: 'Is SEO useful for an e-commerce website?',
     answer:
-      'Encouraging genuine customer feedback can help your business collect more reviews over time, although your overall rating depends on the reviews customers leave.'
+      'Yes. Helpful product descriptions, clear categories, descriptive URLs, and search-friendly product pages can make an online store easier to understand and discover.'
   },
   {
     id: 5,
-    question: 'Can I manage customer feedback easily?',
+    question: 'Do mobile-friendly websites matter for SEO?',
     answer:
-      'Review management tools can help businesses monitor customer feedback, understand customer experiences, and identify opportunities for improvement.'
+      'Yes. Mobile usability, readable content, and website performance are important parts of creating a better search and browsing experience.'
   },
   {
     id: 6,
-    question: 'Do Google reviews help with SEO?',
+    question: 'Do I need to keep updating my website?',
     answer:
-      'Google reviews can contribute to your local search presence by providing customer feedback and helping people evaluate your business.'
+      'Regularly reviewing important pages helps keep information accurate, relevant, and useful. Updating content should focus on real improvements rather than making changes just for search engines.'
   },
   {
     id: 7,
-    question: 'Is the Review Engine suitable for different businesses?',
+    question: 'How can I measure SEO progress?',
     answer:
-      'Review management solutions can support businesses such as retail stores, restaurants, salons, and service providers that want to strengthen customer trust.'
+      'Tools such as Google Search Console can help you review search impressions, clicks, and indexing information. SEO progress is best evaluated over time alongside business goals.'
   }
 ]
 

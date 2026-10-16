@@ -146,7 +146,7 @@ export const products = [
           },
           {
             "label": "Restaurant SEO",
-            "href": "#seo",
+            "href": "/seo",
             "icon": "fa-solid fa-magnifying-glass"
           },
           {
