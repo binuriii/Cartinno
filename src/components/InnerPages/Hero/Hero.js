@@ -119,3 +119,37 @@ export const reviewEngineHero = {
   secondaryButton: null,
   interval: 3500
 }
+
+
+export const retailPOSHero = {
+  fixedLine: 'Your Retail Business,',
+
+  rotatingWords: [
+    'Smarter Than Ever.',
+    'Connected Everywhere.',
+    'Built for Growth.',
+    'Ready for More.'
+  ],
+
+  description:
+    'Manage retail sales, wholesale orders, inventory, and customers with Cartinno. One connected platform to simplify operations and grow your business.',
+
+  // CHANGE YOUR BACKGROUND IMAGE HERE
+  backgroundImage:
+    'https://images.unsplash.com/photo-1775534778375-3f235c466c58?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
+
+  // Controls the white overlay
+  // 0 = no overlay, 1 = completely white
+  overlayOpacity: 0.4,
+
+  backgroundPosition: 'center center',
+
+  primaryButton: {
+    text: 'Get a Free Demo',
+    link: '/#demo'
+  },
+
+  secondaryButton: null,
+
+  interval: 3500
+}
