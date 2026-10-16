@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from './pages/Home/Home.vue'
 
+
 const routes = [
   
   { path: '/', 
@@ -14,9 +15,11 @@ const routes = [
   component: () =>
     import('./pages/Products/EcommerceWebsite/EcommercePage/EcommercePage.vue')
   },
-
-
-
+  {
+    path: '/seo',
+    name: 'seo',
+    component: () => import('./pages/Products/EcommerceWebsite/SEO/SEO.vue')
+  },
 
 
 
