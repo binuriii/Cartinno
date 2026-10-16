@@ -9,11 +9,11 @@ import GoogleReview from './GoogleReview/GoogleReview.vue'
 
 import {
   reviewEngineHero
-} from '../../../../components/InnerPages/Hero/Hero.js'
+} from './ReviewEngine.js'
 
 import {
   reviewEngineFAQs
-} from '../../../../components/InnerPages/FAQ/FAQData.js'
+} from './ReviewEngine.js'
 </script>
 
 <template>
