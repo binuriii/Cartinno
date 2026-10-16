@@ -15,14 +15,14 @@ export const products = [
         "items": [
           { "label": "E-Commerce Website", "href": "/ecommerce-website", "icon": "fa-solid fa-globe" },
           { "label": "SEO", "href": "#seo", "icon": "fa-solid fa-magnifying-glass" },
-          { "label": "Review Engine", "href": "#review-engine", "icon": "fa-regular fa-star" }
+          { "label": "Review Engine", "href": "/review-engine", "icon": "fa-regular fa-star" }
         ]
       },
       {
         "title": "Grow Online Sales",
         "column": 1,
         "items": [
-          { "label": "Retail & Wholesale Pricing", "href": "#retail-wholesale-pricing", "icon": "fa-solid fa-tag" },
+          { "label": "Retail & Wholesale Pricing", "href": "/retail-wholesale", "icon": "fa-solid fa-tag" },
           { "label": "Smart Upsells", "href": "#smart-upsells", "icon": "fa-solid fa-chart-line" },
           { "label": "Delivery", "href": "#delivery", "icon": "fa-solid fa-truck-fast" },
           { "label": "Gift Cards", "href": "#gift-cards", "icon": "fa-regular fa-credit-card" },
@@ -234,11 +234,6 @@ export const products = [
         "title": "Run your restaurant",
         "items": [
           {
-            "label": "Owner App",
-            "href": "#owner-app",
-            "icon": "fa-solid fa-laptop"
-          },
-          {
             "label": "Reporting & Analytics",
             "href": "#reporting-analytics",
             "icon": "fa-solid fa-chart-pie"
@@ -274,11 +269,6 @@ export const products = [
       {
         "title": "Run your restaurant",
         "items": [
-          {
-            "label": "Owner App",
-            "href": "#owner-app",
-            "icon": "fa-solid fa-laptop"
-          },
           {
             "label": "Reporting & Analytics",
             "href": "#reporting-analytics",

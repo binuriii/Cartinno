@@ -91,3 +91,31 @@ export const seoHero = {
 
   interval: 3500
 }
+
+export const reviewEngineHero = {
+  fixedLine: 'Your Business Reputation,',
+
+  rotatingWords: [
+    'Built on Trust.',
+    'Powered by Reviews.',
+    'Ready to Grow.',
+    'Stronger with Cartinno.'
+  ],
+
+  description:
+    'Turn happy customers into powerful reviews, strengthen your online reputation, and help more people discover your business.',
+
+  backgroundImage:
+    'https://images.unsplash.com/photo-1775534778375-3f235c466c58?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
+
+  backgroundPosition: 'center center',
+  overlayOpacity: 0.38,
+
+  primaryButton: {
+    text: 'Get a Free Demo',
+    link: '/#demo'
+  },
+
+  secondaryButton: null,
+  interval: 3500
+}
