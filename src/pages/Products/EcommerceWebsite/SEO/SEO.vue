@@ -6,8 +6,8 @@ import Testimonials from '../../../../components/InnerPages/Testimonials/Testimo
 import SEOFeatures from './SEOFeatures/SEOFeatures.vue'
 import SEOProcess from './SEOProcess/SEOProcess.vue'
 
-import { seoHero } from '../../../../components/InnerPages/Hero/Hero.js'
-import { seoFAQs } from '../../../../components/InnerPages/FAQ/FAQData.js'
+import { seoHero } from './SEO.js'
+import { seoFAQs } from './SEO.js'
 import SEOGuides from './SEOGuides/SEOGuides.vue'
 
 import './SEOPage.css'
