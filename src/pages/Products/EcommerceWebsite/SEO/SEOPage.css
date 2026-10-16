@@ -1,0 +1,119 @@
+.seo-page {
+  width: 100%;
+  background: #ffffff;
+}
+
+/* SHARED STYLES FOR THE TWO SEO SECTIONS */
+
+.seo-page .seo-features,
+.seo-page .seo-process {
+  --seo-brand: #d7454e;
+  --seo-brand-dark: #b82f3a;
+  --seo-ink: #27262b;
+  --seo-muted: #6c6870;
+  --seo-cream: #faf7f3;
+  --seo-border: #e9e3df;
+
+  color: var(--seo-ink);
+  font-family: inherit;
+  scroll-margin-top: 110px;
+}
+
+.seo-page .seo-features,
+.seo-page .seo-features *,
+.seo-page .seo-features *::before,
+.seo-page .seo-features *::after,
+.seo-page .seo-process,
+.seo-page .seo-process *,
+.seo-page .seo-process *::before,
+.seo-page .seo-process *::after {
+  box-sizing: border-box;
+}
+
+.seo-page .seo-section-container {
+  width: min(1200px, 90%);
+  margin-inline: auto;
+}
+
+.seo-page .seo-section-eyebrow {
+  margin: 0 0 20px;
+  color: var(--seo-brand-dark);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.seo-page .seo-section-heading {
+  margin: 0;
+  color: var(--seo-ink);
+  font-size: clamp(32px, 3.8vw, 50px);
+  font-weight: 550;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.seo-page .seo-section-heading > span {
+  display: block;
+}
+
+.seo-page .seo-section-copy {
+  color: var(--seo-muted);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.seo-page .seo-section-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 52px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: var(--seo-ink);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  transition:
+    transform 200ms ease,
+    background-color 200ms ease;
+}
+
+.seo-page .seo-section-button > span {
+  font-size: 21px;
+}
+
+.seo-page .seo-section-button:hover {
+  transform: translateY(-3px);
+  background: var(--seo-brand-dark);
+}
+
+.seo-page .seo-section-button:focus-visible,
+.seo-page .seo-features-link:focus-visible {
+  outline: 3px solid var(--seo-brand);
+  outline-offset: 6px;
+}
+
+@media (max-width: 540px) {
+  .seo-page .seo-section-heading {
+    font-size: clamp(30px, 8vw, 38px);
+  }
+
+  .seo-page .seo-section-copy {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seo-page .seo-section-button {
+    transition: none;
+  }
+
+  .seo-page .seo-section-button:hover {
+    transform: none;
+  }
+}

@@ -16,6 +16,13 @@ const routes = [
   },
 
   {
+    path: '/seo',
+    name: 'seo',
+    component: () => 
+      import('./pages/Products/EcommerceWebsite/SEO/SEO.vue')
+  },
+
+  {
     path: '/review-engine',
     name: 'review-engine',
     component: () =>
