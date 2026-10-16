@@ -1,0 +1,429 @@
+.rg-section,
+.rg-section * {
+  box-sizing: border-box;
+}
+
+.rg-section {
+  --rg-red: #d7454e;
+  --rg-ink: #23232b;
+  --rg-muted: #5b5b66;
+
+  position: relative;
+  z-index: 20;
+
+  width: 100%;
+
+  padding: 5vh 3vw 10vh;
+
+  background: #ffffff;
+  background-clip: padding-box;
+
+  color: var(--rg-ink);
+  font-family: inherit;
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.rg-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* ========================================
+   LEFT-ALIGNED HEADING
+======================================== */
+
+.rg-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  margin-bottom: clamp(30px, 4vw, 55px);
+
+  text-align: left;
+}
+
+/* TITLE */
+
+.rg-heading {
+  max-width: 1000px;
+  margin: 0;
+
+  color: var(--rg-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+
+  text-align: left;
+}
+
+/* DESCRIPTION */
+
+.rg-intro {
+  max-width: 750px;
+  margin: 18px 0 0;
+
+  color: var(--rg-muted);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: normal;
+
+  text-align: left;
+}
+
+/* ========================================
+   THREE-CARD GRID
+======================================== */
+
+.rg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: clamp(16px, 2vw, 28px);
+  align-items: stretch;
+
+  width: 100%;
+}
+
+/* ========================================
+   CARD BASE
+======================================== */
+
+.rg-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 490px;
+
+  padding: clamp(16px, 2vw, 25px);
+
+  border: 1px solid transparent;
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.rg-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 18px 40px rgba(35, 35, 43, 0.08);
+}
+
+/* ========================================
+   CARD BACKGROUND COLORS
+======================================== */
+
+/* CARD 01 - SOFT BLUE */
+
+.rg-card-blue {
+  background: #e2f4fb;
+  border-color: #e9ebf3;
+}
+
+/* CARD 02 - SOFT PEACH */
+
+.rg-card-peach {
+  background: #e2ffdf;
+  border-color: #fae7df;
+}
+
+/* CARD 03 - SOFT LAVENDER */
+
+.rg-card-lavender {
+  background: #fdecd2;
+  border-color: #e8e5f2;
+}
+
+/* ========================================
+   CARD IMAGE AREA
+======================================== */
+
+.rg-card-media {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 1.38 / 1;
+
+  border-radius: 19px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* IMAGE */
+
+.rg-card-media img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.65s ease;
+}
+
+.rg-card:hover .rg-card-media img {
+  transform: scale(1.07);
+}
+
+/* ========================================
+   IMAGE NUMBER BADGE
+======================================== */
+
+.rg-media-number {
+  position: absolute;
+  z-index: 2;
+
+  top: 14px;
+  left: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 42px;
+  height: 32px;
+
+  padding: 0 10px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.94);
+  color: #23232b;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ========================================
+   CARD TEXT CONTENT
+======================================== */
+
+.rg-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  flex: 1;
+
+  padding: 27px 5px 8px;
+
+  text-align: left;
+}
+
+/* FEATURE NUMBER */
+
+.rg-card-number {
+  display: block;
+  margin-bottom: 12px;
+
+  color: #0d0d0d;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* FEATURE TITLE */
+
+.rg-card-title {
+  max-width: 350px;
+  margin: 0;
+
+  color: var(--rg-ink);
+
+  font-size: clamp(21px, 2vw, 28px);
+  font-weight: 550;
+  line-height: 1.22;
+  letter-spacing: -0.04em;
+}
+
+/* FEATURE DESCRIPTION */
+
+.rg-card-description {
+  max-width: 360px;
+  margin: 14px 0 0;
+
+  color: var(--rg-muted);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1024px) {
+  .rg-section {
+    margin-top: -70px;
+
+    padding: 8vh 4vw 8vh;
+
+    border-radius: 40px 40px 0 0;
+  }
+
+  .rg-header {
+    margin-bottom: 35px;
+  }
+
+  .rg-grid {
+    gap: 16px;
+  }
+
+  .rg-card {
+    min-height: 440px;
+    padding: 16px;
+
+    border-radius: 23px;
+  }
+
+  .rg-card-media {
+    aspect-ratio: 1.18 / 1;
+    border-radius: 16px;
+  }
+
+  .rg-card-content {
+    padding: 22px 4px 8px;
+  }
+
+  .rg-card-title {
+    font-size: 22px;
+  }
+
+  .rg-card-description {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   SMALL TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .rg-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rg-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .rg-card:last-child .rg-card-media {
+    aspect-ratio: 2.2 / 1;
+  }
+
+  .rg-card {
+    min-height: auto;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 640px) {
+  .rg-section {
+    margin-top: -45px;
+
+    padding: 56px 14px 70px;
+
+    border-radius: 24px 24px 0 0;
+  }
+
+  /* HEADER */
+
+  .rg-header {
+    margin-bottom: 30px;
+  }
+
+  .rg-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .rg-intro {
+    max-width: 100%;
+    margin-top: 18px;
+
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  /* CARD GRID */
+
+  .rg-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .rg-card,
+  .rg-card:last-child {
+    grid-column: auto;
+
+    min-height: auto;
+    padding: 16px;
+
+    border-radius: 20px;
+  }
+
+  /* CARD IMAGE */
+
+  .rg-card-media,
+  .rg-card:last-child .rg-card-media {
+    aspect-ratio: 1.45 / 1;
+    border-radius: 15px;
+  }
+
+  /* CARD CONTENT */
+
+  .rg-card-content {
+    padding: 22px 5px 8px;
+  }
+
+  .rg-card-title {
+    font-size: 23px;
+    line-height: 1.2;
+  }
+
+  .rg-card-description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rg-card,
+  .rg-card-media img {
+    transition: none;
+  }
+}
