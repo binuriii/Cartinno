@@ -36,6 +36,13 @@ const routes = [
       import('./pages/Products/EcommerceWebsite/RetailWholesale/RetailWholesalePage.vue')
   },
 
+  {
+    path: '/smart-upsells',
+    name: 'smart-upsells',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/SmartUpsells/SmartUpsells.vue')
+  },
+
 
 
 

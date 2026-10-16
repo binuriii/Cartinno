@@ -1,0 +1,439 @@
+
+/* ==========================================
+   SMART UPSELLS BENEFITS SECTION
+========================================== */
+
+.su-section,
+.su-section * {
+  box-sizing: border-box;
+}
+
+.su-section {
+  --su-red: #d7454e;
+  --su-ink: #23232b;
+  --su-muted: #5b5b66;
+
+  position: relative;
+  z-index: 20;
+
+  width: 100%;
+
+  /* OVERLAP PREVIOUS HERO */
+  margin-top: -55px;
+
+  /* ROUNDED TOP CORNERS */
+  border-radius: 70px 70px 0 0;
+
+  /* SECTION SPACING */
+  padding: 10vh 3vw 10vh;
+
+  background: #ffffff;
+  background-clip: padding-box;
+
+  color: var(--su-ink);
+  font-family: inherit;
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.su-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* ==========================================
+   LEFT-ALIGNED SECTION HEADING
+========================================== */
+
+.su-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  margin-bottom: clamp(40px, 5vw, 70px);
+
+  text-align: left;
+}
+
+/* HEADING */
+
+.su-heading {
+  max-width: 920px;
+  margin: 0;
+
+  color: var(--su-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+
+  text-align: left;
+}
+
+/* DESCRIPTION */
+
+.su-description {
+  max-width: 720px;
+  margin: 18px 0 0;
+
+  color: var(--su-muted);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  text-align: left;
+}
+
+/* ==========================================
+   MAIN TWO-COLUMN LAYOUT
+========================================== */
+
+.su-layout {
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+
+  gap: clamp(35px, 5vw, 85px);
+
+  width: 100%;
+}
+
+/* ==========================================
+   LEFT IMAGE CARD
+========================================== */
+
+.su-image-card {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  min-height: 570px;
+
+  border-radius: 35px;
+
+  background: #f4eee7;
+
+  overflow: hidden;
+
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+/* IMAGE */
+
+.su-image {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+.su-image-card:hover .su-image {
+  transform: scale(1.035);
+}
+
+/* IMAGE PLACEHOLDER */
+
+.su-image-placeholder {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+  padding: 30px;
+
+  text-align: center;
+
+  background: radial-gradient(
+    circle at 50% 45%,
+    #fffaf6 0%,
+    #f4eee7 75%
+  );
+}
+
+.su-placeholder-title {
+  color: var(--su-ink);
+
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.su-image-placeholder p {
+  max-width: 270px;
+  margin: 0;
+
+  color: var(--su-muted);
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   RIGHT BENEFITS - NO ICONS
+========================================== */
+
+.su-benefits {
+  display: flex;
+  flex-direction: column;
+
+  gap: clamp(38px, 5vw, 70px);
+
+  width: 100%;
+}
+
+/* BENEFIT ROW */
+
+.su-benefit {
+  display: block;
+  width: 100%;
+
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* BENEFIT CONTENT */
+
+.su-benefit-content {
+  width: 100%;
+  min-width: 0;
+
+  text-align: left;
+}
+
+/* BENEFIT TITLE */
+
+.su-benefit-title {
+  max-width: 470px;
+  margin: 0;
+
+  color: var(--su-ink);
+
+  font-size: clamp(24px, 2.6vw, 35px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.0001em;
+
+  text-align: left;
+}
+
+/* BENEFIT DESCRIPTION */
+
+.su-benefit-description {
+  max-width: 475px;
+  margin: 15px 0 0;
+
+  color: var(--su-muted);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.65;
+
+  text-align: left;
+}
+
+/* ==========================================
+   SCROLL REVEAL ANIMATION
+========================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .su-section:not(.su-visible) .su-image-card {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  .su-section:not(.su-visible) .su-benefit {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .su-visible .su-benefit {
+    transition-delay:
+      calc(var(--su-index) * 0.12s);
+  }
+}
+
+/* ==========================================
+   IMAGE HOVER EFFECT
+========================================== */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .su-image-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 20px 50px rgba(35, 35, 43, 0.09);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+
+  .su-section {
+    margin-top: -70px;
+
+    padding: 8vh 4vw 8vh;
+
+    border-radius: 40px 40px 0 0;
+  }
+
+  .su-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .su-image-card {
+    min-height: 490px;
+    border-radius: 28px;
+  }
+
+  .su-benefits {
+    gap: 38px;
+  }
+
+  .su-benefit-title {
+    font-size: clamp(21px, 2.6vw, 28px);
+  }
+
+  .su-benefit-description {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+  .su-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .su-image-card {
+    min-height: 500px;
+  }
+
+  .su-benefits {
+    gap: 32px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+
+  .su-section {
+    margin-top: -45px;
+
+    padding: 56px 14px 70px;
+
+    border-radius: 24px 24px 0 0;
+  }
+
+  /* HEADER */
+
+  .su-header {
+    margin-bottom: 30px;
+  }
+
+  .su-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .su-description {
+    margin-top: 18px;
+
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  /* IMAGE */
+
+  .su-layout {
+    gap: 35px;
+  }
+
+  .su-image-card {
+    min-height: 355px;
+    border-radius: 20px;
+  }
+
+  .su-placeholder-title {
+    font-size: 19px;
+  }
+
+  /* BENEFITS */
+
+  .su-benefits {
+    gap: 32px;
+  }
+
+  .su-benefit-title {
+    font-size: 23px;
+    line-height: 1.2;
+  }
+
+  .su-benefit-description {
+    margin-top: 10px;
+
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .su-image-card,
+  .su-image,
+  .su-benefit {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

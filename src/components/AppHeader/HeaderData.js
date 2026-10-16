@@ -23,7 +23,7 @@ export const products = [
         "column": 1,
         "items": [
           { "label": "Retail & Wholesale Pricing", "href": "/retail-wholesale", "icon": "fa-solid fa-tag" },
-          { "label": "Smart Upsells", "href": "#smart-upsells", "icon": "fa-solid fa-chart-line" },
+          { "label": "Smart Upsells", "href": "/smart-upsells", "icon": "fa-solid fa-chart-line" },
           { "label": "Delivery", "href": "#delivery", "icon": "fa-solid fa-truck-fast" },
           { "label": "Gift Cards", "href": "#gift-cards", "icon": "fa-regular fa-credit-card" },
           { "label": "Loyalty Management System", "href": "#loyalty", "icon": "fa-solid fa-award" }
