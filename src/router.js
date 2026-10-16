@@ -22,6 +22,13 @@ const routes = [
       import('./pages/Products/ReviewEngine/ReviewEngine.vue')
   },
 
+  {
+    path: '/retail-wholesale',
+    name: 'retail-wholesale',
+    component: () =>
+      import('./pages/Products/RetailWholesale/RetailWholesalePage.vue')
+  },
+
 
 
 

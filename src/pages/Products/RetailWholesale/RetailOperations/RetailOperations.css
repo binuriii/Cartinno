@@ -1,0 +1,1527 @@
+.ro-section,
+.ro-section * {
+  box-sizing: border-box;
+}
+
+.ro-section {
+  --ro-red: #d7454e;
+  --ro-ink: #23232b;
+  --ro-muted: #5b5b66;
+
+  position: relative;
+  width: 100%;
+
+  padding: 5vh 3vw 10vh;
+
+  background: #ffffff;
+  color: var(--ro-ink);
+  font-family: inherit;
+}
+
+.ro-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* ========================================
+   CENTERED SECTION HEADER
+======================================== */
+
+.ro-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-bottom: clamp(30px, 4vw, 55px);
+
+  text-align: center;
+}
+
+.ro-heading {
+  max-width: 950px;
+  margin: 0 auto;
+
+  color: var(--ro-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+
+  text-align: center;
+}
+
+.ro-description {
+  max-width: 730px;
+  margin: 28px auto 0;
+
+  color: var(--ro-muted);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+/* ========================================
+   SIX-CARD GRID
+======================================== */
+
+.ro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: clamp(16px, 2vw, 28px);
+  align-items: stretch;
+}
+
+/* ========================================
+   CARD BASE
+======================================== */
+
+.ro-card {
+  --ro-accent: #6571d8;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 465px;
+
+  padding: clamp(16px, 2vw, 25px);
+
+  border: 1px solid transparent;
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+/* SCROLL REVEAL INITIAL STATE */
+
+.ro-motion-ready .ro-card:not(.ro-card-visible) {
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+}
+
+/* VISIBLE CARD */
+
+.ro-card.ro-card-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* HOVER */
+
+.ro-card:hover,
+.ro-card.ro-card-visible:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 20px 45px rgba(35, 35, 43, 0.09);
+}
+
+/* ========================================
+   SIX PASTEL COLORS
+======================================== */
+
+/* 01 - BLUE */
+
+.ro-card-blue {
+  --ro-accent: #6571d8;
+
+  background: #f0f2f8;
+  border-color: #e9ebf3;
+}
+
+/* 02 - PEACH */
+
+.ro-card-peach {
+  --ro-accent: #d98165;
+
+  background: #fff0eb;
+  border-color: #fae7df;
+}
+
+/* 03 - LAVENDER */
+
+.ro-card-lavender {
+  --ro-accent: #8c75cc;
+
+  background: #f0eef8;
+  border-color: #e8e5f2;
+}
+
+/* 04 - MINT */
+
+.ro-card-mint {
+  --ro-accent: #36a576;
+
+  background: #eaf6f0;
+  border-color: #dcece3;
+}
+
+/* 05 - CREAM */
+
+.ro-card-cream {
+  --ro-accent: #c59147;
+
+  background: #fff6e5;
+  border-color: #f7ead1;
+}
+
+/* 06 - SKY */
+
+.ro-card-sky {
+  --ro-accent: #4b91c6;
+
+  background: #ebf5fb;
+  border-color: #dfeef8;
+}
+
+/* ========================================
+   CARD MEDIA
+======================================== */
+
+.ro-card-media {
+  position: relative;
+
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  height: 230px;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 70%,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.35) 70%
+    );
+}
+
+/* SOFT GLOW */
+
+.ro-card-media::before {
+  content: "";
+
+  position: absolute;
+
+  width: 225px;
+  height: 225px;
+
+  border-radius: 50%;
+
+  background: var(--ro-accent);
+
+  opacity: 0.09;
+  filter: blur(24px);
+
+  pointer-events: none;
+}
+
+/* ========================================
+   UI DASHBOARD CONTAINER
+======================================== */
+
+.ro-visual {
+  position: relative;
+  z-index: 1;
+
+  width: 88%;
+  max-width: 310px;
+
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ro-card:hover .ro-visual {
+  transform: translateY(-8px) scale(1.025);
+}
+
+.ro-mini-window {
+  width: 100%;
+  padding: 15px;
+
+  border: 1px solid rgba(230, 230, 235, 0.95);
+  border-radius: 18px;
+
+  background: #ffffff;
+  color: var(--ro-ink);
+
+  box-shadow:
+    0 15px 35px rgba(35, 35, 43, 0.09);
+}
+
+/* DASHBOARD ENTER ANIMATION */
+
+.ro-motion-ready
+.ro-card:not(.ro-card-visible)
+.ro-mini-window {
+  opacity: 0;
+  transform: translateY(22px) scale(0.96);
+}
+
+.ro-card-visible .ro-mini-window {
+  animation: ro-ui-enter 0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.2s both;
+}
+
+@keyframes ro-ui-enter {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ========================================
+   MINI WINDOW TOP BAR
+======================================== */
+
+.ro-mini-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  margin-bottom: 15px;
+
+  color: #777784;
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.ro-mini-topbar > i {
+  color: var(--ro-accent);
+}
+
+.ro-mini-dots {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.ro-mini-dots i {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+  background: #d7d7df;
+}
+
+/* ========================================
+   01 - POS & BILLING
+======================================== */
+
+.ro-pos-total {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  padding: 14px;
+
+  border-radius: 12px;
+  background: #f5f6fb;
+}
+
+.ro-pos-total small,
+.ro-stock-summary small,
+.ro-customer-stats small,
+.ro-order-heading small,
+.ro-analytics-total small {
+  color: #858590;
+  font-size: 9px;
+}
+
+.ro-pos-total strong {
+  color: var(--ro-ink);
+
+  font-size: 24px;
+  letter-spacing: -0.05em;
+}
+
+.ro-pos-total > span {
+  color: #2d9f69;
+  font-size: 9px;
+}
+
+.ro-pos-payment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  padding: 11px 3px;
+
+  border-bottom: 1px solid #f0f0f2;
+
+  font-size: 10px;
+}
+
+.ro-pos-payment > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ro-pos-payment i {
+  color: var(--ro-accent);
+}
+
+/* POS ANIMATIONS */
+
+.ro-card-visible .ro-pos-total {
+  animation: ro-element-up 0.65s ease 0.45s both;
+}
+
+.ro-card-visible .ro-pos-payment {
+  animation: ro-element-up 0.6s ease both;
+}
+
+.ro-card-visible .ro-pos-payment:nth-child(3) {
+  animation-delay: 0.65s;
+}
+
+.ro-card-visible .ro-pos-payment:nth-child(4) {
+  animation-delay: 0.85s;
+}
+
+/* ========================================
+   02 - INVENTORY
+======================================== */
+
+.ro-stock-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 14px;
+}
+
+.ro-stock-icon {
+  display: grid;
+  place-items: center;
+
+  width: 43px;
+  height: 43px;
+
+  border-radius: 12px;
+
+  background: #fff0eb;
+  color: var(--ro-accent);
+}
+
+.ro-stock-summary > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ro-stock-summary strong {
+  font-size: 23px;
+}
+
+.ro-stock-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 30px;
+  align-items: center;
+  gap: 9px;
+
+  padding: 9px 0;
+
+  font-size: 10px;
+}
+
+.ro-stock-row > span {
+  color: #555560;
+}
+
+.ro-stock-row b {
+  text-align: right;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.ro-stock-track {
+  height: 7px;
+
+  border-radius: 999px;
+  background: #f1f1f4;
+
+  overflow: hidden;
+}
+
+.ro-stock-track i {
+  display: block;
+  height: 100%;
+
+  border-radius: inherit;
+  background: var(--ro-accent);
+
+  transform-origin: left;
+}
+
+/* INVENTORY ANIMATIONS */
+
+.ro-card-visible .ro-stock-summary {
+  animation: ro-element-up 0.6s ease 0.45s both;
+}
+
+.ro-card-visible .ro-stock-track i {
+  animation: ro-progress 1.2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.ro-card-visible .ro-stock-row:nth-child(3)
+.ro-stock-track i {
+  animation-delay: 0.55s;
+}
+
+.ro-card-visible .ro-stock-row:nth-child(4)
+.ro-stock-track i {
+  animation-delay: 0.7s;
+}
+
+.ro-card-visible .ro-stock-row:nth-child(5)
+.ro-stock-track i {
+  animation-delay: 0.85s;
+}
+
+@keyframes ro-progress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ========================================
+   03 - MULTI-LOCATION CONTROL
+======================================== */
+
+.ro-branch-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 0;
+
+  border-bottom: 1px solid #f2f2f4;
+}
+
+.ro-branch-icon {
+  display: grid;
+  place-items: center;
+
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+
+  border-radius: 10px;
+
+  background: #f1edfa;
+  color: var(--ro-accent);
+
+  font-size: 13px;
+}
+
+.ro-branch-row > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  flex: 1;
+  min-width: 0;
+}
+
+.ro-branch-row strong {
+  font-size: 10px;
+}
+
+.ro-branch-row small {
+  color: #858590;
+  font-size: 9px;
+}
+
+.ro-status {
+  padding: 5px 7px;
+
+  border-radius: 999px;
+
+  background: #e7f8ed;
+  color: #298e53;
+
+  font-size: 8px;
+  font-weight: 650;
+}
+
+/* LOCATION ANIMATIONS */
+
+.ro-card-visible .ro-branch-row {
+  animation: ro-element-up 0.6s ease both;
+}
+
+.ro-card-visible .ro-branch-row:nth-child(2) {
+  animation-delay: 0.45s;
+}
+
+.ro-card-visible .ro-branch-row:nth-child(3) {
+  animation-delay: 0.65s;
+}
+
+.ro-card-visible .ro-branch-row:nth-child(4) {
+  animation-delay: 0.85s;
+}
+
+.ro-card-visible .ro-status {
+  animation: ro-status-pulse 3s ease-in-out 1.4s 2;
+}
+
+@keyframes ro-status-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(46, 170, 108, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 12px rgba(46, 170, 108, 0.18);
+  }
+}
+
+/* ========================================
+   04 - CUSTOMER MANAGEMENT
+======================================== */
+
+.ro-customer-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+.ro-customer-avatar {
+  display: grid;
+  place-items: center;
+
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+
+  border-radius: 50%;
+
+  background: #d9f2e4;
+  color: #258255;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ro-customer-profile > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  flex: 1;
+}
+
+.ro-customer-profile strong {
+  font-size: 11px;
+}
+
+.ro-customer-profile small {
+  color: #858590;
+  font-size: 9px;
+}
+
+.ro-customer-profile > i {
+  color: #2eaa6c;
+}
+
+.ro-customer-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.ro-customer-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+  background: #f7faf8;
+}
+
+.ro-customer-stats strong {
+  font-size: 22px;
+}
+
+.ro-customer-offer {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 11px;
+  padding: 10px;
+
+  border-radius: 9px;
+
+  background: #eaf6ee;
+  color: #27834f;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* CUSTOMER ANIMATIONS */
+
+.ro-card-visible .ro-customer-profile {
+  animation: ro-element-up 0.6s ease 0.45s both;
+}
+
+.ro-card-visible .ro-customer-stats {
+  animation: ro-element-up 0.6s ease 0.65s both;
+}
+
+.ro-card-visible .ro-customer-offer {
+  animation: ro-element-up 0.6s ease 0.9s both;
+}
+
+.ro-card-visible .ro-customer-avatar {
+  animation: ro-avatar-pop 0.7s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.55s both;
+}
+
+@keyframes ro-avatar-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.65);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========================================
+   05 - WHOLESALE ORDER MANAGEMENT
+======================================== */
+
+.ro-order-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  margin-bottom: 12px;
+}
+
+.ro-order-heading > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ro-order-heading strong {
+  font-size: 18px;
+}
+
+.ro-order-badge {
+  padding: 6px 9px;
+
+  border-radius: 999px;
+
+  background: #fff4db;
+  color: #a77a2e;
+
+  font-size: 9px;
+  font-weight: 650;
+}
+
+.ro-order-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 0;
+
+  border-bottom: 1px solid #f0f0f2;
+
+  font-size: 10px;
+}
+
+.ro-order-line strong {
+  font-weight: 650;
+}
+
+.ro-order-progress {
+  display: flex;
+  gap: 6px;
+
+  margin-top: 15px;
+}
+
+.ro-order-progress span {
+  flex: 1;
+  height: 6px;
+
+  border-radius: 999px;
+  background: #ebe9e4;
+
+  transform-origin: left;
+}
+
+.ro-order-progress span:first-child,
+.ro-order-progress span:nth-child(2) {
+  background: var(--ro-accent);
+}
+
+.ro-order-caption {
+  display: block;
+
+  margin-top: 9px;
+
+  color: #858590;
+  font-size: 9px;
+}
+
+/* WHOLESALE ANIMATIONS */
+
+.ro-card-visible .ro-order-heading {
+  animation: ro-element-up 0.6s ease 0.45s both;
+}
+
+.ro-card-visible .ro-order-line {
+  animation: ro-element-up 0.6s ease both;
+}
+
+.ro-card-visible .ro-order-line:nth-child(3) {
+  animation-delay: 0.65s;
+}
+
+.ro-card-visible .ro-order-line:nth-child(4) {
+  animation-delay: 0.85s;
+}
+
+.ro-card-visible .ro-order-progress span {
+  animation: ro-progress 0.6s ease both;
+}
+
+.ro-card-visible .ro-order-progress span:nth-child(1) {
+  animation-delay: 0.95s;
+}
+
+.ro-card-visible .ro-order-progress span:nth-child(2) {
+  animation-delay: 1.15s;
+}
+
+.ro-card-visible .ro-order-progress span:nth-child(3) {
+  animation-delay: 1.35s;
+}
+
+/* ========================================
+   06 - ANALYTICS
+======================================== */
+
+.ro-analytics-total {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  margin-bottom: 14px;
+}
+
+.ro-analytics-total strong {
+  font-size: 23px;
+  letter-spacing: -0.05em;
+}
+
+.ro-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  height: 85px;
+  padding: 0 4px;
+
+  border-bottom: 1px solid #eaeaf0;
+}
+
+.ro-chart > span {
+  flex: 1;
+
+  max-width: 24px;
+  height: var(--bar-height);
+
+  border-radius: 5px 5px 0 0;
+
+  background: linear-gradient(
+    180deg,
+    #74c1ed,
+    var(--ro-accent)
+  );
+
+  transform-origin: bottom;
+}
+
+.ro-chart-labels {
+  display: flex;
+  justify-content: space-around;
+
+  padding-top: 8px;
+
+  color: #9696a0;
+  font-size: 9px;
+}
+
+/* ANALYTICS ANIMATIONS */
+
+.ro-card-visible .ro-analytics-total {
+  animation: ro-element-up 0.6s ease 0.45s both;
+}
+
+.ro-card-visible .ro-chart > span {
+  animation: ro-bar-grow 1.05s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.ro-card-visible .ro-chart > span:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.ro-card-visible .ro-chart > span:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.ro-card-visible .ro-chart > span:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+.ro-card-visible .ro-chart > span:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.ro-card-visible .ro-chart > span:nth-child(5) {
+  animation-delay: 0.9s;
+}
+
+.ro-card-visible .ro-chart > span:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.ro-card-visible .ro-chart > span:nth-child(7) {
+  animation-delay: 1.1s;
+}
+
+@keyframes ro-bar-grow {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* ========================================
+   CARD TEXT CONTENT
+======================================== */
+
+.ro-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  flex: 1;
+
+  padding: 25px 4px 7px;
+
+  text-align: left;
+}
+
+/* TEXT REVEAL */
+
+.ro-motion-ready
+.ro-card:not(.ro-card-visible)
+.ro-card-content {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.ro-card-visible .ro-card-content {
+  animation: ro-element-up 0.7s ease 0.3s both;
+}
+
+.ro-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.ro-card-number {
+  color: var(--ro-accent);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+}
+
+.ro-feature-icon {
+  display: grid;
+  place-items: center;
+
+  width: 35px;
+  height: 35px;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--ro-accent);
+
+  font-size: 14px;
+}
+
+.ro-card-title {
+  max-width: 350px;
+  margin: 0;
+
+  color: var(--ro-ink);
+
+  font-size: clamp(21px, 1.9vw, 27px);
+  font-weight: 550;
+  line-height: 1.22;
+  letter-spacing: -0.04em;
+}
+
+.ro-card-description {
+  max-width: 360px;
+  margin: 13px 0 0;
+
+  color: var(--ro-muted);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* ========================================
+   SHARED ANIMATIONS
+======================================== */
+
+@keyframes ro-element-up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1024px) {
+  .ro-section {
+    padding: 8vh 4vw;
+  }
+
+  .ro-grid {
+    gap: 16px;
+  }
+
+  .ro-card {
+    min-height: 455px;
+    padding: 16px;
+    border-radius: 23px;
+  }
+
+  .ro-card-media {
+    height: 205px;
+    border-radius: 16px;
+  }
+
+  .ro-card-content {
+    padding: 22px 4px 8px;
+  }
+
+  .ro-card-title {
+    font-size: 22px;
+  }
+
+  .ro-card-description {
+    font-size: 13px;
+  }
+
+  .ro-mini-window {
+    padding: 12px;
+  }
+}
+
+/* ========================================
+   SMALL TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .ro-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ro-card {
+    min-height: 445px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 640px) {
+  .ro-section {
+    padding: 65px 14px 70px;
+  }
+
+  /* CENTERED HEADING */
+
+  .ro-header {
+    align-items: center;
+
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .ro-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+
+    text-align: center;
+  }
+
+  .ro-description {
+    margin: 18px auto 0;
+
+    font-size: 15px;
+    line-height: 1.55;
+
+    text-align: center;
+  }
+
+  /* SINGLE-COLUMN CARDS */
+
+  .ro-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .ro-card {
+    min-height: auto;
+    padding: 16px;
+
+    border-radius: 20px;
+  }
+
+  .ro-card-media {
+    height: 235px;
+    border-radius: 15px;
+  }
+
+  .ro-visual {
+    max-width: 310px;
+  }
+
+  .ro-card-content {
+    padding: 22px 5px 8px;
+  }
+
+  .ro-card-title {
+    font-size: 23px;
+  }
+
+  .ro-card-description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ro-card,
+  .ro-card.ro-card-visible,
+  .ro-card:hover,
+  .ro-card.ro-card-visible:hover {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .ro-visual,
+  .ro-mini-window,
+  .ro-card-content,
+  .ro-pos-total,
+  .ro-pos-payment,
+  .ro-stock-summary,
+  .ro-stock-track i,
+  .ro-branch-row,
+  .ro-status,
+  .ro-customer-profile,
+  .ro-customer-stats,
+  .ro-customer-offer,
+  .ro-customer-avatar,
+  .ro-order-heading,
+  .ro-order-line,
+  .ro-order-progress span,
+  .ro-analytics-total,
+  .ro-chart > span {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* ==========================================
+   RETAIL OPERATIONS - HOVER ANIMATIONS
+========================================== */
+
+/* ONLY ENABLE HOVER ON SUPPORTED DEVICES */
+
+@media (hover: hover) and (pointer: fine) {
+
+  /* =====================================
+     ALL SIX CARDS
+  ===================================== */
+
+  .ro-card.ro-card-visible:hover {
+    transform: translateY(-8px) scale(1.01);
+
+    box-shadow:
+      0 22px 50px rgba(35, 35, 43, 0.11);
+  }
+
+  /* DASHBOARD FLOATS UP */
+
+  .ro-card:hover .ro-visual {
+    transform: translateY(-9px) scale(1.035);
+  }
+
+  /* FEATURE ICON ROTATES SLIGHTLY */
+
+  .ro-card:hover .ro-feature-icon {
+    animation: ro-hover-icon 0.55s ease both;
+  }
+
+  @keyframes ro-hover-icon {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+      transform: rotate(-9deg) scale(1.15);
+    }
+
+    100% {
+      transform: rotate(0deg) scale(1);
+    }
+  }
+
+  /* =====================================
+     01 - SMART POS & BILLING
+  ===================================== */
+
+  .ro-card:hover .ro-pos-total {
+    animation: ro-hover-rise 0.55s ease both;
+  }
+
+  .ro-card:hover .ro-pos-total strong {
+    animation: ro-hover-number 0.75s ease both;
+  }
+
+  .ro-card:hover .ro-pos-payment {
+    animation: ro-hover-rise 0.5s ease both;
+  }
+
+  .ro-card:hover .ro-pos-payment:nth-child(3) {
+    animation-delay: 0.12s;
+  }
+
+  .ro-card:hover .ro-pos-payment:nth-child(4) {
+    animation-delay: 0.24s;
+  }
+
+  @keyframes ro-hover-number {
+    0%, 100% {
+      color: #23232b;
+      transform: scale(1);
+    }
+
+    50% {
+      color: #6571d8;
+      transform: scale(1.045);
+    }
+  }
+
+  /* =====================================
+     02 - INVENTORY MANAGEMENT
+  ===================================== */
+
+  .ro-card:hover .ro-stock-track i {
+    animation: ro-hover-bar-fill 1s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      both;
+  }
+
+  .ro-card:hover .ro-stock-row:nth-child(3)
+  .ro-stock-track i {
+    animation-delay: 0.08s;
+  }
+
+  .ro-card:hover .ro-stock-row:nth-child(4)
+  .ro-stock-track i {
+    animation-delay: 0.18s;
+  }
+
+  .ro-card:hover .ro-stock-row:nth-child(5)
+  .ro-stock-track i {
+    animation-delay: 0.28s;
+  }
+
+  /* =====================================
+     03 - MULTI-LOCATION CONTROL
+  ===================================== */
+
+  .ro-card:hover .ro-branch-row {
+    animation: ro-hover-rise 0.5s ease both;
+  }
+
+  .ro-card:hover .ro-branch-row:nth-child(2) {
+    animation-delay: 0.05s;
+  }
+
+  .ro-card:hover .ro-branch-row:nth-child(3) {
+    animation-delay: 0.15s;
+  }
+
+  .ro-card:hover .ro-branch-row:nth-child(4) {
+    animation-delay: 0.25s;
+  }
+
+  .ro-card:hover .ro-status {
+    background: #d4f6df;
+    color: #168347;
+  }
+
+  /* =====================================
+     04 - CUSTOMER MANAGEMENT
+  ===================================== */
+
+  .ro-card:hover .ro-customer-avatar {
+    animation: ro-hover-avatar 0.65s ease both;
+  }
+
+  .ro-card:hover .ro-customer-stats > div {
+    animation: ro-hover-rise 0.55s ease both;
+  }
+
+  .ro-card:hover .ro-customer-stats > div:nth-child(2) {
+    animation-delay: 0.15s;
+  }
+
+  .ro-card:hover .ro-customer-offer {
+    animation: ro-hover-rise 0.6s ease 0.25s both;
+  }
+
+  @keyframes ro-hover-avatar {
+    0%, 100% {
+      transform: scale(1);
+    }
+
+    45% {
+      transform: scale(1.14) rotate(-5deg);
+    }
+  }
+
+  /* =====================================
+     05 - WHOLESALE MANAGEMENT
+  ===================================== */
+
+  .ro-card:hover .ro-order-heading {
+    animation: ro-hover-rise 0.5s ease both;
+  }
+
+  .ro-card:hover .ro-order-line {
+    animation: ro-hover-rise 0.5s ease both;
+  }
+
+  .ro-card:hover .ro-order-line:nth-child(3) {
+    animation-delay: 0.12s;
+  }
+
+  .ro-card:hover .ro-order-line:nth-child(4) {
+    animation-delay: 0.24s;
+  }
+
+  .ro-card:hover .ro-order-progress span {
+    animation: ro-hover-bar-fill 0.6s ease both;
+  }
+
+  .ro-card:hover .ro-order-progress span:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  .ro-card:hover .ro-order-progress span:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  .ro-card:hover .ro-order-progress span:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+
+  /* =====================================
+     06 - REPORTS & ANALYTICS
+  ===================================== */
+
+  .ro-card:hover .ro-analytics-total {
+    animation: ro-hover-rise 0.5s ease both;
+  }
+
+  .ro-card:hover .ro-chart > span {
+    animation: ro-hover-chart 0.9s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      both;
+  }
+
+  .ro-card:hover .ro-chart > span:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .ro-card:hover .ro-chart > span:nth-child(2) {
+    animation-delay: 0.08s;
+  }
+
+  .ro-card:hover .ro-chart > span:nth-child(3) {
+    animation-delay: 0.16s;
+  }
+
+  .ro-card:hover .ro-chart > span:nth-child(4) {
+    animation-delay: 0.24s;
+  }
+
+  .ro-card:hover .ro-chart > span:nth-child(5) {
+    animation-delay: 0.32s;
+  }
+
+  .ro-card:hover .ro-chart > span:nth-child(6) {
+    animation-delay: 0.40s;
+  }
+
+  .ro-card:hover .ro-chart > span:nth-child(7) {
+    animation-delay: 0.48s;
+  }
+}
+
+/* ==========================================
+   SHARED HOVER KEYFRAMES
+========================================== */
+
+@keyframes ro-hover-rise {
+  from {
+    opacity: 0.65;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ro-hover-bar-fill {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes ro-hover-chart {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+   KEEP THIS AT THE VERY END
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ro-card:hover,
+  .ro-card.ro-card-visible:hover,
+  .ro-card:hover .ro-visual,
+  .ro-card:hover .ro-feature-icon,
+  .ro-card:hover .ro-pos-total,
+  .ro-card:hover .ro-pos-total strong,
+  .ro-card:hover .ro-pos-payment,
+  .ro-card:hover .ro-stock-track i,
+  .ro-card:hover .ro-branch-row,
+  .ro-card:hover .ro-customer-avatar,
+  .ro-card:hover .ro-customer-stats > div,
+  .ro-card:hover .ro-customer-offer,
+  .ro-card:hover .ro-order-heading,
+  .ro-card:hover .ro-order-line,
+  .ro-card:hover .ro-order-progress span,
+  .ro-card:hover .ro-analytics-total,
+  .ro-card:hover .ro-chart > span {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}

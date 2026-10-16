@@ -22,7 +22,7 @@ export const products = [
         "title": "Grow Online Sales",
         "column": 1,
         "items": [
-          { "label": "Retail & Wholesale Pricing", "href": "#retail-wholesale-pricing", "icon": "fa-solid fa-tag" },
+          { "label": "Retail & Wholesale Pricing", "href": "/retail-wholesale", "icon": "fa-solid fa-tag" },
           { "label": "Smart Upsells", "href": "#smart-upsells", "icon": "fa-solid fa-chart-line" },
           { "label": "Delivery", "href": "#delivery", "icon": "fa-solid fa-truck-fast" },
           { "label": "Gift Cards", "href": "#gift-cards", "icon": "fa-regular fa-credit-card" },
