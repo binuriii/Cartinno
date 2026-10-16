@@ -18,21 +18,22 @@ const routes = [
   {
     path: '/seo',
     name: 'seo',
-    component: () => import('./pages/Products/EcommerceWebsite/SEO/SEO.vue')
+    component: () => 
+      import('./pages/Products/EcommerceWebsite/SEO/SEO.vue')
   },
 
   {
     path: '/review-engine',
     name: 'review-engine',
     component: () =>
-      import('./pages/Products/ReviewEngine/ReviewEngine.vue')
+      import('./pages/Products/EcommerceWebsite/ReviewEngine/ReviewEngine.vue')
   },
 
   {
     path: '/retail-wholesale',
     name: 'retail-wholesale',
     component: () =>
-      import('./pages/Products/RetailWholesale/RetailWholesalePage.vue')
+      import('./pages/Products/EcommerceWebsite/RetailWholesale/RetailWholesalePage.vue')
   },
 
 
