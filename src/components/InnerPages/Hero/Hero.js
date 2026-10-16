@@ -76,7 +76,7 @@ export const seoHero = {
     'Improve your online visibility and help customers discover your business with Cartinno SEO solutions.',
 
   backgroundImage:
-    'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1800&auto=format&fit=crop&q=85',
+   'https://images.unsplash.com/photo-1775534778375-3f235c466c58?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
 
   overlayOpacity: 0.45,
 

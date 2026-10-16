@@ -14,8 +14,8 @@ export const products = [
         "column": 1,
         "items": [
           { "label": "E-Commerce Website", "href": "/ecommerce-website", "icon": "fa-solid fa-globe" },
-          { "label": "SEO", "href": "#seo", "icon": "fa-solid fa-magnifying-glass" },
-          { "label": "Review Engine", "href": "/review-engine", "icon": "fa-regular fa-star" }
+          { "label": "SEO", "href": "/seo", "icon": "fa-solid fa-magnifying-glass" },
+          { "label": "Review Engine", "href": "#review-engine", "icon": "fa-regular fa-star" }
         ]
       },
       {
@@ -146,7 +146,7 @@ export const products = [
           },
           {
             "label": "Restaurant SEO",
-            "href": "#seo",
+            "href": "/seo",
             "icon": "fa-solid fa-magnifying-glass"
           },
           {
