@@ -15,6 +15,7 @@ import {
 } from './SellWithResellerNetwork.js'
 import ResellerFeatures from './ResellerFeatures/ResellerFeatures.vue'
 import ResellerHowItWorks from './ResellerHowItWorks/ResellerHowItWorks.vue'
+import ResellerBenefits from './ResellerBenefits/ResellerBenefits.vue'
 </script>
 
 <template>
@@ -26,6 +27,8 @@ import ResellerHowItWorks from './ResellerHowItWorks/ResellerHowItWorks.vue'
     <ResellerFeatures/>
 
     <ResellerHowItWorks/>
+
+    <ResellerBenefits/>
 
     <!-- FAQ -->
     <FAQ

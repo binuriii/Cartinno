@@ -3,7 +3,7 @@ const base = import.meta.env.BASE_URL
 
 export const resellerBrand = {
   name: 'cartinno',
-  logo: `${base}Products/ResellerNetwork/cartinno-logo.png`,
+  logo: `${base}/cartinno-logo.webp`,
   businessName: 'Cartinno Supply Co.'
 }
 
