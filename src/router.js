@@ -43,6 +43,13 @@ const routes = [
       import('./pages/Products/EcommerceWebsite/SmartUpsells/SmartUpsells.vue')
   },
 
+  {
+    path: '/gift-cards',
+    name: 'gift-cards',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/GiftCards/GiftCards.vue')
+  },
+
 
 
 
