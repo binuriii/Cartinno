@@ -1,63 +1,68 @@
 export const posFAQs = [
   {
     id: 1,
-    question: 'Do I pay commissions on orders?',
+    question: "Do I pay commissions on orders?",
     answer:
-      'No, Cartinno includes a free ordering website on your own domain with 0% commission on the orders that come through it.' /*[cite: 38, 42, 44] */
+      "No. Cartinno provides you with a free, branded ordering website on your own domain. You pay 0% commission on any orders that come through it, allowing you to keep all your profits.",
   },
   {
     id: 2,
-    question: 'Does the POS connect to the kitchen?',
+    question: "What hardware do I need to run Cartinno POS?",
     answer:
-      'Yes, tickets fire directly to the kitchen display with sound and visual alerts, moving through preparing and ready statuses.' /*[cite: 41, 44] */
+      "Cartinno is cloud-based and hardware-agnostic. You can run it on standard iPads, Android tablets, touch-screen monitors, or dedicated POS terminals. No need to buy expensive, locked-in proprietary hardware.",
   },
   {
     id: 3,
-    question: 'Can it manage my inventory and recipes?',
+    question: "Does the system work if my internet goes down?",
     answer:
-      'Yes, you can map a recipe once, and ingredients are deducted automatically as products sell, keeping your stock perfectly in sync.' /*[cite: 39, 40] */
+      "Yes, Cartinno includes a robust Offline Mode. You can continue to take orders, print receipts, and manage tables. Once your connection is restored, all data automatically syncs to the cloud.",
   },
   {
     id: 4,
-    question: 'What order types does it support?',
+    question: "How does it connect to the kitchen?",
     answer:
-      'The system supports multiple order types on one till, including dine-in, takeaway, pickup, drive-thru, and catering.' /*[cite: 37, 44] */
+      "Tickets fire instantly from the POS or online ordering directly to your Kitchen Display System (KDS). It includes color-coded visual alerts and sound notifications, moving seamlessly from 'Preparing' to 'Ready'.",
   },
   {
     id: 5,
-    question: 'Can I run a loyalty program?',
+    question: "Can it manage my inventory and recipes?",
     answer:
-      'Yes, the POS includes customer profiles, loyalty tiers, points redemption, and gift cards to turn one-time visitors into regulars.' /*[cite: 40] */
-  }
-]
+      "Absolutely. You can map out your recipes once, and ingredients are automatically deducted down to the gram as products sell. You get real-time stock alerts before you run out of key items.",
+  },
+  {
+    id: 6,
+    question: "How long does it take to get everything set up?",
+    answer:
+      "Most POS installations take weeks of back-and-forth. Cartinno ships pre-configured to your menu and workflow. You can get fully set up in a matter of days, and your staff can learn the intuitive interface in a single shift.",
+  },
+];
 
 export const posHero = {
-  fixedLine: 'The Restaurant POS,',
+  fixedLine: "The Restaurant POS,",
 
   rotatingWords: [
-    'Built for Service.',
-    'Connected to Everything.',
-    'Powered by Cartinno.',
-    'Ready for Growth.'
+    "Built for Service.",
+    "Connected to Everything.",
+    "Powered by Cartinno.",
+    "Ready for Growth.",
   ],
 
   description:
-    'The restaurant point of sale and operations platform — orders, kitchen, tables, stock, loyalty and a free ordering website, all in one system.' /*[cite: 36] */,
+    "The complete restaurant point of sale and operations platform — orders, kitchen, tables, stock, loyalty, and a zero-commission ordering website, all in one unified system.",
 
-  // Change to a suitable POS or Restaurant background image
   backgroundImage:
-    'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&auto=format&fit=crop&q=60',
+    "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1600&auto=format&fit=crop&q=80",
 
-  overlayOpacity: 0.4,
+  overlayOpacity: 0.5,
 
-  backgroundPosition: 'center center',
+  backgroundPosition: "center center",
 
   primaryButton: {
-    text: 'Get a Free Demo',
-    link: '/#demo'
+    text: "Get a Free Demo",
+    link: "/#demo",
   },
 
   secondaryButton: null,
 
-  interval: 3500
-}
+  interval: 3500,
+};

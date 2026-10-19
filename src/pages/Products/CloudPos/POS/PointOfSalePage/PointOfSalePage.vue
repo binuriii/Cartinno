@@ -5,6 +5,7 @@ import Testimonials from "../../../../../components/InnerPages/Testimonials/Test
 
 // Import the specific components we created for the POS page
 import FeaturesSection from "./FeaturesSection/FeaturesSection.vue";
+import ReasonsSection from "./ReasonsSection/ReasonsSection.vue";
 
 import { posHero, posFAQs } from "./PointOfSalePage.js";
 </script>
@@ -16,6 +17,9 @@ import { posHero, posFAQs } from "./PointOfSalePage.js";
 
     <!-- FEATURES SECTION -->
     <FeaturesSection />
+
+    <!-- REASONS SECTION -->
+    <ReasonsSection />
 
     <!-- FAQ SECTION -->
     <FAQ

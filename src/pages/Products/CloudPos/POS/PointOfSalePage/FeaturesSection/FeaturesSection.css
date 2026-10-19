@@ -1,153 +1,127 @@
-.fs-section,
-.fs-section * {
-  box-sizing: border-box;
-}
-
 .fs-section {
   width: 100%;
-  padding: 10vh 4vw;
+  padding: 120px 5%;
   background: #ffffff;
-  color: #23232b;
-  font-family: inherit;
+  color: #1a1033;
+  font-family: 'Outfit', system-ui, sans-serif;
 }
-
 .fs-container {
   width: 100%;
   max-width: 1200px;
-  margin-inline: auto;
+  margin: 0 auto;
 }
-
 .fs-main-title {
   text-align: center;
-  font-size: clamp(32px, 4vw, 54px);
+  font-size: clamp(36px, 4vw, 56px);
   font-weight: 700;
-  letter-spacing: -0.04em;
-  margin-bottom: 80px;
-  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 100px;
+  color: #1a1033;
 }
-
 .fs-list-container {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 100px;
 }
-
-
 .fs-dashed-line {
   position: absolute;
-  top: 40px;
+  top: 20px;
   bottom: 0;
-  left: 32px; 
-  width: 1px;
-  border-left: 2px dashed #e0e0e0;
+  left: 24px; 
+  width: 2px;
+  background-image: linear-gradient(to bottom, #d1d5db 50%, rgba(255,255,255,0) 0%);
+  background-position: right;
+  background-size: 2px 14px;
+  background-repeat: repeat-y;
   z-index: 1;
 }
-
 .fs-row {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 80px;
   position: relative;
   z-index: 2;
 }
-
 .fs-text-column {
   flex: 1;
-  padding-left: 70px; 
-}
-
-.fs-title {
-  font-size: clamp(24px, 2.5vw, 36px);
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0 0 16px 0;
-  letter-spacing: -0.03em;
   position: relative;
+  display: flex;
+  gap: 40px;
 }
-
-.fs-number {
-  position: absolute;
-  left: -70px;
-  top: 0;
+.fs-number-wrapper {
   background: #ffffff;
-  padding-bottom: 10px;
+  padding: 10px 0;
+  z-index: 2;
 }
-
+.fs-number {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  background: #1a1033;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(26, 16, 51, 0.15);
+}
+.fs-content-wrap {
+  padding-top: 15px;
+}
+.fs-title {
+  font-size: clamp(24px, 2.5vw, 32px);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 16px 0;
+  color: #1a1033;
+}
 .fs-description {
-  font-size: clamp(16px, 1.2vw, 18px);
+  font-size: 17px;
   color: #5b5b66;
   line-height: 1.6;
   margin: 0;
 }
-
 .fs-image-column {
-  flex: 1;
+  flex: 1.2;
 }
-
 .fs-image-wrapper {
+  position: relative;
   width: 100%;
-  border-radius: 24px;
+  border-radius: 32px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-  background: #f4f4f4;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
+.fs-image-wrapper:hover {
+  transform: translateY(-8px);
+}
 .fs-image-wrapper img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
   aspect-ratio: 4/3;
+  transition: transform 0.8s ease;
 }
-
-/* Tablet & Mobile */
+.fs-image-wrapper:hover img {
+  transform: scale(1.04);
+}
+.fs-img-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+  pointer-events: none;
+}
 @media (max-width: 992px) {
-  .fs-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
-  }
-
-  .fs-dashed-line {
-    left: 20px;
-  }
-
-  .fs-text-column {
-    padding-left: 50px;
-  }
-
-  .fs-number {
-    left: -50px;
-  }
-
-  .fs-image-column {
-    width: 100%;
-    padding-left: 50px;
-  }
+  .fs-row { flex-direction: column; align-items: flex-start; gap: 40px; }
+  .fs-dashed-line { left: 24px; }
+  .fs-image-column { width: 100%; padding-left: 90px; }
 }
-
 @media (max-width: 640px) {
-  .fs-main-title {
-    margin-bottom: 50px;
-  }
-
-  .fs-list-container {
-    gap: 60px;
-  }
-
-  .fs-dashed-line {
-    display: none; 
-  }
-
-  .fs-text-column,
-  .fs-image-column {
-    padding-left: 0;
-  }
-
-  .fs-number {
-    position: static;
-    display: inline-block;
-    margin-right: 8px;
-  }
+  .fs-dashed-line { display: none; }
+  .fs-text-column { flex-direction: column; gap: 16px; }
+  .fs-content-wrap { padding-top: 0; }
+  .fs-image-column { padding-left: 0; }
 }
