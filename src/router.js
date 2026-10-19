@@ -42,6 +42,12 @@ const routes = [
     component: () =>
       import('./pages/Products/EcommerceWebsite/SmartUpsells/SmartUpsells.vue')
   },
+  {
+    path: '/point-of-sale',
+    name: 'point-of-sale',
+    component: () =>
+      import('./pages/Products/CloudPos/POS/PointOfSalePage/PointOfSalePage.vue')
+  },
 
 
 

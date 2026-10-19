@@ -76,7 +76,7 @@ export const products = [
         "items": [
           {
             "label": "Point of Sale",
-            "href": "#pos",
+            "href": "/point-of-sale",
             "icon": "fa-solid fa-desktop"
           },
           {
