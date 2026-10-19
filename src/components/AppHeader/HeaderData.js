@@ -24,9 +24,10 @@ export const products = [
         "items": [
           { "label": "Retail & Wholesale Pricing", "href": "/retail-wholesale", "icon": "fa-solid fa-tag" },
           { "label": "Smart Upsells", "href": "#smart-upsells", "icon": "fa-solid fa-chart-line" },
-          { "label": "Delivery", "href": "#delivery", "icon": "fa-solid fa-truck-fast" },
+          { "label": "Delivery", "href": "/delivery", "icon": "fa-solid fa-truck-fast" },
           { "label": "Gift Cards", "href": "#gift-cards", "icon": "fa-regular fa-credit-card" },
-          { "label": "Loyalty Management System", "href": "#loyalty", "icon": "fa-solid fa-award" }
+          { "label": "Loyalty Management System", "href": "/loyalty-management", "icon": "fa-solid fa-award"}
+
         ]
       },
       {
@@ -192,11 +193,13 @@ export const products = [
             "href": "#push-notifications",
             "icon": "fa-regular fa-bell"
           },
+         
           {
-            "label": "Loyalty & Rewards",
-            "href": "#loyalty",
-            "icon": "fa-solid fa-award"
+            label: "Loyalty & Rewards",
+            href: "/loyalty-management",
+            icon: "fa-solid fa-award"
           }
+
         ]
       },
       {
@@ -214,7 +217,7 @@ export const products = [
           },
           {
             "label": "Delivery",
-            "href": "#delivery",
+            "href": "/delivery",
             "icon": "fa-solid fa-truck-fast"
           },
           {
@@ -250,7 +253,7 @@ export const products = [
           },
           {
             "label": "Delivery App",
-            "href": "#delivery-app",
+            "href": "/delivery-app",
             "icon": "fa-solid fa-truck-fast",
             "badge": "Coming Soon"
           }
@@ -286,7 +289,7 @@ export const products = [
           },
           {
             "label": "Delivery App",
-            "href": "#delivery-app",
+            "href": "/delivery-app",
             "icon": "fa-solid fa-truck-fast"
           }
         ]

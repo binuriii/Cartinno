@@ -37,6 +37,24 @@ const routes = [
   },
 
 
+{
+  path: '/delivery',
+  name: 'delivery',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/Delivery/Delivery.vue')
+},
+  
+{
+  path: '/loyalty-management',
+  name: 'loyalty-management',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/LoyaltyManagement/LoyaltyManagement.vue')
+},
+
+
+
+
+
 
 
 
