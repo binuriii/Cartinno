@@ -14,6 +14,7 @@ import {
   resellerNetworkFAQs
 } from './SellWithResellerNetwork.js'
 import ResellerFeatures from './ResellerFeatures/ResellerFeatures.vue'
+import ResellerHowItWorks from './ResellerHowItWorks/ResellerHowItWorks.vue'
 </script>
 
 <template>
@@ -23,6 +24,8 @@ import ResellerFeatures from './ResellerFeatures/ResellerFeatures.vue'
     <Hero v-bind="resellerNetworkHero" />
 
     <ResellerFeatures/>
+
+    <ResellerHowItWorks/>
 
     <!-- FAQ -->
     <FAQ
