@@ -1,0 +1,486 @@
+
+/* ========================================
+   GIFT CARD BUSINESSES
+======================================== */
+
+.gcb-section,
+.gcb-section * {
+  box-sizing: border-box;
+}
+
+.gcb-section {
+  --gcb-red: #d7454e;
+  --gcb-ink: #23232b;
+  --gcb-muted: #5b5b66;
+
+  width: 100%;
+  padding: 5vh 3vw 10vh;
+
+  background: #ffffff;
+  color: var(--gcb-ink);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.gcb-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.gcb-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 35px;
+  margin-bottom: clamp(32px, 4vw, 55px);
+}
+
+.gcb-header-content {
+  flex: 1;
+  min-width: 0;
+  max-width: 780px;
+}
+
+/* HEADING */
+
+.gcb-heading {
+  max-width: 780px;
+  margin: 0;
+
+  color: var(--gcb-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+
+  text-align: left;
+}
+
+/* DESCRIPTION */
+
+.gcb-description {
+  max-width: 650px;
+  margin: 20px 0 0;
+
+  color: var(--gcb-muted);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  text-align: left;
+}
+
+/* ========================================
+   ARROWS ABOVE THE CARDS
+======================================== */
+
+.gcb-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 12px;
+  flex-shrink: 0;
+
+  margin: 0 0 4px;
+}
+
+/* CIRCULAR ARROW BASE */
+
+.gcb-arrow {
+  display: grid;
+  place-items: center;
+
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+
+  padding: 0;
+
+  border-radius: 50%;
+
+  font: inherit;
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* PREVIOUS ARROW */
+
+.gcb-arrow-prev {
+  border: 1px solid #dedede;
+
+  background: #ffffff;
+  color: #191919;
+}
+
+/* NEXT ARROW */
+
+.gcb-arrow-next {
+  border: 1px solid #191919;
+
+  background: #191919;
+  color: #ffffff;
+}
+
+/* ARROW HOVER */
+
+.gcb-arrow:not(:disabled):hover {
+  transform: translateY(-3px);
+}
+
+.gcb-arrow-prev:not(:disabled):hover {
+  border-color: #191919;
+
+  background: #191919;
+  color: #ffffff;
+}
+
+.gcb-arrow-next:not(:disabled):hover {
+  background: #353535;
+  border-color: #353535;
+}
+
+/* DISABLED ARROWS */
+
+.gcb-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* FOCUS */
+
+.gcb-arrow:focus-visible {
+  outline: 3px solid rgba(215, 69, 78, 0.3);
+  outline-offset: 4px;
+}
+
+/* ========================================
+   CAROUSEL
+======================================== */
+
+.gcb-carousel {
+  position: relative;
+  width: 100%;
+}
+
+.gcb-track {
+  display: flex;
+  align-items: stretch;
+
+  gap: clamp(16px, 2vw, 28px);
+
+  width: 100%;
+  padding: 8px 2px 20px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 2px;
+
+  overscroll-behavior-x: contain;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.gcb-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================================
+   BUSINESS IMAGE CARDS
+======================================== */
+
+.gcb-card {
+  position: relative;
+  isolation: isolate;
+
+  flex: 0 0 clamp(280px, 29.5vw, 420px);
+
+  height: 475px;
+
+  border-radius: 26px;
+  overflow: hidden;
+
+  background: #e9e5e5;
+
+  scroll-snap-align: start;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+}
+
+/* CARD IMAGE */
+
+.gcb-card-image {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* DARK IMAGE GRADIENT */
+
+.gcb-card-overlay {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 22%,
+    rgba(0, 0, 0, 0.12) 43%,
+    rgba(0, 0, 0, 0.43) 67%,
+    rgba(13, 13, 20, 0.92) 100%
+  );
+
+  pointer-events: none;
+}
+
+/* ========================================
+   CARD CONTENT
+======================================== */
+
+.gcb-card-content {
+  position: absolute;
+  z-index: 2;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 28px;
+
+  color: #ffffff;
+}
+
+.gcb-card-title {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(23px, 2.1vw, 30px);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.01em;
+}
+
+.gcb-card-description {
+  max-width: 340px;
+  margin: 12px 0 0;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* ========================================
+   IMAGE PLACEHOLDERS
+======================================== */
+
+.gcb-placeholder {
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  background: linear-gradient(
+    145deg,
+    #edeaf0,
+    #d1c9d4
+  );
+
+  color: rgba(35, 35, 43, 0.35);
+  font-size: 90px;
+}
+
+.gcb-card:nth-child(2) .gcb-placeholder {
+  background: linear-gradient(145deg, #e7e1ee, #c5b9d3);
+}
+
+.gcb-card:nth-child(3) .gcb-placeholder {
+  background: linear-gradient(145deg, #f3e8dc, #dbc5af);
+}
+
+.gcb-card:nth-child(4) .gcb-placeholder {
+  background: linear-gradient(145deg, #dce8ea, #abc9ce);
+}
+
+.gcb-card:nth-child(5) .gcb-placeholder {
+  background: linear-gradient(145deg, #f0dfe3, #d9b8c7);
+}
+
+.gcb-card:nth-child(6) .gcb-placeholder {
+  background: linear-gradient(145deg, #e3e9db, #bbcbae);
+}
+
+/* ========================================
+   CARD HOVER ANIMATION
+======================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .gcb-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+      0 14px 30px rgba(35, 35, 43, 0.08),
+      0 24px 55px rgba(35, 35, 43, 0.12);
+  }
+
+  .gcb-card:hover .gcb-card-image {
+    transform: scale(1.075);
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1024px) {
+  .gcb-section {
+    padding: 8vh 4vw;
+  }
+
+  .gcb-card {
+    flex-basis: clamp(270px, 40vw, 380px);
+    height: 430px;
+    border-radius: 23px;
+  }
+
+  .gcb-card-content {
+    padding: 24px;
+  }
+
+  .gcb-arrow {
+    width: 52px;
+    height: 52px;
+    flex-basis: 52px;
+    font-size: 17px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 640px) {
+  .gcb-section {
+    padding: 65px 14px 70px;
+  }
+
+  /* HEADER */
+
+  .gcb-header {
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .gcb-header-content {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .gcb-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+  }
+
+  .gcb-description {
+    margin-top: 18px;
+
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  /* ARROWS */
+
+  .gcb-controls {
+    gap: 10px;
+    margin: 0 0 0 auto;
+  }
+
+  .gcb-arrow {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+
+    font-size: 15px;
+  }
+
+  /* CAROUSEL */
+
+  .gcb-track {
+    gap: 14px;
+    padding: 5px 2px 16px;
+  }
+
+  .gcb-card {
+    flex: 0 0 min(82vw, 340px);
+    height: 400px;
+    border-radius: 20px;
+  }
+
+  .gcb-card-content {
+    padding: 23px;
+  }
+
+  .gcb-card-title {
+    font-size: 24px;
+  }
+
+  .gcb-card-description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .gcb-card,
+  .gcb-card-image,
+  .gcb-arrow {
+    transition: none !important;
+  }
+}

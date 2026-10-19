@@ -13,6 +13,8 @@ import {
 import {
   giftCardsFAQs
 } from './GiftCards.js'
+import GiftCardOccasions from './GiftCardOccasions/GiftCardOccasions.vue'
+import GiftCardBusinesses from './GiftCardBusinesses/GiftCardBusinesses.vue'
 </script>
 
 <template>
@@ -22,6 +24,10 @@ import {
     <Hero v-bind="giftCardsHero" />
 
     <GiftCardHowItWorks />
+
+    <GiftCardOccasions/>
+
+    <GiftCardBusinesses/>
 
     <!-- FAQ -->
     <FAQ
