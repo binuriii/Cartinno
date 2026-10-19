@@ -50,6 +50,13 @@ const routes = [
       import('./pages/Products/EcommerceWebsite/GiftCards/GiftCards.vue')
   },
 
+  {
+    path: '/sell-with-reseller',
+    name: 'sell-with-reseller',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/SellWithResellerNetwork/SellWithResellerNetwork.vue')
+  },
+
 
 
 
