@@ -307,15 +307,7 @@ onBeforeUnmount(() => {
                       <!-- CENTER OWNER CARD -->
                       <div class="rhw-owner-card">
                         <div class="rhw-owner-top">
-                          <span class="rhw-owner-logo">
-                            <img
-                              v-if="brandImageLoaded"
-                              :src="brand.logo"
-                              alt="Cartinno"
-                              @error="brandImageLoaded = false"
-                            />
-                            <span v-else>C</span>
-                          </span>
+                          
 
                           <span class="rhw-verified">
                             <i class="fa-solid fa-circle-check"></i>
