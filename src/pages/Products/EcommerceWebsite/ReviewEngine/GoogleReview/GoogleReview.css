@@ -247,9 +247,9 @@
   color: inherit;
 
   font-size: clamp(20px, 1.9vw, 27px);
-  font-weight: 550;
+  font-weight: 500;
   line-height: 1.25;
-  letter-spacing: -0.035em;
+  letter-spacing: 0.001em;
 }
 
 /* CARD DESCRIPTION */

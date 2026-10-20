@@ -16,7 +16,7 @@ export const marketplaceFeatures = [
     shortDescription:
       'Reach new audiences across online marketplaces.',
     image:
-      'https://images.unsplash.com/photo-1690192123455-6337e6db4179?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
+      'https://images.unsplash.com/photo-1791394813534-cd91b5edc249?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDE%3D',
     imageAlt: 'Customers shopping at a retail business',
     highlight: 'More Reach',
     highlightText: 'New ways for customers to discover your products'

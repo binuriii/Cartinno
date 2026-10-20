@@ -14,6 +14,7 @@ import {
   marketplaceFAQs
 } from './SellWithMarketplace.js'
 import MarketplaceFeatures from './MarketplaceFeatures/MarketplaceFeatures.vue'
+import MarketplaceHowItWorks from './MarketplaceHowItWorks/MarketplaceHowItWorks.vue'
 </script>
 
 <template>
@@ -23,6 +24,8 @@ import MarketplaceFeatures from './MarketplaceFeatures/MarketplaceFeatures.vue'
     <Hero v-bind="marketplaceHero" />
 
     <MarketplaceFeatures/>
+
+    <MarketplaceHowItWorks/>
 
     <!-- FAQ -->
     <FAQ
