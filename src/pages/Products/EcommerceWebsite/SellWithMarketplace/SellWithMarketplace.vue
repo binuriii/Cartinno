@@ -15,6 +15,7 @@ import {
 } from './SellWithMarketplace.js'
 import MarketplaceFeatures from './MarketplaceFeatures/MarketplaceFeatures.vue'
 import MarketplaceHowItWorks from './MarketplaceHowItWorks/MarketplaceHowItWorks.vue'
+import MarketplaceBenefits from './MarketplaceBenefits/MarketplaceBenefits.vue'
 </script>
 
 <template>
@@ -26,6 +27,8 @@ import MarketplaceHowItWorks from './MarketplaceHowItWorks/MarketplaceHowItWorks
     <MarketplaceFeatures/>
 
     <MarketplaceHowItWorks/>
+
+    <MarketplaceBenefits/>
 
     <!-- FAQ -->
     <FAQ
