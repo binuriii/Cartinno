@@ -30,8 +30,6 @@ import './LoyaltyManagement.css'
     <!-- SECTION 2: IMAGE GRID / EDITORIAL STORIES -->
     <LoyaltyStories />
 
-    
-
     <!-- EXISTING SHARED FAQ -->
     <FAQ
       title="Frequently Asked Questions"

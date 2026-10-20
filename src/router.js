@@ -51,6 +51,15 @@ const routes = [
     import('./pages/Products/EcommerceWebsite/LoyaltyManagement/LoyaltyManagement.vue')
 },
 
+ 
+{
+  path: '/gift-registry',
+  name: 'gift-registry',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/GiftRegistry/GiftRegistry.vue')
+},
+
+
 
 
 
