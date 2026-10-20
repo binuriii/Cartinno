@@ -1,409 +1,481 @@
-export const logoImage = 'cartinno-logo.webp'
+export const logoImage = "cartinno-logo.webp";
 
 export const products = [
   {
-    "id": "ecommerce",
-    "title": "E-Commerce Website",
-    "label": "E-COMMERCE",
-    "href": "#ecommerce",
-    "image": "ecommerce.jpg",
-    "imageTitle": "Create a modern online store built to convert.",
-    "groups": [
+    id: "ecommerce",
+    title: "E-Commerce Website",
+    label: "E-COMMERCE",
+    href: "#ecommerce",
+    image: "ecommerce.jpg",
+    imageTitle: "Create a modern online store built to convert.",
+    groups: [
       {
-        "title": "Grow Online Discovery",
-        "column": 1,
-        "items": [
-          { "label": "E-Commerce Website", "href": "/ecommerce-website", "icon": "fa-solid fa-globe" },
-          { "label": "SEO", "href": "/seo", "icon": "fa-solid fa-magnifying-glass" },
-          { "label": "Review Engine", "href": "/review-engine", "icon": "fa-regular fa-star" }
-        ]
+        title: "Grow Online Discovery",
+        column: 1,
+        items: [
+          {
+            label: "E-Commerce Website",
+            href: "/ecommerce-website",
+            icon: "fa-solid fa-globe",
+          },
+          { label: "SEO", href: "/seo", icon: "fa-solid fa-magnifying-glass" },
+          {
+            label: "Review Engine",
+            href: "/review-engine",
+            icon: "fa-regular fa-star",
+          },
+        ],
       },
       {
-        "title": "Grow Online Sales",
-        "column": 1,
-        "items": [
-          { "label": "Retail & Wholesale Pricing", "href": "/retail-wholesale", "icon": "fa-solid fa-tag" },
-          { "label": "Smart Upsells", "href": "/smart-upsells", "icon": "fa-solid fa-chart-line" },
-          { "label": "Delivery", "href": "#delivery", "icon": "fa-solid fa-truck-fast" },
-          { "label": "Gift Cards", "href": "#gift-cards", "icon": "fa-regular fa-credit-card" },
-          { "label": "Loyalty Management System", "href": "#loyalty", "icon": "fa-solid fa-award" }
-        ]
+        title: "Grow Online Sales",
+        column: 1,
+        items: [
+          {
+            label: "Retail & Wholesale Pricing",
+            href: "/retail-wholesale",
+            icon: "fa-solid fa-tag",
+          },
+          {
+            label: "Smart Upsells",
+            href: "/smart-upsells",
+            icon: "fa-solid fa-chart-line",
+          },
+          {
+            label: "Delivery",
+            href: "#delivery",
+            icon: "fa-solid fa-truck-fast",
+          },
+          {
+            label: "Gift Cards",
+            href: "#gift-cards",
+            icon: "fa-regular fa-credit-card",
+          },
+          {
+            label: "Loyalty Management System",
+            href: "#loyalty",
+            icon: "fa-solid fa-award",
+          },
+        ],
       },
       {
-        "title": "Unique to Cartinno",
-        "column": 1,
-        "items": [
-          { "label": "Sell with Reseller Network", "href": "#reseller-network", "icon": "fa-solid fa-users" },
-          { "label": "Gift Registry", "href": "#gift-registry", "icon": "fa-solid fa-gift" },
-          { "label": "Sell with Marketplace", "href": "#marketplace", "icon": "fa-solid fa-store" }
-        ]
+        title: "Unique to Cartinno",
+        column: 1,
+        items: [
+          {
+            label: "Sell with Reseller Network",
+            href: "#reseller-network",
+            icon: "fa-solid fa-users",
+          },
+          {
+            label: "Gift Registry",
+            href: "#gift-registry",
+            icon: "fa-solid fa-gift",
+          },
+          {
+            label: "Sell with Marketplace",
+            href: "#marketplace",
+            icon: "fa-solid fa-store",
+          },
+        ],
       },
       {
-        "title": "Grow Your Business",
-        "column": 2,
-        "items": [
-          { "label": "Cloud POS", "href": "#pos", "icon": "fa-solid fa-desktop" },
-          { "label": "Marketing Campaigns", "href": "#marketing-campaigns", "icon": "fa-solid fa-bullhorn" },
-          { "label": "Push Notification Marketing", "href": "#push-notifications", "icon": "fa-regular fa-bell" },
-          { "label": "Inventory Management System", "href": "#inventory", "icon": "fa-solid fa-boxes-stacked" }
-        ]
+        title: "Grow Your Business",
+        column: 2,
+        items: [
+          { label: "Cloud POS", href: "#pos", icon: "fa-solid fa-desktop" },
+          {
+            label: "Marketing Campaigns",
+            href: "#marketing-campaigns",
+            icon: "fa-solid fa-bullhorn",
+          },
+          {
+            label: "Push Notification Marketing",
+            href: "#push-notifications",
+            icon: "fa-regular fa-bell",
+          },
+          {
+            label: "Inventory Management System",
+            href: "#inventory",
+            icon: "fa-solid fa-boxes-stacked",
+          },
+        ],
       },
       {
-        "title": "Manage Your Business",
-        "column": 2,
-        "items": [
-          { "label": "Cloud Phone System", "href": "#cloud-phone", "icon": "fa-solid fa-phone" },
-          { "label": "Reporting & Analytics", "href": "#reporting-analytics", "icon": "fa-solid fa-chart-pie" },
-          { "label": "POS Integrations", "href": "#pos-integrations", "icon": "fa-solid fa-gears" },
-          { "label": "Enquiry Management System", "href": "#enquiry-management", "icon": "fa-regular fa-message-square" },
-          { "label": "Lead Manager", "href": "#lead-manager", "icon": "fa-solid fa-user-plus" },
-          { "label": "Facebook Integration", "href": "#facebook-integration", "icon": "fa-brands fa-facebook" },
-          { "label": "WhatsApp Business API", "href": "#whatsapp-api", "icon": "fa-brands fa-whatsapp" }
-        ]
-      }
-    ]
+        title: "Manage Your Business",
+        column: 2,
+        items: [
+          {
+            label: "Cloud Phone System",
+            href: "#cloud-phone",
+            icon: "fa-solid fa-phone",
+          },
+          {
+            label: "Reporting & Analytics",
+            href: "#reporting-analytics",
+            icon: "fa-solid fa-chart-pie",
+          },
+          {
+            label: "POS Integrations",
+            href: "#pos-integrations",
+            icon: "fa-solid fa-gears",
+          },
+          {
+            label: "Enquiry Management System",
+            href: "#enquiry-management",
+            icon: "fa-regular fa-message-square",
+          },
+          {
+            label: "Lead Manager",
+            href: "#lead-manager",
+            icon: "fa-solid fa-user-plus",
+          },
+          {
+            label: "Facebook Integration",
+            href: "#facebook-integration",
+            icon: "fa-brands fa-facebook",
+          },
+          {
+            label: "WhatsApp Business API",
+            href: "#whatsapp-api",
+            icon: "fa-brands fa-whatsapp",
+          },
+        ],
+      },
+    ],
   },
   {
-    "id": "pos",
-    "title": "Cloud POS",
-    "label": "CLOUD POS",
-    "href": "#pos",
-    "image": "CloudPOS.webp",
-    "imageTitle": "Keep sales and everyday operations connected.",
-    "groups": [
+    id: "pos",
+    title: "Cloud POS",
+    label: "CLOUD POS",
+    href: "#pos",
+    image: "CloudPOS.webp",
+    imageTitle: "Keep sales and everyday operations connected.",
+    groups: [
       {
-        "title": "Manage sales",
-        "items": [
+        title: "Manage sales",
+        items: [
           {
-            "label": "Point of Sale",
-            "href": "/point-of-sale",
-            "icon": "fa-solid fa-desktop"
+            label: "Point of Sale",
+            href: "/point-of-sale",
+            icon: "fa-solid fa-desktop",
           },
           {
-            "label": "Sales Management",
-            "href": "#pos",
-            "icon": "fa-solid fa-chart-column"
-          }
-        ]
+            label: "Sales Management",
+            href: "/sales-management",
+            icon: "fa-solid fa-chart-column",
+          },
+        ],
       },
       {
-        "title": "Manage products",
-        "items": [
+        title: "Manage products",
+        items: [
           {
-            "label": "Product Management",
-            "href": "#pos",
-            "icon": "fa-solid fa-boxes-stacked"
+            label: "Product Management",
+            href: "#pos",
+            icon: "fa-solid fa-boxes-stacked",
           },
           {
-            "label": "Inventory",
-            "href": "#pos",
-            "icon": "fa-solid fa-warehouse"
-          }
-        ]
+            label: "Inventory",
+            href: "#pos",
+            icon: "fa-solid fa-warehouse",
+          },
+        ],
       },
       {
-        "title": "Run your business",
-        "items": [
+        title: "Run your business",
+        items: [
           {
-            "label": "Cloud Access",
-            "href": "#pos",
-            "icon": "fa-solid fa-cloud"
+            label: "Cloud Access",
+            href: "#pos",
+            icon: "fa-solid fa-cloud",
           },
           {
-            "label": "Daily Operations",
-            "href": "#pos",
-            "icon": "fa-solid fa-gears"
-          }
-        ]
+            label: "Daily Operations",
+            href: "#pos",
+            icon: "fa-solid fa-gears",
+          },
+        ],
       },
       {
-        "title": "Grow with Cartinno",
-        "items": [
+        title: "Grow with Cartinno",
+        items: [
           {
-            "label": "Scalable POS",
-            "href": "#pos",
-            "icon": "fa-solid fa-arrow-trend-up"
-          }
-        ]
-      }
-    ]
+            label: "Scalable POS",
+            href: "#pos",
+            icon: "fa-solid fa-arrow-trend-up",
+          },
+        ],
+      },
+    ],
   },
   {
-    "id": "food",
-    "title": "Food Website",
-    "label": "FOOD",
-    "href": "#food",
-    "image": "food.jpg",
-    "imageTitle": "Build a better digital experience for your restaurant.",
-    "groups": [
+    id: "food",
+    title: "Food Website",
+    label: "FOOD",
+    href: "#food",
+    image: "food.jpg",
+    imageTitle: "Build a better digital experience for your restaurant.",
+    groups: [
       {
-        "title": "Grow online discovery",
-        "items": [
+        title: "Grow online discovery",
+        items: [
           {
-            "label": "Restaurant Website",
-            "href": "#restaurant-website",
-            "icon": "fa-solid fa-globe"
+            label: "Restaurant Website",
+            href: "#restaurant-website",
+            icon: "fa-solid fa-globe",
           },
           {
-            "label": "Restaurant SEO",
-            "href": "/seo",
-            "icon": "fa-solid fa-magnifying-glass"
+            label: "Restaurant SEO",
+            href: "/seo",
+            icon: "fa-solid fa-magnifying-glass",
           },
           {
-            "label": "Online Menu",
-            "href": "#online-menu",
-            "icon": "fa-solid fa-list"
+            label: "Online Menu",
+            href: "#online-menu",
+            icon: "fa-solid fa-list",
           },
           {
-            "label": "Reviews Engine",
-            "href": "#reviews-engine",
-            "icon": "fa-regular fa-star",
-            "badge": "Coming Soon"
+            label: "Reviews Engine",
+            href: "#reviews-engine",
+            icon: "fa-regular fa-star",
+            badge: "Coming Soon",
           },
           {
-            "label": "Listings Management",
-            "href": "#listings-management",
-            "icon": "fa-solid fa-location-dot"
-          }
-        ]
+            label: "Listings Management",
+            href: "#listings-management",
+            icon: "fa-solid fa-location-dot",
+          },
+        ],
       },
       {
-        "title": "Grow repeat orders",
-        "items": [
+        title: "Grow repeat orders",
+        items: [
           {
-            "label": "Point of Sale",
-            "href": "#point-of-sale",
-            "icon": "fa-solid fa-laptop"
+            label: "Point of Sale",
+            href: "#point-of-sale",
+            icon: "fa-solid fa-laptop",
           },
           {
-            "label": "Branded Restaurant App",
-            "href": "#restaurant-app",
-            "icon": "fa-solid fa-mobile-screen-button",
-            "badge": "Coming Soon"
-           
+            label: "Branded Restaurant App",
+            href: "#restaurant-app",
+            icon: "fa-solid fa-mobile-screen-button",
+            badge: "Coming Soon",
           },
           {
-            "label": "Marketing Campaigns",
-            "href": "#marketing-campaigns",
-            "icon": "fa-solid fa-bullhorn"
+            label: "Marketing Campaigns",
+            href: "#marketing-campaigns",
+            icon: "fa-solid fa-bullhorn",
           },
           {
-            "label": "Push Notifications Marketing",
-            "href": "#push-notifications",
-            "icon": "fa-regular fa-bell"
+            label: "Push Notifications Marketing",
+            href: "#push-notifications",
+            icon: "fa-regular fa-bell",
           },
           {
-            "label": "Loyalty & Rewards",
-            "href": "#loyalty",
-            "icon": "fa-solid fa-award"
-          }
-        ]
+            label: "Loyalty & Rewards",
+            href: "#loyalty",
+            icon: "fa-solid fa-award",
+          },
+        ],
       },
       {
-        "title": "Grow online sales",
-        "items": [
+        title: "Grow online sales",
+        items: [
           {
-            "label": "Online Ordering",
-            "href": "#online-ordering",
-            "icon": "fa-solid fa-bag-shopping"
+            label: "Online Ordering",
+            href: "#online-ordering",
+            icon: "fa-solid fa-bag-shopping",
           },
           {
-            "label": "Smart Upsells",
-            "href": "#smart-upsells",
-            "icon": "fa-solid fa-chart-line"
+            label: "Smart Upsells",
+            href: "#smart-upsells",
+            icon: "fa-solid fa-chart-line",
           },
           {
-            "label": "Delivery",
-            "href": "#delivery",
-            "icon": "fa-solid fa-truck-fast"
+            label: "Delivery",
+            href: "#delivery",
+            icon: "fa-solid fa-truck-fast",
           },
           {
-            "label": "Catering",
-            "href": "#catering",
-            "icon": "fa-solid fa-mug-hot"
+            label: "Catering",
+            href: "#catering",
+            icon: "fa-solid fa-mug-hot",
           },
           {
-            "label": "AI Phone Ordering",
-            "href": "#ai-phone-ordering",
-            "icon": "fa-solid fa-phone",
-            "badge": "Coming Soon"
-          }
-        ]
+            label: "AI Phone Ordering",
+            href: "#ai-phone-ordering",
+            icon: "fa-solid fa-phone",
+            badge: "Coming Soon",
+          },
+        ],
       },
       {
-        "title": "Run your restaurant",
-        "items": [
+        title: "Run your restaurant",
+        items: [
           {
-            "label": "Reporting & Analytics",
-            "href": "#reporting-analytics",
-            "icon": "fa-solid fa-chart-pie"
+            label: "Reporting & Analytics",
+            href: "#reporting-analytics",
+            icon: "fa-solid fa-chart-pie",
           },
           {
-            "label": "Kitchen Tablet",
-            "href": "#kitchen-tablet",
-            "icon": "fa-solid fa-tablet-screen-button"
+            label: "Kitchen Tablet",
+            href: "#kitchen-tablet",
+            icon: "fa-solid fa-tablet-screen-button",
           },
           {
-            "label": "POS Integrations",
-            "href": "#pos-integrations",
-            "icon": "fa-regular fa-credit-card"
+            label: "POS Integrations",
+            href: "#pos-integrations",
+            icon: "fa-regular fa-credit-card",
           },
           {
-            "label": "Delivery App",
-            "href": "#delivery-app",
-            "icon": "fa-solid fa-truck-fast",
-            "badge": "Coming Soon"
-          }
-        ]
-      }
-    ]
+            label: "Delivery App",
+            href: "#delivery-app",
+            icon: "fa-solid fa-truck-fast",
+            badge: "Coming Soon",
+          },
+        ],
+      },
+    ],
   },
   {
-    "id": "cloud-food-pos",
-    "title": "Cloud Food POS",
-    "label": "CLOUD FOOD POS",
-    "href": "#cloud-food-pos",
-    "image": "CloudPOS.jpg",
-    "imageTitle": "Keep restaurant sales connected.",
-    "groups": [
+    id: "cloud-food-pos",
+    title: "Cloud Food POS",
+    label: "CLOUD FOOD POS",
+    href: "#cloud-food-pos",
+    image: "CloudPOS.jpg",
+    imageTitle: "Keep restaurant sales connected.",
+    groups: [
       {
-        "title": "Run your restaurant",
-        "items": [
+        title: "Run your restaurant",
+        items: [
           {
-            "label": "Reporting & Analytics",
-            "href": "#reporting-analytics",
-            "icon": "fa-solid fa-chart-pie"
+            label: "Reporting & Analytics",
+            href: "#reporting-analytics",
+            icon: "fa-solid fa-chart-pie",
           },
           {
-            "label": "Kitchen Tablet",
-            "href": "#kitchen-tablet",
-            "icon": "fa-solid fa-tablet-screen-button"
+            label: "Kitchen Tablet",
+            href: "#kitchen-tablet",
+            icon: "fa-solid fa-tablet-screen-button",
           },
           {
-            "label": "POS Integrations",
-            "href": "#pos-integrations",
-            "icon": "fa-regular fa-credit-card"
+            label: "POS Integrations",
+            href: "#pos-integrations",
+            icon: "fa-regular fa-credit-card",
           },
           {
-            "label": "Delivery App",
-            "href": "#delivery-app",
-            "icon": "fa-solid fa-truck-fast"
-          }
-        ]
-      }
-    ]
-  }
-]
+            label: "Delivery App",
+            href: "#delivery-app",
+            icon: "fa-solid fa-truck-fast",
+          },
+        ],
+      },
+    ],
+  },
+];
 
-export const MV_ECOMMERCE_URL = 'https://cartinno.com/multivendor-ecommerce-portal/'
-export const MV_FOOD_URL = 'https://cartinno.com/multivendor-food-portal/'
+export const MV_ECOMMERCE_URL =
+  "https://cartinno.com/multivendor-ecommerce-portal/";
+export const MV_FOOD_URL = "https://cartinno.com/multivendor-food-portal/";
 
 export const corporateSolutions = [
   {
-    "id": "marketplace",
-    "colors": [
-      "#5d5d5fff",
-      "#0a0a0aff"
-    ],
-    "title": "Multivendor E-Commerce Portal",
-    "href": MV_ECOMMERCE_URL,
-    "icon": "fa-solid fa-store",
-    "label": "E-COMMERCE MARKETPLACE",
-    "designTitle": "Bring every vendor together.",
-    "description": "Create one marketplace where customers can discover products from multiple sellers.",
-    "photoTitle": "One marketplace. More possibilities.",
-    "image": "e-commerce.jpg",
-    "alt": "E-commerce marketplace",
-    "imagePosition": "center",
-    "related": "multivendor-pos",
-    "relatedTitle": "Connected POS"
+    id: "marketplace",
+    colors: ["#5d5d5fff", "#0a0a0aff"],
+    title: "Multivendor E-Commerce Portal",
+    href: MV_ECOMMERCE_URL,
+    icon: "fa-solid fa-store",
+    label: "E-COMMERCE MARKETPLACE",
+    designTitle: "Bring every vendor together.",
+    description:
+      "Create one marketplace where customers can discover products from multiple sellers.",
+    photoTitle: "One marketplace. More possibilities.",
+    image: "e-commerce.jpg",
+    alt: "E-commerce marketplace",
+    imagePosition: "center",
+    related: "multivendor-pos",
+    relatedTitle: "Connected POS",
   },
   {
-    "id": "multivendor-pos",
-    "colors": [
-      "#f83232ff",
-      "#060606ff"
-    ],
-    "title": "Multivendor E-Commerce POS",
-    "href": MV_ECOMMERCE_URL,
-    "icon": "fa-solid fa-desktop",
-    "label": "MULTIVENDOR E-COMMERCE POS",
-    "designTitle": "Connect vendors and sales.",
-    "description": "Support vendor sales and everyday operations across your marketplace.",
-    "photoTitle": "A connected view of vendor operations.",
-    "image": "enterprise-team.jpg",
-    "alt": "Multivendor point of sale",
-    "imagePosition": "75% center",
-    "related": "marketplace",
-    "relatedTitle": "Connected portal"
+    id: "multivendor-pos",
+    colors: ["#f83232ff", "#060606ff"],
+    title: "Multivendor E-Commerce POS",
+    href: MV_ECOMMERCE_URL,
+    icon: "fa-solid fa-desktop",
+    label: "MULTIVENDOR E-COMMERCE POS",
+    designTitle: "Connect vendors and sales.",
+    description:
+      "Support vendor sales and everyday operations across your marketplace.",
+    photoTitle: "A connected view of vendor operations.",
+    image: "enterprise-team.jpg",
+    alt: "Multivendor point of sale",
+    imagePosition: "75% center",
+    related: "marketplace",
+    relatedTitle: "Connected portal",
   },
   {
-    "id": "food-portal",
-    "colors": [
-      "#5d5d5fff",
-      "#0a0a0aff"
-    ],
-    "title": "Multivendor Food Portal",
-    "href": MV_FOOD_URL,
-    "icon": "fa-solid fa-store",
-    "label": "FOOD MARKETPLACE",
-    "designTitle": "Many restaurants. One destination.",
-    "description": "Connect restaurants and customers through a shared online ordering experience.",
-    "photoTitle": "Make every restaurant easier to discover.",
-    "image": "food.jpg",
-    "alt": "Restaurant food marketplace",
-    "imagePosition": "center",
-    "related": "food-pos",
-    "relatedTitle": "Connected POS"
+    id: "food-portal",
+    colors: ["#5d5d5fff", "#0a0a0aff"],
+    title: "Multivendor Food Portal",
+    href: MV_FOOD_URL,
+    icon: "fa-solid fa-store",
+    label: "FOOD MARKETPLACE",
+    designTitle: "Many restaurants. One destination.",
+    description:
+      "Connect restaurants and customers through a shared online ordering experience.",
+    photoTitle: "Make every restaurant easier to discover.",
+    image: "food.jpg",
+    alt: "Restaurant food marketplace",
+    imagePosition: "center",
+    related: "food-pos",
+    relatedTitle: "Connected POS",
   },
   {
-    "id": "food-pos",
-    "colors": [
-      "#f83232ff",
-      "#060606ff"
-    ],
-    "title": "Multivendor Food POS",
-    "href": MV_FOOD_URL,
-    "icon": "fa-solid fa-desktop",
-    "label": "FOOD POS",
-    "designTitle": "Keep restaurant sales connected.",
-    "description": "Bring restaurant orders and point-of-sale workflows into one connected experience.",
-    "photoTitle": "Support every restaurant, every day.",
-    "image": "customer-business.jpg",
-    "alt": "Restaurant point of sale",
-    "imagePosition": "25% center",
-    "related": "food-portal",
-    "relatedTitle": "Connected portal"
-  }
-]
+    id: "food-pos",
+    colors: ["#f83232ff", "#060606ff"],
+    title: "Multivendor Food POS",
+    href: MV_FOOD_URL,
+    icon: "fa-solid fa-desktop",
+    label: "FOOD POS",
+    designTitle: "Keep restaurant sales connected.",
+    description:
+      "Bring restaurant orders and point-of-sale workflows into one connected experience.",
+    photoTitle: "Support every restaurant, every day.",
+    image: "customer-business.jpg",
+    alt: "Restaurant point of sale",
+    imagePosition: "25% center",
+    related: "food-portal",
+    relatedTitle: "Connected portal",
+  },
+];
 
 export const links = [
   {
-    "label": "Home",
-    "href": "/"
+    label: "Home",
+    href: "/",
   },
   {
-    "label": "Products",
-    "menu": "products"
+    label: "Products",
+    menu: "products",
   },
   {
-    "label": "Corporate Solutions",
-    "menu": "corporate"
+    label: "Corporate Solutions",
+    menu: "corporate",
   },
   {
-    "label": "Clients",
-    "href": "#clients"
+    label: "Clients",
+    href: "#clients",
   },
   {
-    "label": "About",
-    "href": "#about"
+    label: "About",
+    href: "#about",
   },
   {
-    "label": "Pricing",
-    "href": "#pricing"
+    label: "Pricing",
+    href: "#pricing",
   },
   {
-    "label": "Contact",
-    "href": "#contact"
-  }
-]
+    label: "Contact",
+    href: "#contact",
+  },
+];
