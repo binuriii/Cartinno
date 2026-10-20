@@ -64,6 +64,13 @@ const routes = [
       import('./pages/Products/EcommerceWebsite/SellWithMarketplace/SellWithMarketplace.vue')
   },
 
+  {
+    path: '/ecommerce-cloud-pos',
+    name: 'ecommerce-cloud-pos',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/CloudPOS/CloudPOS.vue')
+  },
+
 
 
 
