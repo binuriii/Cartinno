@@ -35,7 +35,7 @@ export const products = [
         "items": [
           { "label": "Sell with Reseller Network", "href": "/sell-with-reseller", "icon": "fa-solid fa-users" },
           { "label": "Gift Registry", "href": "#gift-registry", "icon": "fa-solid fa-gift" },
-          { "label": "Sell with Marketplace", "href": "#marketplace", "icon": "fa-solid fa-store" }
+          { "label": "Sell with Marketplace", "href": "/sell-with-marketplace", "icon": "fa-solid fa-store" }
         ]
       },
       {

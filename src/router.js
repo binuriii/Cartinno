@@ -57,6 +57,13 @@ const routes = [
       import('./pages/Products/EcommerceWebsite/SellWithResellerNetwork/SellWithResellerNetwork.vue')
   },
 
+  {
+    path: '/sell-with-marketplace',
+    name: 'sell-with-marketplace',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/SellWithMarketplace/SellWithMarketplace.vue')
+  },
+
 
 
 
