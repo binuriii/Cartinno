@@ -14,6 +14,7 @@ import {
 } from './CloudPOS.js'
 import CloudPOSFeatures from './CloudPOSFeatures/CloudPOSFeatures.vue'
 import CloudPOSHowItWorks from './CloudPOSHowItWorks/CloudPOSHowItWorks.vue'
+import CloudPOSBenefits from './CloudPOSBenefits/CloudPOSBenefits.vue'
 </script>
 
 <template>
@@ -26,6 +27,8 @@ import CloudPOSHowItWorks from './CloudPOSHowItWorks/CloudPOSHowItWorks.vue'
 
     <CloudPOSHowItWorks/>
 
+    <CloudPOSBenefits/>
+    
     <!-- FAQ -->
     <FAQ
       title="Frequently Asked Questions"
