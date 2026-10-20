@@ -13,6 +13,7 @@ import {
   cloudPOSFAQs
 } from './CloudPOS.js'
 import CloudPOSFeatures from './CloudPOSFeatures/CloudPOSFeatures.vue'
+import CloudPOSHowItWorks from './CloudPOSHowItWorks/CloudPOSHowItWorks.vue'
 </script>
 
 <template>
@@ -22,6 +23,8 @@ import CloudPOSFeatures from './CloudPOSFeatures/CloudPOSFeatures.vue'
     <Hero v-bind="cloudPOSHero" />
 
     <CloudPOSFeatures/>
+
+    <CloudPOSHowItWorks/>
 
     <!-- FAQ -->
     <FAQ
