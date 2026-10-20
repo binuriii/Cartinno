@@ -1,7 +1,7 @@
 .rs-section {
   width: 100%;
   padding: 120px 5%;
-  background-color: #faf9f6; 
+  background-color: #faf9f6; /* Off-white color exact to the image */
   border-radius: 40px 40px 0 0;
   margin-top: -40px;
   position: relative;
@@ -10,143 +10,131 @@
 }
 
 .rs-container {
-  max-width: 1200px;
+  max-width: 1280px; /* Poddak loku kala image eke widihata */
   margin: 0 auto;
 }
 
 .rs-grid {
   display: flex;
-  gap: 100px;
-  align-items: flex-start;
+  gap: 80px;
+  align-items: stretch; /* Dekama eka height ekata enna */
 }
 
-/* Sticky effect eka ain karapu left column eka */
+/* Left side exact layout */
 .rs-left {
-  flex: 0 0 35%;
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Title eka udata, profile eka pallehata push karanawa */
 }
 
 .rs-title {
-  font-size: clamp(40px, 4.5vw, 56px);
+  font-size: clamp(42px, 4.5vw, 60px);
   font-weight: 700;
   line-height: 1.1;
-  letter-spacing: -0.03em;
-  margin: 0 0 60px 0;
-  color: #1a1033;
+  letter-spacing: -0.04em;
+  margin: 0;
+  color: #1c1d20;
+  max-width: 400px;
 }
 
 .rs-profile-card {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
+  margin-top: 100px; /* Minimum gap eka */
 }
 
 .rs-profile-image-wrapper {
   position: relative;
-  width: 150px; 
-  height: 150px;
+  width: 160px; 
+  height: 160px;
 }
 
 .rs-profile-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 28px; 
-  border: 4px solid #ffffff; 
-  box-shadow: 0 20px 40px rgba(26, 16, 51, 0.12), 0 8px 16px rgba(26, 16, 51, 0.06); 
+  border-radius: 24px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Smooth shadow */
 }
 
+/* Signature overlapping the image bottom-left */
 .rs-signature {
   position: absolute;
-  bottom: -20px;
+  bottom: -10px;
   left: -20px;
-  font-family: 'Brush Script MT', cursive;
-  font-size: 44px;
+  font-family: 'Brush Script MT', 'Cedarville Cursive', cursive;
+  font-size: 48px;
   color: #1a1033;
-  transform: rotate(-8deg);
-  text-shadow: 3px 3px 0 #faf9f6, -3px -3px 0 #faf9f6, 3px -3px 0 #faf9f6, -3px 3px 0 #faf9f6;
+  transform: rotate(-5deg);
   z-index: 2;
 }
 
 .rs-name {
-  font-size: 19px;
+  font-size: 15px;
   font-weight: 700;
-  color: #1a1033;
-  margin: 0 0 4px 0;
+  color: #1c1d20;
+  margin: 0 0 2px 0;
 }
 
 .rs-role {
-  font-size: 15px;
-  color: #6b6380;
+  font-size: 13px;
+  color: #555555;
   margin: 0;
 }
 
+/* Right side list */
 .rs-right {
-  flex: 0 0 65%;
+  flex: 0 0 60%;
   display: flex;
   flex-direction: column;
 }
 
 .rs-item {
-  position: relative;
   display: flex;
   gap: 40px;
-  padding: 45px 30px; 
-  border-bottom: 1px solid #ebebeb;
-  border-radius: 24px;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: default;
+  padding: 40px 0; /* Padding inside the item */
+  border-top: 1px solid #e0e0e0; /* Top border exactly like image */
 }
 
-.rs-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%) scaleY(0);
-  width: 4px;
-  height: 50%;
-  background: #d7454e; 
-  border-radius: 10px;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  opacity: 0;
+.rs-item-title-col { 
+  flex: 0 0 45%; /* Split ratio like image */
 }
 
-.rs-item:hover {
-  transform: translateX(12px);
-  background: #ffffff; 
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04); 
-  border-color: transparent; 
-}
-
-.rs-item:hover::before {
-  transform: translateY(-50%) scaleY(1);
-  opacity: 1;
-}
-
-.rs-item-title-col { flex: 0 0 40%; }
 .rs-item-title-col h4 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.4;
-  color: #1a1033;
+  color: #1c1d20;
   margin: 0;
+  letter-spacing: -0.01em;
 }
 
-.rs-item-desc-col { flex: 1; }
+.rs-item-desc-col { 
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between paragraphs */
+}
+
 .rs-item-desc-col p {
-  font-size: 17px;
-  color: #5b5b66;
-  line-height: 1.6;
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.5;
   margin: 0;
 }
 
+/* Responsive Styles */
 @media (max-width: 992px) {
   .rs-grid { flex-direction: column; gap: 60px; }
-  .rs-left { flex: 1; }
-  .rs-right { flex: 1; width: 100%; }
+  .rs-left { justify-content: flex-start; }
+  .rs-profile-card { margin-top: 40px; }
+  .rs-right { width: 100%; }
 }
 
 @media (max-width: 640px) {
-  .rs-item { flex-direction: column; gap: 16px; padding: 35px 20px; }
-  .rs-item:hover { transform: translateY(-4px); } 
+  .rs-section { padding: 80px 5%; }
+  .rs-item { flex-direction: column; gap: 16px; padding: 30px 0; }
+  .rs-signature { font-size: 40px; }
 }

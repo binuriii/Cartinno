@@ -51,7 +51,7 @@ export const posHero = {
     "The complete restaurant point of sale and operations platform — orders, kitchen, tables, stock, loyalty, and a zero-commission ordering website, all in one unified system.",
 
   backgroundImage:
-    "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1600&auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1775534778375-3f235c466c58?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
 
   overlayOpacity: 0.5,
 
