@@ -1,0 +1,606 @@
+
+/* =========================================
+   CLOUD POS FEATURES
+   ========================================= */
+
+.cpf-section,
+.cpf-section * {
+  box-sizing: border-box;
+}
+
+.cpf-section {
+  --cpf-red: #d7454e;
+  --cpf-ink: #23232b;
+  --cpf-muted: #5b5b66;
+  --cpf-purple: #30203d;
+  --cpf-lavender: #ebe2c6;
+  --cpf-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  position: relative;
+  z-index: 20;
+  isolation: isolate;
+
+  display: block;
+  width: 100%;
+
+  /* SAME OVERLAP AS BUSINESS SUPPORT */
+  margin-top: -55px;
+  border-radius: 70px 70px 0 0;
+
+  /* SAME SECTION SPACING */
+  padding: 10vh 3vw 10vh;
+
+  background: #ffffff;
+  background-clip: padding-box;
+  color: var(--cpf-ink);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.cpf-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.cpf-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 18px;
+
+  width: 100%;
+  margin-bottom: clamp(35px, 4vw, 58px);
+
+  text-align: left;
+}
+
+.cpf-heading {
+  max-width: 850px;
+  margin: 0;
+
+  color: var(--cpf-ink);
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+  text-align: left;
+}
+
+.cpf-intro {
+  max-width: 650px;
+  margin: 0;
+
+  color: var(--cpf-muted);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* =========================================
+   THREE CARD LAYOUT
+   ========================================= */
+
+.cpf-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: clamp(15px, 1.5vw, 24px);
+  align-items: stretch;
+
+  width: 100%;
+}
+
+/* =========================================
+   BASE CARD
+   ========================================= */
+
+.cpf-card {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  height: clamp(465px, 42vw, 555px);
+  overflow: hidden;
+
+  border: 1px solid rgba(50, 35, 60, 0.06);
+  border-radius: 34px;
+
+  background: var(--cpf-purple);
+  color: #ffffff;
+
+  transition:
+    transform 0.5s var(--cpf-ease),
+    box-shadow 0.5s ease;
+}
+
+/* =========================================
+   CARD 01 — SPLIT DESIGN
+   ========================================= */
+
+.cpf-card-1 {
+  display: grid;
+  grid-template-columns: 44% 56%;
+
+  background: var(--cpf-lavender);
+  color: var(--cpf-ink);
+}
+
+.cpf-split-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-width: 0;
+  height: 100%;
+  padding: clamp(22px, 2.4vw, 36px);
+}
+
+.cpf-split-copy {
+  max-width: 310px;
+}
+
+.cpf-split-copy h3 {
+  margin: 0;
+
+  color: var(--cpf-ink);
+  font-size: clamp(21px, 2.15vw, 32px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+.cpf-split-copy p {
+  margin: 20px 0 0;
+
+  color: #595667;
+  font-size: clamp(12px, 1.06vw, 15px);
+  line-height: 1.65;
+}
+
+.cpf-split-media {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #d1dcbe;
+}
+
+.cpf-split-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.8s var(--cpf-ease);
+}
+
+/* =========================================
+   SHARED CARD METADATA
+   ========================================= */
+
+.cpf-card-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  min-width: 0;
+}
+
+.cpf-card-number {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+}
+
+.cpf-card-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100%;
+  padding: 8px 13px;
+
+  border: 1px solid currentColor;
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cpf-card-1 .cpf-card-number {
+  color: rgba(23, 22, 22, 0.85);
+}
+
+.cpf-card-1 .cpf-card-label {
+  border-color: rgba(16, 15, 15, 0.3);
+  color: rgba(23, 22, 22, 0.85);
+}
+
+/* =========================================
+   CARD 02 & 03 — DARK PHOTOGRAPHIC DESIGN
+   ========================================= */
+
+.cpf-card-2,
+.cpf-card-3 {
+  background: #d1dcbe;
+}
+
+.cpf-dark-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0.35;
+
+  transition:
+    transform 0.8s var(--cpf-ease),
+    opacity 0.5s ease;
+}
+
+.cpf-dark-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(177, 177, 176, 0.84) 0%,
+    rgba(36, 36, 36, 0.98) 100%
+  );
+}
+
+.cpf-dark-inner {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+  padding: clamp(22px, 2.35vw, 36px);
+}
+
+.cpf-card-2 .cpf-card-number,
+.cpf-card-3 .cpf-card-number {
+  color: rgba(23, 22, 22, 0.85);
+}
+
+.cpf-card-2 .cpf-card-label,
+.cpf-card-3 .cpf-card-label {
+  color: rgba(23, 22, 22, 0.85);
+  border-color: rgba(16, 15, 15, 0.3);
+}
+
+.cpf-dark-copy {
+  max-width: 300px;
+  margin-bottom: auto;
+  padding-top: clamp(75px, 8vw, 125px);
+}
+
+.cpf-dark-copy h3 {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: clamp(21px, 2vw, 30px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.cpf-dark-copy p {
+  margin: 20px 0 0;
+
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(12px, 1.03vw, 15px);
+  line-height: 1.7;
+}
+
+/* =========================================
+   IMAGE FALLBACK
+   ========================================= */
+
+.cpf-media-fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    #c6b6e5,
+    #9e88bd
+  );
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 65px;
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+/* Cards are always visible. No observer needed. */
+
+@keyframes cpf-image-drift {
+  from {
+    transform: scale(1.04) translateX(-1%);
+  }
+
+  to {
+    transform: scale(1.09) translateX(1%);
+  }
+}
+
+.cpf-split-media img {
+  animation: cpf-image-drift 12s ease-in-out infinite alternate;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cpf-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+      0 18px 32px rgba(35, 35, 43, 0.07),
+      0 28px 55px rgba(35, 35, 43, 0.1);
+  }
+
+  .cpf-card:hover .cpf-split-media img {
+    animation-play-state: paused;
+    transform: scale(1.09);
+  }
+
+  .cpf-card:hover .cpf-dark-image {
+    transform: scale(1.06);
+    opacity: 0.47;
+  }
+}
+
+/* =========================================
+   MEDIUM DESKTOP
+   ========================================= */
+
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .cpf-grid {
+    grid-template-columns:
+      minmax(0, 1.75fr)
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+  }
+
+  .cpf-card {
+    height: 520px;
+  }
+
+  .cpf-card-1 {
+    grid-template-columns: 48% 52%;
+  }
+
+  .cpf-split-content,
+  .cpf-dark-inner {
+    padding: 22px;
+  }
+
+  .cpf-card-meta {
+    gap: 7px;
+  }
+
+  .cpf-card-label {
+    padding: 7px 9px;
+    font-size: 9px;
+  }
+
+  .cpf-dark-copy {
+    padding-top: 75px;
+  }
+
+  .cpf-dark-copy h3 {
+    font-size: 23px;
+  }
+
+  .cpf-dark-copy p {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1024px) {
+  .cpf-section {
+    margin-top: -70px;
+    border-radius: 40px 40px 0 0;
+    padding: 8vh 4vw;
+  }
+
+  .cpf-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+  }
+
+  .cpf-card {
+    height: 440px;
+    border-radius: 25px;
+  }
+
+  .cpf-card-1 {
+    grid-column: 1 / -1;
+    grid-template-columns: 44% 56%;
+  }
+
+  .cpf-card-2,
+  .cpf-card-3 {
+    grid-column: auto;
+  }
+
+  .cpf-split-content,
+  .cpf-dark-inner {
+    padding: 28px;
+  }
+
+  .cpf-dark-copy {
+    padding-top: 70px;
+  }
+
+  .cpf-dark-copy h3 {
+    font-size: 26px;
+  }
+
+  .cpf-dark-copy p {
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 640px) {
+  .cpf-section {
+    margin-top: -45px;
+    border-radius: 24px 24px 0 0;
+    padding: 56px 14px 75px;
+  }
+
+  .cpf-header {
+    gap: 17px;
+    margin-bottom: 32px;
+  }
+
+  .cpf-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+  }
+
+  .cpf-intro {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .cpf-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .cpf-card {
+    height: 385px;
+    border-radius: 20px;
+  }
+
+  .cpf-card-1,
+  .cpf-card-2,
+  .cpf-card-3 {
+    grid-column: 1;
+  }
+
+  .cpf-card-1 {
+    grid-template-columns: 49% 51%;
+    height: 440px;
+  }
+
+  .cpf-split-content {
+    padding: 18px 15px;
+  }
+
+  .cpf-card-meta {
+    gap: 7px;
+  }
+
+  .cpf-card-number {
+    font-size: 10px;
+  }
+
+  .cpf-card-label {
+    padding: 6px 8px;
+    font-size: 8px;
+    white-space: normal;
+  }
+
+  .cpf-split-copy h3 {
+    font-size: clamp(18px, 5vw, 23px);
+    line-height: 1.13;
+  }
+
+  .cpf-split-copy p {
+    margin-top: 12px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .cpf-dark-inner {
+    padding: 23px;
+  }
+
+  .cpf-dark-copy {
+    padding-top: 70px;
+  }
+
+  .cpf-dark-copy h3 {
+    font-size: 26px;
+  }
+
+  .cpf-dark-copy p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* VERY SMALL SCREENS */
+
+@media (max-width: 380px) {
+  .cpf-card-1 {
+    grid-template-columns: 53% 47%;
+    height: 450px;
+  }
+
+  .cpf-split-content {
+    padding: 14px 11px;
+  }
+
+  .cpf-split-copy h3 {
+    font-size: 18px;
+  }
+
+  .cpf-split-copy p {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .cpf-card,
+  .cpf-split-media img,
+  .cpf-dark-image {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -304,9 +304,9 @@
   color: var(--rf-ink);
 
   font-size: clamp(23px, 2.5vw, 34px);
-  font-weight: 550;
+  font-weight: 500;
   line-height: 1.18;
-  letter-spacing: -0.045em;
+  letter-spacing: 0.001em;
 }
 
 .rf-info-content p {

@@ -1,0 +1,549 @@
+
+.gco-section,
+.gco-section * {
+  box-sizing: border-box;
+}
+
+.gco-section {
+  --gco-red: #d7454e;
+  --gco-ink: #23232b;
+  --gco-muted: #5b5b66;
+
+  width: 100%;
+  padding: 5vh 3vw 10vh;
+  background: #ffffff;
+  color: var(--gco-ink);
+  font-family: inherit;
+}
+
+.gco-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* HEADER */
+
+.gco-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: clamp(35px, 4vw, 55px);
+  text-align: center;
+}
+
+.gco-heading {
+  max-width: 900px;
+  margin: 0;
+  color: var(--gco-ink);
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.gco-description {
+  max-width: 650px;
+  margin: 18px auto 0;
+  color: var(--gco-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* GRID */
+
+.gco-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+}
+
+/* CARDS */
+
+.gco-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  height: 350px;
+  padding: clamp(22px, 2.5vw, 35px);
+
+  border-radius: 30px;
+  overflow: hidden;
+
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+.gco-card-large {
+  grid-column: span 2;
+}
+
+.gco-card-small {
+  grid-column: span 1;
+}
+
+/* PASTEL BACKGROUNDS */
+
+.gco-card-birthday {
+  --gco-accent: #238a4b;
+  background: #E6F2E7;
+}
+
+.gco-card-thankyou {
+  --gco-accent: #af8610;
+  background: #FDF9D1;
+}
+
+.gco-card-congratulations {
+  --gco-accent: #be586b;
+  background: #FAECEF;
+}
+
+.gco-card-anniversary {
+  --gco-accent: #6283af;
+  background: #E2F1FC;
+}
+
+.gco-card-justbecause {
+  --gco-accent: #a27550;
+  background: #FCF8ED;
+}
+
+.gco-card-wedding {
+  --gco-accent: #676767;
+  background: #EFEEEE;
+}
+
+/* CARD CONTENT */
+
+.gco-card-content {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  text-align: left;
+}
+
+.gco-card-subtitle {
+  display: block;
+  margin-bottom: 7px;
+
+  color: var(--gco-accent);
+  font-size: clamp(12px, 1.2vw, 17px);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.gco-card-title {
+  margin: 0;
+  color: #383838;
+  font-size: clamp(25px, 2.8vw, 42px);
+  font-weight: 550;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+}
+
+.gco-card-small .gco-card-title {
+  font-size: clamp(23px, 2.2vw, 33px);
+}
+
+.gco-card-description {
+  max-width: 300px;
+  margin: 12px 0 0;
+  color: #626269;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.gco-card-large .gco-card-content {
+  max-width: 55%;
+}
+
+.gco-card-large .gco-card-description {
+  max-width: 235px;
+}
+
+/* OPTIONAL LINK */
+
+.gco-card-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: fit-content;
+  margin-top: 20px;
+  padding: 13px 17px;
+
+  border-radius: 12px;
+  background: #23232b;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow: 0 8px 20px rgba(35, 35, 43, 0.16);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.gco-card-button:hover {
+  background: var(--gco-red);
+  transform: translateY(-2px);
+}
+
+.gco-card-button:focus-visible {
+  outline: 3px solid var(--gco-red);
+  outline-offset: 3px;
+}
+
+/* IMAGE AREA */
+
+.gco-card-art {
+  position: absolute;
+  z-index: 1;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  width: 100%;
+  height: 60%;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* BIRTHDAY AND WEDDING IMAGES */
+
+.gco-card-large .gco-card-art {
+  left: auto;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  height: 84%;
+}
+
+.gco-card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+
+  transition:
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* FOUR SMALL CARDS - FULL IMAGE BACKGROUND */
+
+.gco-card-thankyou .gco-card-art,
+.gco-card-congratulations .gco-card-art,
+.gco-card-anniversary .gco-card-art,
+.gco-card-justbecause .gco-card-art {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gco-card-thankyou .gco-card-image,
+.gco-card-congratulations .gco-card-image,
+.gco-card-anniversary .gco-card-image,
+.gco-card-justbecause .gco-card-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+  mix-blend-mode: normal;
+
+  transform: scale(0.9);
+}
+
+/* KEEP TEXT ABOVE THE IMAGES */
+
+.gco-card-thankyou .gco-card-content,
+.gco-card-congratulations .gco-card-content,
+.gco-card-anniversary .gco-card-content,
+.gco-card-justbecause .gco-card-content {
+  position: relative;
+  z-index: 3;
+}
+
+/* FALLBACK ILLUSTRATIONS */
+
+.gco-art-placeholder {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+
+  display: grid;
+  place-items: center;
+
+  transform: translateX(-50%);
+}
+
+.gco-placeholder-circle {
+  display: grid;
+  place-items: center;
+
+  width: 135px;
+  height: 135px;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.52);
+  color: var(--gco-accent);
+
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.05);
+  font-size: 54px;
+}
+
+.gco-card-large .gco-placeholder-circle {
+  width: 200px;
+  height: 200px;
+  font-size: 72px;
+}
+
+.gco-placeholder-sparkle {
+  position: absolute;
+  top: -25px;
+  right: -22px;
+  color: var(--gco-accent);
+  font-size: 35px;
+  animation: gco-sparkle 4s ease-in-out infinite;
+}
+
+/* HOVER */
+
+@media (hover: hover) and (pointer: fine) {
+  .gco-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+      0 15px 30px rgba(35, 35, 43, 0.05),
+      0 25px 55px rgba(35, 35, 43, 0.08);
+  }
+
+  .gco-card-large:hover .gco-card-image {
+    transform: translateY(-7px) scale(1.05);
+  }
+
+  .gco-card-thankyou:hover .gco-card-image,
+  .gco-card-congratulations:hover .gco-card-image,
+  .gco-card-anniversary:hover .gco-card-image,
+  .gco-card-justbecause:hover .gco-card-image {
+    transform: scale(0.94);
+  }
+
+  .gco-card:hover .gco-placeholder-circle {
+    transform: scale(1.06);
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes gco-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gco-sparkle {
+  0%, 100% {
+    opacity: 0.65;
+    transform: rotate(-10deg) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(12deg) scale(1.18);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gco-card.gco-visible {
+    animation: gco-card-enter 0.7s
+      cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .gco-card:nth-child(2).gco-visible,
+  .gco-card:nth-child(5).gco-visible {
+    animation-delay: 0.08s;
+  }
+
+  .gco-card:nth-child(3).gco-visible,
+  .gco-card:nth-child(6).gco-visible {
+    animation-delay: 0.16s;
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .gco-section {
+    padding: 8vh 4vw;
+  }
+
+  .gco-grid {
+    gap: 16px;
+  }
+
+  .gco-card {
+    height: 320px;
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .gco-card-title {
+    font-size: clamp(25px, 3.2vw, 34px);
+  }
+
+  .gco-card-small .gco-card-title {
+    font-size: clamp(21px, 2.5vw, 27px);
+  }
+
+  .gco-card-description {
+    font-size: 12px;
+  }
+}
+
+/* SMALL TABLET */
+
+@media (max-width: 768px) {
+  .gco-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gco-card-large,
+  .gco-card-small {
+    grid-column: span 1;
+  }
+
+  .gco-card {
+    height: 320px;
+  }
+
+  .gco-card-large .gco-card-content {
+    max-width: 100%;
+  }
+
+  .gco-card-large .gco-card-art {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .gco-section {
+    padding: 65px 14px 70px;
+  }
+
+  .gco-header {
+    margin-bottom: 30px;
+  }
+
+  .gco-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+  }
+
+  .gco-description {
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .gco-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .gco-card-large,
+  .gco-card-small {
+    grid-column: auto;
+  }
+
+  .gco-card {
+    height: 355px;
+    padding: 24px;
+    border-radius: 23px;
+  }
+
+  .gco-card-title,
+  .gco-card-small .gco-card-title {
+    font-size: 32px;
+  }
+
+  .gco-card-subtitle {
+    font-size: 14px;
+  }
+
+  .gco-card-description,
+  .gco-card-large .gco-card-description {
+    max-width: 250px;
+    font-size: 12px;
+  }
+
+  .gco-card-large .gco-card-content {
+    max-width: 100%;
+  }
+
+  .gco-card-large .gco-card-art {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+  }
+
+  .gco-card-large .gco-placeholder-circle {
+    width: 135px;
+    height: 135px;
+    font-size: 54px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .gco-card,
+  .gco-card-image,
+  .gco-card-button,
+  .gco-placeholder-sparkle {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .gco-card {
+    opacity: 1;
+    transform: none;
+  }
+}

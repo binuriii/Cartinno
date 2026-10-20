@@ -43,6 +43,34 @@ const routes = [
       import('./pages/Products/EcommerceWebsite/SmartUpsells/SmartUpsells.vue')
   },
 
+  {
+    path: '/gift-cards',
+    name: 'gift-cards',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/GiftCards/GiftCards.vue')
+  },
+
+  {
+    path: '/sell-with-reseller',
+    name: 'sell-with-reseller',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/SellWithResellerNetwork/SellWithResellerNetwork.vue')
+  },
+
+  {
+    path: '/sell-with-marketplace',
+    name: 'sell-with-marketplace',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/SellWithMarketplace/SellWithMarketplace.vue')
+  },
+
+  {
+    path: '/ecommerce-cloud-pos',
+    name: 'ecommerce-cloud-pos',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/CloudPOS/CloudPOS.vue')
+  },
+
 
 
 

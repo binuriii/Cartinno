@@ -1,0 +1,730 @@
+
+.gchi-section,
+.gchi-section * {
+  box-sizing: border-box;
+}
+
+.gchi-section {
+  --gchi-red: #d7454e;
+  --gchi-ink: #23232b;
+  --gchi-muted: #5b5b66;
+
+  position: relative;
+  z-index: 20;
+  isolation: isolate;
+
+  width: 100%;
+  margin-top: -55px;
+  padding: 10vh 3vw;
+
+  border-radius: 70px 70px 0 0;
+  background: #ffffff;
+  color: var(--gchi-ink);
+  font-family: inherit;
+}
+
+.gchi-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+.gchi-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: clamp(35px, 4vw, 55px);
+  text-align: left;
+}
+
+.gchi-heading {
+  max-width: 900px;
+  margin: 0;
+  color: var(--gchi-ink);
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.gchi-intro {
+  max-width: 700px;
+  margin: 18px 0 0;
+  color: var(--gchi-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.gchi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  perspective: 1400px;
+}
+
+.gchi-step {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 485px;
+  padding: clamp(16px, 2vw, 25px);
+
+  border: 1px solid rgba(35, 35, 43, 0.08);
+  border-radius: 28px;
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 6px rgba(35, 35, 43, 0.025),
+    0 12px 25px rgba(35, 35, 43, 0.045),
+    0 25px 55px rgba(35, 35, 43, 0.065),
+    inset 0 1px 0 #ffffff;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s ease,
+    border-color 0.3s ease;
+}
+
+.gchi-step::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.95),
+    transparent 55%,
+    rgba(35, 35, 43, 0.015)
+  );
+  pointer-events: none;
+}
+
+.gchi-media,
+.gchi-step-content {
+  position: relative;
+  z-index: 1;
+}
+
+.gchi-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 340px;
+  border-radius: 21px;
+  overflow: hidden;
+
+  box-shadow:
+    inset 0 2px 8px rgba(35, 35, 43, 0.035),
+    0 5px 16px rgba(35, 35, 43, 0.025);
+
+  transition: transform 0.45s ease;
+}
+
+.gchi-step-peach .gchi-media {
+  background: linear-gradient(145deg, #fff3eb, #fae5dd);
+}
+
+.gchi-step-lavender .gchi-media {
+  background: linear-gradient(145deg, #f6f2ff, #e9e2f7);
+}
+
+.gchi-step-mint .gchi-media {
+  background: linear-gradient(145deg, #effbf3, #dff1e6);
+}
+
+.gchi-custom-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.65s ease;
+}
+
+.gchi-preview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.gchi-preview-label {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  z-index: 2;
+  color: #77717a;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.gchi-gift-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: min(100%, 300px);
+  aspect-ratio: 1.65 / 1;
+  padding: 22px;
+  border-radius: 19px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 95% 10%,
+      rgba(255, 255, 255, 0.3),
+      transparent 45%
+    ),
+    linear-gradient(125deg, #d7454e, #f0918f);
+
+  color: #ffffff;
+  box-shadow: 0 18px 35px rgba(178, 65, 74, 0.22);
+
+  transform: rotate(-5deg);
+  transition: transform 0.5s ease;
+}
+
+.gchi-gift-card::after {
+  content: "";
+  position: absolute;
+  top: -55px;
+  right: -45px;
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.gchi-gift-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+.gchi-gift-brand i {
+  font-size: 19px;
+}
+
+.gchi-gift-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gchi-gift-middle span {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.gchi-gift-middle strong {
+  font-size: clamp(22px, 2.2vw, 30px);
+  font-weight: 650;
+}
+
+.gchi-gift-bottom {
+  font-size: 11px;
+  opacity: 0.92;
+}
+
+.gchi-amounts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 21px;
+}
+
+.gchi-amount {
+  padding: 9px 11px;
+  border: 1px solid #ead8d4;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--gchi-ink);
+  font: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.gchi-amount:hover {
+  transform: translateY(-2px);
+}
+
+.gchi-amount-active {
+  background: var(--gchi-red);
+  border-color: var(--gchi-red);
+  color: #ffffff;
+}
+
+.gchi-amount:focus-visible {
+  outline: 3px solid rgba(215, 69, 78, 0.3);
+  outline-offset: 3px;
+}
+
+.gchi-message-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: min(100%, 285px);
+  min-height: 245px;
+  padding: 27px 24px;
+
+  border: 1px solid #eee7f5;
+  border-radius: 22px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 18px 35px rgba(65, 44, 90, 0.09);
+
+  transform: rotate(4deg);
+  transition: transform 0.5s ease;
+}
+
+.gchi-message-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: #f4eafa;
+  color: #b77ac5;
+  font-size: 18px;
+}
+
+.gchi-message-overline {
+  color: #a28cae;
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+}
+
+.gchi-message-card h4 {
+  margin: 10px 0;
+  color: var(--gchi-ink);
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+}
+
+.gchi-message-card p {
+  margin: 0;
+  color: var(--gchi-muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.gchi-message-signature {
+  display: flex;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 17px;
+  font-size: 10px;
+}
+
+.gchi-message-signature span {
+  color: #96909d;
+}
+
+.gchi-message-signature strong {
+  color: var(--gchi-ink);
+}
+
+.gchi-floating-heart {
+  position: absolute;
+  top: 22%;
+  right: 9%;
+  z-index: 2;
+
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--gchi-red);
+  box-shadow: 0 12px 28px rgba(35, 35, 43, 0.09);
+  transform: rotate(-12deg);
+}
+
+.gchi-visible .gchi-floating-heart {
+  animation: gchi-heart-float 4s ease-in-out infinite;
+}
+
+.gchi-success-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: min(100%, 295px);
+  padding: 28px 20px;
+
+  border: 1px solid #dcece3;
+  border-radius: 22px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 18px 35px rgba(36, 110, 70, 0.09);
+
+  transition: transform 0.4s ease;
+}
+
+.gchi-success-check {
+  display: grid;
+  place-items: center;
+
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+
+  background: #dcf7e7;
+  color: #209757;
+  font-size: 22px;
+}
+
+.gchi-visible .gchi-success-check {
+  animation: gchi-check-pop 0.75s
+    cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+}
+
+.gchi-success-card h4 {
+  margin: 18px 0 8px;
+  color: var(--gchi-ink);
+  font-size: 20px;
+  font-weight: 650;
+  letter-spacing: -0.035em;
+}
+
+.gchi-success-card p {
+  max-width: 230px;
+  margin: 0;
+  color: var(--gchi-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.gchi-gift-ticket {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  margin-top: 22px;
+  padding: 12px;
+
+  border: 1px dashed #c5e5d2;
+  border-radius: 12px;
+  background: #f4fbf6;
+  text-align: left;
+}
+
+.gchi-ticket-icon {
+  display: grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+
+  border-radius: 10px;
+  background: #daf2e3;
+  color: #2a9e60;
+}
+
+.gchi-gift-ticket > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+  min-width: 0;
+}
+
+.gchi-gift-ticket strong {
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.gchi-gift-ticket span {
+  color: var(--gchi-muted);
+  font-size: 9px;
+}
+
+.gchi-gift-ticket > i {
+  color: #318f59;
+  font-size: 12px;
+}
+
+.gchi-step-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  padding: 26px 4px 8px;
+  text-align: left;
+
+  transition: transform 0.4s ease;
+}
+
+.gchi-step-number {
+  display: block;
+  margin-bottom: 12px;
+
+  color: #23232b;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.gchi-step-title {
+  margin: 0;
+  color: var(--gchi-ink);
+  font-size: clamp(22px, 2.1vw, 28px);
+  font-weight: 550;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.gchi-step-description {
+  margin: 14px 0 0;
+  color: var(--gchi-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .gchi-step.gchi-visible:hover {
+    transform: translateY(-12px) rotateX(3deg) scale(1.015);
+    border-color: rgba(35, 35, 43, 0.12);
+
+    box-shadow:
+      0 5px 10px rgba(35, 35, 43, 0.035),
+      0 20px 35px rgba(35, 35, 43, 0.075),
+      0 38px 75px rgba(35, 35, 43, 0.11);
+  }
+
+  .gchi-step:hover .gchi-media {
+    transform: translateY(-3px);
+  }
+
+  .gchi-step:hover .gchi-step-content {
+    transform: translateY(-2px);
+  }
+
+  .gchi-step:hover .gchi-custom-image {
+    transform: scale(1.07);
+  }
+
+  .gchi-step:hover .gchi-gift-card {
+    transform: rotate(0deg) translateY(-6px);
+  }
+
+  .gchi-step:hover .gchi-message-card {
+    transform: rotate(0deg) translateY(-6px);
+  }
+
+  .gchi-step:hover .gchi-success-card {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes gchi-heart-float {
+  0%, 100% {
+    transform: translateY(0) rotate(-12deg);
+  }
+
+  50% {
+    transform: translateY(-13px) rotate(-5deg);
+  }
+}
+
+@keyframes gchi-check-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gchi-enter {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gchi-visible {
+    animation: gchi-enter 0.75s
+      cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .gchi-step:nth-child(2).gchi-visible {
+    animation-delay: 0.1s;
+  }
+
+  .gchi-step:nth-child(3).gchi-visible {
+    animation-delay: 0.2s;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gchi-section {
+    margin-top: -70px;
+    padding: 8vh 4vw;
+    border-radius: 40px 40px 0 0;
+  }
+
+  .gchi-grid {
+    gap: 16px;
+  }
+
+  .gchi-step {
+    min-height: 460px;
+    padding: 16px;
+    border-radius: 23px;
+  }
+
+  .gchi-media {
+    height: 305px;
+    border-radius: 17px;
+  }
+
+  .gchi-preview {
+    padding: 13px;
+  }
+
+  .gchi-gift-card {
+    padding: 17px;
+  }
+
+  .gchi-amount {
+    padding: 8px 9px;
+    font-size: 9px;
+  }
+
+  .gchi-step-description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gchi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gchi-step:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .gchi-section {
+    margin-top: -45px;
+    padding: 56px 14px 70px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .gchi-header {
+    margin-bottom: 30px;
+  }
+
+  .gchi-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+  }
+
+  .gchi-intro {
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .gchi-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .gchi-step,
+  .gchi-step:last-child {
+    grid-column: auto;
+    min-height: auto;
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .gchi-media {
+    height: 320px;
+    border-radius: 16px;
+  }
+
+  .gchi-preview {
+    padding: 14px;
+  }
+
+  .gchi-step-content {
+    padding: 22px 4px 8px;
+  }
+
+  .gchi-step-title {
+    font-size: 23px;
+  }
+
+  .gchi-step-description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gchi-step,
+  .gchi-media,
+  .gchi-custom-image,
+  .gchi-step-content,
+  .gchi-gift-card,
+  .gchi-message-card,
+  .gchi-success-card,
+  .gchi-amount,
+  .gchi-floating-heart,
+  .gchi-success-check {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .gchi-step,
+  .gchi-step:hover {
+    opacity: 1;
+    transform: none !important;
+  }
+}

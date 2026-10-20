@@ -25,7 +25,7 @@ export const products = [
           { "label": "Retail & Wholesale Pricing", "href": "/retail-wholesale", "icon": "fa-solid fa-tag" },
           { "label": "Smart Upsells", "href": "/smart-upsells", "icon": "fa-solid fa-chart-line" },
           { "label": "Delivery", "href": "#delivery", "icon": "fa-solid fa-truck-fast" },
-          { "label": "Gift Cards", "href": "#gift-cards", "icon": "fa-regular fa-credit-card" },
+          { "label": "Gift Cards", "href": "/gift-cards", "icon": "fa-regular fa-credit-card" },
           { "label": "Loyalty Management System", "href": "#loyalty", "icon": "fa-solid fa-award" }
         ]
       },
@@ -33,16 +33,16 @@ export const products = [
         "title": "Unique to Cartinno",
         "column": 1,
         "items": [
-          { "label": "Sell with Reseller Network", "href": "#reseller-network", "icon": "fa-solid fa-users" },
+          { "label": "Sell with Reseller Network", "href": "/sell-with-reseller", "icon": "fa-solid fa-users" },
           { "label": "Gift Registry", "href": "#gift-registry", "icon": "fa-solid fa-gift" },
-          { "label": "Sell with Marketplace", "href": "#marketplace", "icon": "fa-solid fa-store" }
+          { "label": "Sell with Marketplace", "href": "/sell-with-marketplace", "icon": "fa-solid fa-store" }
         ]
       },
       {
         "title": "Grow Your Business",
         "column": 2,
         "items": [
-          { "label": "Cloud POS", "href": "#pos", "icon": "fa-solid fa-desktop" },
+          { "label": "Cloud POS", "href": "/ecommerce-cloud-pos", "icon": "fa-solid fa-desktop" },
           { "label": "Marketing Campaigns", "href": "#marketing-campaigns", "icon": "fa-solid fa-bullhorn" },
           { "label": "Push Notification Marketing", "href": "#push-notifications", "icon": "fa-regular fa-bell" },
           { "label": "Inventory Management System", "href": "#inventory", "icon": "fa-solid fa-boxes-stacked" }

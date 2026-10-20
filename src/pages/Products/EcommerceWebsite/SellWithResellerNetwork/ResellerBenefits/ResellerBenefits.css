@@ -1,0 +1,491 @@
+
+.rben-section,
+.rben-section * {
+  box-sizing: border-box;
+}
+
+.rben-section {
+  --rben-red: #d7454e;
+  --rben-ink: #23232b;
+  --rben-muted: #5b5b66;
+
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  width: 100%;
+  padding: 5vh 3vw 10vh;
+
+  background: #ffffff;
+  color: var(--rben-ink);
+  font-family: inherit;
+}
+
+.rben-container {
+  display: block;
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.rben-header {
+  display: block;
+  width: 100%;
+  margin-bottom: clamp(35px, 4vw, 55px);
+}
+
+.rben-heading {
+  max-width: 850px;
+  margin: 0;
+
+  color: var(--rben-ink);
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+  text-align: left;
+}
+
+/* GRID */
+
+.rben-section .rben-grid {
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr)) !important;
+
+  grid-template-rows:
+    repeat(2, 270px) !important;
+
+  gap: clamp(14px, 1.4vw, 22px);
+
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+/* ALL CARDS */
+
+.rben-section .rben-card {
+  position: relative;
+  isolation: isolate;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+
+  border-radius: 25px;
+  overflow: hidden;
+
+  opacity: 1;
+  visibility: visible;
+
+  background: #eee9e7;
+
+  animation: none !important;
+
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+}
+
+/* EXACT CARD POSITIONS */
+
+.rben-section .rben-card-one {
+  grid-column: 1 / 3 !important;
+  grid-row: 1 !important;
+  background: #c5f4f9;
+}
+
+.rben-section .rben-card-two {
+  grid-column: 1 / 2 !important;
+  grid-row: 2 !important;
+}
+
+.rben-section .rben-card-three {
+  grid-column: 2 / 3 !important;
+  grid-row: 2 !important;
+}
+
+.rben-section .rben-card-four {
+  grid-column: 3 / 5 !important;
+  grid-row: 1 / 3 !important;
+}
+
+/* IMAGE */
+
+.rben-card-image {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* IMAGE FALLBACK */
+
+.rben-image-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background: linear-gradient(
+    140deg,
+    #d9d7e5,
+    #a9acc1
+  );
+}
+
+.rben-card-two .rben-image-fallback {
+  background: linear-gradient(
+    140deg,
+    #e1cbd7,
+    #b7a2b4
+  );
+}
+
+.rben-card-three .rben-image-fallback {
+  background: linear-gradient(
+    140deg,
+    #d4e4e8,
+    #98aeb4
+  );
+}
+
+.rben-card-four .rben-image-fallback {
+  background: linear-gradient(
+    140deg,
+    #c7c3d9,
+    #817b9f
+  );
+}
+
+/* GRADIENT */
+
+.rben-card-overlay {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.02) 12%,
+    rgba(0, 0, 0, 0.10) 35%,
+    rgba(14, 12, 19, 0.78) 100%
+  );
+}
+
+/* CARD CONTENT */
+
+.rben-card-content {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  width: 100%;
+  height: 100%;
+
+  padding: clamp(22px, 2.5vw, 36px);
+
+  color: #ffffff;
+  text-align: left;
+
+  transition: transform 0.4s ease;
+}
+
+/* DARK TOP CARD CONTENT */
+
+.rben-card-one .rben-card-content {
+  justify-content: flex-start;
+  padding: clamp(28px, 3vw, 46px);
+}
+
+/* EYEBROW */
+
+.rben-eyebrow {
+  display: block;
+  margin: 0 0 13px;
+
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* TITLE */
+
+.rben-card-title {
+  max-width: 430px;
+  margin: 0;
+
+  color: #ffffff;
+  font-size: clamp(21px, 2vw, 29px);
+  font-weight: 550;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+/* DESCRIPTION */
+
+.rben-card-description {
+  max-width: 440px;
+  margin: 14px 0 0;
+
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* SMALL BOTTOM CARDS */
+
+.rben-card-two .rben-card-content,
+.rben-card-three .rben-card-content {
+  padding: 24px;
+}
+
+.rben-card-two .rben-card-title,
+.rben-card-three .rben-card-title {
+  font-size: clamp(19px, 1.6vw, 24px);
+}
+
+.rben-card-two .rben-card-description,
+.rben-card-three .rben-card-description {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* LARGE RIGHT CARD */
+
+.rben-card-four .rben-card-content {
+  padding: clamp(26px, 3vw, 43px);
+}
+
+.rben-card-four .rben-card-title {
+  max-width: 390px;
+  font-size: clamp(25px, 2.4vw, 34px);
+}
+
+.rben-card-four .rben-card-description {
+  max-width: 410px;
+  font-size: 15px;
+}
+
+/* HOVER */
+
+@media (hover: hover) and (pointer: fine) {
+  .rben-section .rben-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 12px 25px rgba(35, 35, 43, 0.05),
+      0 20px 42px rgba(35, 35, 43, 0.12);
+  }
+
+  .rben-card:hover .rben-card-image {
+    transform: scale(1.06);
+  }
+
+  .rben-card:hover .rben-card-content {
+    transform: translateY(-3px);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .rben-section {
+    padding: 8vh 4vw;
+  }
+
+  .rben-section .rben-grid {
+    grid-template-rows:
+      repeat(2, 245px) !important;
+
+    gap: 14px;
+  }
+
+  .rben-section .rben-card {
+    border-radius: 21px;
+  }
+
+  .rben-card-one .rben-card-content {
+    padding: 30px;
+  }
+
+  .rben-card-title {
+    font-size: 22px;
+  }
+
+  .rben-card-description {
+    font-size: 12px;
+  }
+
+  .rben-card-two .rben-card-content,
+  .rben-card-three .rben-card-content {
+    padding: 19px;
+  }
+
+  .rben-card-two .rben-card-title,
+  .rben-card-three .rben-card-title {
+    font-size: 19px;
+  }
+}
+
+/* SMALL TABLET */
+
+@media (max-width: 768px) {
+  .rben-section .rben-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
+
+    grid-template-rows:
+      260px 300px 390px !important;
+  }
+
+  .rben-section .rben-card-one {
+    grid-column: 1 / -1 !important;
+    grid-row: 1 !important;
+  }
+
+  .rben-section .rben-card-two {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+  }
+
+  .rben-section .rben-card-three {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+  }
+
+  .rben-section .rben-card-four {
+    grid-column: 1 / -1 !important;
+    grid-row: 3 !important;
+  }
+
+  .rben-card-four .rben-card-title {
+    font-size: 28px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .rben-section {
+    padding: 65px 14px 75px;
+  }
+
+  .rben-header {
+    margin-bottom: 30px;
+  }
+
+  .rben-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .rben-section .rben-grid {
+    grid-template-columns:
+      minmax(0, 1fr) !important;
+
+    grid-template-rows:
+      none !important;
+
+    gap: 14px;
+  }
+
+  .rben-section .rben-card-one,
+  .rben-section .rben-card-two,
+  .rben-section .rben-card-three,
+  .rben-section .rben-card-four {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+
+    height: 320px;
+  }
+
+  .rben-section .rben-card-one {
+    height: 270px;
+  }
+
+  .rben-section .rben-card-four {
+    height: 420px;
+  }
+
+  .rben-card-content,
+  .rben-card-one .rben-card-content,
+  .rben-card-two .rben-card-content,
+  .rben-card-three .rben-card-content,
+  .rben-card-four .rben-card-content {
+    padding: 25px;
+  }
+
+  .rben-card-title,
+  .rben-card-two .rben-card-title,
+  .rben-card-three .rben-card-title,
+  .rben-card-four .rben-card-title {
+    font-size: 24px;
+  }
+
+  .rben-card-description,
+  .rben-card-two .rben-card-description,
+  .rben-card-three .rben-card-description,
+  .rben-card-four .rben-card-description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .rben-section .rben-card,
+  .rben-card-image,
+  .rben-card-content {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* BRAND VISIBILITY CARD - BLACK TEXT */
+
+.rben-card-one .rben-eyebrow {
+  color: #23232b;
+}
+
+.rben-card-one .rben-card-title {
+  color: #23232b;
+}
+
+.rben-card-one .rben-card-description {
+  color: #23232b;
+}
