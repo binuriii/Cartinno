@@ -1,0 +1,365 @@
+/* ========================================
+   REPORTING SECTION (Bento Grid)
+======================================== */
+
+.rs-section,
+.rs-section * {
+  box-sizing: border-box;
+}
+
+.rs-section {
+  --rs-ink: #23232b;
+  --rs-muted: #5b5b66;
+  --rs-bg: #f9f7f2; /* Light cream background */
+
+  width: 100%;
+  padding: 10vh 3vw 10vh;
+  background: var(--rs-bg);
+  font-family: inherit;
+}
+
+.rs-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+.rs-header {
+  text-align: center;
+  margin-bottom: clamp(40px, 5vw, 60px);
+}
+
+.rs-title {
+  color: var(--rs-ink);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 550;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+
+/* ========================================
+   GRID LAYOUT
+======================================== */
+.rs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+
+/* ========================================
+   COMMON CARD STYLES
+======================================== */
+.rs-card {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.rs-card-content {
+  padding: clamp(30px, 4vw, 40px);
+  position: relative;
+  z-index: 2;
+}
+
+.rs-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.rs-card h3 {
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 0;
+  max-width: 400px;
+}
+
+.rs-card-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rs-card-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========================================
+   TOP CARD (Beige Layout)
+======================================== */
+.rs-card-top {
+  grid-column: span 2;
+  background: #e3dacc; /* Exact beige background */
+  flex-direction: row;
+  align-items: stretch; /* Stretch columns to full card height */
+}
+
+/* Visual container sticks to bottom */
+.rs-top-visual {
+  flex: 1.1;
+  display: flex;
+  align-items: flex-end; /* Push chart to the exact bottom */
+  padding: 40px 0 0 40px; /* Space on top (so it doesn't touch) and left */
+  height: 100%; 
+}
+
+/* Translucent border effect wrapper */
+.rs-chart-widget-wrapper {
+  background: rgba(255, 255, 255, 0.35); /* Translucent white */
+  padding: 12px 12px 0 12px; /* Uniform padding on sides and top, 0 on bottom */
+  border-radius: 20px 20px 0 0; /* Rounded top only */
+  width: 100%;
+  max-width: 380px;
+  margin-top: auto; 
+}
+
+/* Content vertical centered */
+.rs-top-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text vertically */
+  padding: 40px 60px 40px 20px;
+}
+
+.rs-card-top .rs-label { 
+  color: #111111; 
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.rs-card-top h3 { 
+  color: #111111; 
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  font-weight: 500;
+}
+
+/* ========================================
+   LIVE CHART WIDGET (Inside Wrapper)
+======================================== */
+.rs-chart-widget {
+  background: #ffffff;
+  border-radius: 12px 12px 0 0; /* Match inner radius to outer wrapper */
+  padding: 24px 24px 30px 24px;
+  width: 100%;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+  margin-bottom: 0;
+}
+
+/* Titles and Icons */
+.rs-cw-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #5a5b6a;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Metrics (Value and Badge) */
+.rs-cw-metrics {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rs-cw-value {
+  color: #111111;
+  font-size: 26px;
+  font-weight: 550;
+  letter-spacing: -0.02em;
+}
+
+.rs-cw-badge {
+  background: #e0f5e6;
+  color: #188a42;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Chart Area */
+.rs-cw-chart-container {
+  margin-top: 35px;
+}
+
+.rs-cw-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 90px;
+  gap: 4px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 4px;
+}
+
+.rs-cw-bar {
+  flex: 1;
+  max-width: 6px;
+  border-radius: 4px 4px 0 0;
+  min-height: 5px;
+}
+
+.rs-cw-bar-light {
+  background: #e6e8ec;
+}
+
+.rs-cw-bar-blue {
+  background: #6a8ff1;
+}
+
+.rs-cw-x-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: #5a5b6a;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* Divider */
+.rs-cw-divider {
+  width: 100%;
+  height: 1px;
+  background: #f0f0f0;
+  margin: 25px 0;
+}
+
+/* Footer (Total Orders) */
+.rs-cw-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rs-cw-chevron {
+  color: #5a5b6a;
+  font-size: 12px;
+}
+
+/* ========================================
+   BOTTOM LEFT CARD (Green Gradient)
+======================================== */
+.rs-card-green {
+  background: linear-gradient(135deg, #74e082 0%, #1a9c3d 100%);
+}
+
+.rs-card-green .rs-label { color: rgba(255,255,255,0.8); }
+.rs-card-green h3 { color: #ffffff; }
+
+.rs-card-green .rs-bottom-visual {
+  padding: 0 40px 40px;
+  margin-top: auto;
+}
+
+/* ========================================
+   BOTTOM RIGHT CARD (Dark Blue Gradient)
+======================================== */
+.rs-card-blue {
+  background: linear-gradient(135deg, #0f2c59 0%, #031124 100%);
+}
+
+.rs-card-blue .rs-label { color: #7aa1d9; }
+.rs-card-blue h3 { color: #ffffff; }
+
+.rs-card-blue .rs-bottom-visual {
+  padding: 0 40px 0;
+  margin-top: auto;
+}
+
+.rs-card-blue .rs-bottom-visual img {
+  border-radius: 20px 20px 0 0;
+  border: 4px solid #1a1a1a;
+  border-bottom: none;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+@media (max-width: 992px) {
+  .rs-card-top {
+    flex-direction: column-reverse;
+  }
+  .rs-top-visual {
+    padding: 0 40px 0;
+    justify-content: center;
+  }
+  .rs-chart-widget-wrapper {
+    border-radius: 24px 24px 0 0;
+    margin-top: 0;
+  }
+  .rs-top-content {
+    padding: 40px;
+  }
+  .rs-card h3 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .rs-grid {
+    grid-template-columns: 1fr;
+  }
+  .rs-card-top {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .rs-section {
+    padding: 65px 14px 70px;
+  }
+  .rs-title {
+    font-size: clamp(24px, 6.6vw, 28px);
+  }
+  .rs-card-content {
+    padding: 24px;
+  }
+  .rs-top-visual,
+  .rs-card-green .rs-bottom-visual,
+  .rs-card-blue .rs-bottom-visual {
+    padding: 0 24px 24px;
+  }
+  .rs-card h3 {
+    font-size: 22px;
+  }
+  
+  /* Chart Widget Responsive */
+  .rs-chart-widget-wrapper {
+    padding: 8px 8px 0 8px;
+  }
+  .rs-chart-widget {
+    padding: 20px;
+  }
+  .rs-cw-bars {
+    gap: 2px;
+  }
+  .rs-cw-bar {
+    max-width: 4px;
+  }
+}

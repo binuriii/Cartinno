@@ -8,6 +8,8 @@ import Testimonials from "../../../../../components/InnerPages/Testimonials/Test
 import AnalyticsSection from "./AnalyticsSection/AnalyticsSection.vue";
 import CashTaxSection from "./CashTaxSection/CashTaxSection.vue";
 import MultiLocationSection from "./MultiLocationSection/MultiLocationSection.vue";
+import ReportingSection from "./ReportingSection/ReportingSection.vue";
+
 
 // Import Data
 import { salesManagementHero, salesManagementFAQs } from "./SalesManagementPage.js";
@@ -20,6 +22,9 @@ import { salesManagementHero, salesManagementFAQs } from "./SalesManagementPage.
 
     <!-- REAL-TIME ANALYTICS (Bento Grid) -->
     <AnalyticsSection />
+
+    <!-- REPORTING SECTION (Bento Grid) -->
+    <ReportingSection />
 
     <!-- CASH & TAX CONTROL (Grid) -->
     <CashTaxSection />
