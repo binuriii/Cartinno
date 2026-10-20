@@ -59,13 +59,6 @@ const routes = [
     import('./pages/Products/EcommerceWebsite/GiftRegistry/GiftRegistry.vue')
 },
 
-{
-  path: '/marketing-campaigns',
-  name: 'marketing-campaigns',
-  component: () =>
-    import('./pages/Products/EcommerceWebsite/MarketingCampaigns/MarketingCampaigns.vue')
-},
-
 
 
 
