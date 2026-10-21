@@ -1,0 +1,402 @@
+/* ========================================
+   POS INTEGRATION GRID SECTION
+======================================== */
+.pig-section,
+.pig-section * {
+  box-sizing: border-box;
+}
+
+.pig-section {
+  --pig-ink: #1a1a1a;
+  --pig-muted: #6b6b70;
+  --pig-bg-outer: #ffffff;
+  --pig-bg-inner: #f9f7f2;
+  --pig-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  width: 100%;
+  padding: 0 3vw 10vh;
+  background: var(--pig-bg-outer);
+  font-family: inherit;
+}
+
+/* The large cream wrapper box */
+.pig-wrapper {
+  max-width: 1380px;
+  margin: 0 auto;
+  background: var(--pig-bg-inner);
+  border-radius: clamp(32px, 4vw, 48px);
+  padding: clamp(50px, 7vw, 80px) clamp(28px, 4vw, 60px);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 900ms var(--pig-ease);
+}
+
+.pig-section.is-visible .pig-wrapper {
+  opacity: 1;
+  transform: none;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+.pig-header {
+  text-align: center;
+  margin-bottom: clamp(40px, 6vw, 60px);
+}
+
+.pig-title {
+  color: var(--pig-ink);
+  font-size: clamp(28px, 4.2vw, 48px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+/* ========================================
+   GRID LAYOUT
+======================================== */
+.pig-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+  align-items: stretch;
+}
+
+/* ========================================
+   COMMON CARD STYLES
+======================================== */
+.pig-card {
+  position: relative;
+  border-radius: clamp(20px, 2.5vw, 28px);
+  overflow: hidden;
+  display: flex;
+  isolation: isolate;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 800ms var(--pig-ease);
+}
+
+.pig-section.is-visible .pig-card {
+  opacity: 1;
+  transform: none;
+}
+
+.pig-card-top {
+  transition-delay: 0.2s;
+}
+
+.pig-card-bottom-left {
+  transition-delay: 0.35s;
+}
+
+.pig-card-bottom-right {
+  transition-delay: 0.35s;
+}
+
+.pig-label {
+  display: block;
+  font-size: clamp(10px, 0.9vw, 13px);
+  font-weight: 650;
+  text-transform: capitalize;
+  margin-bottom: 12px;
+  color: var(--pig-muted);
+  letter-spacing: -0.3px;
+}
+
+.pig-label-light {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pig-card h3 {
+  font-size: clamp(20px, 2.4vw, 32px);
+  font-weight: 550;
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+/* ========================================
+   TOP CARD (BEIGE BACKGROUND)
+======================================== */
+.pig-card-top {
+  grid-column: span 2;
+  background: #ddd8cc;
+  flex-direction: row;
+  align-items: center;
+  min-height: clamp(280px, 35vw, 360px);
+}
+
+.pig-top-visual {
+  flex: 0 0 45%;
+  padding: clamp(28px, 3.5vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pig-top-visual img {
+  width: 100%;
+  height: auto;
+  max-width: 320px;
+  border-radius: clamp(14px, 1.8vw, 18px);
+  display: block;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.pig-top-content {
+  flex: 0 0 55%;
+  padding: clamp(28px, 3.5vw, 48px) clamp(32px, 4vw, 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pig-card-top h3 {
+  color: var(--pig-ink);
+  max-width: 420px;
+}
+
+/* ========================================
+   BOTTOM LEFT CARD (DARK IMAGE BACKGROUND)
+======================================== */
+.pig-card-bottom-left {
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: clamp(340px, 40vw, 420px);
+}
+
+.pig-bg-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  filter: brightness(0.95);
+}
+
+.pig-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.55) 40%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  z-index: 1;
+}
+
+.pig-bl-content {
+  position: relative;
+  z-index: 2;
+  padding: clamp(28px, 3.5vw, 40px);
+  color: #ffffff;
+}
+
+.pig-card-bottom-left h3 {
+  color: #ffffff;
+  max-width: 300px;
+}
+
+/* ========================================
+   BOTTOM RIGHT CARD (WHITE BACKGROUND)
+======================================== */
+.pig-card-bottom-right {
+  background: #ffffff;
+  flex-direction: column;
+  min-height: clamp(340px, 40vw, 420px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.pig-br-content {
+  padding: clamp(28px, 3.5vw, 40px);
+  flex: 0 0 auto;
+}
+
+.pig-card-bottom-right h3 {
+  color: var(--pig-ink);
+  max-width: 300px;
+}
+
+.pig-br-visual {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 clamp(16px, 2vw, 24px) clamp(16px, 2vw, 28px);
+  overflow: hidden;
+}
+
+.pig-br-visual img {
+  width: 100%;
+  height: auto;
+  max-width: 85%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+@media (max-width: 992px) {
+  .pig-card-top {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .pig-top-visual {
+    flex: none;
+    width: 100%;
+    padding: clamp(28px, 3.5vw, 40px);
+  }
+
+  .pig-top-visual img {
+    max-width: 280px;
+  }
+
+  .pig-top-content {
+    flex: none;
+    width: 100%;
+    padding: clamp(24px, 3.5vw, 40px);
+    align-items: center;
+  }
+
+  .pig-card-top h3 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .pig-wrapper {
+    padding: clamp(40px, 5vw, 60px) clamp(20px, 3vw, 40px);
+    border-radius: clamp(24px, 3.5vw, 40px);
+  }
+
+  .pig-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(12px, 1.5vw, 18px);
+  }
+
+  .pig-card-top {
+    grid-column: span 1;
+  }
+
+  .pig-card-bottom-left,
+  .pig-card-bottom-right {
+    min-height: clamp(300px, 50vw, 380px);
+  }
+
+  .pig-bl-content,
+  .pig-br-content {
+    padding: clamp(24px, 3vw, 32px);
+  }
+
+  .pig-label {
+    font-size: 11px;
+  }
+
+  .pig-card h3 {
+    font-size: clamp(18px, 3vw, 26px);
+  }
+}
+
+@media (max-width: 640px) {
+  .pig-section {
+    padding: 0 2vw 8vh;
+  }
+
+  .pig-wrapper {
+    padding: clamp(32px, 4vw, 48px) clamp(16px, 2.5vw, 28px);
+    border-radius: clamp(20px, 3vw, 32px);
+  }
+
+  .pig-header {
+    margin-bottom: 32px;
+  }
+
+  .pig-title {
+    font-size: clamp(24px, 5.5vw, 36px);
+    line-height: 1.18;
+  }
+
+  .pig-grid {
+    gap: 12px;
+  }
+
+  .pig-card {
+    border-radius: clamp(16px, 2vw, 22px);
+  }
+
+  .pig-card-bottom-left,
+  .pig-card-bottom-right {
+    min-height: clamp(280px, 45vw, 340px);
+  }
+
+  .pig-label {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+
+  .pig-card h3 {
+    font-size: clamp(16px, 4vw, 22px);
+  }
+
+  .pig-card-top h3,
+  .pig-card-bottom-left h3,
+  .pig-card-bottom-right h3 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pig-wrapper {
+    padding: clamp(28px, 4vw, 40px) clamp(12px, 2vw, 20px);
+  }
+
+  .pig-header {
+    margin-bottom: 24px;
+  }
+
+  .pig-title {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
+  .pig-card-bottom-left,
+  .pig-card-bottom-right {
+    min-height: clamp(240px, 50vw, 300px);
+  }
+
+  .pig-bl-content,
+  .pig-br-content {
+    padding: clamp(20px, 2.5vw, 24px);
+  }
+
+  .pig-br-visual {
+    padding: 0 12px 16px;
+  }
+
+  .pig-card h3 {
+    font-size: clamp(15px, 4.5vw, 20px);
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+@media (prefers-reduced-motion: reduce) {
+  .pig-wrapper,
+  .pig-card {
+    transition: none !important;
+  }
+
+  .pig-wrapper,
+  .pig-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

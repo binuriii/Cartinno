@@ -360,7 +360,7 @@ export const products = [
           },
           {
             label: "POS Integrations",
-            href: "#pos-integrations",
+            href: "/pos-integrations",
             icon: "fa-regular fa-credit-card",
           },
           {

@@ -50,6 +50,12 @@ const routes = [
     component: () =>
       import("./pages/Products/CloudPos/FoodPOS/ReportingAnalyticsPage/ReportingAnalyticsPage.vue"),
   },
+  {
+    path: "/pos-integrations",
+    name: "pos-integrations",
+    component: () =>
+      import("./pages/Products/CloudPos/FoodPOS/POSIntegrationsPage/PosIntegrationsPage.vue"),
+  },
 
   { path: "/:pathMatch(.*)*", redirect: "/" },
 ];
