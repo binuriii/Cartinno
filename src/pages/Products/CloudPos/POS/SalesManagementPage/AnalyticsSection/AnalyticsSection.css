@@ -1,26 +1,39 @@
 /* ========================================
-   ANALYTICS SECTION (Base Layout)
+   ANALYTICS SECTION
 ======================================== */
-
 .as-section,
 .as-section * {
   box-sizing: border-box;
 }
 
 .as-section {
-  --as-ink: #23232b;
-  --as-muted: #5b5b66;
+  --as-ink: #1a1a1a;
+  --as-muted: #6b6b70;
   --as-icon-bg: #f5efe6;
+  --as-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  position: relative;
+  z-index: 20;
+  isolation: isolate;
 
   width: 100%;
-  padding: 10vh 3vw 10vh;
+
+  /* OVERLAP PREVIOUS HERO SECTION */
+  margin-top: -55px;
+
+  /* ROUNDED TOP CORNERS */
+  border-radius: 70px 70px 0 0;
+
+  padding: 10vh 3vw;
   background: #ffffff;
   color: var(--as-ink);
   font-family: inherit;
+
+  overflow: hidden;
 }
 
 .as-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -29,114 +42,51 @@
 ======================================== */
 .as-header {
   text-align: center;
-  margin-bottom: clamp(40px, 5vw, 60px);
+  margin-bottom: clamp(40px, 6vw, 70px);
 }
 
 .as-main-title {
   color: var(--as-ink);
-  font-size: clamp(26px, 4.4vw, 54px);
-  font-weight: 450;
-  line-height: 1.15;
-  letter-spacing: -0.045em;
+  font-size: clamp(30px, 5vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 
 /* ========================================
-   2-COLUMN GRID
+   2-COLUMN GRID LAYOUT
 ======================================== */
 .as-content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(40px, 5vw, 60px);
-  align-items: center;
-}
-
-/* RIGHT: FEATURES LIST */
-.as-features-column {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(30px, 4vw, 40px);
-}
-
-.as-feature-item {
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-}
-
-.as-feature-icon {
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
-
-  display: grid;
-  place-items: center;
-
-  background: var(--as-icon-bg);
-  border-radius: 12px;
-  color: var(--as-ink);
-  font-size: 18px;
-}
-
-.as-feature-text h3 {
-  margin: 0 0 10px 0;
-
-  color: var(--as-ink);
-  font-size: clamp(20px, 1.9vw, 27px);
-  font-weight: 550;
-  line-height: 1.25;
-  letter-spacing: -0.035em;
-}
-
-.as-feature-text p {
-  margin: 0;
-
-  color: var(--as-muted);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.65;
+  align-items: start;
 }
 
 /* ========================================
-   LEFT: RESTAURANT ANALYTICS (Animated Dashboard)
+   LEFT: RESTAURANT ANALYTICS DASHBOARD
 ======================================== */
-
 .restaurant-analytics {
-  --card-radius: 27px;
-  --metric-radius: 15px;
-
   position: relative;
   isolation: isolate;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   width: 100%;
-  max-width: 100%;
-  aspect-ratio: 1 / 1;
-  min-height: 320px;
-
+  aspect-ratio: 1.05 / 1;
+  min-height: 400px;
+  border-radius: clamp(24px, 3vw, 32px);
   overflow: hidden;
-  border-radius: 32px;
-  background: #252525;
-
-  
-  font-family: Arial, Helvetica, sans-serif;
+  background: #1a1a1a;
 }
 
-/* Background photo */
 .analytics-background {
   position: absolute;
   inset: 0;
   z-index: -2;
-
   background-image: url("/Cartinno/analytics-app.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  
-  filter: blur(4px);
+  filter: blur(3px);
   transform: scale(1.05);
   transition:
     transform 1.2s ease,
@@ -144,107 +94,94 @@
 }
 
 .restaurant-analytics:hover .analytics-background {
-  transform: scale(1.08);
-  
+  transform: scale(1.1);
 }
 
-/* Darken photo slightly for readability */
 .background-shade {
   position: absolute;
   inset: 0;
   z-index: -1;
-
-  background: linear-gradient(135deg, rgb(0 0 0 / 8%), rgb(0 0 0 / 15%));
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.18));
 }
 
-/* Main glass panel */
+/* ========================================
+   GLASS MORPHISM CARD
+======================================== */
 .analytics-card {
-  width: 72%;
-  max-width: 370px;
-  padding: 20px 10px 10px;
-
-  border: 1px solid rgb(255 255 255 / 40%);
-  border-radius: var(--card-radius);
-
-  background: rgb(255 255 255 / 79%);
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(20px) scale(0.96);
+  width: clamp(80%, 90%, 360px);
+  padding: 20px 16px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: clamp(20px, 2.5vw, 28px);
+  background: rgba(255, 255, 255, 0.82);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   box-shadow:
-    0 12px 40px rgb(0 0 0 / 9%),
-    inset 0 1px 0 rgb(255 255 255 / 65%);
-
+    0 12px 40px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
   opacity: 0;
-  transform: translateY(22px) scale(0.97);
-
-  transition:
-    opacity 700ms ease,
-    transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: all 800ms var(--as-ease);
 }
 
 .analytics-card.is-visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translate(-50%, -50%);
 }
 
-/* Header */
+/* ========================================
+   ANALYTICS HEADER
+======================================== */
 .analytics-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-
-  padding: 0 8px;
-  margin-bottom: 17px;
+  gap: 12px;
+  padding: 0 6px;
+  margin-bottom: 16px;
 }
 
 .analytics-header h2 {
   margin: 0;
-  color: #202020;
-  font-size: clamp(12px, 1.15vw, 15px);
+  color: #1a1a1a;
+  font-size: clamp(13px, 1.2vw, 16px);
   font-weight: 650;
   line-height: 1.3;
-  letter-spacing: -0.55px;
+  letter-spacing: -0.5px;
 }
 
 .period-label {
   flex-shrink: 0;
-  color: #777777;
-  font-size: clamp(10px, 0.95vw, 12px);
-  font-weight: 400;
+  color: #8a8a8a;
+  font-size: clamp(11px, 1vw, 13px);
+  font-weight: 500;
+  letter-spacing: -0.25px;
 }
 
-/* Two-column metric grid */
+/* ========================================
+   METRICS GRID (2x3)
+======================================== */
 .analytics-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 7px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
 }
 
-/* Individual metric */
 .metric-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  min-width: 0;
-  min-height: 65px;
-  padding: 11px 11px 9px;
-
-  border: 1px solid rgb(230 230 230 / 55%);
-  border-radius: var(--metric-radius);
-  background: rgb(255 255 255 / 92%);
-  box-shadow: 0 2px 5px rgb(0 0 0 / 2%);
-
+  min-height: 68px;
+  padding: 12px 10px;
+  border: 1px solid rgba(220, 220, 220, 0.6);
+  border-radius: clamp(14px, 1.8vw, 17px);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
   opacity: 0;
-  transform: translateY(12px);
-
-  transition:
-    opacity 450ms ease,
-    transform 450ms ease,
-    background 250ms ease,
-    box-shadow 250ms ease;
-
+  transform: translateY(14px);
+  transition: all 500ms ease;
   transition-delay: var(--delay);
 }
 
@@ -255,39 +192,106 @@
 
 .metric-card:hover {
   background: #ffffff;
-  box-shadow: 0 5px 15px rgb(0 0 0 / 6%);
-}
-
-/* Animated number */
-.metric-value {
-  display: flex;
-  align-items: baseline;
-  gap: 1px;
-
-  color: #303030;
-  font-size: clamp(17px, 1.65vw, 21px);
-  font-weight: 650;
-  line-height: 1.2;
-  letter-spacing: -0.75px;
-  font-variant-numeric: tabular-nums;
-}
-
-.metric-label {
-  margin: 4px 0 0;
-  color: #898989;
-  font-size: clamp(9px, 0.85vw, 11px);
-  font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: -0.15px;
-  overflow-wrap: anywhere;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-color: rgba(200, 200, 200, 0.8);
 }
 
 /* ========================================
-   TABLET & MOBILE RESPONSIVE
+   METRIC VALUE
+======================================== */
+.metric-value {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  color: #1a1a1a;
+  font-size: clamp(18px, 1.7vw, 22px);
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-prefix {
+  font-size: 0.75em;
+  opacity: 0.8;
+}
+
+.metric-suffix {
+  font-size: 0.75em;
+  opacity: 0.8;
+}
+
+/* ========================================
+   METRIC LABEL
+======================================== */
+.metric-label {
+  margin: 5px 0 0;
+  color: #909090;
+  font-size: clamp(9px, 0.9vw, 11px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+}
+
+/* ========================================
+   RIGHT: FEATURES COLUMN
+======================================== */
+.as-features-column {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 40px);
+}
+
+.as-feature-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.as-feature-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: grid;
+  place-items: center;
+  background: var(--as-icon-bg);
+  border-radius: 14px;
+  color: var(--as-ink);
+  font-size: 20px;
+  transition: all 300ms ease;
+}
+
+.as-feature-item:hover .as-feature-icon {
+  background: #ebe5db;
+  transform: scale(1.08);
+}
+
+.as-feature-text h3 {
+  margin: 0 0 10px;
+  color: var(--as-ink);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+}
+
+.as-feature-text p {
+  margin: 0;
+  color: var(--as-muted);
+  font-size: clamp(13px, 1.1vw, 15px);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.2px;
+}
+
+/* ========================================
+   TABLET RESPONSIVE
 ======================================== */
 @media (max-width: 992px) {
   .as-section {
-    padding: 8vh 4vw 8vh;
+    margin-top: -45px;
+    padding: 8vh 4vw;
+    border-radius: 40px 40px 0 0;
   }
 
   .as-content-grid {
@@ -298,102 +302,142 @@
   .as-image-column {
     order: -1;
   }
+
+  .restaurant-analytics {
+    min-height: 380px;
+  }
 }
 
+/* ========================================
+   SMALL TABLET
+======================================== */
 @media (max-width: 768px) {
   .restaurant-analytics {
-    border-radius: 18px;
+    border-radius: 24px;
+    min-height: 360px;
   }
+
   .analytics-card {
-    width: 80%;
-    padding: 17px 9px 9px;
-    border-radius: 23px;
+    width: 85%;
+    padding: 18px 14px 12px;
+    border-radius: 22px;
   }
+
   .analytics-header {
-    margin-bottom: 13px;
+    margin-bottom: 14px;
   }
+
   .analytics-grid {
-    gap: 6px;
+    gap: 7px;
   }
+
   .metric-card {
-    min-height: 59px;
-    padding: 9px;
-    border-radius: 12px;
+    min-height: 62px;
+    padding: 10px 9px;
+    border-radius: 14px;
+  }
+
+  .as-feature-text h3 {
+    font-size: 20px;
+  }
+
+  .as-feature-text p {
+    font-size: 14px;
   }
 }
 
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
 @media (max-width: 640px) {
   .as-section {
-    padding: 65px 14px 70px;
+    margin-top: -35px;
+    padding: 64px 14px 70px;
+    border-radius: 24px 24px 0 0;
   }
+
   .as-header {
     margin-bottom: 40px;
   }
+
   .as-main-title {
-    font-size: clamp(22px, 6.6vw, 28px);
+    font-size: clamp(24px, 6.8vw, 32px);
     line-height: 1.15;
   }
-  .as-feature-text h3 {
-    font-size: 21px;
-  }
-  .as-feature-text p {
-    font-size: 13px;
-    line-height: 1.6;
-  }
-}
 
-@media (max-width: 480px) {
-  .restaurant-analytics {
-    min-height: 0;
-    aspect-ratio: 1 / 1;
-    border-radius: 15px;
+  .as-content-grid {
+    gap: 36px;
   }
-  .analytics-card {
-    width: 84%;
-    padding: 13px 7px 7px;
+
+  .restaurant-analytics {
+    min-height: 340px;
     border-radius: 20px;
   }
-  .analytics-header {
-    gap: 5px;
-    padding: 0 6px;
-    margin-bottom: 11px;
+
+  .analytics-card {
+    width: 88%;
+    padding: 16px 12px 10px;
   }
+
   .analytics-header h2 {
-    font-size: clamp(11px, 3.2vw, 14px);
-    letter-spacing: -0.4px;
+    font-size: 14px;
   }
-  .period-label {
-    font-size: clamp(9px, 2.6vw, 11px);
-  }
-  .analytics-grid {
-    gap: 5px;
-  }
+
   .metric-card {
-    min-height: 0;
-    padding: 9px 7px;
-    border-radius: 11px;
+    min-height: 58px;
+    padding: 9px 8px;
+    border-radius: 12px;
+    gap: 4px;
   }
+
   .metric-value {
-    font-size: clamp(15px, 4.2vw, 19px);
+    font-size: 19px;
   }
+
   .metric-label {
+    font-size: 9px;
     margin-top: 3px;
-    font-size: clamp(8px, 2.35vw, 10px);
-    line-height: 1.2;
+  }
+
+  .as-feature-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .as-feature-text h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .as-feature-text p {
+    font-size: 13px;
+    line-height: 1.55;
   }
 }
 
-/* Reduced motion accessibility */
+/* ========================================
+   ACCESSIBILITY
+======================================== */
 @media (prefers-reduced-motion: reduce) {
+  .analytics-background,
   .analytics-card,
   .metric-card,
-  .analytics-background {
+  .as-feature-item {
     transition: none !important;
   }
+
   .analytics-card,
   .analytics-card.is-visible,
   .metric-card,
-  .analytics-card.is-visible .metric-card {
-    transform: none;
+  .analytics-card.is-visible .metric-card,
+  .as-feature-item {
+    transform: none !important;
+  }
+
+  .analytics-card,
+  .metric-card,
+  .as-feature-item {
+    opacity: 1 !important;
   }
 }

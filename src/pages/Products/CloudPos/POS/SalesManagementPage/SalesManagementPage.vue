@@ -6,13 +6,13 @@ import Testimonials from "../../../../../components/InnerPages/Testimonials/Test
 
 // Import the specific components we created for the Sales Management page
 import AnalyticsSection from "./AnalyticsSection/AnalyticsSection.vue";
-import CashTaxSection from "./CashTaxSection/CashTaxSection.vue";
-import MultiLocationSection from "./MultiLocationSection/MultiLocationSection.vue";
 import ReportingSection from "./ReportingSection/ReportingSection.vue";
 
-
 // Import Data
-import { salesManagementHero, salesManagementFAQs } from "./SalesManagementPage.js";
+import {
+  salesManagementHero,
+  salesManagementFAQs,
+} from "./SalesManagementPage.js";
 </script>
 
 <template>
@@ -26,11 +26,7 @@ import { salesManagementHero, salesManagementFAQs } from "./SalesManagementPage.
     <!-- REPORTING SECTION (Bento Grid) -->
     <ReportingSection />
 
-    <!-- CASH & TAX CONTROL (Grid) -->
-    <CashTaxSection />
-
-    <!-- MULTI LOCATION EXPANSION (Zig-Zag) -->
-    <MultiLocationSection />
+    
 
     <!-- FAQ SECTION -->
     <FAQ
