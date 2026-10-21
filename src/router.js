@@ -43,11 +43,12 @@ const routes = [
     component: () =>
       import("./pages/Products/CloudPos/POS/PointOfSalePage/PointOfSalePage.vue"),
   },
+
   {
-    path: "/sales-management",
-    name: "sales-management",
+    path: "/reporting-analytics",
+    name: "reporting-analytics",
     component: () =>
-      import("./pages/Products/CloudPos/POS/SalesManagementPage/SalesManagementPage.vue"),
+      import("./pages/Products/CloudPos/FoodPOS/ReportingAnalyticsPage/ReportingAnalyticsPage.vue"),
   },
 
   { path: "/:pathMatch(.*)*", redirect: "/" },

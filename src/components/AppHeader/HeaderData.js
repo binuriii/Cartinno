@@ -350,7 +350,7 @@ export const products = [
         items: [
           {
             label: "Reporting & Analytics",
-            href: "#reporting-analytics",
+            href: "/reporting-analytics",
             icon: "fa-solid fa-chart-pie",
           },
           {

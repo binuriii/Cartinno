@@ -10,15 +10,15 @@ import ReportingSection from "./ReportingSection/ReportingSection.vue";
 
 // Import Data
 import {
-  salesManagementHero,
-  salesManagementFAQs,
-} from "./SalesManagementPage.js";
+  reportingAnalyticsHero,
+reportingAnalyticsFAQs,
+} from "./ReportingAnalyticsPage.js";
 </script>
 
 <template>
   <main class="sm-page">
     <!-- HERO SECTION (Using Shared Component) -->
-    <Hero v-bind="salesManagementHero" />
+    <Hero v-bind="reportingAnalyticsHero" />
 
     <!-- REAL-TIME ANALYTICS (Bento Grid) -->
     <AnalyticsSection />
@@ -32,7 +32,7 @@ import {
     <FAQ
       title="Frequently Asked Questions"
       description="Everything you need to know about Cartinno Sales & Billing."
-      :items="salesManagementFAQs"
+      :items="reportingAnalyticsFAQs"
     />
 
     <!-- TESTIMONIALS SECTION -->

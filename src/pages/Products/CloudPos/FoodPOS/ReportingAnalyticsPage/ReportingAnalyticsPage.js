@@ -1,4 +1,4 @@
-export const salesManagementFAQs = [
+export const reportingAnalyticsFAQs = [
   {
     id: 1,
     question: "Can I manage multiple branches from one system?",
@@ -31,8 +31,8 @@ export const salesManagementFAQs = [
   }
 ];
 
-export const salesManagementHero = {
-  fixedLine: "Sales Management,",
+export const reportingAnalyticsHero = {
+  fixedLine: "Reporting & Analytics,",
 
   rotatingWords: [
     "Fast & Connected.",
