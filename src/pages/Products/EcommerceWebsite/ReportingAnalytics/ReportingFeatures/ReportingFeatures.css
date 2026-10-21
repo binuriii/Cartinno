@@ -1,9 +1,3 @@
-
-/* ==========================================
-   CARTINNO REPORTING & ANALYTICS
-   ANIMATED FEATURE CARDS
-========================================== */
-
 .rpa-section,
 .rpa-section * {
   box-sizing: border-box;
@@ -36,9 +30,7 @@
   margin: 0 auto;
 }
 
-/* ==========================================
-   CENTERED HEADING
-========================================== */
+/* CENTERED HEADING */
 
 .rpa-header {
   display: flex;
@@ -85,9 +77,7 @@
   text-align: left;
 }
 
-/* ==========================================
-   LARGE FEATURE CARD
-========================================== */
+/* LARGE FEATURE CARD */
 
 .rpa-main-card {
   display: grid;
@@ -192,9 +182,7 @@
   font-weight: 700;
 }
 
-/* ==========================================
-   ANIMATED SALES BAR CHART
-========================================== */
+/* ANIMATED SALES BAR CHART */
 
 .rpa-sales-chart {
   display: flex;
@@ -346,9 +334,7 @@
   line-height: 1.7;
 }
 
-/* ==========================================
-   TWO BOTTOM CARDS
-========================================== */
+/* TWO BOTTOM CARDS */
 
 .rpa-bottom-grid {
   display: grid;
@@ -462,9 +448,7 @@
   line-height: 1.65;
 }
 
-/* ==========================================
-   GREEN CARD — GROWTH INSIGHTS
-========================================== */
+/* GREEN CARD — GROWTH INSIGHTS */
 
 .rpa-insights-scene {
   position: relative;
@@ -629,9 +613,7 @@
   font-weight: 700;
 }
 
-/* ==========================================
-   BLUE CARD — MOBILE REPORTING
-========================================== */
+/* BLUE CARD — MOBILE REPORTING */
 
 .rpa-phone-scene {
   position: relative;
@@ -856,9 +838,7 @@
   font-size: 10px;
 }
 
-/* ==========================================
-   ANIMATIONS
-========================================== */
+/* ANIMATIONS */
 
 @keyframes rpa-rise {
   from {
@@ -1034,9 +1014,7 @@
   }
 }
 
-/* ==========================================
-   HOVER
-========================================== */
+/* HOVER */
 
 @media (hover: hover) and (pointer: fine) {
   .rpa-main-card,
@@ -1053,9 +1031,7 @@
   }
 }
 
-/* ==========================================
-   TABLET
-========================================== */
+/* TABLET */
 
 @media (max-width: 1024px) {
   .rpa-header {
@@ -1131,9 +1107,7 @@
   }
 }
 
-/* ==========================================
-   SMALL TABLET
-========================================== */
+/* SMALL TABLET */
 
 @media (max-width: 768px) {
 
@@ -1192,9 +1166,7 @@
   }
 }
 
-/* ==========================================
-   MOBILE
-========================================== */
+/* MOBILE */
 
 @media (max-width: 640px) {
 
@@ -1315,9 +1287,7 @@
   }
 }
 
-/* ==========================================
-   VERY SMALL MOBILE
-========================================== */
+/* VERY SMALL MOBILE */
 
 @media (max-width: 380px) {
   .rpa-insights-card,
@@ -1341,9 +1311,7 @@
   }
 }
 
-/* ==========================================
-   ACCESSIBILITY
-========================================== */
+/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
 

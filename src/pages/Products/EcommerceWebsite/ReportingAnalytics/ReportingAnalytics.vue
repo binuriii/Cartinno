@@ -14,6 +14,7 @@ import {
   reportingAnalyticsFAQs
 } from './ReportingAnalytics.js'
 import ReportingFeatures from './ReportingFeatures/ReportingFeatures.vue'
+import ReportingBenefits from './ReportingBenefits/ReportingBenefits.vue'
 </script>
 
 <template>
@@ -23,6 +24,8 @@ import ReportingFeatures from './ReportingFeatures/ReportingFeatures.vue'
     <Hero v-bind="reportingAnalyticsHero" />
 
     <ReportingFeatures/>
+
+    <ReportingBenefits/>
 
     <!-- FAQ -->
     <FAQ
