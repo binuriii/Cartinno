@@ -1,0 +1,1373 @@
+
+/* ==========================================
+   WHATSAPP BUSINESS API BENEFITS
+========================================== */
+
+.wab-section,
+.wab-section * {
+  box-sizing: border-box;
+}
+
+.wab-section {
+  --wab-green: #25d366;
+  --wab-dark-green: #075e54;
+  --wab-ink: #23232b;
+  --wab-muted: #5b5b66;
+  --wab-ease: cubic-bezier(.22, 1, .36, 1);
+
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 5vh 3vw 10vh;
+
+  border-radius: 0;
+  background: #ffffff;
+
+  color: var(--wab-ink);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.wab-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   CENTERED HEADING
+========================================== */
+
+.wab-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  margin-bottom: clamp(40px, 5vw, 65px);
+  text-align: center;
+}
+
+.wab-heading {
+  max-width: 1000px;
+  margin: 0;
+
+  color: #23232b;
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -.045em;
+
+  text-align: center;
+}
+
+.wab-heading span {
+  display: block;
+}
+
+/* ==========================================
+   LARGE TOP CARD
+========================================== */
+
+.wab-main-card {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, .95fr);
+
+  align-items: center;
+  gap: clamp(32px, 5vw, 80px);
+
+  min-height: 540px;
+  border-radius: 34px;
+
+  background: #d8fbf5;
+  overflow: hidden;
+}
+
+.wab-main-visual {
+  position: relative;
+  align-self: stretch;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  min-width: 0;
+  min-height: 540px;
+
+  padding: 40px 25px 0;
+
+  background:
+    radial-gradient(
+      ellipse at 20% 20%,
+      #bfe9cb,
+      transparent 70%
+    );
+}
+
+/* ==========================================
+   MAIN WHATSAPP CHAT WINDOW
+========================================== */
+
+.wab-chat-window {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  width: min(100%, 420px);
+  height: 510px;
+
+  border: 8px solid rgba(255,255,255,.72);
+  border-bottom: 0;
+  border-radius: 24px 24px 0 0;
+
+  background: #f0eee8;
+
+  box-shadow:
+    0 20px 55px rgba(38,89,63,.14);
+
+  overflow: hidden;
+}
+
+.wab-chat-topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 65px;
+  padding: 10px 13px;
+
+  background: #ffffff;
+  color: #23232b;
+}
+
+.wab-back-arrow {
+  color: #5d6561;
+  font-size: 13px;
+}
+
+.wab-business-avatar {
+  display: grid;
+  place-items: center;
+
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+
+  border-radius: 50%;
+  background: #d9eee0;
+  color: #087445;
+
+  font-size: 15px;
+}
+
+.wab-business-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.wab-business-details strong {
+  font-size: 12px;
+}
+
+.wab-business-details span {
+  color: #858b88;
+  font-size: 10px;
+}
+
+.wab-chat-topbar > i {
+  color: #53615a;
+  font-size: 13px;
+  margin-left: 6px;
+}
+
+.wab-chat-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  flex: 1;
+  padding: 15px;
+
+  background-color: #e9e5dd;
+
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,.32) 1px,
+      transparent 1px
+    );
+
+  background-size: 17px 17px;
+
+  overflow: hidden;
+}
+
+.wab-chat-date {
+  align-self: center;
+
+  padding: 6px 12px;
+  border-radius: 8px;
+
+  background: rgba(255,255,255,.88);
+  color: #777c78;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.wab-chat-security {
+  align-self: center;
+
+  padding: 8px 10px;
+  border-radius: 7px;
+
+  background: #fff6d9;
+  color: #77705d;
+
+  font-size: 9px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.wab-chat-security i {
+  margin-right: 4px;
+}
+
+/* ==========================================
+   MESSAGE BUBBLES
+========================================== */
+
+.wab-message {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: fit-content;
+  max-width: 85%;
+
+  padding: 13px 14px;
+  border-radius: 12px 12px 12px 3px;
+
+  background: #ffffff;
+  color: #27342f;
+
+  box-shadow:
+    0 2px 6px rgba(0,0,0,.05);
+}
+
+.wab-message-brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 10px;
+
+  color: #128c59;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.wab-message-brand i {
+  font-size: 15px;
+}
+
+.wab-message > strong {
+  font-size: 12px;
+}
+
+.wab-message p {
+  margin: 8px 0 0;
+
+  color: #526059;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.wab-message small {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  gap: 5px;
+
+  margin-top: 9px;
+
+  color: #929893;
+  font-size: 9px;
+}
+
+.wab-message small i {
+  color: #4aa6c4;
+}
+
+.wab-order-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+
+  width: 100%;
+  margin-top: 13px;
+  padding: 10px;
+
+  border-radius: 8px;
+  background: #f1f7f2;
+}
+
+.wab-order-info span {
+  color: #76837b;
+  font-size: 9px;
+}
+
+.wab-order-info strong {
+  color: #23232b;
+  font-size: 10px;
+}
+
+.wab-message-customer {
+  align-self: flex-end;
+
+  background: #d9f9df;
+  border-radius: 12px 12px 3px 12px;
+}
+
+.wab-message-customer p {
+  margin-top: 0;
+}
+
+.wab-delivery-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wab-delivery-heading > span {
+  display: grid;
+  place-items: center;
+
+  width: 29px;
+  height: 29px;
+
+  border-radius: 8px;
+  background: #e8f8ed;
+  color: #189958;
+}
+
+.wab-delivery-heading strong {
+  font-size: 11px;
+}
+
+/* CHAT INPUT */
+
+.wab-chat-input {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px;
+  background: #edece8;
+}
+
+.wab-chat-input > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+
+  padding: 12px;
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #8c928d;
+  font-size: 11px;
+}
+
+.wab-chat-input > div span {
+  flex: 1;
+}
+
+.wab-send-icon {
+  display: grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+  background: #128c59;
+  color: #ffffff;
+}
+
+/* ==========================================
+   FLOATING ELEMENTS
+========================================== */
+
+.wab-floating-logo {
+  position: absolute;
+  z-index: 4;
+
+  top: 22%;
+  right: 3%;
+
+  display: grid;
+  place-items: center;
+
+  width: 55px;
+  height: 55px;
+
+  border: 3px solid white;
+  border-radius: 50%;
+
+  background: #25d366;
+  color: #ffffff;
+
+  font-size: 30px;
+
+  box-shadow:
+    0 12px 30px rgba(13,128,65,.22);
+}
+
+.wab-floating-notice {
+  position: absolute;
+  z-index: 4;
+
+  right: -10px;
+  bottom: 82px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: min(270px, 55%);
+  padding: 13px;
+
+  border: 1px solid #e0eee4;
+  border-radius: 15px;
+
+  background: rgba(255,255,255,.97);
+
+  box-shadow:
+    0 15px 35px rgba(29,90,51,.15);
+}
+
+.wab-notice-icon {
+  display: grid;
+  place-items: center;
+
+  width: 37px;
+  height: 37px;
+  flex: 0 0 37px;
+
+  border-radius: 10px;
+  background: #e7f9ec;
+  color: #18a85d;
+}
+
+.wab-floating-notice > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.wab-floating-notice strong {
+  color: #23232b;
+  font-size: 11px;
+}
+
+.wab-floating-notice small {
+  color: #717c73;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+/* MAIN TEXT */
+
+.wab-main-content {
+  padding: 45px clamp(30px, 5vw, 70px) 45px 0;
+}
+
+.wab-card-label {
+  display: block;
+  margin-bottom: 14px;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.wab-main-content h3 {
+  max-width: 540px;
+  margin: 0;
+
+  color: #23232b;
+  font-size: clamp(29px, 3.1vw, 46px);
+  font-weight: 450;
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+
+.wab-main-content p {
+  max-width: 450px;
+  margin: 22px 0 0;
+
+  color: #5b5b66;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   TWO BOTTOM CARDS
+========================================== */
+
+.wab-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: clamp(14px, 1.5vw, 22px);
+  margin-top: clamp(14px, 1.5vw, 22px);
+}
+
+.wab-support-card,
+.wab-promotion-card {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 580px;
+
+  padding: clamp(26px, 3vw, 42px);
+  border-radius: 30px;
+
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* SOFT GREEN */
+
+.wab-support-card {
+  background:
+    radial-gradient(
+      ellipse at 20% 100%,
+      rgba(244, 223, 188, 0.9),
+      transparent 70%
+    ),
+    linear-gradient(
+      145deg,
+      #ceb683,
+      #9d926d 65%,
+      #f1e4b8
+    );
+}
+
+/* DEEP WHATSAPP GREEN */
+
+.wab-promotion-card {
+  background:
+    radial-gradient(
+      ellipse at 30% 95%,
+      rgba(31,151,110,.7),
+      transparent 70%
+    ),
+    linear-gradient(
+      145deg,
+      #039451,
+      #009921 100%
+    );
+}
+
+.wab-card-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.wab-card-copy h3 {
+  max-width: 500px;
+  margin: 0;
+
+  color: #ffffff;
+  font-size: clamp(25px, 2.5vw, 36px);
+  font-weight: 550;
+  line-height: 1.15;
+  letter-spacing: -.035em;
+}
+
+.wab-card-copy p {
+  max-width: 470px;
+  margin: 17px 0 0;
+
+  color: rgba(255,255,255,.92);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* ==========================================
+   CUSTOMER SUPPORT SCENE
+========================================== */
+
+.wab-support-scene {
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  flex: 1;
+  min-height: 315px;
+  padding-top: 30px;
+}
+
+.wab-support-window {
+  width: min(100%, 425px);
+  overflow: hidden;
+
+  border: 6px solid rgba(255,255,255,.35);
+  border-radius: 22px;
+
+  background: #f4f1eb;
+  color: #23232b;
+
+  box-shadow:
+    0 20px 40px rgba(26,89,49,.18);
+}
+
+.wab-support-header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding: 15px;
+  background: #ffffff;
+}
+
+.wab-support-avatar,
+.wab-promotion-avatar {
+  display: grid;
+  place-items: center;
+
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+
+  border-radius: 50%;
+  background: #25d366;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.wab-support-header > div,
+.wab-promotion-header > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.wab-support-header strong,
+.wab-promotion-header strong {
+  font-size: 12px;
+}
+
+.wab-support-header small,
+.wab-promotion-header small {
+  color: #89908b;
+  font-size: 10px;
+}
+
+.wab-online-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 0 0 4px #e4f9e8;
+}
+
+.wab-support-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  min-height: 245px;
+  padding: 18px 15px;
+}
+
+.wab-support-bubble {
+  max-width: 80%;
+  padding: 12px 13px;
+
+  border-radius: 12px;
+  color: #364139;
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.wab-support-bubble-customer {
+  align-self: flex-start;
+
+  background: #ffffff;
+  border-bottom-left-radius: 3px;
+}
+
+.wab-support-bubble-business {
+  align-self: flex-end;
+
+  background: #dcf8e1;
+  border-bottom-right-radius: 3px;
+}
+
+.wab-support-bubble small {
+  display: block;
+
+  margin-top: 8px;
+  color: #7c9983;
+
+  font-size: 9px;
+  text-align: right;
+}
+
+.wab-support-bubble small i {
+  color: #4eaac4;
+}
+
+.wab-support-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 15px;
+
+  border-top: 1px solid #e8eae5;
+  background: #ffffff;
+
+  color: #999d99;
+  font-size: 11px;
+}
+
+.wab-support-input > span:last-child {
+  color: #128c59;
+  font-size: 15px;
+}
+
+.wab-support-badge {
+  position: absolute;
+  z-index: 3;
+
+  right: -4px;
+  bottom: 23px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 14px;
+
+  border-radius: 999px;
+  background: #ffffff;
+  color: #187b4a;
+
+  box-shadow:
+    0 12px 30px rgba(16,92,45,.17);
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+/* ==========================================
+   PROMOTIONAL MESSAGING SCENE
+========================================== */
+
+.wab-promotion-scene {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+  min-height: 315px;
+  padding-top: 35px;
+}
+
+.wab-promotion-window {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 385px);
+  overflow: hidden;
+
+  border: 7px solid rgba(255,255,255,.25);
+  border-radius: 23px;
+
+  background: #ffffff;
+  color: #23232b;
+
+  box-shadow:
+    0 22px 45px rgba(0,20,16,.25);
+}
+
+.wab-promotion-header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding: 14px;
+
+  border-bottom: 1px solid #eef0ed;
+}
+
+.wab-promotion-body {
+  padding: 17px;
+}
+
+.wab-promotion-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  height: 118px;
+
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    #e3f8e7,
+    #88dca2
+  );
+
+  color: #137443;
+}
+
+.wab-promotion-banner i {
+  font-size: 34px;
+}
+
+.wab-promotion-banner span {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: .12em;
+}
+
+.wab-promotion-body h4 {
+  margin: 17px 0 9px;
+
+  color: #23232b;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -.03em;
+}
+
+.wab-promotion-body p {
+  margin: 0;
+
+  color: #68726c;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.wab-promotion-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 17px;
+  padding: 12px 14px;
+
+  border-radius: 10px;
+  background: #128c59;
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.wab-promotion-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 11px;
+
+  border-top: 1px solid #edf0ed;
+
+  color: #5b9672;
+  font-size: 10px;
+}
+
+.wab-promotion-float {
+  position: absolute;
+  z-index: 3;
+
+  right: 0;
+  bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 12px 15px;
+
+  border-radius: 999px;
+  background: #ffffff;
+  color: #137c4a;
+
+  box-shadow:
+    0 15px 30px rgba(0,20,16,.25);
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.wab-promotion-float i {
+  color: #25d366;
+  font-size: 18px;
+}
+
+/* ==========================================
+   MOTION ANIMATIONS
+========================================== */
+
+@keyframes wab-rise {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wab-chat-enter {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes wab-bubble-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes wab-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes wab-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .wab-main-card,
+  .wab-support-card,
+  .wab-promotion-card {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .wab-visible .wab-main-card,
+  .wab-visible .wab-support-card,
+  .wab-visible .wab-promotion-card {
+    animation:
+      wab-rise .85s var(--wab-ease) both;
+  }
+
+  .wab-visible .wab-support-card {
+    animation-delay: .15s;
+  }
+
+  .wab-visible .wab-promotion-card {
+    animation-delay: .28s;
+  }
+
+  .wab-chat-window {
+    opacity: 0;
+  }
+
+  .wab-visible .wab-chat-window {
+    animation:
+      wab-chat-enter .9s var(--wab-ease) .3s both;
+  }
+
+  .wab-message-one,
+  .wab-message-two,
+  .wab-message-three {
+    opacity: 0;
+  }
+
+  .wab-visible .wab-message-one {
+    animation:
+      wab-bubble-enter .6s var(--wab-ease) .8s both;
+  }
+
+  .wab-visible .wab-message-two {
+    animation:
+      wab-bubble-enter .6s var(--wab-ease) 1.2s both;
+  }
+
+  .wab-visible .wab-message-three {
+    animation:
+      wab-bubble-enter .6s var(--wab-ease) 1.6s both;
+  }
+
+  .wab-floating-logo,
+  .wab-floating-notice {
+    opacity: 0;
+  }
+
+  .wab-visible .wab-floating-logo {
+    animation:
+      wab-bubble-enter .7s var(--wab-ease) .9s both,
+      wab-pulse 4s ease-in-out 1.7s infinite;
+  }
+
+  .wab-visible .wab-floating-notice {
+    animation:
+      wab-bubble-enter .7s var(--wab-ease) 1.7s both,
+      wab-float 4.5s ease-in-out 2.5s infinite;
+  }
+
+  .wab-support-bubble {
+    opacity: 0;
+  }
+
+  .wab-visible .wab-support-msg-1 {
+    animation:
+      wab-bubble-enter .6s var(--wab-ease) .75s both;
+  }
+
+  .wab-visible .wab-support-msg-2 {
+    animation:
+      wab-bubble-enter .6s var(--wab-ease) 1.1s both;
+  }
+
+  .wab-visible .wab-support-msg-3 {
+    animation:
+      wab-bubble-enter .6s var(--wab-ease) 1.45s both;
+  }
+
+  .wab-visible .wab-support-badge {
+    animation:
+      wab-float 4s ease-in-out 2s infinite;
+  }
+
+  .wab-visible .wab-promotion-window {
+    animation:
+      wab-float 5s ease-in-out 1.5s infinite;
+  }
+
+  .wab-visible .wab-promotion-float {
+    animation:
+      wab-float 4s ease-in-out 1.9s infinite;
+  }
+}
+
+/* ==========================================
+   HOVER
+========================================== */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .wab-main-card,
+  .wab-support-card,
+  .wab-promotion-card {
+    transition: box-shadow .35s ease;
+  }
+
+  .wab-main-card:hover,
+  .wab-support-card:hover,
+  .wab-promotion-card:hover {
+    box-shadow:
+      0 18px 40px rgba(35,35,43,.09);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+
+  .wab-main-card {
+    min-height: 490px;
+    gap: 25px;
+    border-radius: 25px;
+  }
+
+  .wab-main-visual {
+    min-height: 490px;
+    padding: 25px 15px 0;
+  }
+
+  .wab-chat-window {
+    height: 475px;
+  }
+
+  .wab-main-content {
+    padding: 30px 25px 30px 0;
+  }
+
+  .wab-main-content h3 {
+    font-size: clamp(26px, 3vw, 36px);
+  }
+
+  .wab-main-content p {
+    font-size: 13px;
+  }
+
+  .wab-support-card,
+  .wab-promotion-card {
+    min-height: 550px;
+    padding: 26px;
+    border-radius: 24px;
+  }
+
+  .wab-card-copy h3 {
+    font-size: 26px;
+  }
+
+  .wab-card-copy p {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+  .wab-main-card {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .wab-main-content {
+    grid-row: 1;
+    padding: 35px 30px;
+  }
+
+  .wab-main-visual {
+    grid-row: 2;
+
+    min-height: 460px;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .wab-main-content h3 {
+    font-size: 33px;
+  }
+
+  .wab-bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .wab-support-card,
+  .wab-promotion-card {
+    min-height: 560px;
+    padding: 32px;
+  }
+
+  .wab-card-copy h3 {
+    font-size: 30px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+
+  .wab-section {
+    margin-top: 0;
+    padding: 5vh 3vw 10vh;
+    border-radius: 0;
+  }
+
+  .wab-header {
+    margin-bottom: 32px;
+  }
+
+  .wab-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .wab-main-card {
+    border-radius: 21px;
+  }
+
+  .wab-main-content {
+    padding: 27px 23px;
+  }
+
+  .wab-main-content h3 {
+    font-size: 28px;
+  }
+
+  .wab-main-content p {
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .wab-main-visual {
+    min-height: 400px;
+    padding: 20px 12px 0;
+  }
+
+  .wab-chat-window {
+    width: min(100%, 345px);
+    height: 440px;
+    border-width: 6px;
+  }
+
+  .wab-chat-body {
+    padding: 10px;
+    gap: 9px;
+  }
+
+  .wab-message {
+    padding: 10px;
+  }
+
+  .wab-message p {
+    font-size: 10px;
+  }
+
+  .wab-floating-notice {
+    right: 0;
+    bottom: 30px;
+
+    width: 62%;
+    padding: 10px;
+  }
+
+  .wab-floating-notice small {
+    display: none;
+  }
+
+  .wab-floating-logo {
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+  }
+
+  .wab-bottom-grid {
+    margin-top: 14px;
+    gap: 14px;
+  }
+
+  .wab-support-card,
+  .wab-promotion-card {
+    min-height: 520px;
+    padding: 24px;
+    border-radius: 21px;
+  }
+
+  .wab-card-copy h3 {
+    font-size: 27px;
+  }
+
+  .wab-card-copy p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .wab-support-scene,
+  .wab-promotion-scene {
+    min-height: 270px;
+    padding-top: 25px;
+  }
+
+  .wab-promotion-body h4 {
+    font-size: 18px;
+  }
+}
+
+/* ==========================================
+   VERY SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+  .wab-support-card,
+  .wab-promotion-card {
+    padding: 19px;
+  }
+
+  .wab-support-badge,
+  .wab-promotion-float {
+    padding: 10px;
+    font-size: 9px;
+  }
+
+  .wab-chat-security {
+    font-size: 8px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .wab-section *,
+  .wab-section *::before,
+  .wab-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .wab-main-card,
+  .wab-support-card,
+  .wab-promotion-card,
+  .wab-chat-window,
+  .wab-floating-logo,
+  .wab-floating-notice,
+  .wab-message,
+  .wab-support-bubble {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
