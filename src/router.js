@@ -78,6 +78,13 @@ const routes = [
       import('./pages/Products/EcommerceWebsite/PushNotificationMarketing/PushNotificationMarketing.vue')
   },
 
+  {
+    path: '/inventory-management-system',
+    name: 'inventory-management-system',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/InventoryManagementSystem/InventoryManagementSystem.vue')
+  },
+
 
 
 
