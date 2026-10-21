@@ -92,6 +92,12 @@ const routes = [
       import('./pages/Products/EcommerceWebsite/ReportingAnalytics/ReportingAnalytics.vue')
   },
 
+  {
+    path: '/facebook-intergration',
+    name: 'facebook-intergration',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/FacebookIntegration/FacebookIntegration.vue')
+  },
 
 
 
