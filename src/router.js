@@ -71,6 +71,13 @@ const routes = [
       import('./pages/Products/EcommerceWebsite/CloudPOS/CloudPOS.vue')
   },
 
+  {
+    path: '/push-notification-marketing',
+    name: 'push-notification-marketing',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/PushNotificationMarketing/PushNotificationMarketing.vue')
+  },
+
 
 
 

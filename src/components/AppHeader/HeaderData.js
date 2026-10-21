@@ -44,7 +44,7 @@ export const products = [
         "items": [
           { "label": "Cloud POS", "href": "/ecommerce-cloud-pos", "icon": "fa-solid fa-desktop" },
           { "label": "Marketing Campaigns", "href": "#marketing-campaigns", "icon": "fa-solid fa-bullhorn" },
-          { "label": "Push Notification Marketing", "href": "#push-notifications", "icon": "fa-regular fa-bell" },
+          { "label": "Push Notification Marketing", "href": "/push-notification-marketing", "icon": "fa-regular fa-bell" },
           { "label": "Inventory Management System", "href": "#inventory", "icon": "fa-solid fa-boxes-stacked" }
         ]
       },
