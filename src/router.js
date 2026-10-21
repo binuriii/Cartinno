@@ -85,6 +85,12 @@ const routes = [
       import('./pages/Products/EcommerceWebsite/InventoryManagementSystem/InventoryManagementSystem.vue')
   },
 
+  {
+    path: '/reporting-and-analytics',
+    name: 'reporting-and-analytics',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/ReportingAnalytics/ReportingAnalytics.vue')
+  },
 
 
 

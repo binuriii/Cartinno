@@ -53,7 +53,7 @@ export const products = [
         "column": 2,
         "items": [
           { "label": "Cloud Phone System", "href": "#cloud-phone", "icon": "fa-solid fa-phone" },
-          { "label": "Reporting & Analytics", "href": "#reporting-analytics", "icon": "fa-solid fa-chart-pie" },
+          { "label": "Reporting & Analytics", "href": "/reporting-and-analytics", "icon": "fa-solid fa-chart-pie" },
           { "label": "POS Integrations", "href": "#pos-integrations", "icon": "fa-solid fa-gears" },
           { "label": "Enquiry Management System", "href": "#enquiry-management", "icon": "fa-regular fa-message-square" },
           { "label": "Lead Manager", "href": "#lead-manager", "icon": "fa-solid fa-user-plus" },
