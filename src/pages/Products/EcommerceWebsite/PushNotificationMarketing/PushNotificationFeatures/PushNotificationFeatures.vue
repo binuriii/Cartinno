@@ -142,9 +142,7 @@ const notifications = [
             </div>
 
             <div class="pnf-message-footer">
-              <i class="fa-solid fa-bell"></i>
               Reach customers instantly
-              <i class="fa-solid fa-arrow-up-right"></i>
             </div>
           </div>
 
@@ -176,13 +174,6 @@ const notifications = [
             </div>
 
             <div class="pnf-campaign-card">
-              <div class="pnf-campaign-icon">
-                <i class="fa-solid fa-tag"></i>
-              </div>
-
-              <span class="pnf-campaign-eyebrow">
-                EXCLUSIVE OFFER
-              </span>
 
               <strong>
                 A special deal just for you!
@@ -195,7 +186,6 @@ const notifications = [
 
               <div class="pnf-campaign-button">
                 Shop the Offer
-                <i class="fa-solid fa-arrow-right"></i>
               </div>
             </div>
 

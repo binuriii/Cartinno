@@ -14,6 +14,7 @@ import {
 import {
   pushNotificationFAQs
 } from './PushNotificationMarketing.js'
+import PushNotificationBenefits from './PushNotificationBenefits/PushNotificationBenefits.vue'
 </script>
 
 <template>
@@ -23,6 +24,8 @@ import {
     <Hero v-bind="pushNotificationHero" />
 
     <PushNotificationFeatures/>
+
+    <PushNotificationBenefits/>
 
     <!-- FAQ -->
     <FAQ
