@@ -87,7 +87,29 @@ const routes = [
 
 ]
 
+
 export default createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+
+  scrollBehavior(to, from, savedPosition) {
+    // Restore scroll position when using browser Back/Forward
+    if (savedPosition) {
+      return savedPosition
+    }
+
+    // Scroll to a specific section when using # links
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth'
+      }
+    }
+
+    // Always start new pages at the top
+    return {
+      top: 0,
+      left: 0
+    }
+  }
 })
