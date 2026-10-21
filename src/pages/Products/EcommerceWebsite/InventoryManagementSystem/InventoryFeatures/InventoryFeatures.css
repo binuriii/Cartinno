@@ -263,7 +263,7 @@
   font-size: clamp(24px, 2.6vw, 35px);
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: 0.001em;
+  letter-spacing: -0.025em;
 
   text-align: left;
 }

@@ -14,6 +14,7 @@ import {
   inventoryManagementFAQs
 } from './InventoryManagementSystem.js'
 import InventoryFeatures from './InventoryFeatures/InventoryFeatures.vue'
+import InventoryBenefits from './InventoryBenefits/InventoryBenefits.vue'
 </script>
 
 <template>
@@ -23,6 +24,8 @@ import InventoryFeatures from './InventoryFeatures/InventoryFeatures.vue'
     <Hero v-bind="inventoryManagementHero" />
 
     <InventoryFeatures/>
+
+    <InventoryBenefits/>
 
     <!-- FAQ -->
     <FAQ
