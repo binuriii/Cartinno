@@ -14,6 +14,7 @@ import {
   facebookIntegrationFAQs
 } from './FacebookIntegration.js'
 import FacebookFeatures from './FacebookFeatures/FacebookFeatures.vue'
+import FacebookBenefits from './FacebookBenefits/FacebookBenefits.vue'
 </script>
 
 <template>
@@ -23,6 +24,8 @@ import FacebookFeatures from './FacebookFeatures/FacebookFeatures.vue'
     <Hero v-bind="facebookIntegrationHero" />
 
     <FacebookFeatures/>
+
+    <FacebookBenefits/>
 
     <!-- FAQ -->
     <FAQ

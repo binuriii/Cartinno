@@ -1,0 +1,1434 @@
+
+/* ==========================================
+   FACEBOOK BENEFITS — CARTINNO
+========================================== */
+
+.fbb-section,
+.fbb-section * {
+  box-sizing: border-box;
+}
+
+.fbb-section {
+  --fbb-blue: #1877f2;
+  --fbb-ink: #23232b;
+  --fbb-muted: #5b5b66;
+  --fbb-ease: cubic-bezier(.22, 1, .36, 1);
+
+  position: relative;
+  width: 100%;
+
+  /* NO HERO OVERLAP */
+  margin: 0;
+
+  /* EXACT REQUESTED PADDING */
+  padding: 5vh 3vw 10vh;
+
+  /* NO TOP RADIUS */
+  border-radius: 0;
+
+  background: #ffffff;
+  color: var(--fbb-ink);
+  font-family: inherit;
+
+  overflow: hidden;
+}
+
+.fbb-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.fbb-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  margin-bottom: clamp(40px, 5vw, 65px);
+
+  text-align: left;
+}
+
+.fbb-heading {
+  max-width: 1000px;
+  margin: 0;
+
+  color: #23232b;
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -.045em;
+
+  text-align: left;
+}
+
+.fbb-heading span {
+  display: block;
+}
+
+/* ==========================================
+   LARGE TOP CARD
+========================================== */
+
+.fbb-main-card {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, .95fr);
+
+  align-items: center;
+  gap: clamp(32px, 5vw, 80px);
+
+  min-height: 540px;
+
+  border-radius: 34px;
+  background: #dadbda;
+
+  overflow: hidden;
+}
+
+.fbb-main-visual {
+  position: relative;
+  align-self: stretch;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 540px;
+
+  padding: 40px 25px 0;
+
+  background:
+    radial-gradient(
+      ellipse at 20% 20%,
+      #d1e1ff,
+      transparent 70%
+    );
+}
+
+/* FACEBOOK POST WINDOW */
+
+.fbb-social-window {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 420px);
+  min-height: 510px;
+
+  border: 8px solid rgba(255,255,255,.7);
+  border-bottom: 0;
+  border-radius: 24px 24px 0 0;
+
+  background: #fff;
+  box-shadow:
+    0 20px 55px rgba(31,67,121,.12);
+
+  overflow: hidden;
+}
+
+.fbb-social-topbar {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 15px;
+  border-bottom: 1px solid #eff0f3;
+}
+
+.fbb-facebook-logo,
+.fbb-mini-facebook {
+  display: grid;
+  place-items: center;
+
+  width: 37px;
+  height: 37px;
+  flex: 0 0 37px;
+
+  border-radius: 50%;
+
+  background: #1877f2;
+  color: #fff;
+
+  font-size: 20px;
+}
+
+.fbb-social-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1;
+
+  padding: 11px 13px;
+  border-radius: 999px;
+
+  background: #f1f2f5;
+  color: #777b84;
+
+  font-size: 12px;
+}
+
+.fbb-social-menu {
+  display: grid;
+  place-items: center;
+
+  width: 28px;
+  height: 28px;
+
+  color: #60646b;
+}
+
+.fbb-social-body {
+  padding: 15px;
+}
+
+.fbb-post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fbb-post-avatar {
+  display: grid;
+  place-items: center;
+
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+
+  border-radius: 50%;
+
+  background: #23232b;
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fbb-post-author {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.fbb-post-author strong {
+  font-size: 12px;
+}
+
+.fbb-post-author span {
+  color: #85878d;
+  font-size: 10px;
+}
+
+.fbb-post-more {
+  color: #777;
+  font-size: 15px;
+}
+
+.fbb-post-caption {
+  margin: 14px 0;
+
+  color: #33343c;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.fbb-post-image {
+  position: relative;
+
+  width: 100%;
+  height: 180px;
+
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+
+  background: #f1d7d3;
+}
+
+.fbb-post-image img,
+.fbb-mini-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fbb-post-image-label {
+  position: absolute;
+  inset: auto 12px 13px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,.6);
+}
+
+.fbb-post-image-label span {
+  font-size: 9px;
+  letter-spacing: .1em;
+}
+
+.fbb-post-image-label strong {
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.fbb-image-placeholder {
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    135deg,
+    #a7c5fa,
+    #467ee3
+  );
+
+  color: #fff;
+  font-size: 40px;
+}
+
+.fbb-post-link-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  padding: 13px;
+
+  background: #f0f2f5;
+}
+
+.fbb-post-link-preview > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fbb-post-link-preview small {
+  color: #81838a;
+  font-size: 9px;
+}
+
+.fbb-post-link-preview strong {
+  font-size: 12px;
+}
+
+.fbb-post-link-preview > span {
+  padding: 9px 12px;
+  border-radius: 7px;
+
+  background: #dce2ec;
+  color: #292d36;
+
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.fbb-post-engagement {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding: 15px 0 10px;
+
+  color: #777a82;
+  font-size: 10px;
+}
+
+.fbb-post-engagement > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fbb-post-engagement i:first-child {
+  color: #1877f2;
+}
+
+.fbb-post-engagement i:nth-child(2) {
+  color: #ef4058;
+}
+
+.fbb-post-actions {
+  display: flex;
+  justify-content: space-around;
+
+  padding: 12px 0;
+
+  border-top: 1px solid #eceef1;
+
+  color: #717782;
+  font-size: 11px;
+}
+
+.fbb-post-actions span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* FLOATING NOTIFICATION */
+
+.fbb-floating-notice {
+  position: absolute;
+  z-index: 4;
+
+  right: -12px;
+  bottom: 85px;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  width: min(270px, 55%);
+  padding: 13px;
+
+  border: 1px solid #e9eef8;
+  border-radius: 15px;
+
+  background: rgba(255,255,255,.97);
+
+  box-shadow:
+    0 15px 35px rgba(34,65,114,.18);
+}
+
+.fbb-notice-icon {
+  display: grid;
+  place-items: center;
+
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+
+  border-radius: 11px;
+
+  background: #e9f2ff;
+  color: #1877f2;
+}
+
+.fbb-floating-notice > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fbb-floating-notice strong {
+  color: #23232b;
+  font-size: 11px;
+}
+
+.fbb-floating-notice small {
+  color: #737884;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+/* FLOATING REACTIONS */
+
+.fbb-floating-reaction {
+  position: absolute;
+  z-index: 3;
+
+  display: grid;
+  place-items: center;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  color: #fff;
+  font-size: 20px;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.13);
+}
+
+.fbb-reaction-one {
+  top: 25%;
+  right: 3%;
+  background: #1877f2;
+}
+
+.fbb-reaction-two {
+  top: 49%;
+  left: 4%;
+  background: #fa466b;
+}
+
+/* MAIN TEXT */
+
+.fbb-main-content {
+  padding: 45px clamp(30px, 5vw, 70px) 45px 0;
+}
+
+.fbb-card-label {
+  display: block;
+  margin-bottom: 14px;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.fbb-main-content h3 {
+  max-width: 540px;
+  margin: 0;
+
+  font-size: clamp(29px, 3.1vw, 46px);
+  font-weight: 450;
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+
+.fbb-main-content p {
+  max-width: 450px;
+  margin: 22px 0 0;
+
+  color: #575d6b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   TWO BOTTOM CARDS
+========================================== */
+
+.fbb-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: clamp(14px, 1.5vw, 22px);
+  margin-top: clamp(14px, 1.5vw, 22px);
+}
+
+.fbb-commerce-card,
+.fbb-connect-card {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 580px;
+
+  padding: clamp(26px, 3vw, 42px);
+  border-radius: 30px;
+
+  color: #fff;
+  overflow: hidden;
+}
+
+.fbb-commerce-card {
+  background:
+    radial-gradient(
+      ellipse at 20% 100%,
+      rgba(170, 233, 176, 0.9),
+      transparent 70%
+    ),
+    linear-gradient(
+      145deg,
+      #6a8968,
+      #beeeb2 65%,
+      #a4e59e
+    );
+}
+
+.fbb-connect-card {
+  background:
+    radial-gradient(
+      ellipse at 35% 95%,
+      rgba(122, 144, 190, 0.7),
+      transparent 70%
+    ),
+    linear-gradient(
+      145deg,
+      #2d3f69,
+      #021a47 100%
+    );
+}
+
+.fbb-card-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.fbb-card-copy h3 {
+  max-width: 500px;
+  margin: 0;
+
+  color: #ffffff;
+  font-size: clamp(25px, 2.5vw, 36px);
+  font-weight: 550;
+  line-height: 1.15;
+  letter-spacing: -.035em;
+}
+
+.fbb-card-copy p {
+  max-width: 470px;
+  margin: 17px 0 0;
+
+  color: rgba(255,255,255,.9);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* ==========================================
+   SOCIAL → STORE VISUAL
+========================================== */
+
+.fbb-commerce-scene {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+  flex: 1;
+
+  min-height: 305px;
+  padding-top: 35px;
+}
+
+.fbb-commerce-social,
+.fbb-commerce-store {
+  position: relative;
+  z-index: 2;
+
+  width: min(45%, 225px);
+  min-width: 0;
+
+  border-radius: 17px;
+  background: #fff;
+  color: #23232b;
+
+  box-shadow: 0 18px 35px rgba(0,34,110,.24);
+  overflow: hidden;
+}
+
+.fbb-commerce-social {
+  align-self: center;
+}
+
+.fbb-mini-topbar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 12px;
+}
+
+.fbb-mini-facebook {
+  width: 24px;
+  height: 24px;
+  flex-basis: 24px;
+  font-size: 13px;
+}
+
+.fbb-mini-topbar strong {
+  flex: 1;
+  font-size: 11px;
+}
+
+.fbb-mini-topbar > i {
+  color: #8b8f98;
+  font-size: 12px;
+}
+
+.fbb-mini-image {
+  height: 120px;
+  background: #f0edf0;
+  overflow: hidden;
+}
+
+.fbb-mini-product-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 13px 12px;
+}
+
+.fbb-mini-product-copy small {
+  color: #858995;
+  font-size: 9px;
+}
+
+.fbb-mini-product-copy strong {
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.fbb-mini-product-copy span {
+  color: #1877f2;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.fbb-mini-shop-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0 12px 12px;
+  padding: 10px;
+
+  border-radius: 9px;
+  background: #161617;
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.fbb-commerce-connection {
+  position: relative;
+  z-index: 3;
+
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 44px;
+}
+
+.fbb-commerce-connection span {
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid #e4eeff;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #1877f2;
+
+  font-size: 16px;
+
+  box-shadow: 0 8px 20px rgba(0,25,90,.15);
+}
+
+/* CARTINNO STORE PREVIEW */
+
+.fbb-commerce-store {
+  align-self: center;
+  min-height: 245px;
+}
+
+.fbb-store-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px;
+  border-bottom: 1px solid #eceef2;
+
+  color: #8b8f98;
+  font-size: 9px;
+}
+
+.fbb-store-dots {
+  display: flex;
+  gap: 3px;
+}
+
+.fbb-store-dots i {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+  background: #d5d7db;
+}
+
+.fbb-store-brand {
+  padding: 15px 12px 6px;
+}
+
+.fbb-store-brand img {
+  display: block;
+
+  max-width: 95px;
+  height: 23px;
+  object-fit: contain;
+}
+
+.fbb-store-brand strong {
+  font-size: 16px;
+}
+
+.fbb-store-success {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  margin: 8px 12px 12px;
+  color: #1a975b;
+  font-size: 9px;
+}
+
+.fbb-store-heading {
+  display: block;
+
+  margin: 0 12px 16px;
+  max-width: 140px;
+
+  font-size: 17px;
+  line-height: 1.2;
+  letter-spacing: -.035em;
+}
+
+.fbb-store-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 12px 12px;
+  padding: 11px;
+
+  border-radius: 8px;
+  background: #23232b;
+  color: #fff;
+
+  font-size: 10px;
+}
+
+/* ==========================================
+   CONNECTED NETWORK VISUAL
+========================================== */
+
+.fbb-connect-scene {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  flex: 1;
+  min-height: 305px;
+  padding-top: 30px;
+}
+
+.fbb-network {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.fbb-network-node {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+
+  width: 33.333%;
+  text-align: center;
+}
+
+.fbb-network-icon {
+  display: grid;
+  place-items: center;
+
+  width: clamp(54px, 6vw, 85px);
+  height: clamp(54px, 6vw, 85px);
+
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 23px;
+
+  background: rgba(255,255,255,.13);
+  color: #fff;
+  font-size: clamp(22px, 2.8vw, 35px);
+
+  box-shadow:
+    0 12px 30px rgba(0,12,40,.14);
+  backdrop-filter: blur(8px);
+}
+
+.fbb-node-1 .fbb-network-icon {
+  background: #1877f2;
+}
+
+.fbb-node-2 .fbb-network-icon {
+  background: #ffffff;
+  color: #23232b;
+}
+
+.fbb-node-3 .fbb-network-icon {
+  background: #d7454e;
+}
+
+.fbb-network-node strong {
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.fbb-network-node small {
+  color: rgba(255,255,255,.7);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.fbb-network-lines {
+  position: absolute;
+  z-index: 1;
+
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+
+  transform: translateY(-20px);
+}
+
+.fbb-network-lines span {
+  position: absolute;
+  top: 0;
+
+  height: 2px;
+  width: 22%;
+
+  background: rgba(255,255,255,.6);
+}
+
+.fbb-line-one {
+  left: 22%;
+}
+
+.fbb-line-two {
+  right: 22%;
+}
+
+.fbb-network-status {
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
+  gap: 8px;
+
+  margin-top: 45px;
+  padding: 12px 18px;
+
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.12);
+  color: #fff;
+
+  font-size: 11px;
+  backdrop-filter: blur(9px);
+}
+
+.fbb-status-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: #69eea6;
+  box-shadow: 0 0 0 4px rgba(105,238,166,.14);
+}
+
+/* ==========================================
+   SCROLL & MOTION ANIMATIONS
+========================================== */
+
+@keyframes fbb-rise {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fbb-social-enter {
+  from {
+    opacity: 0;
+    transform: translateY(70px) scale(.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fbb-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fbb-connection-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(0,25,90,.15);
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 10px rgba(255,255,255,.15);
+  }
+}
+
+@keyframes fbb-node-glow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes fbb-line-glow {
+  0%, 100% {
+    opacity: .3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .fbb-main-card,
+  .fbb-commerce-card,
+  .fbb-connect-card {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .fbb-visible .fbb-main-card,
+  .fbb-visible .fbb-commerce-card,
+  .fbb-visible .fbb-connect-card {
+    animation: fbb-rise .85s var(--fbb-ease) both;
+  }
+
+  .fbb-visible .fbb-commerce-card {
+    animation-delay: .15s;
+  }
+
+  .fbb-visible .fbb-connect-card {
+    animation-delay: .28s;
+  }
+
+  .fbb-social-window {
+    opacity: 0;
+  }
+
+  .fbb-visible .fbb-social-window {
+    animation: fbb-social-enter .85s var(--fbb-ease) .3s both;
+  }
+
+  .fbb-floating-notice,
+  .fbb-floating-reaction {
+    opacity: 0;
+  }
+
+  .fbb-visible .fbb-floating-notice {
+    animation:
+      fbb-social-enter .7s var(--fbb-ease) 1s both,
+      fbb-float 4.5s ease-in-out 1.8s infinite;
+  }
+
+  .fbb-visible .fbb-reaction-one {
+    animation:
+      fbb-social-enter .7s var(--fbb-ease) .9s both,
+      fbb-float 3.8s ease-in-out 1.7s infinite;
+  }
+
+  .fbb-visible .fbb-reaction-two {
+    animation:
+      fbb-social-enter .7s var(--fbb-ease) 1.15s both,
+      fbb-float 4.4s ease-in-out 1.9s infinite;
+  }
+
+  .fbb-visible .fbb-commerce-social {
+    animation: fbb-float 4.8s ease-in-out 1s infinite;
+  }
+
+  .fbb-visible .fbb-commerce-store {
+    animation: fbb-float 5.3s ease-in-out 1.3s infinite;
+  }
+
+  .fbb-visible .fbb-commerce-connection span {
+    animation:
+      fbb-connection-pulse 2.8s ease-in-out 1s infinite;
+  }
+
+  .fbb-visible .fbb-network-node {
+    animation:
+      fbb-node-glow 4s ease-in-out infinite;
+    animation-delay: calc(var(--node-index) * .55s);
+  }
+
+  .fbb-visible .fbb-network-lines span {
+    animation:
+      fbb-line-glow 2.6s ease-in-out infinite;
+  }
+
+  .fbb-visible .fbb-line-two {
+    animation-delay: 1.2s;
+  }
+}
+
+/* ==========================================
+   HOVER
+========================================== */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .fbb-main-card,
+  .fbb-commerce-card,
+  .fbb-connect-card {
+    transition: box-shadow .35s ease;
+  }
+
+  .fbb-main-card:hover,
+  .fbb-commerce-card:hover,
+  .fbb-connect-card:hover {
+    box-shadow:
+      0 18px 40px rgba(35,35,43,.09);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+
+  .fbb-main-card {
+    min-height: 490px;
+    gap: 25px;
+    border-radius: 25px;
+  }
+
+  .fbb-main-visual {
+    min-height: 490px;
+    padding: 25px 15px 0;
+  }
+
+  .fbb-social-window {
+    min-height: 475px;
+  }
+
+  .fbb-floating-notice {
+    right: 0;
+    width: 65%;
+  }
+
+  .fbb-main-content {
+    padding: 30px 25px 30px 0;
+  }
+
+  .fbb-main-content h3 {
+    font-size: clamp(26px, 3vw, 36px);
+  }
+
+  .fbb-main-content p {
+    font-size: 13px;
+  }
+
+  .fbb-commerce-card,
+  .fbb-connect-card {
+    min-height: 550px;
+    padding: 26px;
+    border-radius: 24px;
+  }
+
+  .fbb-card-copy h3 {
+    font-size: 26px;
+  }
+
+  .fbb-card-copy p {
+    font-size: 13px;
+  }
+
+  .fbb-commerce-scene {
+    gap: 6px;
+  }
+
+  .fbb-commerce-connection {
+    flex-basis: 35px;
+  }
+
+  .fbb-commerce-connection span {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+  .fbb-main-card {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .fbb-main-content {
+    grid-row: 1;
+    padding: 35px 30px;
+  }
+
+  .fbb-main-visual {
+    grid-row: 2;
+    min-height: 460px;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .fbb-main-content h3 {
+    font-size: 33px;
+  }
+
+  .fbb-bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .fbb-commerce-card,
+  .fbb-connect-card {
+    min-height: 560px;
+    padding: 32px;
+  }
+
+  .fbb-card-copy h3 {
+    font-size: 30px;
+  }
+
+  .fbb-commerce-social,
+  .fbb-commerce-store {
+    width: min(40%, 225px);
+  }
+
+  .fbb-network-icon {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+
+  .fbb-section {
+    padding: 5vh 3vw 10vh;
+    border-radius: 0;
+    margin-top: 0;
+  }
+
+  .fbb-header {
+    margin-bottom: 32px;
+  }
+
+  .fbb-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .fbb-main-card {
+    border-radius: 21px;
+  }
+
+  .fbb-main-content {
+    padding: 27px 23px;
+  }
+
+  .fbb-main-content h3 {
+    font-size: 28px;
+  }
+
+  .fbb-main-content p {
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .fbb-main-visual {
+    min-height: 400px;
+    padding: 20px 12px 0;
+  }
+
+  .fbb-social-window {
+    min-height: 450px;
+    width: min(100%, 345px);
+    border-width: 6px;
+  }
+
+  .fbb-post-image {
+    height: 145px;
+  }
+
+  .fbb-post-caption {
+    font-size: 11px;
+  }
+
+  .fbb-floating-notice {
+    right: 0;
+    bottom: 30px;
+    width: 62%;
+    padding: 10px;
+  }
+
+  .fbb-floating-notice small {
+    display: none;
+  }
+
+  .fbb-reaction-one {
+    right: 1%;
+  }
+
+  .fbb-reaction-two {
+    left: 1%;
+  }
+
+  .fbb-bottom-grid {
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .fbb-commerce-card,
+  .fbb-connect-card {
+    min-height: 520px;
+    padding: 24px;
+    border-radius: 21px;
+  }
+
+  .fbb-card-copy h3 {
+    font-size: 27px;
+  }
+
+  .fbb-card-copy p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .fbb-commerce-scene {
+    min-height: 260px;
+    padding-top: 25px;
+  }
+
+  .fbb-network {
+    gap: 7px;
+  }
+
+  .fbb-network-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 17px;
+    font-size: 25px;
+  }
+
+  .fbb-network-node strong {
+    font-size: 10px;
+  }
+
+  .fbb-network-node small {
+    font-size: 9px;
+  }
+
+  .fbb-network-status {
+    margin-top: 35px;
+    font-size: 10px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+  .fbb-commerce-card,
+  .fbb-connect-card {
+    padding: 19px;
+  }
+
+  .fbb-commerce-social,
+  .fbb-commerce-store {
+    width: 44%;
+  }
+
+  .fbb-commerce-connection {
+    flex-basis: 30px;
+  }
+
+  .fbb-commerce-connection span {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .fbb-mini-image {
+    height: 95px;
+  }
+
+  .fbb-store-heading {
+    font-size: 14px;
+  }
+
+  .fbb-network-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+  }
+
+  .fbb-network-node small {
+    font-size: 8px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .fbb-section *,
+  .fbb-section *::before,
+  .fbb-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .fbb-main-card,
+  .fbb-commerce-card,
+  .fbb-connect-card,
+  .fbb-social-window,
+  .fbb-floating-notice,
+  .fbb-floating-reaction {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
