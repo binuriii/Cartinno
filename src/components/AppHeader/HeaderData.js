@@ -58,7 +58,7 @@ export const products = [
           { "label": "Enquiry Management System", "href": "#enquiry-management", "icon": "fa-regular fa-message-square" },
           { "label": "Lead Manager", "href": "#lead-manager", "icon": "fa-solid fa-user-plus" },
           { "label": "Facebook Integration", "href": "/facebook-intergration", "icon": "fa-brands fa-facebook" },
-          { "label": "WhatsApp Business API", "href": "#whatsapp-api", "icon": "fa-brands fa-whatsapp" }
+          { "label": "WhatsApp Business API", "href": "/whatspp-business-api", "icon": "fa-brands fa-whatsapp" }
         ]
       }
     ]
