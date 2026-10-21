@@ -1,8 +1,3 @@
-
-/* ========================================
-   REVIEW FEATURES SECTION
-======================================== */
-
 .rf-section,
 .rf-section * {
   box-sizing: border-box;
@@ -26,9 +21,7 @@
   font-family: inherit;
 }
 
-/* ========================================
-   CONTAINER
-======================================== */
+/* CONTAINER */
 
 .rf-container {
   width: 100%;
@@ -36,9 +29,7 @@
   margin-inline: auto;
 }
 
-/* ========================================
-   SECTION HEADING
-======================================== */
+/* SECTION HEADING */
 
 .rf-header {
   display: flex;
@@ -77,9 +68,7 @@
   text-align: center;
 }
 
-/* ========================================
-   MAIN GREEN FEATURE CARD
-======================================== */
+/* MAIN GREEN FEATURE CARD */
 
 .rf-main-card {
   position: relative;
@@ -119,9 +108,7 @@
   color: #ffffff;
 }
 
-/* ========================================
-   REVIEW NOTIFICATIONS
-======================================== */
+/* REVIEW NOTIFICATIONS */
 
 .rf-reviews {
   width: 100%;
@@ -193,9 +180,7 @@
   text-align: center;
 }
 
-/* ========================================
-   MAIN CARD CONTENT
-======================================== */
+/* MAIN CARD CONTENT */
 
 .rf-main-content {
   position: relative;
@@ -233,9 +218,7 @@
   line-height: 1.7;
 }
 
-/* ========================================
-   BOTTOM TWO-CARD GRID
-======================================== */
+/* BOTTOM TWO-CARD GRID */
 
 .rf-bottom-grid {
   display: grid;
@@ -266,27 +249,15 @@
   overflow: hidden;
 }
 
-/* ========================================
-   MORE VISIBILITY CARD - SOFT GREEN
-======================================== */
-
 .rf-visibility-card {
   background: var(--rf-green-card);
   border-color: #d7eadf;
 }
 
-/* ========================================
-   BETTER RATINGS CARD - SOFT PEACH
-======================================== */
-
 .rf-ratings-card {
   background: var(--rf-peach-card);
   border-color: #f4e1d8;
 }
-
-/* ========================================
-   BOTTOM CARD CONTENT
-======================================== */
 
 .rf-info-content {
   position: relative;
@@ -317,10 +288,6 @@
   font-size: 14px;
   line-height: 1.65;
 }
-
-/* ========================================
-   MORE VISIBILITY - SEARCH PREVIEW
-======================================== */
 
 .rf-search-preview {
   position: relative;
@@ -481,9 +448,7 @@
   text-align: center;
 }
 
-/* ========================================
-   BETTER RATINGS - PHONE SCENE
-======================================== */
+/* BETTER RATINGS - PHONE SCENE */
 
 .rf-phone-scene {
   position: relative;
@@ -624,9 +589,7 @@
   font-size: 17px;
 }
 
-/* ========================================
-   FLOATING REVIEW
-======================================== */
+/* FLOATING REVIEW */
 
 .rf-floating-review {
   position: absolute;
@@ -667,9 +630,7 @@
   font-size: 10px;
 }
 
-/* ========================================
-   TABLET
-======================================== */
+/* TABLET */
 
 @media (max-width: 1024px) {
   .rf-section {
@@ -707,9 +668,7 @@
   }
 }
 
-/* ========================================
-   SMALL TABLET
-======================================== */
+/* SMALL TABLET */
 
 @media (max-width: 768px) {
   .rf-main-card {
@@ -742,9 +701,7 @@
   }
 }
 
-/* ========================================
-   MOBILE
-======================================== */
+/* MOBILE */
 
 @media (max-width: 640px) {
   .rf-section {
@@ -919,9 +876,7 @@
   }
 }
 
-/* ========================================
-   REDUCED MOTION
-======================================== */
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
   .rf-phone,
@@ -931,9 +886,7 @@
 }
 
 
-/* ========================================
-   REVIEW FEATURES ANIMATIONS
-======================================== */
+/* REVIEW FEATURES ANIMATIONS */
 
 /* INITIAL REVEAL STATE */
 
@@ -967,9 +920,7 @@
   transition-delay: 0.4s;
 }
 
-/* ========================================
-   MORE REVIEWS - NOTIFICATION ANIMATION
-======================================== */
+/* MORE REVIEWS - NOTIFICATION ANIMATION */
 
 /* REVIEWS ENTER ONE BY ONE */
 
@@ -1023,9 +974,7 @@
   }
 }
 
-/* ========================================
-   MORE VISIBILITY - SEARCH ANIMATION
-======================================== */
+/* MORE VISIBILITY - SEARCH ANIMATION */
 
 /* SEARCH PREVIEW SLIDES UP */
 
@@ -1105,10 +1054,6 @@
   }
 }
 
-/* ========================================
-   BETTER RATINGS - PHONE ANIMATION
-======================================== */
-
 /* FLOATING CUSTOMER FEEDBACK */
 
 .rf-visible .rf-floating-review {
@@ -1125,10 +1070,6 @@
     transform: rotate(5deg) translateY(-12px);
   }
 }
-
-/* ========================================
-   MOBILE ADJUSTMENTS
-======================================== */
 
 @media (max-width: 640px) {
   .rf-visible .rf-phone {
@@ -1147,9 +1088,8 @@
   }
 }
 
-/* ========================================
-   ACCESSIBILITY - REDUCED MOTION
-======================================== */
+/* ACCESSIBILITY - REDUCED MOTION 
+*/
 
 @media (prefers-reduced-motion: reduce) {
   .rf-section .rf-main-card,
@@ -1170,5 +1110,216 @@
   .rf-visible .rf-floating-review,
   .rf-visible .rf-search-bar .fa-magnifying-glass {
     animation: none;
+  }
+}
+
+/* TABLET — 769px TO 1024px */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .pnf-section {
+    padding: 75px 4vw 80px;
+  }
+
+  .pnf-header {
+    margin-bottom: 35px;
+  }
+
+  .pnf-title {
+    max-width: 750px;
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1.15;
+  }
+
+  .pnf-description {
+    max-width: 600px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  /* TWO COLUMNS INSTEAD OF THREE */
+
+  .pnf-cards {
+    display: grid;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .pnf-card {
+    min-width: 0;
+    min-height: 520px;
+    padding: 25px;
+    border-radius: 24px;
+  }
+
+  /* FIRST CARD — LEFT */
+
+  .pnf-card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  /* THIRD CARD — RIGHT */
+
+  .pnf-card:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  /* MIDDLE IMAGE CARD — FULL WIDTH BELOW */
+
+  .pnf-card-featured {
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    min-height: 430px;
+  }
+
+  .pnf-card-featured .pnf-card-content {
+    max-width: 600px;
+  }
+
+  .pnf-card-featured .pnf-card-title {
+    max-width: 480px;
+  }
+
+  .pnf-card-featured .pnf-card-description {
+    max-width: 520px;
+  }
+
+  .pnf-card-title {
+    font-size: 23px;
+  }
+
+  .pnf-card-description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .pnf-preview {
+    padding: 18px;
+  }
+
+  .pnf-notification-copy strong {
+    font-size: 12px;
+  }
+
+  .pnf-notification-copy span {
+    font-size: 11px;
+  }
+
+  .pnf-featured-bottom > span {
+    font-size: 34px;
+  }
+}
+
+/* SMALL TABLET — 641px TO 768px */
+
+@media (min-width: 641px) and (max-width: 768px) {
+
+  .pnf-section {
+    padding: 65px 4vw 75px;
+  }
+
+  .pnf-title {
+    font-size: clamp(30px, 4.8vw, 38px);
+  }
+
+  .pnf-cards {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .pnf-card {
+    min-height: 530px;
+    padding: 22px;
+  }
+
+  .pnf-card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .pnf-card:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .pnf-card-featured {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    min-height: 420px;
+  }
+
+  .pnf-card-title {
+    font-size: 21px;
+  }
+
+  .pnf-card-description {
+    font-size: 12px;
+  }
+
+  .pnf-preview {
+    padding: 12px;
+  }
+
+  .pnf-notification {
+    gap: 7px;
+    padding: 10px 8px;
+  }
+
+  .pnf-notification-icon {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+    font-size: 12px;
+  }
+
+  .pnf-notification-copy strong {
+    font-size: 10px;
+  }
+
+  .pnf-notification-copy span {
+    font-size: 9px;
+  }
+
+  .pnf-notification > small {
+    font-size: 7px;
+  }
+}
+
+/* MOBILE — UP TO 640px */
+
+@media (max-width: 640px) {
+
+  .pnf-cards {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .pnf-card,
+  .pnf-card-featured {
+    grid-column: 1;
+    grid-row: auto;
+
+    width: 100%;
+    min-height: 0;
+    padding: 24px;
+  }
+
+  .pnf-card:nth-child(1),
+  .pnf-card:nth-child(3) {
+    min-height: 510px;
+  }
+
+  .pnf-card-featured {
+    min-height: 490px;
+  }
+
+  .pnf-title {
+    font-size: clamp(23px, 6.6vw, 29px);
   }
 }
