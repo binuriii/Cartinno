@@ -162,7 +162,7 @@ export const products = [
           },
           {
             "label": "Listings Management",
-            "href": "#listings-management",
+            "href": "/listings-management",
             "icon": "fa-solid fa-location-dot"
           }
         ]

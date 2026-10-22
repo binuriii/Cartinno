@@ -134,6 +134,13 @@ const routes = [
       import('./pages/Products/FoodWebsite/FoodReviewsEngine/FoodReviewsEngine.vue')
   },
 
+  {
+    path: '/listings-management',
+    name: 'listings-management',
+    component: () =>
+      import('./pages/Products/FoodWebsite/ListingsManagement/ListingsManagement.vue')
+  },
+
 
 
 
