@@ -14,6 +14,7 @@ import {
   restaurantWebsiteFAQs
 } from './RestaurantWebsite.js'
 import RestaurantFeatures from './RestaurantFeatures/RestaurantFeatures.vue'
+import RestaurantBenefits from './RestaurantBenefits/RestaurantBenefits.vue'
 </script>
 
 <template>
@@ -23,6 +24,8 @@ import RestaurantFeatures from './RestaurantFeatures/RestaurantFeatures.vue'
     <Hero v-bind="restaurantWebsiteHero" />
 
     <RestaurantFeatures/>
+    
+    <RestaurantBenefits/>
 
     <!-- FAQ -->
     <FAQ
