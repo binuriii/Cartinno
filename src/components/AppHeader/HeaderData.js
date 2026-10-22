@@ -141,7 +141,7 @@ export const products = [
         "items": [
           {
             "label": "Restaurant Website",
-            "href": "#restaurant-website",
+            "href": "/restaurant-website",
             "icon": "fa-solid fa-globe"
           },
           {

@@ -106,6 +106,12 @@ const routes = [
       import('./pages/Products/EcommerceWebsite/WhatsAppBusinessAPI/WhatsAppBusinessAPI.vue')
   },
 
+  {
+    path: '/restaurant-website',
+    name: 'restaurant-website',
+    component: () =>
+      import('./pages/Products/FoodWebsite/RestaurantWebsite/RestaurantWebsite.vue')
+  },
 
 
 
