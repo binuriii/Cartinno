@@ -81,6 +81,12 @@ const routes = [
     import('./pages/Products/EcommerceWebsite/POSIntegrations/POSIntegrations.vue')
 },
 
+{
+  path: '/enquiry-management',
+  name: 'enquiry-management',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/EnquiryManagement/EnquiryManagement.vue')
+},
 
 
 

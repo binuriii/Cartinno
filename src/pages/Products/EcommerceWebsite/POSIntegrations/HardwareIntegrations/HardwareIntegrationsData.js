@@ -4,7 +4,7 @@ export const content = {
   title1: 'Your Tools.',
   title2: 'Working Better Together.',
 
-   "image": "https://plus.unsplash.com/premium_photo-1677087122824-dda4b86a9b62?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+   "image": "https://images.unsplash.com/photo-1572025442646-866d16c84a54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
 
   imageAlt:
     'Cafe checkout with a POS terminal, receipt printer, and card reader',
