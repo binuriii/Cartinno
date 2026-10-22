@@ -13,6 +13,7 @@ import {
   onlineMenuFAQs
 } from './OnlineMenu.js'
 import OnlineMenuFeatures from './OnlineMenuFeatures/OnlineMenuFeatures.vue'
+import OnlineMenuBenefits from './OnlineMenuBenefits/OnlineMenuBenefits.vue'
 </script>
 
 <template>
@@ -22,6 +23,8 @@ import OnlineMenuFeatures from './OnlineMenuFeatures/OnlineMenuFeatures.vue'
     <Hero v-bind="onlineMenuHero" />
 
     <OnlineMenuFeatures/>
+
+    <OnlineMenuBenefits/>
 
     <!-- FAQ -->
     <FAQ
