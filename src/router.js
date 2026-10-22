@@ -127,6 +127,12 @@ const routes = [
       import('./pages/Products/FoodWebsite/OnlineMenu/OnlineMenu.vue')
   },
 
+  {
+    path: '/food-reviews-engine',
+    name: 'food-reviews-engine',
+    component: () =>
+      import('./pages/Products/FoodWebsite/FoodReviewsEngine/FoodReviewsEngine.vue')
+  },
 
 
 

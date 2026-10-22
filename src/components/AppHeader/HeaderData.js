@@ -156,7 +156,7 @@ export const products = [
           },
           {
             "label": "Reviews Engine",
-            "href": "#reviews-engine",
+            "href": "/food-reviews-engine",
             "icon": "fa-regular fa-star",
             "badge": "Coming Soon"
           },
