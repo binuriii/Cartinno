@@ -113,6 +113,12 @@ const routes = [
       import('./pages/Products/FoodWebsite/RestaurantWebsite/RestaurantWebsite.vue')
   },
 
+  {
+    path: '/restaurant-seo',
+    name: 'restaurant-seo',
+    component: () =>
+      import('./pages/Products/FoodWebsite/RestaurantSEO/RestaurantSEO.vue')
+  },
 
 
 
