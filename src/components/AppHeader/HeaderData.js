@@ -151,7 +151,7 @@ export const products = [
           },
           {
             "label": "Online Menu",
-            "href": "#online-menu",
+            "href": "/online-menu",
             "icon": "fa-solid fa-list"
           },
           {
