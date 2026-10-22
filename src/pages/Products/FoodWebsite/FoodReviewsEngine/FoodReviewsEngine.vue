@@ -13,6 +13,7 @@ import {
   foodReviewEngineFAQs
 } from './FoodReviewsEngine.js'
 import FoodReviewFeatures from './FoodReviewFeatures/FoodReviewFeatures.vue'
+import FoodReviewBenefits from './FoodReviewBenefits/FoodReviewBenefits.vue'
 </script>
 
 <template>
@@ -22,6 +23,8 @@ import FoodReviewFeatures from './FoodReviewFeatures/FoodReviewFeatures.vue'
     <Hero v-bind="foodReviewEngineHero" />
 
     <FoodReviewFeatures/>
+
+    <FoodReviewBenefits/>
 
     <!-- FAQ -->
     <FAQ
