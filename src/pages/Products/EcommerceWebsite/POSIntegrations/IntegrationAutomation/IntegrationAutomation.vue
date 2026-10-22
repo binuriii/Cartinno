@@ -1,7 +1,68 @@
 <script setup>
-import { ref } from 'vue'
 import { content } from './IntegrationAutomationData.js'
 import './IntegrationAutomation.css'
-const active = ref(0)
-const flows = [['External application','REST API / Webhook','Cartinno POS'],['Online order','Fulfillment queue','Delivery progress'],['Business event','Connected workflow','Synchronized data']]
-</script><template><section class="pi-section ia-section"><div class="pi-container"><header class="pi-heading"><h2>{{ content.title1 }}<br>{{ content.title2 }}</h2><p>{{ content.description }}</p></header><div class="ia-layout"><div class="ia-features"><button v-for="(feature,i) in content.features" :key="feature.number" class="ia-feature" :class="{active:active===i}" :aria-pressed="active===i" @click="active=i"><span>{{ feature.number }}</span><div><h3>{{ feature.title }}</h3><p>{{ feature.description }}</p></div><b aria-hidden="true">↗</b></button></div><div class="ia-visual"><span class="pi-label">CONNECTED WORKFLOWS</span><div class="ia-brand">cartinno<span>One connected platform</span></div><div class="ia-flow" :key="active"><template v-for="(step,i) in flows[active]" :key="step"><div v-if="i" class="ia-connector" aria-hidden="true"><span></span></div><div class="ia-node"><span>{{ ['↗','⇄','✓'][i] }}</span>{{ step }}<i>●</i></div></template></div><p class="ia-caption">Illustrative workflow · subject to configuration</p></div></div><aside class="ia-note"><b>Built around your business.</b> Integration Hub is an optional add-on. Supported applications, hardware models and payment gateways depend on your setup. Confirm compatibility with Cartinno before choosing an integration.</aside></div></section></template>
+
+// Preserve readable cards if an external image is unavailable.
+function hideFailedImage(event) {
+  event.currentTarget.hidden = true
+}
+</script>
+
+<template>
+  <section class="ia-section" aria-labelledby="ia-heading">
+    <div class="ia-container">
+      <header class="ia-heading">
+        <h2 id="ia-heading">
+          {{ content.title1 }}<br />
+          {{ content.title2 }}
+        </h2>
+        <p>{{ content.description }}</p>
+      </header>
+
+      <div class="ia-bento">
+        <article
+          v-for="feature in content.features"
+          :key="feature.id"
+          class="ia-story-card"
+          :class="{ 'ia-story-card-featured': feature.featured }"
+        >
+          <img
+            class="ia-card-image"
+            :src="feature.image"
+            :alt="feature.imageAlt"
+            :style="{ objectPosition: feature.imagePosition }"
+            loading="lazy"
+            decoding="async"
+            width="1000"
+            height="1000"
+            @error="hideFailedImage"
+          />
+          <div class="ia-card-shade" aria-hidden="true"></div>
+
+          <div class="ia-card-copy">
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.description }}</p>
+          </div>
+        </article>
+
+        <a
+          class="ia-contact-banner"
+          :href="content.cta.link"
+          :aria-label="content.cta.accessibleLabel"
+        >
+          <div class="ia-contact-copy">
+            <h3>{{ content.cta.title }}</h3>
+            <p>{{ content.cta.description }}</p>
+          </div>
+          <span class="ia-contact-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="m9 5 7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <p class="ia-compatibility-note">{{ content.note }}</p>
+    </div>
+  </section>
+</template>
