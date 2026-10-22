@@ -59,7 +59,27 @@ const routes = [
     import('./pages/Products/EcommerceWebsite/GiftRegistry/GiftRegistry.vue')
 },
 
+{
+  path: '/marketing-campaigns',
+  name: 'marketing-campaigns',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/MarketingCampaigns/MarketingCampaigns.vue')
+},
 
+{
+  path: '/cloud-phone-system',
+  name: 'cloud-phone-system',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/CloudPhoneSystem/CloudPhoneSystem.vue')
+},
+
+
+{
+  path: '/pos-integrations',
+  name: 'pos-integrations',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/POSIntegrations/POSIntegrations.vue')
+},
 
 
 

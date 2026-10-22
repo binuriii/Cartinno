@@ -1,0 +1,5 @@
+<script setup>
+import { content } from './HardwareIntegrationsData.js'
+import './HardwareIntegrations.css'
+const hardwareImage = `${import.meta.env.BASE_URL}Products/POSIntegrations/pos-hardware.webp`
+</script><template><section class="pi-section hi-section"><div class="pi-container"><header class="pi-heading"><h2>{{ content.title1 }}<br>{{ content.title2 }}</h2><p>{{ content.description }}</p></header><div class="hi-image"><img :src="hardwareImage" alt="Cafe team using a POS terminal, receipt printer and card reader" loading="lazy" width="1536" height="1024"><div class="hi-badge"><span class="hi-dot"></span> From your counter to your kitchen</div></div><div class="hi-grid"><article v-for="feature in content.features" :key="feature.number"><span>{{ feature.number }}</span><h3>{{ feature.title }}</h3><p>{{ feature.description }}</p></article></div></div></section></template>

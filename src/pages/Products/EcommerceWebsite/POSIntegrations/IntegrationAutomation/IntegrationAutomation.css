@@ -1,0 +1,170 @@
+.ia-section {
+  background:white
+}
+
+.ia-layout {
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:55px;
+  align-items:center
+}
+
+.ia-features {
+  display:grid;
+  gap:12px
+}
+
+.ia-feature {
+  width:100%;
+  text-align:left;
+  border:1px solid transparent;
+  background:#faf8f7;
+  border-radius:20px;
+  padding:25px;
+  display:flex;
+  gap:18px;
+  color:inherit;
+  cursor:pointer;
+  font:inherit;
+  transition:background .25s,border-color .25s
+}
+
+.ia-feature.active {
+  background:#fff0ee;
+  border-color:#efc3be
+}
+
+.ia-feature>span {
+  font-size:11px;
+  color:#a26b66;
+  padding-top:4px
+}
+
+.ia-feature>b {
+  margin-left:auto
+}
+
+.ia-feature h3 {
+  font-size:21px;
+  line-height:1.25;
+  margin:0 0 12px;
+  letter-spacing:-.5px
+}
+
+.ia-feature p {
+  font-size:14px;
+  line-height:1.8;
+  margin:0;
+  color:#5b5b66
+}
+
+.ia-visual {
+  background:#eae8fb;
+  border-radius:30px;
+  padding:40px;
+  text-align:center
+}
+
+.ia-brand {
+  font-size:36px;
+  letter-spacing:-2px;
+  font-weight:700;
+  margin:24px 0
+}
+
+.ia-brand>span {
+  font-size:11px;
+  letter-spacing:0;
+  display:block;
+  font-weight:400;
+  margin-top:6px
+}
+
+.ia-node {
+  background:white;
+  border-radius:12px;
+  padding:18px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-align:left;
+  font-size:13px;
+  box-shadow:0 7px 20px #3633630b
+}
+
+.ia-node>span {
+  padding:9px;
+  background:#f1effb;
+  border-radius:9px
+}
+
+.ia-node i {
+  margin-left:auto;
+  color:#59a88a;
+  font-size:9px
+}
+
+.ia-connector {
+  height:30px;
+  width:2px;
+  margin:auto;
+  background:#c6bfeb;
+  position:relative;
+  overflow:hidden
+}
+
+.ia-connector span {
+  position:absolute;
+  top:-8px;
+  left:0;
+  width:2px;
+  height:10px;
+  background:#7a65bc;
+  animation:ia-travel 1.8s linear infinite
+}
+
+.ia-caption {
+  font-size:10px;
+  color:#706a83;
+  margin:24px 0 0
+}
+
+.ia-note {
+  margin-top:40px;
+  border-top:1px solid #e9e7e6;
+  padding-top:24px;
+  font-size:13px;
+  line-height:1.8;
+  color:#69636b
+}
+
+.ia-note b {
+  color:#23232b;
+  margin-right:5px
+}
+
+@keyframes ia-travel {
+  to {
+  transform:translateY(45px)
+}
+
+
+}
+
+@media(max-width:800px) {
+  .ia-layout {
+  grid-template-columns:1fr;
+  gap:25px
+}
+
+.ia-visual {
+  padding:28px
+}
+
+.ia-feature {
+  padding:22px
+}
+
+
+}
+

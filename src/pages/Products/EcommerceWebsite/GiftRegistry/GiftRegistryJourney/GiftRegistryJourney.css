@@ -64,6 +64,28 @@
 .grj-fade-enter-active,.grj-fade-leave-active { transition: opacity .28s ease,transform .28s ease; }
 .grj-fade-enter-from { opacity: 0; transform: translateY(13px); }
 .grj-fade-leave-to { opacity: 0; transform: translateY(-9px); }
+
+/* Cartinno black logo in the registry preview header */
+.gr-registry-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.gr-registry-logo {
+  display: block;
+  width: 112px;
+  max-width: 55%;
+  height: 25px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.gr-registry-top > small {
+  flex-shrink: 0;
+}
+
 @keyframes grj-float { 0%,100% { translate: 0 0; } 50% { translate: 0 -9px; } }
 @media (max-width: 1120px) { .grj-floating-tag--top { right: 0; } .grj-floating-tag--bottom { left: 0; } .grj-shell { gap: 32px; } }
 @media (max-width: 1024px) { .grj-section { padding: 8vh 4vw 9vh; } .grj-art { min-height: 520px; } .grj-device { width: 100%; max-width: 420px; min-height: 455px; } }

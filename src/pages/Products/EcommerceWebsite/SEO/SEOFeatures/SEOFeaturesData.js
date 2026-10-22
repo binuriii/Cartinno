@@ -8,7 +8,6 @@ export const seoFeaturesContent = {
 export const seoFeatures = [
   {
     id: 'visibility',
-    category: 'Search visibility',
     title: 'Get Found.',
     description:
       'Connect your business with customers searching for your products and services.',
@@ -19,7 +18,6 @@ export const seoFeatures = [
   },
   {
     id: 'experience',
-    category: 'Content & experience',
     title: 'Engage Customers.',
     description:
       'Create helpful content and clear pages that make exploring your business easier.',
@@ -30,7 +28,6 @@ export const seoFeatures = [
   },
   {
     id: 'improvement',
-    category: 'Insights & improvement',
     title: 'Keep Improving.',
     description:
       'Use search and website insights to guide meaningful improvements.',

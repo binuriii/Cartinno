@@ -131,9 +131,9 @@
   background: var(--visual);
   isolation: isolate;
 }
-.lsc-card--tiers .lsc-visual { --visual: #f1edef; }
-.lsc-card--birthday .lsc-visual { --visual: #fcebee; }
-.lsc-card--vouchers .lsc-visual { --visual: #f9efe6; }
+.lsc-card--tiers .lsc-visual { --visual: #e0f8f8; }
+.lsc-card--birthday .lsc-visual { --visual: #fcf7de; }
+.lsc-card--vouchers .lsc-visual { --visual: #dcf8da; }
 .lsc-card--referrals .lsc-visual { --visual: #f0edf7; }
 .lsc-card--insights .lsc-visual { --visual: #eaf1f2; }
 .lsc-aura {
