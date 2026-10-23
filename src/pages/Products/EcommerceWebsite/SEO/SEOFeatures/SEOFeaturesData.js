@@ -12,7 +12,7 @@ export const seoFeatures = [
     description:
       'Connect your business with customers searching for your products and services.',
     image:
-      'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200&auto=format&fit=crop',
+      'https://images.openai.com/static-rsc-4/bQxXutRqVgNDbSZPDtM9DM7Za2RW8c1B1zqZ-KQzQRCbzUkqqo5sQsGMwOINYJ9qn3nR_w4VEh1N7ZmzKVDRYLZhWxJwgn8Wx154zGa0gT2E4ifr_uqFJHMCX3EOmybrMP5P-UfFck30NZdrDbB0cCJpVj3aUhaW69r-7lf7UudR-eu2H7m2EVkEc8-0qgnI?purpose=fullsize',
     imageAlt: 'Colleagues celebrating together in an office',
     imagePosition: 'center'
   },
@@ -22,7 +22,7 @@ export const seoFeatures = [
     description:
       'Create helpful content and clear pages that make exploring your business easier.',
     image:
-      'https://images.unsplash.com/photo-1768055105012-4c53791b2877?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1761292636032-eaf5a7d930bf?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
     imageAlt: 'A person writing a checklist',
     imagePosition: 'center'
   },
@@ -32,7 +32,7 @@ export const seoFeatures = [
     description:
       'Use search and website insights to guide meaningful improvements.',
     image:
-      'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/30/38/12/fe/36/v1_E10/E106L86P.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=e506d03f4c9484fb2351a1ae9c95a3e659c13115d8b91f96042ad974e4911e61',
+      'https://images.openai.com/static-rsc-4/EQ-cm8HzJXmkabjzE_ee8XmXcUU_9YrVNIhNrPsiltP7-UlR2BGvwhdBj6M5PwxVuxczOvWXOXudBDZquh1jDpAtCWejKJDRCND-4FW7alurtt_Bbv2rmhuMdA19xxEFCyVeSIoYXCyF4q6uK_R9Ae4jg1ZNqsFme3Sq3hO4E5ytlfi5Llrm2QC06w48X0mR?purpose=fullsize',
     imageAlt: 'A team collaborating in a bright office',
     imagePosition: 'center'
   }
