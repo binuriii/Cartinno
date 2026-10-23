@@ -99,12 +99,66 @@ const routes = [
       import('./pages/Products/EcommerceWebsite/FacebookIntegration/FacebookIntegration.vue')
   },
 
-  {
-    path: '/whatspp-business-api',
-    name: 'whatspp-business-api',
-    component: () =>
-      import('./pages/Products/EcommerceWebsite/WhatsAppBusinessAPI/WhatsAppBusinessAPI.vue')
-  },
+{
+  path: '/delivery',
+  name: 'delivery',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/Delivery/Delivery.vue')
+},
+  
+{
+  path: '/loyalty-management',
+  name: 'loyalty-management',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/LoyaltyManagement/LoyaltyManagement.vue')
+},
+
+ 
+{
+  path: '/gift-registry',
+  name: 'gift-registry',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/GiftRegistry/GiftRegistry.vue')
+},
+
+{
+  path: '/marketing-campaigns',
+  name: 'marketing-campaigns',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/MarketingCampaigns/MarketingCampaigns.vue')
+},
+
+{
+  path: '/cloud-phone-system',
+  name: 'cloud-phone-system',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/CloudPhoneSystem/CloudPhoneSystem.vue')
+},
+
+
+{
+  path: '/pos-integrations',
+  name: 'pos-integrations',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/POSIntegrations/POSIntegrations.vue')
+},
+
+{
+  path: '/enquiry-management',
+  name: 'enquiry-management',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/EnquiryManagement/EnquiryManagement.vue')
+},
+
+
+{
+  path: '/lead-manager',
+  name: 'lead-manager',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/LeadManager/LeadManager.vue')
+},
+
+
 
 
 

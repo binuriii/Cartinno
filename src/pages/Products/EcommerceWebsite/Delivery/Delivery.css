@@ -1,0 +1,77 @@
+.delivery-page {
+  --delivery-brand: #d7454e;
+  --delivery-ink: #23232b;
+  --delivery-muted: #5b5b66;
+  --delivery-line: #e8e5e1;
+
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  background: #ffffff;
+  color: var(--delivery-ink);
+  font-family: inherit;
+}
+
+.delivery-page .delivery-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+.delivery-page .delivery-heading {
+  max-width: 950px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.delivery-page .delivery-eyebrow {
+  margin: 0 0 18px;
+
+  color: #ad3942;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.14em;
+}
+
+.delivery-page .delivery-heading h2 {
+  margin: 0;
+
+  color: var(--delivery-ink);
+  font-size: clamp(28px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.delivery-page .delivery-heading > p:last-child {
+  max-width: 620px;
+  margin: 24px auto 0;
+
+  color: var(--delivery-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.delivery-page a:focus-visible,
+.delivery-page button:focus-visible {
+  outline: 3px solid var(--delivery-brand);
+  outline-offset: 5px;
+}
+
+@media (max-width: 640px) {
+  .delivery-page .delivery-heading {
+    margin-bottom: 32px;
+  }
+
+  .delivery-page .delivery-heading h2 {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  .delivery-page .delivery-heading > p:last-child {
+    margin-top: 18px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,10 @@
+/* CLOUD PHONE SYSTEM PAGE — wrapper only. Each section has its own CSS. */
+.cloud-phone-page,
+.cloud-phone-page * { box-sizing: border-box; }
+
+.cloud-phone-page {
+  width: 100%;
+  overflow-x: clip;
+  background: #ffffff;
+  color: #23232b;
+}

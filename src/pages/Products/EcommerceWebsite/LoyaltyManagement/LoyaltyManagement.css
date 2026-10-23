@@ -1,0 +1,28 @@
+
+.loyalty-page {
+  --loyalty-red: #d7454e;
+  --loyalty-ink: #23232b;
+  --loyalty-muted: #5b5b66;
+  --loyalty-line: #e8e5e1;
+
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  background: #ffffff;
+  color: var(--loyalty-ink);
+  font-family: inherit;
+}
+
+.loyalty-page .lsc-section,
+.loyalty-page .lst-section,
+.loyalty-page .lbf-section {
+  width: 100%;
+  font-family: inherit;
+}
+
+.loyalty-page a:focus-visible,
+.loyalty-page button:focus-visible {
+  outline: 3px solid rgba(215, 69, 78, 0.65);
+  outline-offset: 4px;
+}
