@@ -1,0 +1,922 @@
+
+/* ==========================================
+   FOOD REVIEW BENEFITS
+========================================== */
+
+.frb-section,
+.frb-section * {
+  box-sizing: border-box;
+}
+
+.frb-section {
+  --frb-red: #d7454e;
+  --frb-ink: #23232b;
+  --frb-muted: #5b5b66;
+  --frb-visibility: #e5e9ff;
+  --frb-confidence: #f8dfca;
+  --frb-ease: cubic-bezier(.22, 1, .36, 1);
+
+  position: relative;
+  width: 100%;
+  padding: 5vh 3vw 10vh;
+
+  background: #ffffff;
+  color: var(--frb-ink);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.frb-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* ==========================================
+   CENTERED HEADING
+========================================== */
+
+.frb-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: clamp(24px, 3vw, 40px);
+  text-align: center;
+}
+
+.frb-heading {
+  max-width: 1000px;
+  margin: 0;
+
+  color: var(--frb-ink);
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -.045em;
+  text-align: center;
+}
+
+/* ==========================================
+   MAIN FEATURE CARD
+========================================== */
+
+.frb-main-card {
+  position: relative;
+  isolation: isolate;
+
+  display: grid;
+  grid-template-columns: 1fr .95fr;
+  align-items: center;
+  gap: clamp(25px, 4vw, 65px);
+
+  width: 100%;
+  min-height: 470px;
+  padding: clamp(30px, 5vw, 70px);
+
+  border-radius: 30px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    115deg,
+    #b1e9db 0%,
+    #55bdb2 42%,
+    #1b878c 100%
+  );
+
+  color: #ffffff;
+}
+
+/* ==========================================
+   REVIEW STACK
+========================================== */
+
+.frb-reviews {
+  width: 100%;
+  max-width: 430px;
+  justify-self: center;
+}
+
+.frb-review-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 24px;
+
+  background: rgba(255,255,255,.22);
+
+  box-shadow: 0 20px 45px rgba(0,70,70,.12);
+  backdrop-filter: blur(8px);
+}
+
+.frb-review {
+  padding: 16px 19px;
+  border-radius: 14px;
+
+  background: #ffffff;
+  color: var(--frb-ink);
+}
+
+.frb-review-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.frb-review-top strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.frb-stars {
+  color: #f5ab22;
+  font-size: 16px;
+  letter-spacing: .01em;
+}
+
+.frb-review p {
+  margin: 6px 0 0;
+
+  color: #45454b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.frb-preview-note {
+  display: block;
+  margin-top: 10px;
+
+  color: rgba(255,255,255,.94);
+  font-size: 10px;
+  text-align: center;
+}
+
+/* ==========================================
+   MAIN CARD CONTENT
+========================================== */
+
+.frb-main-content {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+}
+
+.frb-label {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .03em;
+}
+
+.frb-main-content h3 {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: clamp(29px, 3.5vw, 48px);
+  font-weight: 450;
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+
+.frb-main-content p {
+  max-width: 440px;
+  margin: 20px 0 0;
+
+  color: rgba(255,255,255,.95);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   BOTTOM TWO-CARD GRID
+========================================== */
+
+.frb-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: clamp(14px, 1.6vw, 24px);
+  margin-top: clamp(14px, 1.6vw, 24px);
+}
+
+/* ==========================================
+   COMMON BOTTOM CARD STYLES
+========================================== */
+
+.frb-info-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 520px;
+  padding: clamp(24px, 2.8vw, 40px);
+
+  border-radius: 28px;
+  overflow: hidden;
+
+  color: var(--frb-ink);
+}
+
+.frb-visibility-card {
+  background: var(--frb-visibility);
+}
+
+.frb-confidence-card {
+  background: var(--frb-confidence);
+}
+
+.frb-info-content {
+  position: relative;
+  z-index: 2;
+}
+
+.frb-info-content h3 {
+  max-width: 490px;
+  margin: 0;
+
+  color: var(--frb-ink);
+  font-size: clamp(23px, 2.5vw, 34px);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: .001em;
+}
+
+.frb-info-content p {
+  max-width: 440px;
+  margin: 14px 0 0;
+
+  color: var(--frb-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* ==========================================
+   SEARCH PREVIEW
+========================================== */
+
+.frb-search-preview {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  width: 100%;
+  margin-top: auto;
+  padding: 24px;
+
+  border: 1px solid #e5e5f0;
+  border-radius: 22px;
+
+  background: #ffffff;
+  box-shadow: 0 15px 35px rgba(43,48,99,.07);
+}
+
+/* SEARCH BAR */
+
+.frb-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px 15px;
+  border: 1px solid #e7e7e7;
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #777777;
+}
+
+.frb-search-bar span {
+  flex: 1;
+  min-width: 0;
+
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.frb-search-bar i {
+  font-size: 13px;
+}
+
+/* RESTAURANT RESULT */
+
+.frb-search-result {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 8px 0;
+}
+
+.frb-business-icon {
+  display: grid;
+  place-items: center;
+
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+
+  border-radius: 15px;
+  background: #e8eaff;
+  color: #6170bc;
+
+  font-size: 22px;
+}
+
+.frb-business-details {
+  min-width: 0;
+}
+
+.frb-business-details h4 {
+  margin: 0 0 9px;
+
+  color: var(--frb-ink);
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.frb-business-rating {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.frb-search-stars {
+  color: #f5ad27;
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+
+.frb-business-rating > span:last-child {
+  color: #777777;
+  font-size: 11px;
+}
+
+.frb-business-details p {
+  margin: 10px 0 0;
+
+  color: var(--frb-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* VISIBILITY HIGHLIGHT */
+
+.frb-search-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px;
+  border-radius: 13px;
+
+  background: #eeefff;
+  color: #5260a7;
+
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.frb-search-highlight i {
+  font-size: 16px;
+}
+
+.frb-search-note {
+  color: #81818a;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* ==========================================
+   PHONE SCENE
+========================================== */
+
+.frb-phone-scene {
+  position: relative;
+  flex: 1;
+
+  min-height: 310px;
+  margin: 35px -40px -40px;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    var(--frb-confidence) 0%,
+    var(--frb-confidence) 30%,
+    #f8e6d8 30%,
+    #cfb9a9 100%
+  );
+}
+
+/* PHONE BODY */
+
+.frb-phone {
+  position: absolute;
+  z-index: 2;
+
+  top: 5%;
+  left: 29%;
+
+  width: 245px;
+  height: 450px;
+  padding: 9px;
+
+  border: 6px solid #35383a;
+  border-radius: 42px;
+  background: #1e2022;
+
+  box-shadow: 18px 24px 45px rgba(0,0,0,.18);
+  transform: rotate(-16deg);
+  transform-origin: center;
+}
+
+.frb-phone-notch {
+  position: absolute;
+  z-index: 3;
+
+  top: 11px;
+  left: 50%;
+
+  width: 75px;
+  height: 18px;
+
+  border-radius: 999px;
+  background: #232323;
+
+  transform: translateX(-50%);
+}
+
+.frb-phone-screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  border-radius: 30px;
+  background: #ffffff;
+}
+
+.frb-phone-header {
+  padding: 31px 16px 12px;
+
+  color: var(--frb-ink);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -.05em;
+}
+
+.frb-phone-screen img,
+.frb-phone-image-fallback {
+  display: block;
+  width: 100%;
+  height: 135px;
+}
+
+.frb-phone-screen img {
+  object-fit: cover;
+}
+
+.frb-phone-image-fallback {
+  display: grid;
+  place-items: center;
+
+  background: #e8d0ba;
+  color: #926448;
+  font-size: 34px;
+}
+
+.frb-phone-body {
+  padding: 16px;
+}
+
+.frb-phone-body > span {
+  color: var(--frb-red);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.frb-phone-body h4 {
+  margin: 10px 0;
+
+  color: var(--frb-ink);
+  font-size: 19px;
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -.04em;
+}
+
+.frb-phone-body p {
+  margin: 0;
+
+  color: var(--frb-muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.frb-phone-stars {
+  margin-top: 15px;
+  color: #f6b323;
+  font-size: 17px;
+}
+
+/* FLOATING REVIEW PANEL */
+
+.frb-floating-review {
+  position: absolute;
+  z-index: 3;
+
+  right: 6%;
+  bottom: 13%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  padding: 15px 18px;
+  border: 1px solid #ededed;
+  border-radius: 17px;
+
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(0,0,0,.12);
+
+  transform: rotate(5deg);
+}
+
+.frb-floating-review > span {
+  color: #f6b323;
+  font-size: 15px;
+}
+
+.frb-floating-review strong {
+  color: var(--frb-ink);
+  font-size: 12px;
+}
+
+.frb-floating-review small {
+  color: var(--frb-muted);
+  font-size: 10px;
+}
+
+/* ==========================================
+   REVEAL AND UI ANIMATIONS
+========================================== */
+
+@keyframes frb-enter {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes frb-review-enter {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes frb-stack-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+@keyframes frb-feedback-float {
+  0%, 100% {
+    transform: rotate(5deg) translateY(0);
+  }
+  50% {
+    transform: rotate(5deg) translateY(-12px);
+  }
+}
+
+@keyframes frb-search-pulse {
+  0%, 100% {
+    color: #777777;
+    transform: scale(1);
+  }
+  50% {
+    color: var(--frb-red);
+    transform: scale(1.2);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .frb-main-card,
+  .frb-info-card {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  .frb-visible .frb-main-card,
+  .frb-visible .frb-info-card {
+    animation: frb-enter .8s ease both;
+  }
+
+  .frb-visible .frb-main-card {
+    animation-delay: .1s;
+  }
+
+  .frb-visible .frb-visibility-card {
+    animation-delay: .25s;
+  }
+
+  .frb-visible .frb-confidence-card {
+    animation-delay: .4s;
+  }
+
+  .frb-review {
+    opacity: 0;
+  }
+
+  .frb-visible .frb-review {
+    animation: frb-review-enter .75s ease both;
+  }
+
+  .frb-visible .frb-review:nth-child(1) {
+    animation-delay: .5s;
+  }
+
+  .frb-visible .frb-review:nth-child(2) {
+    animation-delay: .8s;
+  }
+
+  .frb-visible .frb-review:nth-child(3) {
+    animation-delay: 1.1s;
+  }
+
+  .frb-visible .frb-review-stack {
+    animation: frb-stack-float 5s ease-in-out 1.9s infinite;
+  }
+
+  .frb-visible .frb-search-bar .fa-magnifying-glass {
+    animation: frb-search-pulse 3s ease-in-out 1.8s infinite;
+  }
+
+  .frb-visible .frb-floating-review {
+    animation: frb-feedback-float 4s ease-in-out 1.3s infinite;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+
+  .frb-section {
+    padding: 5vh 4vw 8vh;
+  }
+
+  .frb-main-card {
+    min-height: 420px;
+    padding: 35px;
+    gap: 30px;
+  }
+
+  .frb-info-card {
+    min-height: 510px;
+    padding: 35px;
+  }
+
+  .frb-info-content h3 {
+    font-size: clamp(23px, 2.7vw, 30px);
+  }
+
+  .frb-search-preview {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .frb-phone-scene {
+    margin: 35px -35px -35px;
+  }
+
+  .frb-phone {
+    left: 22%;
+  }
+}
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+  .frb-main-card {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .frb-reviews {
+    max-width: 480px;
+  }
+
+  .frb-main-content {
+    max-width: 620px;
+  }
+
+  .frb-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .frb-info-card {
+    min-height: 500px;
+  }
+
+  .frb-phone-scene {
+    min-height: 340px;
+  }
+
+  .frb-phone {
+    left: 36%;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+
+  .frb-section {
+    padding: 65px 14px 70px;
+  }
+
+  .frb-header {
+    margin-bottom: 30px;
+  }
+
+  .frb-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .frb-main-card {
+    gap: 30px;
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .frb-review-stack {
+    gap: 7px;
+    padding: 7px;
+    border-radius: 18px;
+  }
+
+  .frb-review {
+    padding: 12px;
+    border-radius: 11px;
+  }
+
+  .frb-review-top strong {
+    font-size: 11px;
+  }
+
+  .frb-stars {
+    font-size: 12px;
+  }
+
+  .frb-review p {
+    font-size: 10px;
+  }
+
+  .frb-main-content h3 {
+    font-size: clamp(26px, 6.5vw, 34px);
+  }
+
+  .frb-main-content p {
+    margin-top: 14px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .frb-bottom-grid {
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .frb-info-card {
+    min-height: 480px;
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .frb-info-content h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .frb-info-content p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .frb-search-preview {
+    margin-top: 35px;
+    padding: 16px;
+    gap: 15px;
+    border-radius: 18px;
+  }
+
+  .frb-search-bar {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .frb-search-bar span {
+    font-size: 11px;
+  }
+
+  .frb-business-icon {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+    font-size: 18px;
+  }
+
+  .frb-business-details h4 {
+    font-size: 15px;
+  }
+
+  .frb-search-stars {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .frb-search-highlight {
+    padding: 12px;
+    font-size: 11px;
+  }
+
+  .frb-phone-scene {
+    min-height: 300px;
+    margin: 25px -22px -22px;
+  }
+
+  .frb-phone {
+    top: 8%;
+    left: 24%;
+
+    width: 205px;
+    height: 390px;
+    transform: rotate(-13deg);
+  }
+
+  .frb-floating-review {
+    right: 5%;
+    bottom: 12%;
+    padding: 10px 12px;
+  }
+
+  .frb-floating-review strong {
+    font-size: 10px;
+  }
+
+  .frb-floating-review small {
+    font-size: 9px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .frb-section *,
+  .frb-section *::before,
+  .frb-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .frb-main-card,
+  .frb-info-card,
+  .frb-review {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

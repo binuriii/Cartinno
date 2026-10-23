@@ -160,8 +160,40 @@ const routes = [
 
 
 
+  {
+    path: '/restaurant-website',
+    name: 'restaurant-website',
+    component: () =>
+      import('./pages/Products/FoodWebsite/RestaurantWebsite/RestaurantWebsite.vue')
+  },
 
+  {
+    path: '/restaurant-seo',
+    name: 'restaurant-seo',
+    component: () =>
+      import('./pages/Products/FoodWebsite/RestaurantSEO/RestaurantSEO.vue')
+  },
 
+  {
+    path: '/online-menu',
+    name: 'online-menu',
+    component: () =>
+      import('./pages/Products/FoodWebsite/OnlineMenu/OnlineMenu.vue')
+  },
+
+  {
+    path: '/food-reviews-engine',
+    name: 'food-reviews-engine',
+    component: () =>
+      import('./pages/Products/FoodWebsite/FoodReviewsEngine/FoodReviewsEngine.vue')
+  },
+
+  {
+    path: '/listings-management',
+    name: 'listings-management',
+    component: () =>
+      import('./pages/Products/FoodWebsite/ListingsManagement/ListingsManagement.vue')
+  },
 
 
 

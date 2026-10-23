@@ -142,28 +142,28 @@ export const products = [
         "items": [
           {
             "label": "Restaurant Website",
-            "href": "#restaurant-website",
+            "href": "/restaurant-website",
             "icon": "fa-solid fa-globe"
           },
           {
             "label": "Restaurant SEO",
-            "href": "/seo",
+            "href": "/restaurant-seo",
             "icon": "fa-solid fa-magnifying-glass"
           },
           {
             "label": "Online Menu",
-            "href": "#online-menu",
+            "href": "/online-menu",
             "icon": "fa-solid fa-list"
           },
           {
             "label": "Reviews Engine",
-            "href": "#reviews-engine",
+            "href": "/food-reviews-engine",
             "icon": "fa-regular fa-star",
             "badge": "Coming Soon"
           },
           {
             "label": "Listings Management",
-            "href": "#listings-management",
+            "href": "/listings-management",
             "icon": "fa-solid fa-location-dot"
           }
         ]
