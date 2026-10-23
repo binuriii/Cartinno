@@ -1,0 +1,389 @@
+.fsu-section,
+.fsu-section * {
+  box-sizing: border-box;
+}
+
+.fsu-section {
+  --fsu-red: #d7454e;
+  --fsu-ink: #23232b;
+  --fsu-muted: #5b5b66;
+  --fsu-ease: cubic-bezier(.22, 1, .36, 1);
+
+  position: relative;
+  z-index: 20;
+
+  width: 100%;
+  margin-top: -55px;
+
+  border-radius: 70px 70px 0 0;
+  padding: 10vh 3vw;
+
+  background: #ffffff;
+  background-clip: padding-box;
+
+  color: var(--fsu-ink);
+  font-family: inherit;
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* CONTAINER */
+
+.fsu-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* ========================================
+   LEFT ALIGNED HEADING
+======================================== */
+
+.fsu-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  margin-bottom: clamp(40px, 5vw, 70px);
+
+  text-align: left;
+}
+
+.fsu-heading {
+  max-width: 920px;
+  margin: 0;
+
+  color: var(--fsu-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+
+  text-align: left;
+}
+
+/* ========================================
+   TWO COLUMN LAYOUT
+======================================== */
+
+.fsu-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+
+  gap: clamp(35px, 5vw, 85px);
+  width: 100%;
+}
+
+/* ========================================
+   LEFT IMAGE CARD
+======================================== */
+
+.fsu-image-card {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 570px;
+
+  border-radius: 35px;
+  background: #f4eee7;
+
+  overflow: hidden;
+
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s var(--fsu-ease),
+    box-shadow 0.35s ease;
+}
+
+/* IMAGE */
+
+.fsu-image {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+/* IMAGE PLACEHOLDER */
+
+.fsu-image-placeholder {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+  padding: 30px;
+
+  background: radial-gradient(
+    circle at 50% 45%,
+    #fffaf6 0%,
+    #f4eee7 75%
+  );
+
+  text-align: center;
+}
+
+.fsu-placeholder-title {
+  color: var(--fsu-ink);
+
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.fsu-image-placeholder p {
+  max-width: 270px;
+  margin: 0;
+
+  color: var(--fsu-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   RIGHT BENEFITS
+======================================== */
+
+.fsu-benefits {
+  display: flex;
+  flex-direction: column;
+
+  gap: clamp(38px, 5vw, 70px);
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* BENEFIT */
+
+.fsu-benefit {
+  display: block;
+  width: 100%;
+
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s var(--fsu-ease);
+}
+
+.fsu-benefit-content {
+  width: 100%;
+  min-width: 0;
+  text-align: left;
+}
+
+/* BENEFIT TITLE */
+
+.fsu-benefit-title {
+  max-width: 470px;
+  margin: 0;
+
+  color: var(--fsu-ink);
+
+  font-size: clamp(24px, 2.6vw, 35px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+
+  text-align: left;
+}
+
+/* BENEFIT DESCRIPTION */
+
+.fsu-benefit-description {
+  max-width: 475px;
+  margin: 15px 0 0;
+
+  color: var(--fsu-muted);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.65;
+
+  text-align: left;
+}
+
+/* ========================================
+   SCROLL REVEAL
+======================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .fsu-section:not(.fsu-visible) .fsu-image-card {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  .fsu-section:not(.fsu-visible) .fsu-benefit {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .fsu-visible .fsu-benefit {
+    transition-delay:
+      calc(var(--fsu-index) * 0.12s);
+  }
+}
+
+/* ========================================
+   HOVER
+======================================== */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .fsu-image-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 20px 50px rgba(35, 35, 43, 0.09);
+  }
+
+  .fsu-image-card:hover .fsu-image {
+    transform: scale(1.035);
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1024px) {
+
+  .fsu-section {
+    margin-top: -70px;
+    padding: 8vh 4vw;
+
+    border-radius: 40px 40px 0 0;
+  }
+
+  .fsu-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .fsu-image-card {
+    min-height: 490px;
+    border-radius: 28px;
+  }
+
+  .fsu-benefits {
+    gap: 38px;
+  }
+
+  .fsu-benefit-title {
+    font-size: clamp(21px, 2.6vw, 28px);
+  }
+
+  .fsu-benefit-description {
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   SMALL TABLET
+======================================== */
+
+@media (max-width: 768px) {
+
+  .fsu-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .fsu-image-card {
+    min-height: 500px;
+  }
+
+  .fsu-benefits {
+    gap: 32px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 640px) {
+
+  .fsu-section {
+    margin-top: -45px;
+
+    padding: 56px 14px 70px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .fsu-header {
+    margin-bottom: 30px;
+  }
+
+  .fsu-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .fsu-layout {
+    gap: 35px;
+  }
+
+  .fsu-image-card {
+    min-height: 355px;
+    border-radius: 20px;
+  }
+
+  .fsu-placeholder-title {
+    font-size: 19px;
+  }
+
+  .fsu-benefits {
+    gap: 32px;
+  }
+
+  .fsu-benefit-title {
+    font-size: 23px;
+    line-height: 1.2;
+  }
+
+  .fsu-benefit-description {
+    margin-top: 10px;
+
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .fsu-image-card,
+  .fsu-image,
+  .fsu-benefit {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

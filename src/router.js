@@ -209,6 +209,13 @@ const routes = [
       import('./pages/Products/FoodWebsite/OnlineOrdering/OnlineOrdering.vue')
   },
 
+  {
+    path: '/food-smart-upsells',
+    name: 'food-smart-upsells',
+    component: () =>
+      import('./pages/Products/FoodWebsite/FoodSmartUpsells/FoodSmartUpsells.vue')
+  },
+
 
 
 

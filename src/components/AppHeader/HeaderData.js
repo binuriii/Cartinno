@@ -212,7 +212,7 @@ export const products = [
           },
           {
             "label": "Smart Upsells",
-            "href": "#smart-upsells",
+            "href": "/food-smart-upsells",
             "icon": "fa-solid fa-chart-line"
           },
           {
