@@ -19,7 +19,7 @@ export const peopleCards = [
       'Keep order information and delivery details organised throughout your daily workflow.',
 
     image:
-      'https://i.pinimg.com/1200x/21/db/b4/21dbb47837df7e8f3dd91bf546e5489c.jpg',
+      'https://images.unsplash.com/photo-1770013413878-2530e2c3d82b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
 
     alt:
       'Products displayed in a retail store'
@@ -34,7 +34,7 @@ export const peopleCards = [
       'Help your team coordinate preparation and handovers with a consistent delivery process.',
 
     image:
-      'https://images.unsplash.com/photo-1556742208-999815fca738?q=80&w=1049&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDE%3D',
+      'https://images.unsplash.com/photo-1760531953684-769354b5ebb4?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
 
     alt:
       'A business team working together'
@@ -49,7 +49,7 @@ export const peopleCards = [
       'Carry your service beyond checkout with a delivery journey built around your customers.',
 
     image:
-      'https://plus.unsplash.com/premium_photo-1661758211006-d41106e4be4d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
+      'https://images.unsplash.com/photo-1695654400247-3423ffa67ef7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
 
     alt:
       'A customer being served at a shop counter'

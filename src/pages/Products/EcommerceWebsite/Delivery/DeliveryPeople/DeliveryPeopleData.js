@@ -24,7 +24,7 @@ export const peopleCards = [
     description:
       'Help your team coordinate preparation and handovers with a consistent delivery process.',
     image:
-      'https://i.pinimg.com/736x/b6/4e/8f/b64e8fe1276e67ddcd5ece664f6e6333.jpg',
+      'https://images.openai.com/static-rsc-4/1PAfnBA11Q-_NOhphuqLRs9prB1vlg_o1MEAnNREe9QCxieCbP37EuoMlugj68rId_Ch4p0otDEFOBHIRnTGxKgiMw6y6D9tXZSU5PEBK0Dd3z0q2v5z81hQdwng0AVKKEt-Es-Z9J0-RHCaI0oGM8PQeDD3-9OQIHH8MdTnazEeJtuET2uMZ6nVisUwDH5W?purpose=fullsize',
     alt: 'A business team working together'
   },
   {
@@ -33,7 +33,7 @@ export const peopleCards = [
     description:
       'Carry your service beyond checkout with a delivery journey built around your customers.',
     image:
-      'https://i.pinimg.com/736x/bc/cf/b2/bccfb22527ff4fd1ca2d758e0f253434.jpg',
+      'https://images.openai.com/static-rsc-4/r8qzTx2JHUzQD-sj404PCrI6GJaEc_uv3eMZJQjqTt4a4Z5JstmJcx3W-Uw4Ay1Si2w1Hj0Gq0ePFzskDrs5feDJIFZyAa_LwAD9LXGSo6LGXZhZSgsI13yy_94HSp1ctXgov3r5hfFVzLIXYNOsuUWO-6yHybchCrsOeNuJTP6Vn6gh4HvAcoszT7EeGASY?purpose=fullsize',
     alt: 'A customer being served at a shop counter'
   },
   {
@@ -51,7 +51,7 @@ export const peopleCards = [
     description:
       'Learn from every delivery and keep improving the experience as your business grows.',
     image:
-      'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/ca/c5/82/e8/24/v1_E10/E10E23Z.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=09a738320a69b677ab3f73871ff6d92fb83516fbdfeaf7a2a29641ab265dcfb1',
+      'https://images.openai.com/static-rsc-4/Rn5n2t86t7lbgtEqZKut69nABhEHGVH1JO2LjRB6dK7nla9zCbfbUSkjlF2eqAQY3Qzztf6Xv9GBEqkt5ApBsLgRI1FNh3xYIdfyGgiMUeDVqKrkeZGPx9OeWmItq6pOOSmE2ns1CYyIDxRmj0RFVnDtv_eHtBCuETBgJclt3corCf1fqUtr9z1_lQ8Rjt7a?purpose=fullsize',
     alt: 'A planning meeting in progress'
   }
 ]

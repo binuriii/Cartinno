@@ -7,32 +7,30 @@
 
 .seo-guides {
   width: 100%;
-  padding: 90px 0 100px;
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #faf7f3 100%
-  );
+  padding: 5vh 3vw 10vh;
+  background: #ffffff;
   color: #292929;
   font-family: inherit;
 }
 
 .seo-guides__container {
-  width: min(1240px, calc(100% - 64px));
+  width: 100%;
+  max-width: 1350px;
   margin-inline: auto;
 }
 
-/* SECTION HEADING */
+/* SECTION HEADING â€” same typography as ReviewFeatures */
 
 .seo-guides__header {
-  margin-bottom: 40px;
+  margin-bottom: clamp(28px, 3vw, 42px);
 }
 
 .seo-guides__heading {
+  max-width: 900px;
   margin: 0;
-  font-size: clamp(30px, 3.4vw, 48px);
-  font-weight: 500;
-  line-height: 1.1;
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
   letter-spacing: -0.045em;
 }
 
@@ -57,7 +55,7 @@
     minmax(0, 1fr)
     minmax(0, 1fr);
   grid-template-rows: 420px minmax(112px, auto);
-  gap: 16px;
+  gap: clamp(16px, 2vw, 28px);
 }
 
 /* IMAGE CARDS */
@@ -69,7 +67,7 @@
   min-width: 0;
   height: 100%;
   overflow: hidden;
-  border-radius: 32px;
+  border-radius: 28px;
   background: #777771;
   color: #ffffff;
   text-decoration: none;
@@ -94,7 +92,7 @@
   transition: transform 500ms ease;
 }
 
-/* IMAGE OVERLAY */
+/* IMAGE OVERLAY â€” preserved from your design */
 
 .seo-guides__overlay {
   position: absolute;
@@ -126,10 +124,10 @@
   min-width: 0;
   margin: 0;
   color: #ffffff;
-  font-size: 21px;
-  font-weight: 600;
-  line-height: 1.18;
-  letter-spacing: -0.035em;
+  font-size: clamp(20px, 1.9vw, 27px);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.001em;
   overflow-wrap: break-word;
 }
 
@@ -141,7 +139,7 @@
 
 .seo-guides__card--featured .seo-guides__card-title {
   max-width: 450px;
-  font-size: 23px;
+  font-size: clamp(20px, 1.9vw, 27px);
 }
 
 .seo-guides__card-arrow {
@@ -170,7 +168,7 @@
   gap: 14px;
 }
 
-/* GREEN BANNER */
+/* YELLOW BANNER */
 
 .seo-guides__banner {
   grid-column: 2 / 4;
@@ -181,7 +179,7 @@
   gap: 24px;
   min-width: 0;
   padding: 26px 32px;
-  border-radius: 32px;
+  border-radius: 28px;
   background: #f3e795;
   color: #292929;
   text-decoration: none;
@@ -202,9 +200,9 @@
 .seo-guides__banner-copy p {
   margin: 0;
   color: #424e45;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.45;
+  line-height: 1.65;
 }
 
 .seo-guides__banner-arrow {
@@ -243,15 +241,16 @@
   outline-offset: 5px;
 }
 
-/* TABLET */
+/* TABLET â€” same section padding as ReviewFeatures */
 
 @media (max-width: 1024px) {
   .seo-guides {
-    padding: 70px 0 80px;
+    padding: 5vh 4vw 8vh;
   }
 
   .seo-guides__container {
-    width: calc(100% - 48px);
+    width: 100%;
+    max-width: 1350px;
   }
 
   .seo-guides__grid {
@@ -275,34 +274,34 @@
   }
 }
 
-/* MOBILE */
+/* MOBILE â€” match ReviewFeatures spacing, heading & card typography */
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .seo-guides {
-    padding: 55px 0 65px;
+    padding: 65px 14px 70px;
   }
 
   .seo-guides__container {
-    width: calc(100% - 40px);
+    width: 100%;
   }
 
   .seo-guides__header {
-    margin-bottom: 28px;
+    margin-bottom: 30px;
   }
 
   .seo-guides__heading {
-    font-size: 32px;
-    line-height: 1.12;
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
   }
 
   .seo-guides__grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
+    gap: 14px;
   }
 
   .seo-guides__card,
   .seo-guides__banner {
-    border-radius: 24px;
+    border-radius: 20px;
   }
 
   .seo-guides__card--featured {
@@ -335,7 +334,8 @@
   }
 
   .seo-guides__banner-copy p {
-    font-size: 15px;
+    font-size: 13px;
+    line-height: 1.6;
   }
 
   .seo-guides__banner-arrow {
