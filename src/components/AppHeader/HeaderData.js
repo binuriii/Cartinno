@@ -207,7 +207,7 @@ export const products = [
         "items": [
           {
             "label": "Online Ordering",
-            "href": "#online-ordering",
+            "href": "/online-ordering",
             "icon": "fa-solid fa-bag-shopping"
           },
           {

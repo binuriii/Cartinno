@@ -202,6 +202,15 @@ const routes = [
       import('./pages/Products/FoodWebsite/ListingsManagement/ListingsManagement.vue')
   },
 
+  {
+    path: '/online-ordering',
+    name: 'online-ordering',
+    component: () =>
+      import('./pages/Products/FoodWebsite/OnlineOrdering/OnlineOrdering.vue')
+  },
+
+
+
 
 
 
