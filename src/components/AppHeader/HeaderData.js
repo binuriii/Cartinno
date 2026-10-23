@@ -328,7 +328,7 @@ export const products = [
           },
           {
             label: "POS Integrations",
-            href: "#pos-integrations",
+            href: "/pos-integrations",
             icon: "fa-regular fa-credit-card",
           },
           {
@@ -359,7 +359,7 @@ export const products = [
           },
           {
             label: "Kitchen Tablet",
-            href: "#kitchen-tablet",
+            href: "/kitchen-tablet",
             icon: "fa-solid fa-tablet-screen-button",
           },
           {

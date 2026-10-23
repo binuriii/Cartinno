@@ -165,6 +165,13 @@ const routes = [
       import("./pages/Products/CloudPos/FoodPOS/POSIntegrationsPage/PosIntegrationsPage.vue"),
   },
 
+  {
+    path: "/kitchen-tablet",
+    name: "kitchen-tablet",
+    component: () =>
+      import("./pages/Products/CloudPos/FoodPOS/KitchenTabletPage/KitchenTabletPage.vue"),
+  },
+
   // Commented out to prevent duplicate route conflict:
   // {
   //   path: '/pos-integrations-ecommerce',
