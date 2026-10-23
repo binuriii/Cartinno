@@ -36,10 +36,6 @@
   margin-inline: auto;
 }
 
-/* ========================================
-   LEFT ALIGNED HEADING
-======================================== */
-
 .fsu-header {
   display: flex;
   flex-direction: column;
@@ -65,10 +61,6 @@
   text-align: left;
 }
 
-/* ========================================
-   TWO COLUMN LAYOUT
-======================================== */
-
 .fsu-layout {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -77,10 +69,6 @@
   gap: clamp(35px, 5vw, 85px);
   width: 100%;
 }
-
-/* ========================================
-   LEFT IMAGE CARD
-======================================== */
 
 .fsu-image-card {
   position: relative;
@@ -91,7 +79,7 @@
   min-height: 570px;
 
   border-radius: 35px;
-  background: #f4eee7;
+  background: #faf7f2;
 
   overflow: hidden;
 

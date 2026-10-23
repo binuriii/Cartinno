@@ -13,6 +13,7 @@ import {
   foodSmartUpsellsFAQs
 } from './FoodSmartUpsells.js'
 import FoodSmartUpsellsFeatures from './FoodUpsellFeatures/FoodSmartUpsellsFeatures.vue'
+import FoodSmartUpsellsHighlights from './FoodSmartUpsellsHighlights/FoodSmartUpsellsHighlights.vue'
 
 
 </script>
@@ -24,6 +25,8 @@ import FoodSmartUpsellsFeatures from './FoodUpsellFeatures/FoodSmartUpsellsFeatu
     <Hero v-bind="foodSmartUpsellsHero" />
 
     <FoodSmartUpsellsFeatures/>
+
+    <FoodSmartUpsellsHighlights/>
 
     <!-- FAQ -->
     <FAQ
