@@ -1,8 +1,3 @@
-
-/* =========================================
-   CLOUD POS FEATURES
-   ========================================= */
-
 .cpf-section,
 .cpf-section * {
   box-sizing: border-box;
@@ -13,7 +8,7 @@
   --cpf-ink: #23232b;
   --cpf-muted: #5b5b66;
   --cpf-purple: #30203d;
-  --cpf-lavender: #ebe2c6;
+  --cpf-lavender: #9aac83;
   --cpf-ease: cubic-bezier(0.22, 1, 0.36, 1);
 
   position: relative;
@@ -42,10 +37,6 @@
   max-width: 1350px;
   margin-inline: auto;
 }
-
-/* =========================================
-   HEADER
-   ========================================= */
 
 .cpf-header {
   display: flex;
@@ -83,10 +74,6 @@
   text-align: left;
 }
 
-/* =========================================
-   THREE CARD LAYOUT
-   ========================================= */
-
 .cpf-grid {
   display: grid;
   grid-template-columns:
@@ -99,10 +86,6 @@
 
   width: 100%;
 }
-
-/* =========================================
-   BASE CARD
-   ========================================= */
 
 .cpf-card {
   position: relative;
@@ -121,10 +104,6 @@
     transform 0.5s var(--cpf-ease),
     box-shadow 0.5s ease;
 }
-
-/* =========================================
-   CARD 01 — SPLIT DESIGN
-   ========================================= */
 
 .cpf-card-1 {
   display: grid;
@@ -154,7 +133,7 @@
 .cpf-split-copy h3 {
   margin: 0;
 
-  color: var(--cpf-ink);
+  color: #ffffff;
   font-size: clamp(21px, 2.15vw, 32px);
   font-weight: 600;
   line-height: 1.12;
@@ -164,7 +143,7 @@
 .cpf-split-copy p {
   margin: 20px 0 0;
 
-  color: #595667;
+  color: #eeeded;
   font-size: clamp(12px, 1.06vw, 15px);
   line-height: 1.65;
 }
@@ -186,10 +165,6 @@
 
   transition: transform 0.8s var(--cpf-ease);
 }
-
-/* =========================================
-   SHARED CARD METADATA
-   ========================================= */
 
 .cpf-card-meta {
   display: flex;
@@ -227,21 +202,17 @@
 }
 
 .cpf-card-1 .cpf-card-number {
-  color: rgba(23, 22, 22, 0.85);
+  color: rgba(250, 248, 248, 0.85);
 }
 
 .cpf-card-1 .cpf-card-label {
-  border-color: rgba(16, 15, 15, 0.3);
-  color: rgba(23, 22, 22, 0.85);
+  border-color: rgba(244, 239, 239, 0.3);
+  color: rgba(246, 241, 241, 0.85);
 }
-
-/* =========================================
-   CARD 02 & 03 — DARK PHOTOGRAPHIC DESIGN
-   ========================================= */
 
 .cpf-card-2,
 .cpf-card-3 {
-  background: #d1dcbe;
+  background: #9aac83;
 }
 
 .cpf-dark-image {
@@ -269,11 +240,7 @@
   z-index: 1;
   pointer-events: none;
 
-  background: linear-gradient(
-    180deg,
-    rgba(177, 177, 176, 0.84) 0%,
-    rgba(36, 36, 36, 0.98) 100%
-  );
+  background: #9aac83;
 }
 
 .cpf-dark-inner {
@@ -291,13 +258,13 @@
 
 .cpf-card-2 .cpf-card-number,
 .cpf-card-3 .cpf-card-number {
-  color: rgba(23, 22, 22, 0.85);
+  color: rgba(245, 242, 242, 0.85);
 }
 
 .cpf-card-2 .cpf-card-label,
 .cpf-card-3 .cpf-card-label {
-  color: rgba(23, 22, 22, 0.85);
-  border-color: rgba(16, 15, 15, 0.3);
+  color: rgba(247, 244, 244, 0.85);
+  border-color: rgba(246, 243, 243, 0.3);
 }
 
 .cpf-dark-copy {
@@ -324,10 +291,6 @@
   line-height: 1.7;
 }
 
-/* =========================================
-   IMAGE FALLBACK
-   ========================================= */
-
 .cpf-media-fallback {
   display: grid;
   place-items: center;
@@ -341,12 +304,6 @@
   color: rgba(255, 255, 255, 0.7);
   font-size: 65px;
 }
-
-/* =========================================
-   ANIMATIONS
-   ========================================= */
-
-/* Cards are always visible. No observer needed. */
 
 @keyframes cpf-image-drift {
   from {
@@ -381,10 +338,6 @@
     opacity: 0.47;
   }
 }
-
-/* =========================================
-   MEDIUM DESKTOP
-   ========================================= */
 
 @media (max-width: 1200px) and (min-width: 1025px) {
   .cpf-grid {
@@ -428,10 +381,6 @@
     font-size: 12px;
   }
 }
-
-/* =========================================
-   TABLET
-   ========================================= */
 
 @media (max-width: 1024px) {
   .cpf-section {
@@ -477,10 +426,6 @@
     font-size: 14px;
   }
 }
-
-/* =========================================
-   MOBILE
-   ========================================= */
 
 @media (max-width: 640px) {
   .cpf-section {
@@ -591,10 +536,6 @@
     font-size: 10px;
   }
 }
-
-/* =========================================
-   ACCESSIBILITY
-   ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
   .cpf-card,

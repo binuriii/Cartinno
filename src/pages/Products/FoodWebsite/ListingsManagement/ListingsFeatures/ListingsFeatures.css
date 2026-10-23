@@ -1,0 +1,841 @@
+
+/* ==========================================
+   LISTINGS MANAGEMENT FEATURES
+========================================== */
+
+.lmf-section,
+.lmf-section * {
+  box-sizing: border-box;
+}
+
+.lmf-section {
+  --lmf-red: #d7454e;
+  --lmf-ink: #23232b;
+  --lmf-muted: #5b5b66;
+  --lmf-ease: cubic-bezier(.22, 1, .36, 1);
+
+  position: relative;
+  z-index: 20;
+
+  width: 100%;
+  margin-top: -55px;
+  padding: 10vh 3vw;
+
+  border-radius: 70px 70px 0 0;
+
+  background: #ffffff;
+  background-clip: padding-box;
+
+  color: var(--lmf-ink);
+  font-family: inherit;
+
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.lmf-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.lmf-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  margin-bottom: clamp(28px, 3vw, 42px);
+  text-align: left;
+}
+
+.lmf-heading {
+  max-width: 1000px;
+  margin: 0;
+
+  color: var(--lmf-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -.045em;
+
+  text-align: left;
+}
+
+/* ==========================================
+   TWO-COLUMN LAYOUT
+========================================== */
+
+.lmf-layout {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+
+  gap: clamp(35px, 5vw, 85px);
+  width: 100%;
+  min-width: 0;
+}
+
+/* ==========================================
+   LEFT VISUAL CARD
+========================================== */
+
+.lmf-image-card {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 570px;
+
+  padding: 32px;
+
+  border-radius: 35px;
+  background: #e7effb;
+  overflow: hidden;
+
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity .8s ease,
+    transform .8s var(--lmf-ease),
+    box-shadow .35s ease;
+}
+
+.lmf-image-card::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(255,255,255,.95),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(134,177,244,.35),
+      transparent 58%
+    );
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   BROWSER MOCKUP
+========================================== */
+
+.lmf-browser {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 520px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 19px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 25px 55px rgba(49,78,126,.15);
+}
+
+.lmf-browser-topbar {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 42px;
+  padding: 0 15px;
+
+  border-bottom: 1px solid #edeef2;
+}
+
+.lmf-browser-dots {
+  position: absolute;
+  left: 15px;
+
+  display: flex;
+  gap: 5px;
+}
+
+.lmf-browser-dots i {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: #d6d7dd;
+}
+
+.lmf-browser-dots i:first-child {
+  background: #f1b5b1;
+}
+
+.lmf-browser-dots i:nth-child(2) {
+  background: #f0d095;
+}
+
+.lmf-browser-dots i:last-child {
+  background: #b5dabb;
+}
+
+.lmf-browser-address {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 7px 20px;
+
+  border-radius: 6px;
+  background: #f6f6f7;
+
+  color: #858995;
+  font-size: 10px;
+}
+
+.lmf-browser-address i {
+  font-size: 9px;
+}
+
+/* ==========================================
+   SEARCH AREA
+========================================== */
+
+.lmf-search-area {
+  padding: 22px 22px 17px;
+
+  border-bottom: 1px solid #edf0f5;
+}
+
+.lmf-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-height: 43px;
+  padding: 11px 15px;
+
+  border: 1px solid #e8ebf1;
+  border-radius: 999px;
+
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(0,0,0,.04);
+
+  color: #626776;
+  font-size: 11px;
+}
+
+.lmf-search-bar span {
+  flex: 1;
+  min-width: 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.lmf-search-bar i:first-child {
+  color: #467ac8;
+}
+
+.lmf-search-bar i:last-child {
+  color: #9298a4;
+}
+
+.lmf-search-caption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 15px;
+
+  color: #757b87;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.lmf-search-caption i {
+  color: #467ac8;
+}
+
+/* ==========================================
+   RESTAURANT LISTING
+========================================== */
+
+.lmf-business-listing {
+  padding: 16px 20px 23px;
+}
+
+.lmf-listing-photo {
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  height: 145px;
+
+  overflow: hidden;
+  border-radius: 12px;
+
+  background: #d6bca5;
+  color: #936d52;
+  font-size: 30px;
+}
+
+.lmf-listing-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lmf-listing-body {
+  padding-top: 16px;
+}
+
+.lmf-listing-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.lmf-listing-heading h3 {
+  margin: 0;
+
+  color: #292c35;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.lmf-listing-heading p {
+  margin: 5px 0 0;
+
+  color: #818792;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.lmf-verified {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 7px 9px;
+
+  border-radius: 999px;
+  background: #eaf7ef;
+  color: #258154;
+
+  font-size: 9px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.lmf-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+
+  margin-top: 18px;
+}
+
+.lmf-detail {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.lmf-detail-icon {
+  display: grid;
+  place-items: center;
+
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+
+  border-radius: 9px;
+  background: #eff4fa;
+  color: #4a80c5;
+
+  font-size: 12px;
+}
+
+.lmf-detail > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.lmf-detail strong {
+  color: #303440;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.lmf-detail div span {
+  color: #858a97;
+  font-size: 10px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.lmf-platform-card {
+  position: absolute;
+  z-index: 3;
+
+  right: 0;
+  bottom: 7%;
+  margin-right: 20px;
+  width: min(245px, 48%);
+  padding: 15px;
+
+  border: 1px solid #edf0f5;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 35px rgba(45,70,120,.17);
+}
+
+.lmf-platform-title {
+  display: block;
+  margin-bottom: 12px;
+
+  color: #303440;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.lmf-platform-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 7px 0;
+}
+
+.lmf-platform-icon {
+  display: grid;
+  place-items: center;
+
+  width: 29px;
+  height: 29px;
+  flex: 0 0 29px;
+
+  border-radius: 8px;
+  background: #f1f5fc;
+  color: #497ac4;
+
+  font-size: 12px;
+}
+
+.lmf-platform-row > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.lmf-platform-row strong {
+  color: #343944;
+  font-size: 10px;
+}
+
+.lmf-platform-row small {
+  color: #8b929c;
+  font-size: 9px;
+}
+
+.lmf-check {
+  color: #35a775;
+  font-size: 11px;
+}
+
+.lmf-floating-badge {
+  position: absolute;
+  z-index: 4;
+
+  left: 2%;
+  bottom: 5%;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  max-width: 55%;
+  padding: 12px 14px;
+
+  border-radius: 999px;
+  background: #ffffff;
+  color: #278258;
+
+  box-shadow:
+    0 12px 30px rgba(45,70,120,.14);
+
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.lmf-floating-badge i {
+  flex-shrink: 0;
+}
+
+.lmf-benefits {
+  display: flex;
+  flex-direction: column;
+
+  gap: clamp(38px, 5vw, 70px);
+
+  width: 100%;
+  min-width: 0;
+}
+
+.lmf-benefit {
+  width: 100%;
+
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity .7s ease,
+    transform .7s var(--lmf-ease);
+}
+
+.lmf-benefit-title {
+  max-width: 500px;
+  margin: 0;
+
+  color: var(--lmf-ink);
+
+  font-size: clamp(24px, 2.6vw, 35px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.lmf-benefit-description {
+  max-width: 490px;
+  margin: 15px 0 0;
+
+  color: var(--lmf-muted);
+
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes lmf-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes lmf-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lmf-section:not(.lmf-visible) .lmf-image-card {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  .lmf-section:not(.lmf-visible) .lmf-benefit {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .lmf-visible .lmf-benefit {
+    transition-delay: calc(var(--lmf-index) * .12s);
+  }
+
+  .lmf-visible .lmf-platform-card {
+    animation:
+      lmf-enter .7s var(--lmf-ease) .5s both,
+      lmf-float 4.7s ease-in-out 1.2s infinite;
+  }
+
+  .lmf-visible .lmf-floating-badge {
+    animation:
+      lmf-enter .7s var(--lmf-ease) .8s both,
+      lmf-float 4.2s ease-in-out 1.5s infinite;
+  }
+}
+
+/* ==========================================
+   HOVER
+========================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .lmf-visible .lmf-image-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 20px 50px rgba(35,35,43,.09);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+  .lmf-section {
+    margin-top: -70px;
+    padding: 8vh 4vw 3vh;
+    border-radius: 40px 40px 0 0;
+  }
+
+  .lmf-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .lmf-image-card {
+    min-height: 490px;
+    padding: 18px;
+    border-radius: 28px;
+  }
+
+  .lmf-platform-card {
+    width: min(220px, 53%);
+  }
+
+  .lmf-benefits {
+    gap: 38px;
+  }
+
+  .lmf-benefit-title {
+    font-size: clamp(21px, 2.6vw, 28px);
+  }
+
+  .lmf-benefit-description {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 768px) {
+  .lmf-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .lmf-image-card {
+    min-height: 540px;
+  }
+
+  .lmf-benefits {
+    gap: 32px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+  .lmf-section {
+    margin-top: -45px;
+    padding: 56px 14px 25px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .lmf-header {
+    margin-bottom: 30px;
+  }
+
+  .lmf-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+  }
+
+  .lmf-layout {
+    gap: 35px;
+  }
+
+  .lmf-image-card {
+    min-height: 430px;
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .lmf-browser-topbar {
+    height: 34px;
+  }
+
+  .lmf-browser-address {
+    padding: 5px 10px;
+    font-size: 8px;
+  }
+
+  .lmf-search-area {
+    padding: 13px 12px;
+  }
+
+  .lmf-search-bar {
+    min-height: 35px;
+    padding: 8px 10px;
+    font-size: 9px;
+  }
+
+  .lmf-search-caption {
+    margin-top: 10px;
+    font-size: 9px;
+  }
+
+  .lmf-business-listing {
+    padding: 12px;
+  }
+
+  .lmf-listing-photo {
+    height: 95px;
+  }
+
+  .lmf-listing-body {
+    padding-top: 11px;
+  }
+
+  .lmf-listing-heading h3 {
+    font-size: 12px;
+  }
+
+  .lmf-listing-heading p {
+    font-size: 9px;
+  }
+
+  .lmf-verified {
+    padding: 6px;
+    font-size: 8px;
+  }
+
+  .lmf-detail-list {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .lmf-detail-icon {
+    width: 27px;
+    height: 27px;
+    flex-basis: 27px;
+    font-size: 10px;
+  }
+
+  .lmf-detail strong,
+  .lmf-detail div span {
+    font-size: 9px;
+  }
+
+  .lmf-platform-card {
+    right: 0;
+    bottom: 7%;
+
+    width: min(185px, 54%);
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .lmf-platform-title {
+    margin-bottom: 5px;
+    font-size: 9px;
+  }
+
+  .lmf-platform-row {
+    gap: 6px;
+    padding: 5px 0;
+  }
+
+  .lmf-platform-icon {
+    width: 24px;
+    height: 24px;
+    flex-basis: 24px;
+    font-size: 10px;
+  }
+
+  .lmf-platform-row strong,
+  .lmf-platform-row small {
+    font-size: 8px;
+  }
+
+  .lmf-check {
+    font-size: 9px;
+  }
+
+  .lmf-floating-badge {
+    left: 1%;
+    bottom: 4%;
+    max-width: 50%;
+
+    padding: 9px;
+    font-size: 8px;
+  }
+
+  .lmf-benefit-title {
+    font-size: 23px;
+  }
+
+  .lmf-benefit-description {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .lmf-image-card,
+  .lmf-benefit,
+  .lmf-platform-card,
+  .lmf-floating-badge {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+}

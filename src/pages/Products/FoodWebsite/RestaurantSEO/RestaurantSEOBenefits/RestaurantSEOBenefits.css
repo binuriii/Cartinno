@@ -1,0 +1,998 @@
+
+/* ==========================================
+   RESTAURANT SEO BENEFITS
+========================================== */
+
+.rsb-section,
+.rsb-section * {
+  box-sizing: border-box;
+}
+
+.rsb-section {
+  --rsb-ink: #23232b;
+  --rsb-muted: #5b5b66;
+  --rsb-red: #d7454e;
+  --rsb-ease: cubic-bezier(.22, 1, .36, 1);
+
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 5vh 3vw 10vh;
+
+  border-radius: 0;
+  background: #ffffff;
+  color: var(--rsb-ink);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.rsb-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* ==========================================
+   CENTERED HEADING
+========================================== */
+
+.rsb-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: clamp(40px, 5vw, 68px);
+  text-align: center;
+}
+
+.rsb-heading {
+  max-width: 1000px;
+  margin: 0;
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -.045em;
+  text-align: center;
+}
+
+.rsb-heading span {
+  display: block;
+}
+
+/* ==========================================
+   LARGE TOP CARD
+========================================== */
+
+.rsb-main-card {
+  display: grid;
+  grid-template-columns: 1fr .95fr;
+  align-items: center;
+  gap: clamp(30px, 5vw, 80px);
+
+  min-height: 505px;
+  border-radius: 34px;
+  background: #dcdaf0;
+  overflow: hidden;
+}
+
+.rsb-search-scene {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 505px;
+  padding: 35px 28px;
+
+  background: radial-gradient(
+    ellipse at 20% 25%,
+    rgba(255, 255, 255, .65),
+    transparent 68%
+  );
+}
+
+.rsb-search-window {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 420px);
+}
+
+.rsb-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 12px;
+  padding: 19px 20px;
+
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 0 15px 35px rgba(60, 50, 105, .1);
+
+  color: #49445c;
+  font-size: 13px;
+}
+
+.rsb-search-bar span {
+  flex: 1;
+  min-width: 0;
+}
+
+.rsb-search-bar i:first-child {
+  color: #675ca8;
+}
+
+.rsb-search-bar i:last-child {
+  font-size: 11px;
+}
+
+.rsb-results-window {
+  padding: 17px;
+
+  border: 1px solid rgba(255, 255, 255, .65);
+  border-radius: 23px;
+
+  background: rgba(255, 255, 255, .4);
+  box-shadow: 0 18px 50px rgba(65, 54, 114, .1);
+}
+
+.rsb-results-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 13px;
+  color: #5d5486;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.rsb-search-result {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.rsb-result-image {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+
+  width: 74px;
+  height: 74px;
+  flex: 0 0 74px;
+
+  border-radius: 11px;
+  background: #ddd1bd;
+  color: #8a644c;
+}
+
+.rsb-result-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rsb-result-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.rsb-result-content > strong {
+  color: #292631;
+  font-size: 13px;
+}
+
+.rsb-result-content small {
+  color: #85818f;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.rsb-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #65556f;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.rsb-rating i {
+  color: #e3a440;
+}
+
+.rsb-rating span {
+  color: #8e889a;
+  font-weight: 400;
+}
+
+.rsb-result-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #6654a4;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* FADED SEARCH RESULTS */
+
+.rsb-skeleton-result {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 10px;
+}
+
+.rsb-skeleton-result > span {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .52);
+}
+
+.rsb-skeleton-result > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rsb-skeleton-result i {
+  width: 55%;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .72);
+}
+
+.rsb-skeleton-result i:nth-child(2) {
+  width: 87%;
+}
+
+.rsb-skeleton-result i:nth-child(3) {
+  width: 68%;
+}
+
+.rsb-search-float {
+  position: absolute;
+  z-index: 3;
+  right: 2%;
+  bottom: 12%;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #64549d;
+
+  box-shadow: 0 12px 30px rgba(65, 54, 114, .14);
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+/* MAIN CARD TEXT */
+
+.rsb-main-content {
+  padding: 40px clamp(30px, 5vw, 70px) 40px 0;
+}
+
+.rsb-label {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.rsb-main-content h3 {
+  max-width: 540px;
+  margin: 0;
+
+  color: #352e58;
+  font-size: clamp(29px, 3.1vw, 46px);
+  font-weight: 450;
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+
+.rsb-main-content p {
+  max-width: 460px;
+  margin: 22px 0 0;
+
+  color: #645e7d;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   TWO BOTTOM CARDS
+========================================== */
+
+.rsb-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.5vw, 22px);
+  margin-top: clamp(14px, 1.5vw, 22px);
+}
+
+.rsb-order-card,
+.rsb-visibility-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 560px;
+  padding: clamp(26px, 3vw, 42px);
+
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.rsb-order-card {
+  background: #eee5d7;
+  color: #352f29;
+}
+
+.rsb-visibility-card {
+  background:
+    radial-gradient(
+      ellipse at 75% 100%,
+      #327f75,
+      transparent 70%
+    ),
+    #133f40;
+
+  color: #ffffff;
+}
+
+.rsb-card-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.rsb-card-copy h3 {
+  max-width: 500px;
+  margin: 0;
+
+  font-size: clamp(25px, 2.5vw, 36px);
+  font-weight: 550;
+  line-height: 1.15;
+  letter-spacing: -.035em;
+}
+
+.rsb-card-copy p {
+  max-width: 470px;
+  margin: 17px 0 0;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.rsb-order-card .rsb-card-copy p {
+  color: #72665c;
+}
+
+.rsb-visibility-card .rsb-card-copy p {
+  color: rgba(255, 255, 255, .83);
+}
+
+/* ==========================================
+   CARD 02 — SEARCH TO ORDER
+========================================== */
+
+.rsb-order-scene {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+  min-height: 295px;
+  padding-top: 32px;
+}
+
+.rsb-mini-search {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: min(100%, 380px);
+  padding: 16px;
+
+  border-radius: 14px;
+  background: #ffffff;
+  color: #77716e;
+
+  box-shadow: 0 12px 28px rgba(81, 65, 42, .1);
+  font-size: 11px;
+}
+
+.rsb-mini-search i {
+  color: #977756;
+}
+
+.rsb-journey-arrow {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+
+  width: 37px;
+  height: 37px;
+  margin: 10px 0;
+
+  border-radius: 50%;
+  background: #a37655;
+  color: #ffffff;
+
+  font-size: 12px;
+}
+
+.rsb-restaurant-card {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: min(100%, 420px);
+  padding: 13px;
+
+  border-radius: 17px;
+  background: #ffffff;
+
+  box-shadow: 0 15px 35px rgba(81, 65, 42, .13);
+}
+
+.rsb-restaurant-image {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+
+  width: 65px;
+  height: 65px;
+  flex: 0 0 65px;
+
+  border-radius: 11px;
+  background: #eee1d4;
+  color: #a37655;
+}
+
+.rsb-restaurant-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rsb-restaurant-details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.rsb-restaurant-details small {
+  color: #8d8a86;
+  font-size: 9px;
+}
+
+.rsb-restaurant-details strong {
+  color: #292626;
+  font-size: 12px;
+}
+
+.rsb-restaurant-details > span {
+  color: #a17657;
+  font-size: 10px;
+}
+
+.rsb-order-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 11px;
+  border-radius: 9px;
+
+  background: #a37655;
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.rsb-direct-badge {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 5%;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 15px;
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #38865c;
+
+  box-shadow: 0 12px 30px rgba(81, 65, 42, .12);
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+/* ==========================================
+   CARD 03 — SEO DASHBOARD
+========================================== */
+
+.rsb-visibility-scene {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+  min-height: 295px;
+  padding-top: 35px;
+}
+
+.rsb-dashboard {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 425px);
+  padding: 22px;
+
+  border-radius: 20px;
+  background: #ffffff;
+  color: #23232b;
+
+  box-shadow: 0 22px 45px rgba(1, 28, 29, .22);
+}
+
+.rsb-dashboard-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+.rsb-dashboard-icon {
+  display: grid;
+  place-items: center;
+
+  width: 41px;
+  height: 41px;
+  flex: 0 0 41px;
+
+  border-radius: 12px;
+  background: #e0f3ef;
+  color: #19836b;
+}
+
+.rsb-dashboard-header > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rsb-dashboard-header strong {
+  font-size: 12px;
+}
+
+.rsb-dashboard-header small {
+  color: #8e9694;
+  font-size: 9px;
+}
+
+.rsb-dashboard-metric > span {
+  color: #828a88;
+  font-size: 10px;
+}
+
+.rsb-dashboard-metric > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 7px;
+}
+
+.rsb-dashboard-metric strong {
+  font-size: 26px;
+  letter-spacing: -.04em;
+}
+
+.rsb-dashboard-metric em {
+  padding: 6px 8px;
+  border-radius: 999px;
+
+  background: #e3f7ee;
+  color: #22895c;
+
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.rsb-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+
+  height: 115px;
+  margin-top: 18px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #e7eeeb;
+}
+
+.rsb-chart span {
+  flex: 1;
+  height: var(--rsb-height);
+  min-height: 5px;
+
+  border-radius: 5px 5px 0 0;
+  background: linear-gradient(
+    180deg,
+    #49b99d,
+    #c4e9de
+  );
+  transform-origin: bottom;
+}
+
+.rsb-dashboard-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.rsb-dashboard-items > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #667571;
+  font-size: 10px;
+}
+
+.rsb-dashboard-items i {
+  color: #249a77;
+}
+
+.rsb-visibility-float {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 3%;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 12px 15px;
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #247d6b;
+
+  box-shadow: 0 15px 35px rgba(1, 28, 29, .2);
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes rsb-rise {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rsb-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes rsb-grow {
+  from { transform: scaleY(.08); }
+  to { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rsb-main-card,
+  .rsb-order-card,
+  .rsb-visibility-card {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .rsb-visible .rsb-main-card,
+  .rsb-visible .rsb-order-card,
+  .rsb-visible .rsb-visibility-card {
+    animation: rsb-rise .85s var(--rsb-ease) both;
+  }
+
+  .rsb-visible .rsb-order-card {
+    animation-delay: .15s;
+  }
+
+  .rsb-visible .rsb-visibility-card {
+    animation-delay: .28s;
+  }
+
+  .rsb-visible .rsb-search-float,
+  .rsb-visible .rsb-direct-badge,
+  .rsb-visible .rsb-visibility-float {
+    animation: rsb-float 4s ease-in-out infinite;
+  }
+
+  .rsb-visible .rsb-journey-arrow {
+    animation: rsb-float 3s ease-in-out infinite;
+  }
+
+  .rsb-visible .rsb-chart span {
+    animation: rsb-grow .8s var(--rsb-ease) both;
+    animation-delay: calc(.5s + var(--rsb-delay));
+  }
+}
+
+/* ==========================================
+   HOVER
+========================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .rsb-main-card,
+  .rsb-order-card,
+  .rsb-visibility-card {
+    transition: box-shadow .35s ease;
+  }
+
+  .rsb-main-card:hover,
+  .rsb-order-card:hover,
+  .rsb-visibility-card:hover {
+    box-shadow: 0 18px 40px rgba(35, 35, 43, .09);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+  .rsb-main-card {
+    min-height: 470px;
+    gap: 25px;
+    border-radius: 26px;
+  }
+
+  .rsb-search-scene {
+    min-height: 470px;
+    padding: 24px 15px;
+  }
+
+  .rsb-main-content {
+    padding: 35px 25px 35px 0;
+  }
+
+  .rsb-main-content h3 {
+    font-size: clamp(26px, 3vw, 36px);
+  }
+
+  .rsb-order-card,
+  .rsb-visibility-card {
+    min-height: 530px;
+    padding: 26px;
+    border-radius: 24px;
+  }
+
+  .rsb-card-copy h3 {
+    font-size: 26px;
+  }
+}
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 768px) {
+  .rsb-main-card {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .rsb-main-content {
+    grid-row: 1;
+    padding: 35px 30px;
+  }
+
+  .rsb-search-scene {
+    grid-row: 2;
+    min-height: 435px;
+  }
+
+  .rsb-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rsb-order-card,
+  .rsb-visibility-card {
+    min-height: 515px;
+    padding: 30px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+  .rsb-section {
+    padding: 5vh 3vw 10vh;
+  }
+
+  .rsb-header {
+    margin-bottom: 32px;
+  }
+
+  .rsb-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+  }
+
+  .rsb-main-card {
+    border-radius: 21px;
+  }
+
+  .rsb-main-content {
+    padding: 27px 23px;
+  }
+
+  .rsb-main-content h3 {
+    font-size: 28px;
+  }
+
+  .rsb-main-content p {
+    margin-top: 15px;
+    font-size: 13px;
+  }
+
+  .rsb-search-scene {
+    min-height: 370px;
+    padding: 18px 13px 35px;
+  }
+
+  .rsb-search-bar {
+    padding: 14px;
+    font-size: 11px;
+  }
+
+  .rsb-results-window {
+    padding: 12px;
+  }
+
+  .rsb-result-image {
+    width: 57px;
+    height: 57px;
+    flex-basis: 57px;
+  }
+
+  .rsb-search-float {
+    right: 1%;
+    bottom: 7%;
+    padding: 10px;
+    font-size: 9px;
+  }
+
+  .rsb-bottom-grid {
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .rsb-order-card,
+  .rsb-visibility-card {
+    min-height: 475px;
+    padding: 23px;
+    border-radius: 21px;
+  }
+
+  .rsb-card-copy h3 {
+    font-size: 27px;
+  }
+
+  .rsb-card-copy p {
+    font-size: 13px;
+  }
+
+  .rsb-restaurant-image {
+    width: 50px;
+    height: 50px;
+    flex-basis: 50px;
+  }
+
+  .rsb-order-button {
+    padding: 9px;
+    font-size: 9px;
+  }
+
+  .rsb-dashboard {
+    padding: 18px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+  .rsb-order-card,
+  .rsb-visibility-card {
+    padding: 18px;
+  }
+
+  .rsb-restaurant-card {
+    gap: 8px;
+    padding: 9px;
+  }
+
+  .rsb-restaurant-details strong {
+    font-size: 10px;
+  }
+
+  .rsb-order-button {
+    font-size: 8px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rsb-section *,
+  .rsb-section *::before,
+  .rsb-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .rsb-main-card,
+  .rsb-order-card,
+  .rsb-visibility-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
