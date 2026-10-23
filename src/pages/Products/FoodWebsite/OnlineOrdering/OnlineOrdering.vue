@@ -1,4 +1,3 @@
-
 <script setup>
 
 import Hero from '../../../../components/InnerPages/Hero/Hero.vue'
@@ -15,6 +14,7 @@ import {
 } from './OnlineOrdering.js'
 import OnlineMenuFeatures from '../OnlineMenu/OnlineMenuFeatures/OnlineMenuFeatures.vue'
 import OnlineOrderingFeatures from './OnlineOrderingFeatures/OnlineOrderingFeatures.vue'
+import OnlineOrderingBenefits from './OnlineOrderingBenefits/OnlineOrderingBenefits.vue'
 </script>
 
 <template>
@@ -24,6 +24,8 @@ import OnlineOrderingFeatures from './OnlineOrderingFeatures/OnlineOrderingFeatu
     <Hero v-bind="onlineOrderingHero" />
 
     <OnlineOrderingFeatures/>
+
+    <OnlineOrderingBenefits/>
 
     <!-- FAQ -->
     <FAQ
