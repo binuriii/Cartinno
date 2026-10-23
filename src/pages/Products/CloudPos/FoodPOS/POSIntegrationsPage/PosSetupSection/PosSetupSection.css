@@ -1,18 +1,26 @@
-/* ========================================
-   POS SETUP SECTION
-======================================== */
 .ps-section,
 .ps-section * {
   box-sizing: border-box;
 }
 
 .ps-section {
-  --ps-ink: #1a1a1a;
-  --ps-muted: #6b6b70;
+  --ps-ink: #23232b;
+  --ps-muted: #5b5b66;
   --ps-bg: #ffffff;
   --ps-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 
+  position: relative;
+  z-index: 20;
+  isolation: isolate;
+
   width: 100%;
+
+  /* OVERLAP PREVIOUS HERO SECTION */
+  margin-top: -55px;
+
+  /* ROUNDED TOP CORNERS */
+  border-radius: 70px 70px 0 0;
+
   padding: 10vh 3vw 8vh;
   background: var(--ps-bg);
   font-family: inherit;
@@ -33,16 +41,17 @@
 }
 
 .ps-title {
+  max-width: 850px;
+  margin: 0 auto;
   color: var(--ps-ink);
-  font-size: clamp(28px, 4.5vw, 48px);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.035em;
-  margin: 0;
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
 }
 
 .ps-title-bold {
-  font-weight: 700;
+  font-weight: 450;
   display: block;
 }
 
@@ -71,7 +80,9 @@
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
   opacity: 0;
   transform: translateY(30px) scale(0.97);
-  transition: opacity 900ms var(--ps-ease), transform 900ms var(--ps-ease);
+  transition:
+    opacity 900ms var(--ps-ease),
+    transform 900ms var(--ps-ease);
 }
 
 .ps-section.is-visible .ps-image-wrapper {
@@ -111,7 +122,9 @@
   transform: none;
 }
 
-/* Icon Wrapper */
+/* ========================================
+   ICON WRAPPER
+======================================== */
 .ps-icon-wrapper {
   flex: 0 0 auto;
   width: 44px;
@@ -131,34 +144,41 @@
   transform: scale(1.1);
 }
 
-/* Feature Content */
+/* ========================================
+   FEATURE CONTENT
+======================================== */
 .ps-feature-content {
   flex: 1;
   min-width: 0;
 }
 
 .ps-feature-content h3 {
-  margin: 0 0 8px 0;
+  margin: 0 0 10px 0;
   color: var(--ps-ink);
-  font-size: clamp(17px, 1.8vw, 22px);
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
+  font-size: clamp(19px, 2vw, 24px);
+  font-weight: 550;
+  line-height: 1.18;
+  letter-spacing: -0.045em;
 }
 
 .ps-feature-content p {
   margin: 0;
   color: var(--ps-muted);
-  font-size: clamp(13px, 1.1vw, 15px);
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.65;
-  letter-spacing: -0.2px;
+  line-height: 1.7;
 }
 
 /* ========================================
-   RESPONSIVE DESIGN
+   TABLET RESPONSIVE
 ======================================== */
 @media (max-width: 992px) {
+  .ps-section {
+    margin-top: -45px;
+    padding: 8vh 4vw;
+    border-radius: 40px 40px 0 0;
+  }
+
   .ps-grid {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -178,13 +198,12 @@
   }
 }
 
+/* ========================================
+   SMALL TABLET
+======================================== */
 @media (max-width: 768px) {
   .ps-section {
-    padding: 8vh 4vw 8vh;
-  }
-
-  .ps-title {
-    font-size: clamp(26px, 5vw, 40px);
+    padding: 8vh 4vw;
   }
 
   .ps-grid {
@@ -192,17 +211,18 @@
   }
 
   .ps-feature-content h3 {
-    font-size: 18px;
-  }
-
-  .ps-feature-content p {
-    font-size: 14px;
+    font-size: 20px;
   }
 }
 
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
 @media (max-width: 640px) {
   .ps-section {
+    margin-top: -35px;
     padding: 65px 16px 60px;
+    border-radius: 24px 24px 0 0;
   }
 
   .ps-header {
@@ -210,8 +230,8 @@
   }
 
   .ps-title {
-    font-size: clamp(24px, 6.5vw, 32px);
-    line-height: 1.18;
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
   }
 
   .ps-grid {
@@ -233,7 +253,7 @@
   }
 
   .ps-feature-content h3 {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 6px;
   }
 
@@ -243,13 +263,14 @@
   }
 }
 
+/* ========================================
+   SMALL MOBILE
+======================================== */
 @media (max-width: 480px) {
   .ps-section {
+    margin-top: -30px;
     padding: 60px 12px 55px;
-  }
-
-  .ps-title {
-    font-size: clamp(22px, 7vw, 28px);
+    border-radius: 22px 22px 0 0;
   }
 
   .ps-header {
@@ -271,11 +292,11 @@
   }
 
   .ps-feature-content h3 {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .ps-feature-content p {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -286,10 +307,6 @@
   .ps-image-wrapper,
   .ps-feature-item {
     transition: none !important;
-  }
-
-  .ps-image-wrapper,
-  .ps-feature-item {
     opacity: 1 !important;
     transform: none !important;
   }

@@ -7,396 +7,428 @@
 }
 
 .pig-section {
-  --pig-ink: #1a1a1a;
-  --pig-muted: #6b6b70;
-  --pig-bg-outer: #ffffff;
-  --pig-bg-inner: #f9f7f2;
+  --pig-ink: #1f1d1a;
+  --pig-muted: #5f6358;
+  --pig-bg: #f8f4ee;
+  --pig-beige: #ddd6cf;
   --pig-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 
   width: 100%;
-  padding: 0 3vw 10vh;
-  background: var(--pig-bg-outer);
+  padding: clamp(50px, 7vw, 90px) 3vw clamp(40px, 6vw, 80px);
+  background: var(--pig-bg);
   font-family: inherit;
 }
 
-/* The large cream wrapper box */
 .pig-wrapper {
-  max-width: 1380px;
+  max-width: 1100px;
   margin: 0 auto;
-  background: var(--pig-bg-inner);
-  border-radius: clamp(32px, 4vw, 48px);
-  padding: clamp(50px, 7vw, 80px) clamp(28px, 4vw, 60px);
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 900ms var(--pig-ease);
-}
-
-.pig-section.is-visible .pig-wrapper {
-  opacity: 1;
-  transform: none;
 }
 
 /* ========================================
    HEADER
 ======================================== */
 .pig-header {
+  margin-bottom: clamp(28px, 4vw, 44px);
   text-align: center;
-  margin-bottom: clamp(40px, 6vw, 60px);
 }
 
 .pig-title {
-  color: var(--pig-ink);
-  font-size: clamp(28px, 4.2vw, 48px);
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.035em;
+  max-width: 850px;
   margin: 0 auto;
-  max-width: 650px;
+  color: var(--pig-ink);
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.pig-title-muted {
+  color: var(--pig-muted);
 }
 
 /* ========================================
-   GRID LAYOUT
+   GRID + CARDS
 ======================================== */
 .pig-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(16px, 2vw, 24px);
-  align-items: stretch;
+  gap: 8px;
 }
 
-/* ========================================
-   COMMON CARD STYLES
-======================================== */
 .pig-card {
   position: relative;
-  border-radius: clamp(20px, 2.5vw, 28px);
-  overflow: hidden;
   display: flex;
+  overflow: hidden;
   isolation: isolate;
+  border-radius: clamp(14px, 1.8vw, 20px);
+
+  /* smooth reveal: only opacity + transform (GPU friendly) */
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 800ms var(--pig-ease);
+  transform: translateY(24px);
+  transition:
+    opacity 700ms var(--pig-ease),
+    transform 800ms var(--pig-ease);
+  will-change: opacity, transform;
 }
 
 .pig-section.is-visible .pig-card {
   opacity: 1;
   transform: none;
+  will-change: auto;
 }
 
-.pig-card-top {
-  transition-delay: 0.2s;
-}
+.pig-card-top { transition-delay: 0.1s; }
+.pig-card-bottom-left { transition-delay: 0.25s; }
+.pig-card-bottom-right { transition-delay: 0.4s; }
 
-.pig-card-bottom-left {
-  transition-delay: 0.35s;
-}
-
-.pig-card-bottom-right {
-  transition-delay: 0.35s;
+.pig-card h3 {
+  margin: 0;
 }
 
 .pig-label {
   display: block;
-  font-size: clamp(10px, 0.9vw, 13px);
-  font-weight: 650;
-  text-transform: capitalize;
   margin-bottom: 12px;
-  color: var(--pig-muted);
-  letter-spacing: -0.3px;
+  color: var(--pig-ink);
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .pig-label-light {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.pig-card h3 {
-  font-size: clamp(20px, 2.4vw, 32px);
-  font-weight: 550;
-  line-height: 1.22;
-  letter-spacing: -0.03em;
-  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* ========================================
-   TOP CARD (BEIGE BACKGROUND)
+   TOP CARD
 ======================================== */
 .pig-card-top {
   grid-column: span 2;
-  background: #ddd8cc;
-  flex-direction: row;
   align-items: center;
-  min-height: clamp(280px, 35vw, 360px);
-}
-
-.pig-top-visual {
-  flex: 0 0 45%;
-  padding: clamp(28px, 3.5vw, 40px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pig-top-visual img {
-  width: 100%;
-  height: auto;
-  max-width: 320px;
-  border-radius: clamp(14px, 1.8vw, 18px);
-  display: block;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-.pig-top-content {
-  flex: 0 0 55%;
-  padding: clamp(28px, 3.5vw, 48px) clamp(32px, 4vw, 56px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  min-height: clamp(280px, 30vw, 360px);
+  padding: 0 clamp(28px, 5vw, 60px);
+  background: var(--pig-beige);
 }
 
 .pig-card-top h3 {
+  max-width: 520px;
   color: var(--pig-ink);
-  max-width: 420px;
+  font-size: clamp(29px, 3.5vw, 48px);
+  font-weight: 450;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
 }
 
+.pig-top-visual {
+  flex: 0 0 42%;
+  display: flex;
+  padding: 28px 0;
+}
+
+.pig-top-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4%;
+}
+
+/* menu cards */
+.pig-menu {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 0.8vw, 10px);
+  width: 100%;
+  max-width: 440px;
+}
+
+.pig-menu-item {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.2vw, 16px);
+  padding: clamp(6px, 0.7vw, 9px) clamp(10px, 1.2vw, 16px) clamp(6px, 0.7vw, 9px) clamp(6px, 0.7vw, 9px);
+  border-radius: clamp(14px, 1.5vw, 20px);
+  background: #faf8f6;
+  box-shadow: 0 10px 28px rgba(60, 45, 30, 0.12);
+}
+
+.pig-thumb {
+  flex: 0 0 auto;
+  display: block;
+  width: clamp(64px, 7.4vw, 100px);
+  height: clamp(64px, 7.4vw, 100px);
+  border-radius: clamp(10px, 1.1vw, 14px);
+  background: #d9a9a0;
+  object-fit: cover;
+}
+
+.pig-menu-text {
+  flex: 1;
+  min-width: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pig-menu-name {
+  color: var(--pig-ink);
+  font-size: clamp(13px, 1.3vw, 18px);
+  font-weight: 600;
+}
+
+.pig-skel {
+  display: block;
+  width: 72%;
+  height: clamp(4px, 0.45vw, 6px);
+  margin-top: clamp(6px, 0.7vw, 9px);
+  border-radius: 6px;
+  background: #ebe7e1;
+}
+
+.pig-skel + .pig-skel {
+  width: 54%;
+  margin-top: clamp(4px, 0.45vw, 6px);
+}
+
+.pig-price {
+  margin-top: clamp(8px, 1vw, 14px);
+  color: #9a958d;
+  font-size: clamp(11px, 1vw, 14px);
+}
+
+/* "+" button (used on menu cards and tiles) */
+.pig-add {
+  position: relative;
+  flex: 0 0 auto;
+  align-self: flex-end;
+  width: clamp(30px, 3vw, 42px);
+  height: clamp(30px, 3vw, 42px);
+  border-radius: clamp(9px, 1vw, 13px);
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.pig-add::before,
+.pig-add::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: var(--pig-ink);
+  transform: translate(-50%, -50%);
+}
+
+.pig-add::before { width: 40%; height: 1.5px; }
+.pig-add::after  { width: 1.5px; height: 40%; }
+
 /* ========================================
-   BOTTOM LEFT CARD (DARK IMAGE BACKGROUND)
+   BOTTOM LEFT CARD
 ======================================== */
 .pig-card-bottom-left {
   flex-direction: column;
-  justify-content: flex-start;
-  min-height: clamp(340px, 40vw, 420px);
+  min-height: clamp(340px, 36vw, 440px);
 }
 
 .pig-bg-image {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
   z-index: 0;
-  filter: brightness(0.95);
+  background-color: #3a3632;
+  background-position: center;
+  background-size: cover;
 }
 
 .pig-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.72) 0%,
-    rgba(0, 0, 0, 0.55) 40%,
-    rgba(0, 0, 0, 0.35) 100%
-  );
   z-index: 1;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 55%, rgba(0, 0, 0, 0) 100%);
 }
 
 .pig-bl-content {
   position: relative;
   z-index: 2;
-  padding: clamp(28px, 3.5vw, 40px);
-  color: #ffffff;
+  padding: clamp(24px, 2.8vw, 40px);
 }
 
 .pig-card-bottom-left h3 {
-  color: #ffffff;
-  max-width: 300px;
+  max-width: 420px;
+  color: #fff;
+  font-size: clamp(23px, 2.5vw, 34px);
+  font-weight: 550;
+  line-height: 1.18;
+  letter-spacing: -0.045em;
 }
 
 /* ========================================
-   BOTTOM RIGHT CARD (WHITE BACKGROUND)
+   BOTTOM RIGHT CARD
 ======================================== */
 .pig-card-bottom-right {
-  background: #ffffff;
   flex-direction: column;
-  min-height: clamp(340px, 40vw, 420px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  min-height: clamp(340px, 36vw, 440px);
+  background: #fff;
 }
 
 .pig-br-content {
-  padding: clamp(28px, 3.5vw, 40px);
-  flex: 0 0 auto;
+  position: relative;
+  z-index: 3;
+  padding: clamp(24px, 2.8vw, 40px);
 }
 
 .pig-card-bottom-right h3 {
+  max-width: 420px;
   color: var(--pig-ink);
-  max-width: 300px;
+  font-size: clamp(23px, 2.5vw, 34px);
+  font-weight: 550;
+  line-height: 1.18;
+  letter-spacing: -0.045em;
 }
 
-.pig-br-visual {
-  flex: 1;
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 0 clamp(16px, 2vw, 24px) clamp(16px, 2vw, 28px);
+.pig-orbit {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.pig-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pig-ring-1 { width: 62%; }
+.pig-ring-2 { width: 100%; }
+.pig-ring-3 { width: 140%; }
+
+.pig-tile {
+  position: absolute;
   overflow: hidden;
+  border-radius: clamp(10px, 1.1vw, 14px);
+  background: #b9c7a4;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+  animation: pig-float 7s ease-in-out infinite;
+  will-change: translate;
 }
 
-.pig-br-visual img {
-  width: 100%;
-  height: auto;
-  max-width: 85%;
-  object-fit: contain;
+/* float only after the section is revealed */
+.pig-section:not(.is-visible) .pig-tile {
+  animation-play-state: paused;
+}
+
+.pig-tile img {
   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pig-tile .pig-add {
+  position: absolute;
+  right: 7%;
+  bottom: 7%;
+  width: clamp(20px, 1.9vw, 27px);
+  height: clamp(20px, 1.9vw, 27px);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.pig-tile-badge {
+  position: absolute;
+  left: 8%;
+  top: 8%;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--pig-ink);
+  font-size: clamp(8px, 0.75vw, 10px);
+  font-weight: 500;
+}
+
+/* sizes/positions are % of the card; some are cropped on purpose */
+.pig-t1 { width: 17%; aspect-ratio: 1.2; left: 67%;  top: -4%;    opacity: 0.85; animation-delay: -1s; }
+.pig-t2 { width: 15%; aspect-ratio: 1;   right: -5%; top: 17%;    animation-delay: -3s; }
+.pig-t3 { width: 19%; aspect-ratio: 1;   right: 9%;  top: 41%;    animation-delay: -2s; }
+.pig-t4 { width: 19%; aspect-ratio: 1.1; left: 45%;  bottom: 6%;  animation-delay: -4s; }
+.pig-t5 { width: 13%; aspect-ratio: 0.8; left: -4%;  bottom: 27%; opacity: 0.75; animation-delay: -5s; }
+.pig-t6 { width: 16%; aspect-ratio: 1;   right: -3%; bottom: 4%;  animation-delay: -6s; }
+
+@keyframes pig-float {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -5px; }
 }
 
 /* ========================================
-   RESPONSIVE DESIGN
+   RESPONSIVE
 ======================================== */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
+  .pig-grid {
+    grid-template-columns: 1fr;
+  }
+
   .pig-card-top {
+    grid-column: auto;
     flex-direction: column;
-    text-align: center;
-    min-height: auto;
+    align-items: stretch;
+    padding: 28px 22px;
   }
 
   .pig-top-visual {
     flex: none;
-    width: 100%;
-    padding: clamp(28px, 3.5vw, 40px);
-  }
-
-  .pig-top-visual img {
-    max-width: 280px;
+    justify-content: center;
+    padding: 0 0 22px;
   }
 
   .pig-top-content {
-    flex: none;
-    width: 100%;
-    padding: clamp(24px, 3.5vw, 40px);
-    align-items: center;
+    padding-left: 0;
   }
 
-  .pig-card-top h3 {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .pig-wrapper {
-    padding: clamp(40px, 5vw, 60px) clamp(20px, 3vw, 40px);
-    border-radius: clamp(24px, 3.5vw, 40px);
-  }
-
-  .pig-grid {
-    grid-template-columns: 1fr;
-    gap: clamp(12px, 1.5vw, 18px);
-  }
-
-  .pig-card-top {
-    grid-column: span 1;
+  .pig-menu {
+    max-width: 380px;
   }
 
   .pig-card-bottom-left,
   .pig-card-bottom-right {
-    min-height: clamp(300px, 50vw, 380px);
-  }
-
-  .pig-bl-content,
-  .pig-br-content {
-    padding: clamp(24px, 3vw, 32px);
-  }
-
-  .pig-label {
-    font-size: 11px;
-  }
-
-  .pig-card h3 {
-    font-size: clamp(18px, 3vw, 26px);
+    min-height: 380px;
   }
 }
 
 @media (max-width: 640px) {
-  .pig-section {
-    padding: 0 2vw 8vh;
-  }
+  .pig-title { font-size: clamp(22px, 6.6vw, 28px); }
+  .pig-card-top h3 { font-size: clamp(26px, 6.5vw, 34px); }
 
-  .pig-wrapper {
-    padding: clamp(32px, 4vw, 48px) clamp(16px, 2.5vw, 28px);
-    border-radius: clamp(20px, 3vw, 32px);
-  }
-
-  .pig-header {
-    margin-bottom: 32px;
-  }
-
-  .pig-title {
-    font-size: clamp(24px, 5.5vw, 36px);
-    line-height: 1.18;
-  }
-
-  .pig-grid {
-    gap: 12px;
-  }
-
-  .pig-card {
-    border-radius: clamp(16px, 2vw, 22px);
-  }
-
-  .pig-card-bottom-left,
-  .pig-card-bottom-right {
-    min-height: clamp(280px, 45vw, 340px);
-  }
-
-  .pig-label {
-    font-size: 10px;
-    margin-bottom: 8px;
-  }
-
-  .pig-card h3 {
-    font-size: clamp(16px, 4vw, 22px);
-  }
-
-  .pig-card-top h3,
   .pig-card-bottom-left h3,
   .pig-card-bottom-right h3 {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .pig-wrapper {
-    padding: clamp(28px, 4vw, 40px) clamp(12px, 2vw, 20px);
-  }
-
-  .pig-header {
-    margin-bottom: 24px;
-  }
-
-  .pig-title {
-    font-size: clamp(20px, 6vw, 28px);
-  }
-
-  .pig-card-bottom-left,
-  .pig-card-bottom-right {
-    min-height: clamp(240px, 50vw, 300px);
+    font-size: 24px;
+    line-height: 1.2;
   }
 
   .pig-bl-content,
   .pig-br-content {
-    padding: clamp(20px, 2.5vw, 24px);
+    padding: 22px;
   }
+}
 
-  .pig-br-visual {
-    padding: 0 12px 16px;
-  }
-
-  .pig-card h3 {
-    font-size: clamp(15px, 4.5vw, 20px);
+@media (max-width: 480px) {
+  .pig-section {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }
 
 /* ========================================
-   ACCESSIBILITY
+   REDUCED MOTION
 ======================================== */
 @media (prefers-reduced-motion: reduce) {
-  .pig-wrapper,
   .pig-card {
-    transition: none !important;
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 
-  .pig-wrapper,
-  .pig-card {
-    opacity: 1 !important;
-    transform: none !important;
+  .pig-tile {
+    animation: none;
   }
 }

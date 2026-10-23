@@ -35,7 +35,7 @@ export const posIntegrationsHero = {
     "Connect Cartinno seamlessly with your existing Point of Sale. Online orders go straight to your POS—nothing changes on your end, and no extra tablets are needed.",
 
   backgroundImage:
-    "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&auto=format&fit=crop&q=60",
+    "https://images.unsplash.com/photo-1775534778375-3f235c466c58?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
 
   overlayOpacity: 0.6,
 

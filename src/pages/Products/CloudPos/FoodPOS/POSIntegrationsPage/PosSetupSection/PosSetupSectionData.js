@@ -2,13 +2,13 @@ export const posSetupContent = {
   headingPart1: "Set it up once.",
   headingPart2: "Then it just works.",
   image: {
-    src: "/Cartinno/pos-setup-image.jpg", // Oyage image path ekata replace karanna
+    src: "/Cartinno/poscashier.jpg", 
     alt: "Staff using POS system"
   },
   features: [
     {
       id: 1,
-      icon: "fa-solid fa-desktop", // Oyata one font-awesome icon ekak danna puluwan
+      icon: "fa-solid fa-desktop", 
       title: "Works with your POS",
       description: "Online orders go straight to your POS. No extra tablets, no manual re-entry."
     },
