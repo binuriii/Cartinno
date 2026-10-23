@@ -44,19 +44,19 @@ export const reviewFeatures = {
 export const previewReviews = [
   {
     id: 1,
-    name: 'Sample Customer 01',
+    name: 'John Daniel',
     text: 'Great experience and friendly service!',
-    rating: 5
+    rating: 4
   },
   {
     id: 2,
-    name: 'Sample Customer 02',
+    name: 'Mariah Samuel',
     text: 'Everything was quick and easy.',
-    rating: 5
+    rating: 3
   },
   {
     id: 3,
-    name: 'Sample Customer 03',
+    name: 'Ben Savoy',
     text: 'Would definitely recommend!',
     rating: 5
   }

@@ -34,32 +34,32 @@ export const products = [
         "title": "Unique to Cartinno",
         "column": 1,
         "items": [
-          { "label": "Sell with Reseller Network", "href": "/reseller-network", "icon": "fa-solid fa-users" },
+          { "label": "Sell with Reseller Network", "href": "/sell-with-reseller", "icon": "fa-solid fa-users" },
           { "label": "Gift Registry", "href": "/gift-registry", "icon": "fa-solid fa-gift" },
-          { "label": "Sell with Marketplace", "href": "/marketplace", "icon": "fa-solid fa-store" }
+          { "label": "Sell with Marketplace", "href": "/sell-with-marketplace", "icon": "fa-solid fa-store" }
         ]
       },
       {
         "title": "Grow Your Business",
         "column": 2,
         "items": [
-          { "label": "Cloud POS", "href": "/pos", "icon": "fa-solid fa-desktop" },
+          { "label": "Cloud POS", "href": "/ecommerce-cloud-pos", "icon": "fa-solid fa-desktop" },
           { "label": "Marketing Campaigns", "href": "/marketing-campaigns", "icon": "fa-solid fa-bullhorn" },
-          { "label": "Push Notification Marketing", "href": "/push-notifications", "icon": "fa-regular fa-bell" },
-          { "label": "Inventory Management System", "href": "/inventory", "icon": "fa-solid fa-boxes-stacked" }
+          { "label": "Push Notification Marketing", "href": "/push-notification-marketing", "icon": "fa-regular fa-bell" },
+          { "label": "Inventory Management System", "href": "/inventory-management-system", "icon": "fa-solid fa-boxes-stacked" }
         ]
       },
       {
         "title": "Manage Your Business",
         "column": 2,
         "items": [
-          { "label": "Cloud Phone System", "href": "/cloud-phone-system", "icon": "fa-solid fa-phone"},
-          { "label": "Reporting & Analytics", "href": "/reporting-analytics", "icon": "fa-solid fa-chart-pie" },
+          { "label": "Cloud Phone System", "href": "/cloud-phone-system", "icon": "fa-solid fa-phone" },
+          { "label": "Reporting & Analytics", "href": "/reporting-and-analytics", "icon": "fa-solid fa-chart-pie" },
           { "label": "POS Integrations", "href": "/pos-integrations", "icon": "fa-solid fa-gears" },
           { "label": "Enquiry Management System", "href": "/enquiry-management", "icon": "fa-regular fa-message-square" },
           { "label": "Lead Manager", "href": "/lead-manager", "icon": "fa-solid fa-user-plus" },
-          { "label": "Facebook Integration", "href": "/facebook-integration", "icon": "fa-brands fa-facebook" },
-          { "label": "WhatsApp Business API", "href": "/whatsapp-api", "icon": "fa-brands fa-whatsapp" }
+          { "label": "Facebook Integration", "href": "/facebook-intergration", "icon": "fa-brands fa-facebook" },
+          { "label": "WhatsApp Business API", "href": "/whatspp-business-api", "icon": "fa-brands fa-whatsapp" }
         ]
       }
     ]

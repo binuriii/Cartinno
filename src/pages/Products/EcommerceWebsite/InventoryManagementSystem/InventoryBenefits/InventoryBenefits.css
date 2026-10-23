@@ -1,0 +1,635 @@
+
+/* ==========================================
+   INVENTORY BENEFITS
+   CARTINNO THEME
+========================================== */
+
+.imb-section,
+.imb-section * {
+  box-sizing: border-box;
+}
+
+.imb-section {
+  --imb-red: #d7454e;
+  --imb-ink: #23232b;
+  --imb-muted: #5b5b66;
+  --imb-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  padding: 5vh 3vw 10vh;
+
+  background: #ffffff;
+  color: var(--imb-ink);
+  font-family: inherit;
+
+  overflow: hidden;
+}
+
+.imb-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   CENTERED HEADING
+========================================== */
+
+.imb-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-bottom: clamp(35px, 4vw, 55px);
+
+  text-align: center;
+}
+
+.imb-heading {
+  max-width: 900px;
+  margin: 0 auto;
+
+  color: var(--imb-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+
+  text-align: center;
+}
+
+.imb-description {
+  max-width: 680px;
+  margin: 20px auto 0;
+
+  color: var(--imb-muted);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+/* ==========================================
+   MAIN GRID
+========================================== */
+
+.imb-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  grid-template-rows:
+    195px
+    265px
+    auto;
+
+  column-gap: clamp(18px, 2vw, 30px);
+  row-gap: clamp(16px, 1.2vw, 20px);
+
+  align-items: stretch;
+  width: 100%;
+}
+
+/* ==========================================
+   IMAGE CARDS
+========================================== */
+
+.imb-image-card {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  border-radius: 25px;
+  overflow: hidden;
+
+  background: #e5e2e8;
+}
+
+.imb-image-card img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.75s var(--imb-ease);
+}
+
+.imb-image-fallback {
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  background: linear-gradient(
+    140deg,
+    #ebe9e7,
+    #cfccd0
+  );
+
+  color: #77737c;
+  font-size: 45px;
+}
+
+/* ==========================================
+   EXACT IMAGE POSITIONS
+========================================== */
+
+/* TALL LEFT IMAGE */
+
+.imb-main-image {
+  grid-column: 1;
+  grid-row: 1 / 4;
+
+  min-height: 800px;
+}
+
+/* TOP MIDDLE IMAGE */
+
+.imb-top-image {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* RIGHT IMAGE */
+
+.imb-right-image {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+
+/* ==========================================
+   FEATURED RED CARD
+========================================== */
+
+.imb-highlight-card {
+  grid-column: 2;
+  grid-row: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  min-width: 0;
+  min-height: 0;
+
+  padding: clamp(25px, 2.4vw, 38px);
+  border-radius: 25px;
+
+  background: #d7454e;
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.imb-highlight-card h3 {
+  max-width: 360px;
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(21px, 2vw, 29px);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.001em;
+}
+
+.imb-highlight-card p {
+  max-width: 370px;
+  margin: 20px 0 0;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* ==========================================
+   NUMBERED BENEFITS
+========================================== */
+
+.imb-benefits {
+  grid-column: 2 / 4;
+  grid-row: 3;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  width: 100%;
+}
+
+.imb-benefit {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1fr);
+
+  align-items: start;
+  gap: clamp(15px, 2vw, 32px);
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 27px 0;
+
+  border-bottom: 1px solid #e8e7e9;
+}
+
+.imb-benefit:first-child {
+  padding-top: 30px;
+}
+
+.imb-benefit-heading {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 25px;
+  gap: clamp(12px, 1.6vw, 25px);
+  min-width: 0;
+}
+
+
+.imb-benefit-heading h3 {
+  min-width: 0;
+  margin: 4px 0 0;
+
+  color: #23232b;
+
+  font-size: clamp(15px, 1.35vw, 19px);
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -0.035em;
+}
+
+.imb-benefit > p {
+  margin: 4px 0 0;
+
+  color: #5b5b66;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* ==========================================
+   HOVER EFFECTS
+========================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .imb-image-card:hover img {
+    transform: scale(1.04);
+  }
+}
+
+/* ==========================================
+   SCROLL REVEAL ANIMATION
+========================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .imb-section:not(.imb-visible) .imb-image-card,
+  .imb-section:not(.imb-visible) .imb-highlight-card,
+  .imb-section:not(.imb-visible) .imb-benefit {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .imb-image-card,
+  .imb-highlight-card,
+  .imb-benefit {
+    transition:
+      opacity 0.75s ease,
+      transform 0.75s var(--imb-ease);
+  }
+
+  .imb-visible .imb-image-card,
+  .imb-visible .imb-highlight-card,
+  .imb-visible .imb-benefit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .imb-visible .imb-main-image {
+    transition-delay: 0.1s;
+  }
+
+  .imb-visible .imb-top-image {
+    transition-delay: 0.2s;
+  }
+
+  .imb-visible .imb-highlight-card {
+    transition-delay: 0.3s;
+  }
+
+  .imb-visible .imb-right-image {
+    transition-delay: 0.4s;
+  }
+
+  .imb-visible .imb-benefit {
+    transition-delay:
+      calc(0.35s + var(--imb-index) * 0.1s);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+
+  .imb-section {
+    padding: 8vh 4vw;
+  }
+
+  .imb-grid {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    grid-template-rows:
+      220px
+      260px
+      260px
+      auto;
+
+    gap: 18px;
+  }
+
+  .imb-main-image {
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    min-height: 0;
+  }
+
+  .imb-top-image {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .imb-highlight-card {
+    grid-column: 2;
+    grid-row: 2;
+
+    padding: 25px;
+  }
+
+  .imb-right-image {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+
+  .imb-benefits {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+
+  .imb-image-card,
+  .imb-highlight-card {
+    border-radius: 21px;
+  }
+
+  .imb-benefit {
+    padding: 23px 0;
+  }
+
+  .imb-benefit-heading h3 {
+    font-size: 18px;
+  }
+}
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+  .imb-heading {
+    font-size: clamp(29px, 4.8vw, 39px);
+  }
+
+  .imb-grid {
+    grid-template-rows:
+      190px
+      250px
+      240px
+      auto;
+
+    gap: 15px;
+  }
+
+  .imb-highlight-card h3 {
+    font-size: 23px;
+  }
+
+  .imb-highlight-card p {
+    font-size: 13px;
+  }
+
+  .imb-benefit-heading h3 {
+    font-size: 17px;
+  }
+
+  .imb-benefit > p {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+
+  .imb-section {
+    padding: 65px 14px 75px;
+  }
+
+  .imb-header {
+    margin-bottom: 30px;
+  }
+
+  .imb-heading {
+    max-width: 100%;
+
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .imb-description {
+    max-width: 100%;
+    margin: 16px auto 0;
+
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .imb-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    grid-template-rows: auto;
+    gap: 12px;
+  }
+
+  /* LARGE IMAGE */
+
+  .imb-main-image {
+    grid-column: 1 / -1;
+    grid-row: auto;
+
+    min-height: 0;
+    height: 350px;
+  }
+
+  /* SMALL IMAGES */
+
+  .imb-top-image {
+    grid-column: 1;
+    grid-row: auto;
+
+    height: 175px;
+  }
+
+  .imb-right-image {
+    grid-column: 2;
+    grid-row: auto;
+
+    height: 175px;
+  }
+
+  /* RED CONTENT CARD */
+
+  .imb-highlight-card {
+    grid-column: 1 / -1;
+    grid-row: auto;
+
+    min-height: 210px;
+    padding: 25px;
+  }
+
+  .imb-highlight-card h3 {
+    max-width: 280px;
+    font-size: 24px;
+  }
+
+  .imb-highlight-card p {
+    max-width: 310px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* BENEFITS */
+
+  .imb-benefits {
+    grid-column: 1 / -1;
+    grid-row: auto;
+
+    margin-top: 15px;
+  }
+
+  .imb-benefit {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    padding: 21px 0;
+  }
+
+  .imb-benefit:first-child {
+    padding-top: 12px;
+  }
+
+  .imb-benefit-heading {
+    align-items: center;
+    gap: 13px;
+  }
+
+  .imb-benefit-number {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+
+    font-size: 11px;
+  }
+
+  .imb-benefit-heading h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .imb-benefit > p {
+    margin: 0 0 0 43px;
+
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .imb-image-card,
+  .imb-highlight-card {
+    border-radius: 20px;
+  }
+}
+
+/* ==========================================
+   VERY SMALL SCREENS
+========================================== */
+
+@media (max-width: 380px) {
+
+  .imb-main-image {
+    height: 300px;
+  }
+
+  .imb-top-image,
+  .imb-right-image {
+    height: 145px;
+  }
+
+  .imb-highlight-card {
+    min-height: 230px;
+  }
+
+  .imb-benefit-heading h3 {
+    font-size: 15px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .imb-section *,
+  .imb-section *::before,
+  .imb-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .imb-image-card,
+  .imb-highlight-card,
+  .imb-benefit {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
