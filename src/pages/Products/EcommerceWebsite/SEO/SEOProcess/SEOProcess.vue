@@ -106,19 +106,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
 
-        <button
-          v-if="!reducedMotion"
-          class="sp-motion-button"
-          type="button"
-          :aria-pressed="paused"
-          @click="paused = !paused"
-        >
-          <span aria-hidden="true">
-            {{ paused ? '▷' : 'Ⅱ' }}
-          </span>
 
-          {{ paused ? 'Resume animation' : 'Pause animation' }}
-        </button>
       </header>
 
       <!-- PROCESS PANELS -->

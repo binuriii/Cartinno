@@ -1,0 +1,51 @@
+/* Shared rules are restricted to this page. Your existing site font is inherited. */
+.marketing-campaigns-page {
+  --mc-red:#d7454e; --mc-ink:#23232b; --mc-muted:#5b5b66;
+  width:100%; min-width:0; position:relative; isolation:isolate;
+  background:#fff; color:var(--mc-ink); font-family:inherit;
+}
+.marketing-campaigns-page *, .marketing-campaigns-page *::before,
+.marketing-campaigns-page *::after { box-sizing:border-box; }
+.marketing-campaigns-page .mc-section { padding:90px 3vw; }
+.marketing-campaigns-page .mc-shell { width:100%; max-width:1350px; margin-inline:auto; }
+.marketing-campaigns-page .mc-heading { margin-bottom:44px; }
+.marketing-campaigns-page .mc-heading h2 {
+  margin:0; font-size:clamp(26px,4.4vw,54px); font-weight:550;
+  line-height:1.15; letter-spacing:-.045em; text-wrap:balance;
+}
+.marketing-campaigns-page .mc-heading h2 span { display:block; }
+.marketing-campaigns-page .mc-heading p {
+  max-width:780px; margin:22px 0 0; font-size:15px; line-height:1.75; color:var(--mc-muted);
+}
+.marketing-campaigns-page button { font:inherit; }
+.marketing-campaigns-page a:focus-visible,
+.marketing-campaigns-page button:focus-visible { outline:3px solid var(--mc-red); outline-offset:5px; }
+.marketing-campaigns-page .mc-reveal-ready {
+  opacity:0; transform:translateY(25px);
+  transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1);
+  transition-delay:var(--mc-delay,0ms);
+}
+.marketing-campaigns-page .mc-reveal-ready.mc-entered { opacity:1; transform:translateY(0); }
+.marketing-campaigns-page [data-mc-section] .mc-loop,
+.marketing-campaigns-page [data-mc-section] .mc-loop::before,
+.marketing-campaigns-page [data-mc-section] .mc-loop::after { animation-play-state:paused; }
+.marketing-campaigns-page [data-mc-section].mc-in-view .mc-loop,
+.marketing-campaigns-page [data-mc-section].mc-in-view .mc-loop::before,
+.marketing-campaigns-page [data-mc-section].mc-in-view .mc-loop::after { animation-play-state:running; }
+.marketing-campaigns-page.mc-animations-paused [data-mc-section] .mc-loop,
+.marketing-campaigns-page.mc-animations-paused [data-mc-section] .mc-loop::before,
+.marketing-campaigns-page.mc-animations-paused [data-mc-section] .mc-loop::after { animation-play-state:paused; }
+.marketing-campaigns-page.mc-reduced .mc-reveal-ready { opacity:1; transform:none; transition:none; }
+@media(max-width:1024px) { .marketing-campaigns-page .mc-section { padding:72px 4vw; } }
+@media(max-width:640px) {
+  .marketing-campaigns-page .mc-section { padding:60px 14px; }
+  .marketing-campaigns-page .mc-heading { margin-bottom:30px; }
+  .marketing-campaigns-page .mc-heading h2 { font-size:clamp(22px,6.6vw,28px); }
+  .marketing-campaigns-page .mc-heading p { margin-top:18px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .marketing-campaigns-page [data-mc-section] *,
+  .marketing-campaigns-page [data-mc-section] *::before,
+  .marketing-campaigns-page [data-mc-section] *::after { animation:none!important; transition:none!important; }
+  .marketing-campaigns-page .mc-reveal-ready { opacity:1; transform:none; }
+}

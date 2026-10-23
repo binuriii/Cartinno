@@ -1,5 +1,4 @@
 export const seoProcessContent = {
-  eyebrow: 'THE CARTINNO APPROACH',
   heading: 'A clearer path to',
   highlight: 'better search visibility.',
 }

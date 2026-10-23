@@ -1,0 +1,27 @@
+/* The page inherits Cartinno's global font system: do not load a second font. */
+.lm-page, .lm-page * { box-sizing: border-box; }
+.lm-page {
+  --lm-ink: #23232b;
+  --lm-muted: #5b5b66;
+  --lm-red: #d7454e;
+  --lm-peach: #fff0e8;
+  --lm-green: #e8f6ee;
+  --lm-line: rgba(35,35,43,.10);
+  background: #fff;
+  color: var(--lm-ink);
+  font-family: inherit;
+  width: 100%;
+}
+.lm-page button, .lm-page a { font: inherit; }
+.lm-container { max-width: 1350px; width: 100%; margin-inline: auto; }
+/* Opt-in reveal; content remains visible without JavaScript / IO support. */
+.lm-motion-ready [data-lead-reveal] {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .85s ease, transform .85s cubic-bezier(.2,.7,.2,1);
+}
+.lm-motion-ready [data-lead-reveal].lm-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .lm-motion-ready [data-lead-reveal] { opacity: 1 !important; transform: none !important; }
+  .lm-page *, .lm-page *::before, .lm-page *::after { animation: none !important; transition-duration: .01ms !important; }
+}
