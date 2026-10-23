@@ -13,6 +13,7 @@ import {
   foodListingsFAQs
 } from './ListingsManagement.js'
 import ListingsFeatures from './ListingsFeatures/ListingsFeatures.vue'
+import ListingsBenefits from './ListingsBenefits/ListingsBenefits.vue'
 </script>
 
 <template>
@@ -22,6 +23,8 @@ import ListingsFeatures from './ListingsFeatures/ListingsFeatures.vue'
     <Hero v-bind="foodListingsHero" />
 
     <ListingsFeatures/>
+
+    <ListingsBenefits/>
     
     <!-- FAQ -->
     <FAQ

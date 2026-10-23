@@ -23,12 +23,7 @@ import RetailExpansion from './RetailExpansion/RetailExpansion.vue'
 
     <RetailExpansion />
 
-    
-
     <RetailOperations />
-
-    <RetailGrowth />
-
 
     <!-- FAQ -->
     <FAQ
