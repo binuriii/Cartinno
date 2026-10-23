@@ -89,6 +89,13 @@ const routes = [
 },
 
 
+{
+  path: '/lead-manager',
+  name: 'lead-manager',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/LeadManager/LeadManager.vue')
+},
+
 
 
 
