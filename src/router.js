@@ -99,6 +99,13 @@ const routes = [
       import('./pages/Products/EcommerceWebsite/FacebookIntegration/FacebookIntegration.vue')
   },
 
+  {
+    path: '/whatspp-business-api',
+    name: 'whatspp-business-api',
+    component: () =>
+      import('./pages/Products/EcommerceWebsite/WhatsAppBusinessAPI/WhatsAppBusinessAPI.vue')
+  },
+
 {
   path: '/delivery',
   name: 'delivery',
