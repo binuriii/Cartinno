@@ -101,10 +101,6 @@ import {
 
             <div class="gr-preview-action">
               Leave a Google Review
-              <i
-                class="fa-solid fa-arrow-up-right-from-square"
-                aria-hidden="true"
-              ></i>
             </div>
           </div>
 
@@ -117,12 +113,6 @@ import {
               {{ feature.label }}
             </span>
 
-            <div
-              class="gr-featured-symbol"
-              aria-hidden="true"
-            >
-              <i class="fa-solid fa-heart"></i>
-            </div>
           </div>
 
           <!-- RIGHT CARD: VISIBILITY PREVIEW -->

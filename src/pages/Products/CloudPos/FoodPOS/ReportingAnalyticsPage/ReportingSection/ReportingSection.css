@@ -7,7 +7,7 @@
 .rs-section {
   --rs-ink: #2a2a2e;
   --rs-muted: #6b6b70;
-  --rs-bg: #dcf8da;
+  --rs-bg: #ffffff;
   --rs-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
   --rs-grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 

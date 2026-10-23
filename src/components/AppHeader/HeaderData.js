@@ -42,17 +42,17 @@ export const products = [
           },
           {
             label: "Delivery",
-            href: "#delivery",
+            href: "/delivery",
             icon: "fa-solid fa-truck-fast",
           },
           {
             label: "Gift Cards",
-            href: "#gift-cards",
+            href: "/gift-cards",
             icon: "fa-regular fa-credit-card",
           },
           {
             label: "Loyalty Management System",
-            href: "#loyalty",
+            href: "/loyalty-management",
             icon: "fa-solid fa-award",
           },
         ],
@@ -63,17 +63,17 @@ export const products = [
         items: [
           {
             label: "Sell with Reseller Network",
-            href: "#reseller-network",
+            href: "/sell-with-reseller",
             icon: "fa-solid fa-users",
           },
           {
             label: "Gift Registry",
-            href: "#gift-registry",
+            href: "/gift-registry",
             icon: "fa-solid fa-gift",
           },
           {
             label: "Sell with Marketplace",
-            href: "#marketplace",
+            href: "/sell-with-marketplace",
             icon: "fa-solid fa-store",
           },
         ],
@@ -82,20 +82,24 @@ export const products = [
         title: "Grow Your Business",
         column: 2,
         items: [
-          { label: "Cloud POS", href: "#pos", icon: "fa-solid fa-desktop" },
+          {
+            label: "Cloud POS",
+            href: "/ecommerce-cloud-pos",
+            icon: "fa-solid fa-desktop",
+          },
           {
             label: "Marketing Campaigns",
-            href: "#marketing-campaigns",
+            href: "/marketing-campaigns",
             icon: "fa-solid fa-bullhorn",
           },
           {
             label: "Push Notification Marketing",
-            href: "#push-notifications",
+            href: "/push-notification-marketing",
             icon: "fa-regular fa-bell",
           },
           {
             label: "Inventory Management System",
-            href: "#inventory",
+            href: "/inventory-management-system",
             icon: "fa-solid fa-boxes-stacked",
           },
         ],
@@ -106,37 +110,37 @@ export const products = [
         items: [
           {
             label: "Cloud Phone System",
-            href: "#cloud-phone",
+            href: "/cloud-phone-system",
             icon: "fa-solid fa-phone",
           },
           {
             label: "Reporting & Analytics",
-            href: "#reporting-analytics",
+            href: "/reporting-and-analytics",
             icon: "fa-solid fa-chart-pie",
           },
           {
             label: "POS Integrations",
-            href: "#pos-integrations",
+            href: "/pos-integrations",
             icon: "fa-solid fa-gears",
           },
           {
             label: "Enquiry Management System",
-            href: "#enquiry-management",
+            href: "/enquiry-management",
             icon: "fa-regular fa-message-square",
           },
           {
             label: "Lead Manager",
-            href: "#lead-manager",
+            href: "/lead-manager",
             icon: "fa-solid fa-user-plus",
           },
           {
             label: "Facebook Integration",
-            href: "#facebook-integration",
+            href: "/facebook-intergration",
             icon: "fa-brands fa-facebook",
           },
           {
             label: "WhatsApp Business API",
-            href: "#whatsapp-api",
+            href: "/whatspp-business-api",
             icon: "fa-brands fa-whatsapp",
           },
         ],
@@ -273,7 +277,7 @@ export const products = [
           },
           {
             label: "Loyalty & Rewards",
-            href: "#loyalty",
+            href: "/loyalty-management",
             icon: "fa-solid fa-award",
           },
         ],
@@ -293,7 +297,7 @@ export const products = [
           },
           {
             label: "Delivery",
-            href: "#delivery",
+            href: "/delivery",
             icon: "fa-solid fa-truck-fast",
           },
           {
@@ -329,7 +333,7 @@ export const products = [
           },
           {
             label: "Delivery App",
-            href: "#delivery-app",
+            href: "/delivery-app",
             icon: "fa-solid fa-truck-fast",
             badge: "Coming Soon",
           },
@@ -365,7 +369,7 @@ export const products = [
           },
           {
             label: "Delivery App",
-            href: "#delivery-app",
+            href: "/delivery-app",
             icon: "fa-solid fa-truck-fast",
           },
         ],

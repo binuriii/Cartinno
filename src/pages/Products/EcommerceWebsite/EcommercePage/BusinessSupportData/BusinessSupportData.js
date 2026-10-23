@@ -20,26 +20,26 @@ export const supportServices = [
     title: 'Maintenance',
     description:
       'We handle updates, optimizations, and checks to keep your platform running smoothly and securely.',
-    image: 'https://images.unsplash.com/photo-1621570171784-29f3a911570d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
+    image: 'https://images.unsplash.com/photo-1578737657637-fabac4b4409f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
     imageAlt: 'Website maintenance',
     icon: 'fa-solid fa-screwdriver-wrench'
   },
   {
     id: 3,
-    title: 'Help & Support',
-    description:
-      'Get expert help anytime with fast issue resolution and guidance to keep your e-commerce running smoothly.',
-    image: 'https://images.unsplash.com/photo-1781145854105-9930923becf9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
-    imageAlt: 'Customer support',
-    icon: 'fa-solid fa-headset'
-  },
-  {
-    id: 4,
     title: 'Digital Marketing Supports',
     description:
       'Boost visibility with expert SEO guidance and tools to optimize your site and improve search rankings.',
     image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
     imageAlt: 'Digital marketing',
     icon: 'fa-solid fa-chart-line'
+  },
+  {
+    id: 4,
+    title: 'Help & Support',
+    description:
+      'Get expert help anytime with fast issue resolution and guidance to keep your e-commerce running smoothly.',
+    image: 'https://images.unsplash.com/photo-1785033153973-fd121a3206ac?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
+    imageAlt: 'Customer support',
+    icon: 'fa-solid fa-headset'
   }
 ]

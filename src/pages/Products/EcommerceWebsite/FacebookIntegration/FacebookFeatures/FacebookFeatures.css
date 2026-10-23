@@ -1,0 +1,471 @@
+
+/* ==========================================
+   FACEBOOK INTEGRATION FEATURES
+   CARTINNO THEME
+========================================== */
+
+.fbf-section,
+.fbf-section * {
+  box-sizing: border-box;
+}
+
+.fbf-section {
+  --fbf-red: #d7454e;
+  --fbf-ink: #23232b;
+  --fbf-muted: #5b5b66;
+
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  /* SAME HERO OVERLAP AS RETAIL EXPANSION */
+  margin-top: -55px;
+
+  /* LARGE ROUNDED TOP CORNERS */
+  border-radius: 70px 70px 0 0;
+
+  /* SAME SECTION PADDING */
+  padding: 10vh 3vw 10vh;
+
+  background: #ffffff;
+  color: var(--fbf-ink);
+  font-family: inherit;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.fbf-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* ==========================================
+   LEFT-ALIGNED SECTION HEADER
+========================================== */
+
+.fbf-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  margin-bottom: clamp(38px, 5vw, 65px);
+
+  text-align: left;
+}
+
+.fbf-heading {
+  max-width: 980px;
+  margin: 0;
+
+  color: var(--fbf-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+
+  text-align: left;
+}
+
+/* ==========================================
+   THREE STAGGERED CARD GRID
+========================================== */
+
+.fbf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: clamp(16px, 2vw, 28px);
+  align-items: end;
+
+  width: 100%;
+}
+
+/* ==========================================
+   CARD BASE
+========================================== */
+
+.fbf-card {
+  position: relative;
+  isolation: isolate;
+
+  min-width: 0;
+  height: 445px;
+
+  overflow: hidden;
+
+  border-radius: 25px;
+  background: #ececf0;
+
+  opacity: 0;
+  transform: translateY(40px);
+
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+
+  transition-delay: calc(var(--fbf-index) * 0.13s);
+}
+
+/* MIDDLE CARD IS TALLER */
+
+.fbf-card-middle {
+  height: 505px;
+}
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+.fbf-visible .fbf-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================
+   CARD BACKGROUND IMAGES
+========================================== */
+
+.fbf-card-image-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  overflow: hidden;
+}
+
+.fbf-card-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.7s ease;
+}
+
+/* FALLBACK WHEN IMAGE FAILS */
+
+.fbf-image-fallback {
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #c1c8d4,
+    #7f8ea7
+  );
+
+  color: #ffffff;
+  font-size: 40px;
+}
+
+/* DIFFERENT FALLBACK COLORS */
+
+.fbf-card-peach .fbf-image-fallback {
+  background: linear-gradient(
+    135deg,
+    #f2d4bd,
+    #c78e80
+  );
+}
+
+.fbf-card-lavender .fbf-image-fallback {
+  background: linear-gradient(
+    135deg,
+    #d3c5e9,
+    #8878b9
+  );
+}
+
+/* IMAGE GRADIENT */
+
+.fbf-card-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.02) 20%,
+    rgba(0, 0, 0, 0.04) 48%,
+    rgba(0, 0, 0, 0.30) 100%
+  );
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   CARD NUMBER
+========================================== */
+
+.fbf-card-number {
+  position: absolute;
+  z-index: 2;
+
+  top: 19px;
+  left: 19px;
+
+  display: grid;
+  place-items: center;
+
+  width: 43px;
+  height: 35px;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--fbf-ink);
+
+  font-size: 12px;
+  font-weight: 650;
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* ==========================================
+   FLOATING WHITE CONTENT PANEL
+========================================== */
+
+.fbf-card-panel {
+  position: absolute;
+  z-index: 2;
+
+  left: 13px;
+  right: 13px;
+  bottom: 13px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: clamp(14px, 1.6vw, 20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.10);
+
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* ==========================================
+   PANEL TEXT
+========================================== */
+
+.fbf-card-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.fbf-card-title {
+  margin: 0;
+
+  color: var(--fbf-ink);
+
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+.fbf-card-description {
+  margin: 8px 0 0;
+
+  color: var(--fbf-muted);
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* ==========================================
+   HOVER EFFECTS
+========================================== */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .fbf-visible .fbf-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+      0 20px 45px rgba(35, 35, 43, 0.12);
+  }
+
+  .fbf-card:hover .fbf-card-image {
+    transform: scale(1.07);
+  }
+
+  .fbf-card:hover .fbf-card-panel {
+    transform: translateY(-3px);
+
+    box-shadow:
+      0 15px 35px rgba(0, 0, 0, 0.14);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+
+  .fbf-section {
+    margin-top: -45px;
+
+    padding: 8vh 4vw;
+
+    border-radius: 40px 40px 0 0;
+  }
+
+  .fbf-grid {
+    gap: 16px;
+  }
+
+  .fbf-card {
+    height: 425px;
+    border-radius: 22px;
+  }
+
+  .fbf-card-middle {
+    height: 475px;
+  }
+
+  .fbf-card-panel {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    gap: 9px;
+    padding: 14px;
+  }
+
+  .fbf-card-title {
+    font-size: 17px;
+  }
+
+  .fbf-card-description {
+    font-size: 11px;
+  }
+}
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+  .fbf-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: end;
+  }
+
+  .fbf-card {
+    height: 430px;
+  }
+
+  .fbf-card-middle {
+    height: 470px;
+  }
+
+  .fbf-card:last-child {
+    grid-column: 1 / -1;
+    height: 400px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+
+  .fbf-section {
+    margin-top: -35px;
+
+    padding: 65px 14px 70px;
+
+    border-radius: 24px 24px 0 0;
+  }
+
+  .fbf-header {
+    margin-bottom: 30px;
+  }
+
+  .fbf-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .fbf-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .fbf-card,
+  .fbf-card-middle,
+  .fbf-card:last-child {
+    grid-column: auto;
+
+    height: 430px;
+    border-radius: 20px;
+  }
+
+  .fbf-card-panel {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .fbf-card-title {
+    font-size: 19px;
+  }
+
+  .fbf-card-description {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .fbf-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .fbf-card-image,
+  .fbf-card-panel {
+    transition: none;
+  }
+}

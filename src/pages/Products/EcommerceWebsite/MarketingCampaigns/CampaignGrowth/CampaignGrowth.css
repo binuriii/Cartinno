@@ -1,0 +1,31 @@
+.mcg-section.mc-section { position:relative; z-index:1; margin-top:-55px; border-radius:70px 70px 0 0; background:#fff; padding-top:90px; }
+.mcg-section .mc-heading { margin-bottom:60px; }
+.mcg-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-items:end; gap:24px; }
+.mcg-reveal { min-width:0; }
+.mcg-card { position:relative; height:465px; overflow:hidden; border-radius:25px; background:#e8e0dc; isolation:isolate; }
+.mcg-card--raised { height:525px; }
+.mcg-card > img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.2s cubic-bezier(.2,.7,.2,1); }
+.mcg-shade { position:absolute; inset:0; background:linear-gradient(180deg,#24202504 30%,#24202555); pointer-events:none; }
+.mcg-number { position:absolute; top:19px; left:19px; min-width:42px; height:34px; display:grid; place-items:center; border-radius:99px; background:#fffffff0; color:#23232b; font-size:11px; font-weight:600; }
+.mcg-caption { position:absolute; bottom:14px; left:14px; right:14px; border-radius:18px; padding:22px 20px; background:#fffdfcf5; backdrop-filter:blur(16px); box-shadow:0 8px 30px #2016200a; transition:transform .4s; }
+.mcg-tag { display:block; color:#a0545e; font-size:8px; font-weight:600; letter-spacing:.15em; margin-bottom:10px; }
+.mcg-caption h3 { margin:0 0 9px; font-size:clamp(18px,1.65vw,23px); line-height:1.25; letter-spacing:-.035em; font-weight:600; }
+.mcg-caption p { margin:0; font-size:12px; line-height:1.65; color:#5b5b66; }
+@media(hover:hover) {
+  .mcg-card:hover > img { transform:scale(1.065); }
+  .mcg-card:hover .mcg-caption { transform:translateY(-5px); }
+}
+@media(max-width:1024px) { .mcg-section.mc-section { margin-top:-45px; border-radius:40px 40px 0 0; padding-top:75px; } .mcg-grid { gap:16px; } .mcg-caption { padding:18px 15px; } }
+@media(max-width:760px) {
+  .mcg-grid { grid-template-columns:1fr; gap:20px; }
+  .mcg-card,.mcg-card--raised { height:430px; }
+  .mcg-caption { padding:23px; }
+  .mcg-caption h3 { font-size:23px; }
+  .mcg-caption p { font-size:13px; }
+  .mcg-section .mc-heading { margin-bottom:32px; }
+}
+@media(max-width:640px) {
+  .mcg-section.mc-section { margin-top:-35px; border-radius:24px 24px 0 0; padding-top:60px; }
+  .mcg-card,.mcg-card--raised { height:420px; border-radius:22px; }
+  .mcg-caption { padding:20px; } .mcg-caption h3 { font-size:21px; }
+}
