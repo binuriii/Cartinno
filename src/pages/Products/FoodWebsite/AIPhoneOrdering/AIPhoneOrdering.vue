@@ -14,6 +14,7 @@ import {
 import {
   aiPhoneOrderingFAQs
 } from './AIPhoneOrdering.js'
+import AIPhoneOrderingBenefits from './AIPhoneOrderingBenefits/AIPhoneOrderingBenefits.vue'
 </script>
 
 <template>
@@ -23,6 +24,8 @@ import {
     <Hero v-bind="aiPhoneOrderingHero" />
 
     <AIPhoneOrderingFeatures/>
+
+    <AIPhoneOrderingBenefits/>
 
     <!-- FAQ -->
     <FAQ
