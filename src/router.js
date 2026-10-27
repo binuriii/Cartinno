@@ -237,6 +237,13 @@ const routes = [
       import('./pages/Products/FoodWebsite/BrandedRestaurantApp/BrandedRestaurantApp.vue')
   },
 
+  {
+    path: '/food-marketing-campaigns',
+    name: 'food-marketing-campaigns',
+    component: () =>
+      import('./pages/Products/FoodWebsite/FoodMarketingCampaigns/FoodMarketingCampaigns.vue')
+  },
+
 
 
 

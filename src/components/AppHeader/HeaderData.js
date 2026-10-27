@@ -185,7 +185,7 @@ export const products = [
           },
           {
             "label": "Marketing Campaigns",
-            "href": "#marketing-campaigns",
+            "href": "/food-marketing-campaigns",
             "icon": "fa-solid fa-bullhorn"
           },
           {
