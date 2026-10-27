@@ -14,6 +14,7 @@ import {
   foodWebsiteMarketingCampaignFAQs
 } from './FoodMarketingCampaigns.js'
 import FoodMarketingCampaignsFeatures from './FoodMarketingCampaignsFeatures/FoodMarketingCampaignsFeatures.vue'
+import FoodMarketingCampaignBenefits from './FoodMarketingCampaignBenefits/FoodMarketingCampaignBenefits.vue'
 </script>
 
 <template>
@@ -23,6 +24,8 @@ import FoodMarketingCampaignsFeatures from './FoodMarketingCampaignsFeatures/Foo
     <Hero v-bind="foodWebsiteMarketingCampaignHero" />
 
     <FoodMarketingCampaignsFeatures/>
+
+    <FoodMarketingCampaignBenefits/>
 
     <!-- FAQ -->
     <FAQ
