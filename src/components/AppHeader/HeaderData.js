@@ -222,7 +222,7 @@ export const products = [
           },
           {
             "label": "Catering",
-            "href": "#catering",
+            "href": "/catering",
             "icon": "fa-solid fa-mug-hot"
           },
           {

@@ -216,6 +216,13 @@ const routes = [
       import('./pages/Products/FoodWebsite/FoodSmartUpsells/FoodSmartUpsells.vue')
   },
 
+  {
+    path: '/catering',
+    name: 'catering',
+    component: () =>
+      import('./pages/Products/FoodWebsite/Catering/Catering.vue')
+  },
+
 
 
 
