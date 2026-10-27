@@ -1,0 +1,414 @@
+.brab-section,
+.brab-section * {
+  box-sizing: border-box;
+}
+
+.brab-section {
+  --brab-red: #d7454e;
+  --brab-ink: #23232b;
+  --brab-muted: #5b5b66;
+
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  width: 100%;
+  padding: 5vh 3vw 10vh;
+
+  background: #ffffff;
+  color: var(--brab-ink);
+  font-family: inherit;
+}
+
+.brab-container {
+  display: block;
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.brab-header {
+  display: block;
+  width: 100%;
+  margin-bottom: clamp(35px, 4vw, 55px);
+}
+
+.brab-heading {
+  max-width: 850px;
+  margin: 0;
+
+  color: var(--brab-ink);
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+  text-align: left;
+}
+
+/* GRID */
+
+.brab-section .brab-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(2, 270px) !important;
+  gap: clamp(14px, 1.4vw, 22px);
+
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+/* ALL CARDS */
+
+.brab-section .brab-card {
+  position: relative;
+  isolation: isolate;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+
+  border-radius: 25px;
+  overflow: hidden;
+
+  opacity: 1;
+  visibility: visible;
+
+  background: #eee9e7;
+
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+}
+
+/* CARD POSITIONS */
+
+.brab-section .brab-card-one {
+  grid-column: 1 / 3 !important;
+  grid-row: 1 !important;
+  background: #c5f9c8;
+}
+
+.brab-section .brab-card-two {
+  grid-column: 1 / 3 !important;
+  grid-row: 2 !important;
+  background: #e1cbd7;
+}
+
+.brab-section .brab-card-three {
+  grid-column: 3 / 5 !important;
+  grid-row: 1 / 3 !important;
+  background: #d4e4e8;
+}
+
+/* IMAGES */
+
+.brab-card-image {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* IMAGE FALLBACKS */
+
+.brab-image-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.brab-fallback-two {
+  background: linear-gradient(140deg, #e1cbd7, #b7a2b4);
+}
+
+.brab-fallback-three {
+  background: linear-gradient(140deg, #d4e4e8, #98aeb4);
+}
+
+/* IMAGE OVERLAY */
+
+.brab-card-overlay {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.02) 12%,
+    rgba(0, 0, 0, 0.10) 35%,
+    rgba(14, 12, 19, 0.78) 100%
+  );
+}
+
+/* CARD CONTENT */
+
+.brab-card-content {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  width: 100%;
+  height: 100%;
+
+  padding: clamp(22px, 2.5vw, 36px);
+
+  color: #ffffff;
+  text-align: left;
+
+  transition: transform 0.4s ease;
+}
+
+/* FIRST CARD - LIGHT BACKGROUND */
+
+.brab-card-one .brab-card-content {
+  justify-content: flex-start;
+  padding: clamp(28px, 3vw, 46px);
+}
+
+.brab-card-one .brab-card-title,
+.brab-card-one .brab-card-description {
+  color: var(--brab-ink);
+}
+
+/* TITLE */
+
+.brab-card-title {
+  max-width: 430px;
+  margin: 0;
+
+  color: #ffffff;
+  font-size: clamp(21px, 2vw, 29px);
+  font-weight: 550;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+/* DESCRIPTION */
+
+.brab-card-description {
+  max-width: 440px;
+  margin: 14px 0 0;
+
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* BOTTOM LEFT CARD */
+
+.brab-card-two .brab-card-content {
+  padding: 24px;
+}
+
+.brab-card-two .brab-card-title {
+  font-size: clamp(19px, 1.6vw, 24px);
+}
+
+.brab-card-two .brab-card-description {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* TALL RIGHT CARD */
+
+.brab-card-three .brab-card-content {
+  padding: clamp(26px, 3vw, 43px);
+}
+
+.brab-card-three .brab-card-title {
+  max-width: 390px;
+  font-size: clamp(25px, 2.4vw, 34px);
+}
+
+.brab-card-three .brab-card-description {
+  max-width: 410px;
+  font-size: 15px;
+}
+
+/* HOVER */
+
+@media (hover: hover) and (pointer: fine) {
+  .brab-section .brab-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 12px 25px rgba(35, 35, 43, 0.05),
+      0 20px 42px rgba(35, 35, 43, 0.12);
+  }
+
+  .brab-card:hover .brab-card-image {
+    transform: scale(1.06);
+  }
+
+  .brab-card:hover .brab-card-content {
+    transform: translateY(-3px);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .brab-section {
+    padding: 8vh 4vw;
+  }
+
+  .brab-section .brab-grid {
+    grid-template-rows: repeat(2, 245px) !important;
+    gap: 14px;
+  }
+
+  .brab-section .brab-card {
+    border-radius: 21px;
+  }
+
+  .brab-card-one .brab-card-content {
+    padding: 30px;
+  }
+
+  .brab-card-title {
+    font-size: 22px;
+  }
+
+  .brab-card-description {
+    font-size: 12px;
+  }
+
+  .brab-card-two .brab-card-content {
+    padding: 19px;
+  }
+
+  .brab-card-two .brab-card-title {
+    font-size: 19px;
+  }
+
+  .brab-card-three .brab-card-title {
+    font-size: 25px;
+  }
+}
+
+/* SMALL TABLET */
+
+@media (max-width: 768px) {
+  .brab-section .brab-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: 260px 300px 390px !important;
+  }
+
+  .brab-section .brab-card-one {
+    grid-column: 1 / -1 !important;
+    grid-row: 1 !important;
+  }
+
+  .brab-section .brab-card-two {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+  }
+
+  .brab-section .brab-card-three {
+    grid-column: 1 / -1 !important;
+    grid-row: 3 !important;
+  }
+
+  .brab-card-three .brab-card-title {
+    font-size: 28px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .brab-section {
+    padding: 65px 14px 75px;
+  }
+
+  .brab-header {
+    margin-bottom: 30px;
+  }
+
+  .brab-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .brab-section .brab-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: none !important;
+    gap: 14px;
+  }
+
+  .brab-section .brab-card-one,
+  .brab-section .brab-card-two,
+  .brab-section .brab-card-three {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    height: 320px;
+  }
+
+  .brab-section .brab-card-one {
+    height: 270px;
+  }
+
+  .brab-section .brab-card-three {
+    height: 420px;
+  }
+
+  .brab-card-content,
+  .brab-card-one .brab-card-content,
+  .brab-card-two .brab-card-content,
+  .brab-card-three .brab-card-content {
+    padding: 25px;
+  }
+
+  .brab-card-title,
+  .brab-card-two .brab-card-title,
+  .brab-card-three .brab-card-title {
+    font-size: 24px;
+  }
+
+  .brab-card-description,
+  .brab-card-two .brab-card-description,
+  .brab-card-three .brab-card-description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .brab-section .brab-card,
+  .brab-card-image,
+  .brab-card-content {
+    animation: none !important;
+    transition: none !important;
+  }
+}

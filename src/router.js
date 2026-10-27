@@ -202,6 +202,63 @@ const routes = [
       import('./pages/Products/FoodWebsite/ListingsManagement/ListingsManagement.vue')
   },
 
+  {
+    path: '/online-ordering',
+    name: 'online-ordering',
+    component: () =>
+      import('./pages/Products/FoodWebsite/OnlineOrdering/OnlineOrdering.vue')
+  },
+
+  {
+    path: '/food-smart-upsells',
+    name: 'food-smart-upsells',
+    component: () =>
+      import('./pages/Products/FoodWebsite/FoodSmartUpsells/FoodSmartUpsells.vue')
+  },
+
+  {
+    path: '/catering',
+    name: 'catering',
+    component: () =>
+      import('./pages/Products/FoodWebsite/Catering/Catering.vue')
+  },
+
+  {
+    path: '/ai-phone-ordering',
+    name: 'ai-phone-ordering',
+    component: () =>
+      import('./pages/Products/FoodWebsite/AIPhoneOrdering/AIPhoneOrdering.vue')
+  },
+
+  {
+    path: '/branded-restaurant-ordering',
+    name: 'branded-restaurant-ordering',
+    component: () =>
+      import('./pages/Products/FoodWebsite/BrandedRestaurantApp/BrandedRestaurantApp.vue')
+  },
+
+  {
+    path: '/food-marketing-campaigns',
+    name: 'food-marketing-campaigns',
+    component: () =>
+      import('./pages/Products/FoodWebsite/FoodMarketingCampaigns/FoodMarketingCampaigns.vue')
+  },
+
+  {
+    path: '/food-push-notification-marketing',
+    name: 'food-push-notification-marketing',
+    component: () =>
+      import('./pages/Products/FoodWebsite/PushNotificationMarketing/PushNotificationMarketing.vue')
+  },
+
+  {
+    path: '/loyalty-and-rewards',
+    name: 'loyalty-and-rewards',
+    component: () =>
+      import('./pages/Products/FoodWebsite/LoyaltyAndRewards/LoyaltyAndRewards.vue')
+  },
+
+
 
 
 

@@ -178,25 +178,25 @@ export const products = [
           },
           {
             "label": "Branded Restaurant App",
-            "href": "#restaurant-app",
+            "href": "/branded-restaurant-ordering",
             "icon": "fa-solid fa-mobile-screen-button",
             "badge": "Coming Soon"
            
           },
           {
             "label": "Marketing Campaigns",
-            "href": "#marketing-campaigns",
+            "href": "/food-marketing-campaigns",
             "icon": "fa-solid fa-bullhorn"
           },
           {
             "label": "Push Notifications Marketing",
-            "href": "#push-notifications",
+            "href": "/food-push-notification-marketing",
             "icon": "fa-regular fa-bell"
           },
          
           {
             label: "Loyalty & Rewards",
-            href: "/loyalty-management",
+            href: "/loyalty-and-rewards",
             icon: "fa-solid fa-award"
           }
 
@@ -207,12 +207,12 @@ export const products = [
         "items": [
           {
             "label": "Online Ordering",
-            "href": "#online-ordering",
+            "href": "/online-ordering",
             "icon": "fa-solid fa-bag-shopping"
           },
           {
             "label": "Smart Upsells",
-            "href": "#smart-upsells",
+            "href": "/food-smart-upsells",
             "icon": "fa-solid fa-chart-line"
           },
           {
@@ -222,12 +222,12 @@ export const products = [
           },
           {
             "label": "Catering",
-            "href": "#catering",
+            "href": "/catering",
             "icon": "fa-solid fa-mug-hot"
           },
           {
             "label": "AI Phone Ordering",
-            "href": "#ai-phone-ordering",
+            "href": "/ai-phone-ordering",
             "icon": "fa-solid fa-phone",
             "badge": "Coming Soon"
           }

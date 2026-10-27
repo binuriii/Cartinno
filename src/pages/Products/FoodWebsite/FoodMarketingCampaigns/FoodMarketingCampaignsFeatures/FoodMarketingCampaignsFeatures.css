@@ -1,0 +1,431 @@
+.fmc-section,
+.fmc-section * {
+  box-sizing: border-box;
+}
+
+.fmc-section {
+  --fmc-red: #d7454e;
+  --fmc-ink: #23232b;
+  --fmc-muted: #5b5b66;
+
+  position: relative;
+  width: 100%;
+
+  margin-top: -55px;
+
+  /* ROUNDED TOP CORNERS */
+  border-radius: 70px 70px 0 0;
+
+  /* SECTION SPACING */
+  padding: 10vh 3vw 10vh;
+
+  background: #ffffff;
+  color: var(--fmc-ink);
+  font-family: inherit;
+
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.fmc-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* LEFT-ALIGNED SECTION HEADER */
+
+.fmc-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  margin-bottom: clamp(38px, 5vw, 65px);
+
+  text-align: left;
+}
+
+.fmc-heading {
+  max-width: 980px;
+  margin: 0;
+
+  color: var(--fmc-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+
+  text-align: left;
+}
+
+.fmc-description {
+  max-width: 760px;
+  margin: 18px 0 0;
+
+  color: var(--fmc-muted);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: normal;
+
+  text-align: left;
+}
+
+/* THREE-CARD GRID */
+
+.fmc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: clamp(16px, 2vw, 28px);
+  align-items: end;
+
+  width: 100%;
+}
+
+/* CARD BASE */
+
+.fmc-card {
+  position: relative;
+  isolation: isolate;
+
+  min-width: 0;
+  height: 445px;
+
+  overflow: hidden;
+
+  border-radius: 25px;
+  background: #ececf0;
+
+  opacity: 0;
+  transform: translateY(40px);
+
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+
+  transition-delay: calc(var(--fmc-index) * 0.13s);
+}
+
+/* MIDDLE CARD IS TALLER */
+
+.fmc-card-middle {
+  height: 505px;
+}
+
+/* SCROLL REVEAL */
+
+.fmc-visible .fmc-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fmc-visible .fmc-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 20px 45px rgba(35, 35, 43, 0.12);
+}
+
+/* CARD IMAGE */
+
+.fmc-card-image-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  overflow: hidden;
+}
+
+.fmc-card-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.7s ease;
+}
+
+.fmc-card:hover .fmc-card-image {
+  transform: scale(1.07);
+}
+
+/* IMAGE GRADIENT */
+
+.fmc-card-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.02) 20%,
+    rgba(0, 0, 0, 0.04) 48%,
+    rgba(0, 0, 0, 0.30) 100%
+  );
+
+  pointer-events: none;
+}
+
+/* CARD NUMBER */
+
+.fmc-card-number {
+  position: absolute;
+  z-index: 2;
+
+  top: 19px;
+  left: 19px;
+
+  display: grid;
+  place-items: center;
+
+  width: 43px;
+  height: 35px;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--fmc-ink);
+
+  font-size: 12px;
+  font-weight: 650;
+
+  backdrop-filter: blur(10px);
+}
+
+/* FLOATING WHITE CONTENT PANEL */
+
+.fmc-card-panel {
+  position: absolute;
+  z-index: 2;
+
+  left: 13px;
+  right: 13px;
+  bottom: 13px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: clamp(14px, 1.6vw, 20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.10);
+
+  backdrop-filter: blur(15px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.fmc-card:hover .fmc-card-panel {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+/* INDIVIDUAL ICON COLORS */
+
+.fmc-card-blue .fmc-card-icon {
+  background: #eaf0ff;
+  color: #627ad5;
+}
+
+.fmc-card-peach .fmc-card-icon {
+  background: #fff0e9;
+  color: #d98165;
+}
+
+.fmc-card-lavender .fmc-card-icon {
+  background: #f0ebff;
+  color: #876bca;
+}
+
+/* PANEL TEXT */
+
+.fmc-card-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.fmc-card-title {
+  margin: 0;
+
+  color: var(--fmc-ink);
+
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+.fmc-card-description {
+  margin: 8px 0 0;
+
+  color: var(--fmc-muted);
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .fmc-section {
+    padding: 8vh 4vw;
+  }
+
+  .fmc-grid {
+    gap: 16px;
+  }
+
+  .fmc-card {
+    height: 425px;
+    border-radius: 22px;
+  }
+
+  .fmc-card-middle {
+    height: 475px;
+  }
+
+  .fmc-card-panel {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    gap: 9px;
+    padding: 14px;
+  }
+
+  .fmc-card-icon {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+
+    font-size: 14px;
+  }
+
+  .fmc-card-title {
+    font-size: 17px;
+  }
+
+  .fmc-card-description {
+    font-size: 11px;
+  }
+}
+
+/* SMALL TABLET */
+
+@media (max-width: 768px) {
+  .fmc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: end;
+  }
+
+  .fmc-card {
+    height: 430px;
+  }
+
+  .fmc-card-middle {
+    height: 470px;
+  }
+
+  .fmc-card:last-child {
+    grid-column: 1 / -1;
+    height: 400px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .fmc-section {
+    padding: 65px 14px 70px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .fmc-header {
+    margin-bottom: 30px;
+  }
+
+  .fmc-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .fmc-description {
+    margin-top: 18px;
+
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .fmc-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .fmc-card,
+  .fmc-card-middle,
+  .fmc-card:last-child {
+    grid-column: auto;
+    height: 430px;
+
+    border-radius: 20px;
+  }
+
+  .fmc-card-panel {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .fmc-card-icon {
+    width: 41px;
+    height: 41px;
+    flex-basis: 41px;
+  }
+
+  .fmc-card-title {
+    font-size: 19px;
+  }
+
+  .fmc-card-description {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .fmc-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .fmc-card-image,
+  .fmc-card-panel {
+    transition: none;
+  }
+}
