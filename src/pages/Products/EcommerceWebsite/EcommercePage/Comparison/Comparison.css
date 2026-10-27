@@ -1,4 +1,3 @@
-
 .ec-compare,
 .ec-compare * {
   box-sizing: border-box;
@@ -8,7 +7,7 @@
   --cc-red: #d7454e;
   --cc-ink: #23232b;
   --cc-muted: #5b5b66;
-  --cc-line: #e6e6e6;
+  --cc-line: #e3e3e6;
 
   width: 100%;
   padding: 5vh 3vw 8vh;
@@ -18,47 +17,41 @@
   font-family: inherit;
 }
 
-/* CONTAINER */
-
 .ec-compare-container {
   width: 100%;
   max-width: 1350px;
   margin-inline: auto;
 }
 
-/* CENTER HEADING AND DESCRIPTION */
+/* HEADING */
 
 .ec-compare-heading {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-
   margin-bottom: clamp(24px, 3vw, 40px);
+  text-align: center;
 }
 
 .ec-compare-title {
   margin: 0;
-
   color: var(--cc-ink);
+
   font-size: clamp(26px, 4.4vw, 54px);
   font-weight: 450;
   line-height: 1.15;
   letter-spacing: -0.045em;
-
   text-align: center;
 }
 
 .ec-compare-description {
-  max-width: 620px;
+  max-width: 680px;
   margin: 18px auto 0;
 
   color: var(--cc-muted);
   font-size: 15px;
   font-weight: 400;
   line-height: 1.7;
-  letter-spacing: normal;
-
   text-align: center;
 }
 
@@ -69,10 +62,11 @@
   overflow-x: auto;
 
   border: 1px solid var(--cc-line);
-  border-radius: 24px;
+  border-radius: 18px;
 
+  background: #ffffff;
   scrollbar-width: thin;
-  scrollbar-color: #d3d3d3 transparent;
+  scrollbar-color: #c9c9cd transparent;
 }
 
 .ec-compare-scroll:focus-visible {
@@ -109,175 +103,158 @@
 
 /* COLUMN WIDTHS */
 
-.ec-compare-table th:first-child {
-  width: 36%;
+.ec-compare-table thead th:first-child {
+  width: 32%;
 }
 
-.ec-compare-table thead th:not(:first-child) {
-  width: 16%;
+.ec-compare-table thead th:nth-child(2) {
+  width: 34%;
 }
 
-/* TABLE HEADER */
+.ec-compare-table thead th:nth-child(3) {
+  width: 34%;
+}
+
+/* HEADER */
 
 .ec-compare-table thead th {
-  height: 76px;
-  padding: 16px 14px;
+  height: 64px;
+  padding: 16px 24px;
 
-  background: #29292d;
+  background: #262629;
   color: #ffffff;
 
-  font-size: clamp(14px, 1.3vw, 18px);
-  font-weight: 450;
+  font-size: clamp(15px, 1.4vw, 19px);
+  font-weight: 600;
   line-height: 1.3;
 
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
 
-  border-right-color: rgba(255, 255, 255, 0.16);
+  border-right-color: rgba(255, 255, 255, 0.12);
 }
 
 .ec-compare-feature-head {
-  text-align: left !important;
   padding-left: 28px !important;
-}
-
-.ec-compare-column-name {
-  display: block;
 }
 
 /* CARTINNO HEADER */
 
 .ec-compare-table thead .ec-compare-brand-head {
-  background: var(--cc-red);
+  background: #c8102e;
   color: #ffffff;
-
-  border-left: 2px solid var(--cc-red);
   border-right: none;
 }
 
-.ec-compare-brand-caption {
-  display: block;
-  width: fit-content;
-
-  margin: 7px auto 0;
-  padding: 4px 9px;
-
-  border-radius: 100px;
-  background: rgba(255, 255, 255, 0.17);
-
-  color: #ffffff;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-}
-
-/* FEATURE ROWS */
+/* BODY ROWS */
 
 .ec-compare-table tbody tr {
-  height: 64px;
-}
-
-.ec-compare-table tbody tr:nth-child(odd) {
-  background: #fafafa;
-}
-
-.ec-compare-table tbody tr:nth-child(even) {
   background: #ffffff;
+  transition: background 0.25s ease;
 }
 
 .ec-compare-table tbody tr:hover {
-  background: #f8f6f6;
+  background: #faf8f8;
 }
 
 /* FEATURE LABEL */
 
 .ec-compare-table tbody .ec-compare-feature {
-  padding: 14px 24px;
+  padding: 17px 24px 17px 28px;
 
-  color: #44444a;
+  color: #29292e;
   font-size: 15px;
-  font-weight: 450;
-  line-height: 1.5;
+  font-weight: 600;
+  line-height: 1.45;
 
   text-align: left;
   vertical-align: middle;
 }
 
-.ec-compare-feature-number {
-  display: inline-block;
-  min-width: 32px;
-  margin-right: 12px;
-
-  color: #b1afb3;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-
-/* COMPARISON VALUES */
+/* VALUES */
 
 .ec-compare-table tbody td {
-  padding: 10px 12px;
-  text-align: center;
+  padding: 15px 22px;
   vertical-align: middle;
+  text-align: left;
 }
 
-/* CHECK / CROSS ICONS */
+.ec-compare-value {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.ec-compare-value-text {
+  min-width: 0;
+
+  color: #555560;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* CHECK / DASH */
 
 .ec-compare-mark {
-  width: 32px;
-  height: 32px;
-
   display: inline-grid;
   place-items: center;
 
-  border-radius: 10px;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+
+  color: #888891;
 }
 
 .ec-compare-mark svg {
-  width: 19px;
-  height: 19px;
+  display: block;
+  width: 21px;
+  height: 21px;
 }
 
 .ec-compare-mark.is-yes {
-  color: #29292d;
+  color: #74747d;
 }
 
 .ec-compare-mark.is-no {
-  color: #b9b9bd;
+  color: #a3a3ac;
 }
 
 /* CARTINNO COLUMN */
 
 .ec-compare-table tbody .ec-compare-brand-cell {
-  background: rgba(215, 69, 78, 0.045);
-  border-left: 2px solid rgba(215, 69, 78, 0.18);
+  background: #fcf1f3;
+  border-right: none;
 }
 
-.ec-compare-mark.is-brand.is-yes {
-  background: var(--cc-red);
-  color: #ffffff;
-  border-radius: 50%;
+.ec-compare-brand-cell .ec-compare-value-text {
+  color: #29292e;
 }
 
-.ec-compare-mark.is-brand.is-no {
-  color: var(--cc-red);
+.ec-compare-brand-cell .ec-compare-mark.is-brand.is-yes {
+  color: #c8102e;
+}
+
+.ec-compare-brand-cell .ec-compare-mark.is-brand.is-no {
+  color: #c8102e;
 }
 
 .ec-compare-table tbody tr:hover .ec-compare-brand-cell {
-  background: rgba(215, 69, 78, 0.085);
+  background: #fae9ed;
 }
 
-/* BOTTOM NOTE */
+/* NOTE */
 
 .ec-compare-note {
-  margin: 22px 0 0;
+  margin: 18px 0 0;
 
-  color: #888888;
+  color: #888891;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.7;
-
   text-align: center;
 }
 
@@ -289,13 +266,20 @@
   }
 
   .ec-compare-table tbody .ec-compare-feature {
-    padding: 14px 18px;
+    padding: 15px 18px;
     font-size: 14px;
   }
 
-  .ec-compare-feature-number {
-    min-width: 25px;
-    margin-right: 7px;
+  .ec-compare-table tbody td {
+    padding: 14px 15px;
+  }
+
+  .ec-compare-value {
+    gap: 10px;
+  }
+
+  .ec-compare-value-text {
+    font-size: 14px;
   }
 }
 
@@ -322,7 +306,7 @@
   }
 
   .ec-compare-scroll {
-    border-radius: 16px;
+    border-radius: 15px;
   }
 
   .ec-compare-table {
@@ -330,32 +314,42 @@
   }
 
   .ec-compare-table thead th {
-    height: 66px;
-    padding: 12px 10px;
+    height: 58px;
+    padding: 12px 14px;
     font-size: 14px;
   }
 
-  .ec-compare-table tbody tr {
-    height: 62px;
+  .ec-compare-feature-head {
+    padding-left: 16px !important;
   }
 
   .ec-compare-table tbody .ec-compare-feature {
-    padding: 12px;
+    padding: 13px 14px;
     font-size: 12px;
   }
 
-  .ec-compare-feature-number {
-    display: none;
+  .ec-compare-table tbody td {
+    padding: 13px 12px;
+  }
+
+  .ec-compare-value {
+    gap: 8px;
   }
 
   .ec-compare-mark {
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
   }
 
   .ec-compare-mark svg {
-    width: 17px;
-    height: 17px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .ec-compare-value-text {
+    font-size: 12px;
+    line-height: 1.5;
   }
 
   .ec-compare-note {
@@ -367,8 +361,7 @@
 /* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
-  .ec-compare-table tbody tr,
-  .ec-compare-mark {
+  .ec-compare-table tbody tr {
     transition: none;
   }
 }

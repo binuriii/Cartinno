@@ -1,86 +1,111 @@
-
 export const comparisonContent = {
-  title: 'Everything You Need, All in One',
+  title: 'Cartinno vs Other Vendors',
   description:
-    'From website setup to ongoing support, discover how Cartinno brings essential business tools together in one platform.'
+    'Compare pricing, essential business tools, and support to see how Cartinno brings your operations together in one platform.'
 }
 
 export const comparisonColumns = [
-  { id: 'diy', label: 'DIY Tools' },
-  { id: 'freelancer', label: 'Freelancer' },
-  { id: 'agency', label: 'Agency' },
-  { id: 'cartinno', label: 'Cartinno' }
+  { id: 'cartinno', label: 'Cartinno' },
+  { id: 'otherVendors', label: 'Other Vendors' }
 ]
 
 export const comparisonRows = [
   {
-    feature: 'Website Setup',
-    diy: false,
-    freelancer: true,
-    agency: true,
-    cartinno: true
+    feature: 'Starting price',
+    cartinno: '$15 per month',
+    cartinnoIncluded: true,
+    otherVendors: '$39 per month ($29 billed yearly)',
+    otherVendorsIncluded: false
   },
   {
-    feature: 'Customization & Self Service',
-    diy: true,
-    freelancer: false,
-    agency: false,
-    cartinno: true
+    feature: 'Platform transaction fees',
+    cartinno: 'None — keep 100% of every sale',
+    cartinnoIncluded: true,
+    otherVendors: '2% per sale on third-party payment gateways',
+    otherVendorsIncluded: false
   },
   {
-    feature: 'Affordable',
-    diy: true,
-    freelancer: true,
-    agency: false,
-    cartinno: true
+    feature: 'Setup fee',
+    cartinno: 'None',
+    cartinnoIncluded: true,
+    otherVendors: 'None',
+    otherVendorsIncluded: true
   },
   {
-    feature: 'Shopping Cart Integration',
-    diy: false,
-    freelancer: true,
-    agency: true,
-    cartinno: true
+    feature: 'Store launch',
+    cartinno: 'Live in 24 hours — we set it up for you',
+    cartinnoIncluded: true,
+    otherVendors: 'Do-it-yourself setup',
+    otherVendorsIncluded: false
   },
   {
-    feature: 'Payment Integration',
-    diy: false,
-    freelancer: false,
-    agency: false,
-    cartinno: true
+    feature: 'PABX telephone system',
+    cartinno: 'Built-in phone system integration',
+    cartinnoIncluded: true,
+    otherVendors: 'Not included — third-party apps',
+    otherVendorsIncluded: false
   },
   {
-    feature: 'Free Software Upgrade',
-    diy: false,
-    freelancer: false,
-    agency: false,
-    cartinno: true
+    feature: 'POS (retail + food)',
+    cartinno: 'Built-in POS and food POS',
+    cartinnoIncluded: true,
+    otherVendors: 'POS Lite included; POS Pro $89/location/mo; no dedicated restaurant POS',
+    otherVendorsIncluded: false
   },
   {
-    feature: 'Support and Maintenance',
-    diy: false,
-    freelancer: false,
-    agency: false,
-    cartinno: true
+    feature: 'Retail + wholesale',
+    cartinno: 'Both on one platform',
+    cartinnoIncluded: true,
+    otherVendors: 'Wholesale (B2B) tools on higher plans or apps',
+    otherVendorsIncluded: false
   },
   {
-    feature: 'Multiple Payment Gateways',
-    diy: false,
-    freelancer: false,
-    agency: false,
-    cartinno: true
+    feature: 'Inventory management',
+    cartinno: 'Included',
+    cartinnoIncluded: true,
+    otherVendors: 'Included',
+    otherVendorsIncluded: true
   },
   {
-    feature: 'POS Billing',
-    diy: false,
-    freelancer: false,
-    agency: false,
-    cartinno: true
+    feature: 'Order management & promotions',
+    cartinno: 'Included',
+    cartinnoIncluded: true,
+    otherVendors: 'Included',
+    otherVendorsIncluded: true
   },
   {
-    feature: 'Delivery App',
-    diy: false,
-    freelancer: false,
-    agency: false,
-    cartinno: true
+    feature: 'Lead & inquiry management',
+    cartinno: 'Built in',
+    cartinnoIncluded: true,
+    otherVendors: 'Not included — third-party apps',
+    otherVendorsIncluded: false
+  },
+  {
+    feature: 'Customer support portal',
+    cartinno: 'Built in',
+    cartinnoIncluded: true,
+    otherVendors: 'Inbox chat only; ticketing via apps',
+    otherVendorsIncluded: false
+  },
+  {
+    feature: 'Marketing + email portal',
+    cartinno: 'Built in',
+    cartinnoIncluded: true,
+    otherVendors: 'Shopify Email — paid beyond free allowance',
+    otherVendorsIncluded: false
+  },
+  {
+    feature: 'Dedicated local support',
+    cartinno: 'Dedicated team in Colombo, one call away',
+    cartinnoIncluded: true,
+    otherVendors: 'Global online help centre',
+    otherVendorsIncluded: false
+  },
+  {
+    feature: 'All-in-one portal',
+    cartinno: 'Store, POS, phone, CRM tools & marketing in one',
+    cartinnoIncluded: true,
+    otherVendors: 'Built up from separate paid apps',
+    otherVendorsIncluded: false
   }
 ]
