@@ -28,6 +28,6 @@ export const brandedRestaurantAppFeatures = [
 ]
 
 export const brandedRestaurantAppPreview = {
-  image: './Products/BrandedRestaurantApp/BerryBlissBowlAppMockup.png',
+  image: './Products/BrandedRestaurantApp/BerryBlissBowlAppMockup.webp',
   imageAlt: 'Branded restaurant app displayed on a mobile device'
 }
