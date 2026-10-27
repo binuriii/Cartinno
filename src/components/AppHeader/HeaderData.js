@@ -227,7 +227,7 @@ export const products = [
           },
           {
             "label": "AI Phone Ordering",
-            "href": "#ai-phone-ordering",
+            "href": "/ai-phone-ordering",
             "icon": "fa-solid fa-phone",
             "badge": "Coming Soon"
           }

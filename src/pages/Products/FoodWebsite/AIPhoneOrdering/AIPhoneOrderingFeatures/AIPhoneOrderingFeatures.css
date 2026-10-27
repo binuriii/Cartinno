@@ -1,0 +1,829 @@
+/* ==========================================
+   AI PHONE ORDERING FEATURES
+========================================== */
+
+.aipf-section,
+.aipf-section * {
+  box-sizing: border-box;
+}
+
+.aipf-section {
+  --aipf-red: #d7454e;
+  --aipf-ink: #23232b;
+  --aipf-muted: #5b5b66;
+  --aipf-ease: cubic-bezier(.22, 1, .36, 1);
+
+  position: relative;
+  z-index: 20;
+
+  width: 100%;
+  margin-top: -55px;
+  padding: 10vh 3vw;
+
+  border-radius: 70px 70px 0 0;
+
+  background: #ffffff;
+  background-clip: padding-box;
+
+  color: var(--aipf-ink);
+  font-family: inherit;
+
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.aipf-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* HEADER */
+
+.aipf-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  margin-bottom: clamp(28px, 3vw, 42px);
+  text-align: left;
+}
+
+.aipf-heading {
+  max-width: 1000px;
+  margin: 0;
+
+  color: var(--aipf-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -.045em;
+
+  text-align: left;
+}
+
+/* TWO-COLUMN LAYOUT */
+
+.aipf-layout {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+
+  gap: clamp(35px, 5vw, 85px);
+  width: 100%;
+  min-width: 0;
+}
+
+/* PREVIEW CARD */
+
+.aipf-image-card {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 570px;
+
+  padding: 32px;
+
+  border-radius: 35px;
+  background: #e7effb;
+  overflow: hidden;
+
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity .8s ease,
+    transform .8s var(--aipf-ease),
+    box-shadow .35s ease;
+}
+
+.aipf-image-card::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(255,255,255,.95),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(134,177,244,.35),
+      transparent 58%
+    );
+
+  pointer-events: none;
+}
+
+/* BROWSER MOCKUP */
+
+.aipf-browser {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 520px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 19px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 25px 55px rgba(49,78,126,.15);
+}
+
+.aipf-browser-topbar {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 42px;
+  padding: 0 15px;
+
+  border-bottom: 1px solid #edeef2;
+}
+
+.aipf-browser-dots {
+  position: absolute;
+  left: 15px;
+
+  display: flex;
+  gap: 5px;
+}
+
+.aipf-browser-dots i {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: #d6d7dd;
+}
+
+.aipf-browser-dots i:first-child {
+  background: #f1b5b1;
+}
+
+.aipf-browser-dots i:nth-child(2) {
+  background: #f0d095;
+}
+
+.aipf-browser-dots i:last-child {
+  background: #b5dabb;
+}
+
+.aipf-browser-address {
+  max-width: 65%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  padding: 7px 20px;
+
+  border-radius: 6px;
+  background: #f6f6f7;
+
+  color: #858995;
+  font-size: 10px;
+}
+
+/* RESTAURANT PREVIEW */
+
+.aipf-restaurant-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 16px 18px;
+
+  border-bottom: 1px solid #edf0f5;
+}
+
+.aipf-restaurant-image {
+  display: block;
+
+  width: 62px;
+  height: 62px;
+  flex: 0 0 62px;
+
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.aipf-restaurant-info {
+  min-width: 0;
+}
+
+.aipf-restaurant-info h3 {
+  margin: 0;
+
+  color: #292c35;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.aipf-restaurant-info p {
+  margin: 5px 0 0;
+
+  color: #818792;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* PHONE ORDER */
+
+.aipf-call-panel {
+  margin: 15px 18px;
+  padding: 15px;
+
+  border-radius: 13px;
+  background: #eafefb;
+  color: #2e2e2e;
+}
+
+.aipf-call-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.aipf-call-status {
+  color: #6873d4;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.aipf-phone-number {
+  margin: 8px 0 0;
+
+  color: #5a5959;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.aipf-waveform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  height: 30px;
+  margin: 8px 0;
+}
+
+.aipf-waveform span {
+  width: 4px;
+  height: 12px;
+
+  border-radius: 10px;
+  background: #e0a4a0;
+
+  animation: aipf-wave 1s ease-in-out infinite alternate;
+  animation-delay: calc(var(--bar-index) * -0.07s);
+}
+
+.aipf-waveform span:nth-child(5n + 1) {
+  height: 8px;
+}
+
+.aipf-waveform span:nth-child(5n + 2) {
+  height: 16px;
+}
+
+.aipf-waveform span:nth-child(5n + 3) {
+  height: 24px;
+}
+
+.aipf-waveform span:nth-child(5n + 4) {
+  height: 18px;
+}
+
+.aipf-waveform span:nth-child(5n + 5) {
+  height: 11px;
+}
+
+.aipf-call-caption {
+  margin: 0;
+
+  color: #414040;
+  font-size: 9px;
+  text-align: center;
+}
+
+/* CONVERSATION */
+
+.aipf-conversation {
+  margin: 0 18px;
+  padding: 14px;
+
+  border: 1px solid #edf0f5;
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+.aipf-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  margin-bottom: 12px;
+}
+
+.aipf-section-heading h4 {
+  margin: 0;
+
+  color: #303440;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.aipf-section-heading > span {
+  color: #858a97;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.aipf-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-top: 11px;
+}
+
+.aipf-message-customer {
+  align-items: flex-end;
+}
+
+.aipf-message-speaker {
+  margin-bottom: 5px;
+
+  color: #858a97;
+  font-size: 9px;
+}
+
+.aipf-message p {
+  max-width: 90%;
+  margin: 0;
+  padding: 9px 11px;
+
+  border-radius: 4px 12px 12px;
+
+  background: #f1f5fc;
+  color: #343944;
+
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.aipf-message-customer p {
+  border-radius: 12px 4px 12px 12px;
+
+  background: #fce9e8;
+  color: #63383b;
+}
+
+/* ORDER SUMMARY */
+
+.aipf-order-summary {
+  margin: 13px 18px 18px;
+  padding: 13px;
+
+  border: 1px solid #edf0f5;
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+.aipf-order-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 9px 0;
+
+  border-top: 1px solid #edf0f5;
+}
+
+.aipf-order-item img {
+  display: block;
+
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+.aipf-order-details {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.aipf-order-details strong {
+  color: #303440;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.aipf-order-details span {
+  color: #858a97;
+  font-size: 9px;
+}
+
+/* FLOATING ORDER CARD */
+
+.aipf-floating-card {
+  position: absolute;
+  z-index: 3;
+
+  right: 0;
+  bottom: 7%;
+  margin-right: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: min(225px, 48%);
+  padding: 12px;
+
+  border: 1px solid #edf0f5;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 35px rgba(45,70,120,.17);
+}
+
+.aipf-floating-card img {
+  display: block;
+
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+.aipf-floating-card div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.aipf-floating-card strong {
+  color: #303440;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.aipf-floating-card span {
+  color: #858a97;
+  font-size: 9px;
+}
+
+/* BENEFITS */
+
+.aipf-benefits {
+  display: flex;
+  flex-direction: column;
+
+  gap: clamp(38px, 5vw, 70px);
+
+  width: 100%;
+  min-width: 0;
+}
+
+.aipf-benefit {
+  width: 100%;
+
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity .7s ease,
+    transform .7s var(--aipf-ease);
+}
+
+.aipf-benefit-title {
+  max-width: 500px;
+  margin: 0;
+
+  color: var(--aipf-ink);
+
+  font-size: clamp(24px, 2.6vw, 35px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.aipf-benefit-description {
+  max-width: 490px;
+  margin: 15px 0 0;
+
+  color: var(--aipf-muted);
+
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* ANIMATIONS */
+
+@keyframes aipf-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes aipf-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes aipf-wave {
+  from {
+    transform: scaleY(.55);
+    opacity: .7;
+  }
+
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .aipf-section:not(.aipf-visible) .aipf-image-card {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  .aipf-section:not(.aipf-visible) .aipf-benefit {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .aipf-visible .aipf-benefit {
+    transition-delay: calc(var(--aipf-index) * .12s);
+  }
+
+  .aipf-visible .aipf-floating-card {
+    animation:
+      aipf-enter .7s var(--aipf-ease) .5s both,
+      aipf-float 4.7s ease-in-out 1.2s infinite;
+  }
+}
+
+/* HOVER */
+
+@media (hover: hover) and (pointer: fine) {
+  .aipf-visible .aipf-image-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 20px 50px rgba(35,35,43,.09);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .aipf-section {
+    margin-top: -70px;
+    padding: 8vh 4vw 3vh;
+    border-radius: 40px 40px 0 0;
+  }
+
+  .aipf-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .aipf-image-card {
+    min-height: 490px;
+    padding: 18px;
+    border-radius: 28px;
+  }
+
+  .aipf-floating-card {
+    width: min(210px, 53%);
+  }
+
+  .aipf-benefits {
+    gap: 38px;
+  }
+
+  .aipf-benefit-title {
+    font-size: clamp(21px, 2.6vw, 28px);
+  }
+
+  .aipf-benefit-description {
+    font-size: 14px;
+  }
+}
+
+/* SMALL TABLET */
+
+@media (max-width: 768px) {
+  .aipf-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .aipf-image-card {
+    min-height: 540px;
+  }
+
+  .aipf-benefits {
+    gap: 32px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .aipf-section {
+    margin-top: -45px;
+    padding: 56px 14px 25px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .aipf-header {
+    margin-bottom: 30px;
+  }
+
+  .aipf-heading {
+    font-size: clamp(22px, 6.6vw, 28px);
+  }
+
+  .aipf-layout {
+    gap: 35px;
+  }
+
+  .aipf-image-card {
+    min-height: 430px;
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .aipf-browser-topbar {
+    height: 34px;
+  }
+
+  .aipf-browser-address {
+    padding: 5px 10px;
+    font-size: 8px;
+  }
+
+  .aipf-restaurant-header {
+    gap: 9px;
+    padding: 12px;
+  }
+
+  .aipf-restaurant-image {
+    width: 43px;
+    height: 43px;
+    flex-basis: 43px;
+  }
+
+  .aipf-restaurant-info h3 {
+    font-size: 12px;
+  }
+
+  .aipf-restaurant-info p {
+    font-size: 9px;
+  }
+
+  .aipf-call-panel {
+    margin: 10px 12px;
+    padding: 11px;
+  }
+
+  .aipf-call-heading {
+    font-size: 9px;
+  }
+
+  .aipf-phone-number {
+    font-size: 11px;
+  }
+
+  .aipf-call-caption {
+    font-size: 8px;
+  }
+
+  .aipf-conversation {
+    margin: 0 12px;
+    padding: 10px;
+  }
+
+  .aipf-message p {
+    font-size: 9px;
+  }
+
+  .aipf-order-summary {
+    margin: 10px 12px 12px;
+    padding: 10px;
+  }
+
+  .aipf-order-item img {
+    width: 35px;
+    height: 35px;
+    flex-basis: 35px;
+  }
+
+  .aipf-order-details strong,
+  .aipf-order-details span {
+    font-size: 8px;
+  }
+
+  .aipf-floating-card {
+    right: 0;
+    bottom: 7%;
+
+    width: min(185px, 54%);
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .aipf-floating-card img {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
+
+  .aipf-floating-card strong,
+  .aipf-floating-card span {
+    font-size: 8px;
+  }
+
+  .aipf-benefit-title {
+    font-size: 23px;
+  }
+
+  .aipf-benefit-description {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .aipf-image-card,
+  .aipf-benefit,
+  .aipf-floating-card {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+
+  .aipf-waveform span {
+    animation: none;
+  }
+}
