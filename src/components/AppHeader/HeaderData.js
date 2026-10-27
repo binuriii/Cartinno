@@ -190,7 +190,7 @@ export const products = [
           },
           {
             "label": "Push Notifications Marketing",
-            "href": "#push-notifications",
+            "href": "/food-push-notification-marketing",
             "icon": "fa-regular fa-bell"
           },
          

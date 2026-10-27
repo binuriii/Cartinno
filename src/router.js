@@ -244,6 +244,13 @@ const routes = [
       import('./pages/Products/FoodWebsite/FoodMarketingCampaigns/FoodMarketingCampaigns.vue')
   },
 
+  {
+    path: '/food-push-notification-marketing',
+    name: 'food-push-notification-marketing',
+    component: () =>
+      import('./pages/Products/FoodWebsite/PushNotificationMarketing/PushNotificationMarketing.vue')
+  },
+
 
 
 
