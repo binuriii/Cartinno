@@ -251,6 +251,12 @@ const routes = [
       import('./pages/Products/FoodWebsite/PushNotificationMarketing/PushNotificationMarketing.vue')
   },
 
+  {
+    path: '/loyalty-and-rewards',
+    name: 'loyalty-and-rewards',
+    component: () =>
+      import('./pages/Products/FoodWebsite/LoyaltyAndRewards/LoyaltyAndRewards.vue')
+  },
 
 
 

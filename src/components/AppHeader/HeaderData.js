@@ -196,7 +196,7 @@ export const products = [
          
           {
             label: "Loyalty & Rewards",
-            href: "/loyalty-management",
+            href: "/loyalty-and-rewards",
             icon: "fa-solid fa-award"
           }
 
