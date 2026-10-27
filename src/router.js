@@ -230,6 +230,13 @@ const routes = [
       import('./pages/Products/FoodWebsite/AIPhoneOrdering/AIPhoneOrdering.vue')
   },
 
+  {
+    path: '/branded-restaurant-ordering',
+    name: 'branded-restaurant-ordering',
+    component: () =>
+      import('./pages/Products/FoodWebsite/BrandedRestaurantApp/BrandedRestaurantApp.vue')
+  },
+
 
 
 

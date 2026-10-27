@@ -178,7 +178,7 @@ export const products = [
           },
           {
             "label": "Branded Restaurant App",
-            "href": "#restaurant-app",
+            "href": "/branded-restaurant-ordering",
             "icon": "fa-solid fa-mobile-screen-button",
             "badge": "Coming Soon"
            
