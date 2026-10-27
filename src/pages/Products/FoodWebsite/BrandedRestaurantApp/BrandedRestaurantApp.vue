@@ -14,6 +14,7 @@ import {
   brandedRestaurantAppFAQs
 } from './BrandedRestaurantApp.js'
 import BrandedRestaurantAppFeatures from './BrandedRestaurantAppFeatures/BrandedRestaurantAppFeatures.vue'
+import BrandedRestaurantAppBenefits from './BrandedRestaurantAppBenefits/BrandedRestaurantAppBenefits.vue'
 </script>
 
 <template>
@@ -23,6 +24,8 @@ import BrandedRestaurantAppFeatures from './BrandedRestaurantAppFeatures/Branded
     <Hero v-bind="brandedRestaurantAppHero" />
 
     <BrandedRestaurantAppFeatures/>
+
+    <BrandedRestaurantAppBenefits/>
 
     <!-- FAQ -->
     <FAQ
