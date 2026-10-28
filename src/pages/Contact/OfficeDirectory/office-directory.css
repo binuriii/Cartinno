@@ -1,3 +1,4 @@
+
 .co-section,
 .co-section * {
   box-sizing: border-box;
@@ -12,13 +13,10 @@
 
   width: 100%;
   padding: 5vh 3vw 10vh;
-
   background: #ffffff;
   color: var(--co-ink);
   font-family: inherit;
 }
-
-/* CONTAINER */
 
 .co-container {
   width: 100%;
@@ -26,21 +24,17 @@
   margin-inline: auto;
 }
 
-/* SECTION HEADING (LEFT ALIGNED) */
-
 .co-heading {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-
   margin-bottom: clamp(24px, 3vw, 40px);
 }
 
 .co-title {
   margin: 0;
   color: var(--co-ink);
-
   font-size: clamp(26px, 4.4vw, 54px);
   font-weight: 450;
   line-height: 1.15;
@@ -50,20 +44,15 @@
 .co-description {
   max-width: 620px;
   margin: 18px 0 0;
-
   color: var(--co-muted);
   font-size: 15px;
   font-weight: 400;
   line-height: 1.7;
 }
 
-/* MAIN OFFICES PANEL */
-
 .co-panel {
   padding: clamp(18px, 2.2vw, 30px);
-
   border-radius: 28px;
-
   background: #ffffff;
 }
 
@@ -73,20 +62,14 @@
   gap: var(--co-gap);
 }
 
-/* OFFICE CARDS */
-
 .co-office {
   min-width: 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding: clamp(22px, 2.6vw, 38px) 24px;
-
   border-radius: 22px;
   border: 1px solid var(--co-line);
-
   background: #ffffff;
   text-align: center;
 }
@@ -95,13 +78,11 @@
   display: block;
   width: 78px;
   height: auto;
-
   border-radius: 6px;
 }
 
 .co-office-name {
   margin: 22px 0 0;
-
   color: var(--co-ink);
   font-size: clamp(19px, 1.8vw, 25px);
   font-weight: 500;
@@ -112,9 +93,7 @@
 .co-office-address {
   display: flex;
   flex-direction: column;
-
   margin: 14px 0 0;
-
   color: var(--co-muted);
   font-size: 15px;
   font-weight: 400;
@@ -124,7 +103,6 @@
 .co-office-line,
 .co-office-email {
   margin: 14px 0 0;
-
   color: var(--co-muted);
   font-size: 15px;
   font-weight: 400;
@@ -148,6 +126,7 @@
   color: var(--co-ink);
   font-weight: 600;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .co-office-line a:hover,
@@ -155,13 +134,10 @@
   color: var(--co-red);
 }
 
-/* COUNTRY GRID */
-
 .co-countries {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--co-gap);
-
   margin: var(--co-gap) 0 0;
   padding: 0;
   list-style: none;
@@ -169,16 +145,12 @@
 
 .co-country {
   min-width: 0;
-
   display: flex;
   align-items: center;
   gap: 16px;
-
   padding: 16px 18px;
-
   border-radius: 24px;
   border: 1px solid var(--co-line);
-
   background: #ffffff;
 }
 
@@ -186,10 +158,8 @@
   flex: 0 0 48px;
   width: 48px;
   height: 48px;
-
   display: grid;
   place-items: center;
-
   border-radius: 14px;
   background: #f6f7f9;
 }
@@ -197,14 +167,13 @@
 .co-country-flag img {
   display: block;
   width: 28px;
+  max-height: 28px;
   height: auto;
-
   border-radius: 3px;
 }
 
 .co-country-copy {
   min-width: 0;
-
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -224,21 +193,18 @@
   font-weight: 400;
   line-height: 1.5;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .co-country-phone:hover {
   color: var(--co-red);
 }
 
-/* KEYBOARD FOCUS */
-
 .co-section a:focus-visible {
   outline: 3px solid rgba(215, 69, 78, 0.35);
   outline-offset: 3px;
   border-radius: 6px;
 }
-
-/* TABLET */
 
 @media (max-width: 1024px) {
   .co-section {
@@ -250,8 +216,6 @@
   }
 }
 
-/* SMALL TABLET */
-
 @media (max-width: 800px) {
   .co-offices {
     grid-template-columns: 1fr;
@@ -261,8 +225,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
-/* MOBILE */
 
 @media (max-width: 640px) {
   .co-section {

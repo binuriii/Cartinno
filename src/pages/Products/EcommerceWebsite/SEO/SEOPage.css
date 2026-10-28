@@ -3,14 +3,14 @@
   background: #ffffff;
 }
 
-/* SHARED STYLES FOR THE TWO SEO SECTIONS */
+/* SHARED STYLES FOR SEO SECTIONS */
 
 .seo-page .seo-features,
 .seo-page .seo-process {
   --seo-brand: #d7454e;
   --seo-brand-dark: #b82f3a;
-  --seo-ink: #27262b;
-  --seo-muted: #6c6870;
+  --seo-ink: #23232b;
+  --seo-muted: #5b5b66;
   --seo-cream: #faf7f3;
   --seo-border: #e9e3df;
 
@@ -30,8 +30,11 @@
   box-sizing: border-box;
 }
 
+/* GENERIC SEO HELPERS â€” MATCH REVIEW ENGINE */
+
 .seo-page .seo-section-container {
-  width: min(1200px, 90%);
+  width: 100%;
+  max-width: 1350px;
   margin-inline: auto;
 }
 
@@ -48,8 +51,8 @@
 .seo-page .seo-section-heading {
   margin: 0;
   color: var(--seo-ink);
-  font-size: clamp(32px, 3.8vw, 50px);
-  font-weight: 550;
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
   line-height: 1.15;
   letter-spacing: -0.045em;
 }
@@ -60,9 +63,11 @@
 
 .seo-page .seo-section-copy {
   color: var(--seo-muted);
-  font-size: 16px;
-  line-height: 1.85;
+  font-size: 15px;
+  line-height: 1.7;
 }
+
+/* ORIGINAL BUTTON DESIGN PRESERVED */
 
 .seo-page .seo-section-button {
   display: inline-flex;
@@ -98,13 +103,14 @@
   outline-offset: 6px;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 640px) {
   .seo-page .seo-section-heading {
-    font-size: clamp(30px, 8vw, 38px);
+    font-size: clamp(22px, 6.6vw, 28px);
   }
 
   .seo-page .seo-section-copy {
     font-size: 15px;
+    line-height: 1.55;
   }
 }
 

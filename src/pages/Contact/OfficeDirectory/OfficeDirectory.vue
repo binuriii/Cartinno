@@ -1,13 +1,17 @@
+
 <script setup>
 import {
   contactHeading,
   offices,
   countries
-} from './ContactOfficesData.js'
+} from './office-directory-data.js'
 
-import './ContactOffices.css'
+import './office-directory.css'
 
 const base = import.meta.env.BASE_URL
+
+const imagePath = (path) =>
+  `${base}${path.replace(/^\.\//, '')}`
 
 const telHref = (phone) =>
   `tel:${phone.replace(/[^\d+]/g, '')}`
@@ -16,8 +20,6 @@ const telHref = (phone) =>
 <template>
   <section class="co-section">
     <div class="co-container">
-
-      <!-- SECTION HEADING -->
       <div class="co-heading">
         <h2 class="co-title">
           {{ contactHeading.title }}
@@ -28,17 +30,15 @@ const telHref = (phone) =>
         </p>
       </div>
 
-      <!-- MAIN OFFICES PANEL -->
       <div class="co-panel">
         <div class="co-offices">
-
           <article
             v-for="office in offices"
             :key="office.id"
             class="co-office"
           >
             <img
-              :src="`${base}${office.flag}`"
+              :src="imagePath(office.flag)"
               :alt="office.name + ' flag'"
               class="co-office-flag"
               width="78"
@@ -60,8 +60,8 @@ const telHref = (phone) =>
             </p>
 
             <p
-              v-for="(line, i) in office.lines"
-              :key="i"
+              v-for="(line, index) in office.lines"
+              :key="index"
               class="co-office-line"
             >
               <template v-if="line.label">
@@ -69,7 +69,7 @@ const telHref = (phone) =>
               </template>
 
               <a
-                :href="`tel:${line.tel}`"
+                :href="telHref(line.tel)"
                 :class="{ 'is-strong': line.label }"
               >
                 {{ line.value }}
@@ -83,11 +83,9 @@ const telHref = (phone) =>
               </a>
             </p>
           </article>
-
         </div>
       </div>
 
-      <!-- COUNTRY NUMBERS -->
       <ul class="co-countries">
         <li
           v-for="country in countries"
@@ -96,7 +94,7 @@ const telHref = (phone) =>
         >
           <span class="co-country-flag">
             <img
-              :src="`${base}${country.flag}`"
+              :src="imagePath(country.flag)"
               :alt="country.name + ' flag'"
               width="28"
               height="20"
@@ -118,7 +116,6 @@ const telHref = (phone) =>
           </span>
         </li>
       </ul>
-
     </div>
   </section>
 </template>

@@ -416,10 +416,6 @@ onBeforeUnmount(() => {
                 </div>
               </div>
             </div>
-
-            <p class="sp-demo-label">
-              Illustrative interface · Sample data
-            </p>
           </div>
         </article>
       </div>
