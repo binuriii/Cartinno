@@ -3,7 +3,7 @@ export const logoImage = 'cartinno-logo.webp'
 export const products = [
   {
     "id": "ecommerce",
-    "title": "E-Commerce Website",
+    "title": "E-commerce Solutions",
     "label": "E-COMMERCE",
     "href": "#ecommerce",
     "image": "ecommerce.jpg",
@@ -44,6 +44,10 @@ export const products = [
         "column": 2,
         "items": [
           { "label": "Cloud POS", "href": "/ecommerce-cloud-pos", "icon": "fa-solid fa-desktop" },
+          { "label": "Sales Management", "href": "#pos", "icon": "fa-solid fa-chart-column" },
+          { "label": "Cloud Access", "href": "#pos", "icon": "fa-solid fa-cloud" },
+          { "label": "Daily Operations", "href": "#pos", "icon": "fa-solid fa-gears" },
+          { "label": "Scalable POS", "href": "#pos", "icon": "fa-solid fa-arrow-trend-up" },
           { "label": "Marketing Campaigns", "href": "/marketing-campaigns", "icon": "fa-solid fa-bullhorn" },
           { "label": "Push Notification Marketing", "href": "/push-notification-marketing", "icon": "fa-regular fa-bell" },
           { "label": "Inventory Management System", "href": "/inventory-management-system", "icon": "fa-solid fa-boxes-stacked" }
@@ -64,74 +68,10 @@ export const products = [
       }
     ]
   },
-  {
-    "id": "pos",
-    "title": "Cloud POS",
-    "label": "CLOUD POS",
-    "href": "#pos",
-    "image": "CloudPOS.webp",
-    "imageTitle": "Keep sales and everyday operations connected.",
-    "groups": [
-      {
-        "title": "Manage sales",
-        "items": [
-          {
-            "label": "Point of Sale",
-            "href": "#pos",
-            "icon": "fa-solid fa-desktop"
-          },
-          {
-            "label": "Sales Management",
-            "href": "#pos",
-            "icon": "fa-solid fa-chart-column"
-          }
-        ]
-      },
-      {
-        "title": "Manage products",
-        "items": [
-          {
-            "label": "Product Management",
-            "href": "#pos",
-            "icon": "fa-solid fa-boxes-stacked"
-          },
-          {
-            "label": "Inventory",
-            "href": "#pos",
-            "icon": "fa-solid fa-warehouse"
-          }
-        ]
-      },
-      {
-        "title": "Run your business",
-        "items": [
-          {
-            "label": "Cloud Access",
-            "href": "#pos",
-            "icon": "fa-solid fa-cloud"
-          },
-          {
-            "label": "Daily Operations",
-            "href": "#pos",
-            "icon": "fa-solid fa-gears"
-          }
-        ]
-      },
-      {
-        "title": "Grow with Cartinno",
-        "items": [
-          {
-            "label": "Scalable POS",
-            "href": "#pos",
-            "icon": "fa-solid fa-arrow-trend-up"
-          }
-        ]
-      }
-    ]
-  },
+
   {
     "id": "food",
-    "title": "Food Website",
+    "title": "Food Ordering Systems",
     "label": "FOOD",
     "href": "#food",
     "image": "food.jpg",
@@ -261,41 +201,8 @@ export const products = [
       }
     ]
   },
-  {
-    "id": "cloud-food-pos",
-    "title": "Cloud Food POS",
-    "label": "CLOUD FOOD POS",
-    "href": "#cloud-food-pos",
-    "image": "CloudPOS.jpg",
-    "imageTitle": "Keep restaurant sales connected.",
-    "groups": [
-      {
-        "title": "Run your restaurant",
-        "items": [
-          {
-            "label": "Reporting & Analytics",
-            "href": "#reporting-analytics",
-            "icon": "fa-solid fa-chart-pie"
-          },
-          {
-            "label": "Kitchen Tablet",
-            "href": "#kitchen-tablet",
-            "icon": "fa-solid fa-tablet-screen-button"
-          },
-          {
-            "label": "POS Integrations",
-            "href": "#pos-integrations",
-            "icon": "fa-regular fa-credit-card"
-          },
-          {
-            "label": "Delivery App",
-            "href": "/delivery-app",
-            "icon": "fa-solid fa-truck-fast"
-          }
-        ]
-      }
-    ]
-  }
+  
+    
 ]
 
 export const MV_ECOMMERCE_URL = 'https://cartinno.com/multivendor-ecommerce-portal/'
@@ -322,25 +229,6 @@ export const corporateSolutions = [
     "relatedTitle": "Connected POS"
   },
   {
-    "id": "multivendor-pos",
-    "colors": [
-      "#f83232ff",
-      "#060606ff"
-    ],
-    "title": "Multivendor E-Commerce POS",
-    "href": MV_ECOMMERCE_URL,
-    "icon": "fa-solid fa-desktop",
-    "label": "MULTIVENDOR E-COMMERCE POS",
-    "designTitle": "Connect vendors and sales.",
-    "description": "Support vendor sales and everyday operations across your marketplace.",
-    "photoTitle": "A connected view of vendor operations.",
-    "image": "enterprise-team.jpg",
-    "alt": "Multivendor point of sale",
-    "imagePosition": "75% center",
-    "related": "marketplace",
-    "relatedTitle": "Connected portal"
-  },
-  {
     "id": "food-portal",
     "colors": [
       "#5d5d5fff",
@@ -359,25 +247,6 @@ export const corporateSolutions = [
     "related": "food-pos",
     "relatedTitle": "Connected POS"
   },
-  {
-    "id": "food-pos",
-    "colors": [
-      "#f83232ff",
-      "#060606ff"
-    ],
-    "title": "Multivendor Food POS",
-    "href": MV_FOOD_URL,
-    "icon": "fa-solid fa-desktop",
-    "label": "FOOD POS",
-    "designTitle": "Keep restaurant sales connected.",
-    "description": "Bring restaurant orders and point-of-sale workflows into one connected experience.",
-    "photoTitle": "Support every restaurant, every day.",
-    "image": "customer-business.jpg",
-    "alt": "Restaurant point of sale",
-    "imagePosition": "25% center",
-    "related": "food-portal",
-    "relatedTitle": "Connected portal"
-  }
 ]
 
 export const links = [
