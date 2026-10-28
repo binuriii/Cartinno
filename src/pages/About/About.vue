@@ -5,6 +5,7 @@ import Testimonials from '../../components/InnerPages/Testimonials/Testimonials.
 
 import {aboutUsHero} from './About.js'
 import {aboutUsFAQs} from './About.js'
+import AboutMissionSection from './AboutMissionSection/AboutMissionSection.vue';
 import AboutUnique from './AboutUnique/AboutUnique.vue';
 import ReportingBenefits from './ReportingBenefits/ReportingBenefits.vue'
 
@@ -16,6 +17,8 @@ const base = import.meta.env.BASE_URL
 
   <AboutUnique/>
 
+  <AboutMissionSection/>
+  
   <ReportingBenefits/>
   
   <FAQ
