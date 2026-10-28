@@ -5,6 +5,7 @@ import Testimonials from '../../components/InnerPages/Testimonials/Testimonials.
 
 import {contactHero} from './Contact.js'
 import {contactFAQs} from './Contact.js'
+import ContactInquiry from './ContactInquiry/ContactInquiry.vue';
 import Contactoffices from './Contactoffices/Contactoffices.vue';
 
 
@@ -16,6 +17,7 @@ const base = import.meta.env.BASE_URL
 
   <Contactoffices/>
 
+  <ContactInquiry/>
 
 
 
