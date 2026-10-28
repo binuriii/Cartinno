@@ -399,7 +399,7 @@ export const links = [
   },
   {
     "label": "About",
-    "href": "#about"
+    "href": "/about"
   },
   {
     "label": "Pricing",
