@@ -3,9 +3,9 @@ import {
   contactHeading,
   offices,
   countries
-} from './ContactOfficesData.js'
+} from './ContactUs.js'
 
-import './ContactOffices.css'
+import './ContactUs.css'
 
 const base = import.meta.env.BASE_URL
 
