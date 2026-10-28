@@ -1,5 +1,3 @@
-const flags = '/Products/Contact/'
-
 export const contactHeading = {
   title: 'Contact Our Offices',
   description:
@@ -9,7 +7,7 @@ export const contactHeading = {
 export const offices = [
   {
     id: 'usa',
-    flag: `${flags}united-states-1.svg`,
+    flag: './Products/Contact/united-states-1.svg',
     name: 'Sepova LLC',
     address: ['Bethlehem, PA', '18020', 'USA'],
     lines: [
@@ -32,7 +30,7 @@ export const offices = [
   },
   {
     id: 'sri-lanka',
-    flag: `${flags}sri-lanka.svg`,
+    flag: './Products/Contact/sri-lanka.svg',
     name: 'Sepova PVT Ltd',
     address: ['207/09 Dharmapala Mawatha', 'Colombo 7', 'Sri Lanka'],
     lines: [
@@ -49,121 +47,121 @@ export const offices = [
 export const countries = [
   {
     id: 'australia',
-    flag: `${flags}australia.svg`,
+    flag: './Products/Contact/australia.svg',
     name: 'Australia',
     phone: '61 (2) 888 00 333'
   },
   {
     id: 'argentina',
-    flag: `${flags}argentina.svg`,
+    flag: './Products/Contact/argentina.svg',
     name: 'Argentina',
     phone: '54 11 535 28 633'
   },
   {
     id: 'belgium',
-    flag: `${flags}belgium.svg`,
+    flag: './Products/Contact/belgium.svg',
     name: 'Belgium',
     phone: '32 (48) 0206233'
   },
   {
     id: 'brazil',
-    flag: `${flags}brazil.svg`,
+    flag: './Products/Contact/brazil.svg',
     name: 'Brazil',
     phone: '55 (21) 204 222 60'
   },
   {
     id: 'canada',
-    flag: `${flags}canada.svg`,
+    flag: './Products/Contact/canada.svg',
     name: 'Canada',
     phone: '1 403 8000 111'
   },
   {
     id: 'denmark',
-    flag: `${flags}denmark.svg`,
+    flag: './Products/Contact/denmark.svg',
     name: 'Denmark',
     phone: '45 32 33 0471'
   },
   {
     id: 'finland',
-    flag: `${flags}finland.svg`,
+    flag: './Products/Contact/finland.svg',
     name: 'Finland',
     phone: '358 (9) 21114'
   },
   {
     id: 'israel',
-    flag: `${flags}il.png`,
+    flag: './Products/Contact/il.png',
     name: 'Israel',
     phone: '972 (3) 376 06 60'
   },
   {
     id: 'kenya',
-    flag: `${flags}kenya.svg`,
+    flag: './Products/Contact/kenya.svg',
     name: 'Kenya',
     phone: '254 20 878 0 777'
   },
   {
     id: 'mexico',
-    flag: `${flags}mexico.svg`,
+    flag: './Products/Contact/mexico.svg',
     name: 'Mexico',
     phone: '52 55 981 61 222'
   },
   {
     id: 'netherlands',
-    flag: `${flags}netherlands.svg`,
+    flag: './Products/Contact/netherlands.svg',
     name: 'Netherlands',
     phone: '3197010285411'
   },
   {
     id: 'new-zealand',
-    flag: `${flags}new-zealand.svg`,
+    flag: './Products/Contact/new-zealand.svg',
     name: 'New Zealand',
     phone: '64 (9) 9518222'
   },
   {
     id: 'peru',
-    flag: `${flags}peru.svg`,
+    flag: './Products/Contact/peru.svg',
     name: 'Peru',
     phone: '51 (17) 009 559'
   },
   {
     id: 'poland',
-    flag: `${flags}poland.svg`,
+    flag: './Products/Contact/poland.svg',
     name: 'Poland',
     phone: '48 732 082 666'
   },
   {
     id: 'singapore',
-    flag: `${flags}singapore.svg`,
+    flag: './Products/Contact/singapore.svg',
     name: 'Singapore',
     phone: '65 (3) 125 88 33'
   },
   {
     id: 'south-africa',
-    flag: `${flags}south-africa.svg`,
+    flag: './Products/Contact/south-africa.svg',
     name: 'South Africa',
     phone: '27 (21) 300 37 33'
   },
   {
     id: 'sweden',
-    flag: `${flags}sweden.svg`,
+    flag: './Products/Contact/sweden.svg',
     name: 'Sweden',
     phone: '46 (10) 3371414'
   },
   {
     id: 'switzerland',
-    flag: `${flags}switzerland.svg`,
+    flag: './Products/Contact/switzerland.svg',
     name: 'Switzerland',
     phone: '41 44 707 83 88'
   },
   {
     id: 'uk',
-    flag: `${flags}united-kingdom.svg`,
+    flag: './Products/Contact/united-kingdom.svg',
     name: 'UK',
     phone: '44 (203) 80 75 999'
   },
   {
     id: 'ukraine',
-    flag: `${flags}ukraine.svg`,
+    flag: './Products/Contact/ukraine.svg',
     name: 'Ukraine',
     phone: '380 94 711 24 22'
   }
