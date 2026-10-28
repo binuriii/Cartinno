@@ -15,6 +15,12 @@ const routes = [
   },
 
   {
+  path: '/contact',
+  name: 'contact',
+  component: () => import('./pages/Contact/Contact.vue')
+  },
+
+  {
   path: '/ecommerce-website',
   name: 'ecommerce-website',
   component: () =>

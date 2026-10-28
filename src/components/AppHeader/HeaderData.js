@@ -407,6 +407,6 @@ export const links = [
   },
   {
     "label": "Contact",
-    "href": "#contact"
+    "href": "/contact"
   }
 ]
