@@ -221,7 +221,7 @@ export const corporateSolutions = [
     "label": "E-COMMERCE MARKETPLACE",
     "designTitle": "Bring every vendor together.",
     "description": "Create one marketplace where customers can discover products from multiple sellers.",
-    "photoTitle": "One marketplace. More possibilities.",
+    "photoTitle": "Multivendor POS System",
     "image": "e-commerce.jpg",
     "alt": "E-commerce marketplace",
     "imagePosition": "center",
@@ -240,13 +240,59 @@ export const corporateSolutions = [
     "label": "FOOD MARKETPLACE",
     "designTitle": "Many restaurants. One destination.",
     "description": "Connect restaurants and customers through a shared online ordering experience.",
-    "photoTitle": "Make every restaurant easier to discover.",
+    "photoTitle": "Multivendor Food POS System",
     "image": "food.jpg",
     "alt": "Restaurant food marketplace",
     "imagePosition": "center",
     "related": "food-pos",
     "relatedTitle": "Connected POS"
   },
+]
+
+// RESELLER SIGNUP: same structure as `products` (tabs > groups > page links)
+export const resellerPrograms = [
+  {
+    id: 'reseller-website',
+    title: 'Reseller Website',
+    label: 'RESELLER WEBSITE',
+    href: '/reseller-website',
+    image: 'CloudPOS.webp',
+    imageTitle: 'Your own marketplace, ready from day one.',
+    groups: [
+      {
+        title: 'Your Marketplace',
+        items: [
+          { label: 'Your Own Marketplace', href: '/reseller-own-marketplace', icon: 'fa-solid fa-store' },
+          { label: 'No Need to Find Vendors', href: '/reseller-no-vendor-search', icon: 'fa-solid fa-users' },
+          { label: 'Use Zappymart Vendors', href: '/reseller-zappymart-vendors', icon: 'fa-solid fa-boxes-stacked' }
+        ]
+      },
+      {
+        title: 'Your Profit',
+        items: [
+          { label: 'Set Your Own Price', href: '/reseller-set-your-price', icon: 'fa-solid fa-tag' },
+          { label: 'Maximum Profit Margin 100%', href: '/reseller-profit-margin', icon: 'fa-solid fa-arrow-trend-up' }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'reseller-packages',
+    title: 'Resell Cartinno Packages',
+    label: 'RESELL PACKAGES',
+    href: '/reseller-packages',
+    image: 'enterprise-team.jpg',
+    imageTitle: 'Recurring income from every package you sell.',
+    groups: [
+      {
+        title: 'Resell Packages',
+        items: [
+          { label: 'Resell Cartinno Packages', href: '/resell-cartinno-packages', icon: 'fa-solid fa-box-open', badge: 'Recurring income' },
+          { label: 'Earn up to 45% Commission', href: '/reseller-commission', icon: 'fa-solid fa-award' }
+        ]
+      }
+    ]
+  }
 ]
 
 export const links = [
@@ -273,6 +319,9 @@ export const links = [
   {
     "label": "Pricing",
     "href": "#pricing"
+  },
+  { "label": "Reseller Signup", 
+    "menu": "reseller" 
   },
   {
     "label": "Contact",
