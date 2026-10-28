@@ -3,7 +3,7 @@ export const logoImage = 'cartinno-logo.webp'
 export const products = [
   {
     "id": "ecommerce",
-    "title": "E-Commerce Website",
+    "title": "E-commerce Solutions",
     "label": "E-COMMERCE",
     "href": "#ecommerce",
     "image": "ecommerce.jpg",
@@ -44,6 +44,10 @@ export const products = [
         "column": 2,
         "items": [
           { "label": "Cloud POS", "href": "/ecommerce-cloud-pos", "icon": "fa-solid fa-desktop" },
+          { "label": "Sales Management", "href": "#pos", "icon": "fa-solid fa-chart-column" },
+          { "label": "Cloud Access", "href": "#pos", "icon": "fa-solid fa-cloud" },
+          { "label": "Daily Operations", "href": "#pos", "icon": "fa-solid fa-gears" },
+          { "label": "Scalable POS", "href": "#pos", "icon": "fa-solid fa-arrow-trend-up" },
           { "label": "Marketing Campaigns", "href": "/marketing-campaigns", "icon": "fa-solid fa-bullhorn" },
           { "label": "Push Notification Marketing", "href": "/push-notification-marketing", "icon": "fa-regular fa-bell" },
           { "label": "Inventory Management System", "href": "/inventory-management-system", "icon": "fa-solid fa-boxes-stacked" }
@@ -64,74 +68,10 @@ export const products = [
       }
     ]
   },
-  {
-    "id": "pos",
-    "title": "Cloud POS",
-    "label": "CLOUD POS",
-    "href": "#pos",
-    "image": "CloudPOS.webp",
-    "imageTitle": "Keep sales and everyday operations connected.",
-    "groups": [
-      {
-        "title": "Manage sales",
-        "items": [
-          {
-            "label": "Point of Sale",
-            "href": "#pos",
-            "icon": "fa-solid fa-desktop"
-          },
-          {
-            "label": "Sales Management",
-            "href": "#pos",
-            "icon": "fa-solid fa-chart-column"
-          }
-        ]
-      },
-      {
-        "title": "Manage products",
-        "items": [
-          {
-            "label": "Product Management",
-            "href": "#pos",
-            "icon": "fa-solid fa-boxes-stacked"
-          },
-          {
-            "label": "Inventory",
-            "href": "#pos",
-            "icon": "fa-solid fa-warehouse"
-          }
-        ]
-      },
-      {
-        "title": "Run your business",
-        "items": [
-          {
-            "label": "Cloud Access",
-            "href": "#pos",
-            "icon": "fa-solid fa-cloud"
-          },
-          {
-            "label": "Daily Operations",
-            "href": "#pos",
-            "icon": "fa-solid fa-gears"
-          }
-        ]
-      },
-      {
-        "title": "Grow with Cartinno",
-        "items": [
-          {
-            "label": "Scalable POS",
-            "href": "#pos",
-            "icon": "fa-solid fa-arrow-trend-up"
-          }
-        ]
-      }
-    ]
-  },
+
   {
     "id": "food",
-    "title": "Food Website",
+    "title": "Food Ordering Systems",
     "label": "FOOD",
     "href": "#food",
     "image": "food.jpg",
@@ -261,41 +201,8 @@ export const products = [
       }
     ]
   },
-  {
-    "id": "cloud-food-pos",
-    "title": "Cloud Food POS",
-    "label": "CLOUD FOOD POS",
-    "href": "#cloud-food-pos",
-    "image": "CloudPOS.jpg",
-    "imageTitle": "Keep restaurant sales connected.",
-    "groups": [
-      {
-        "title": "Run your restaurant",
-        "items": [
-          {
-            "label": "Reporting & Analytics",
-            "href": "#reporting-analytics",
-            "icon": "fa-solid fa-chart-pie"
-          },
-          {
-            "label": "Kitchen Tablet",
-            "href": "#kitchen-tablet",
-            "icon": "fa-solid fa-tablet-screen-button"
-          },
-          {
-            "label": "POS Integrations",
-            "href": "#pos-integrations",
-            "icon": "fa-regular fa-credit-card"
-          },
-          {
-            "label": "Delivery App",
-            "href": "/delivery-app",
-            "icon": "fa-solid fa-truck-fast"
-          }
-        ]
-      }
-    ]
-  }
+  
+    
 ]
 
 export const MV_ECOMMERCE_URL = 'https://cartinno.com/multivendor-ecommerce-portal/'
@@ -314,31 +221,12 @@ export const corporateSolutions = [
     "label": "E-COMMERCE MARKETPLACE",
     "designTitle": "Bring every vendor together.",
     "description": "Create one marketplace where customers can discover products from multiple sellers.",
-    "photoTitle": "One marketplace. More possibilities.",
+    "photoTitle": "Multivendor POS System",
     "image": "e-commerce.jpg",
     "alt": "E-commerce marketplace",
     "imagePosition": "center",
     "related": "multivendor-pos",
     "relatedTitle": "Connected POS"
-  },
-  {
-    "id": "multivendor-pos",
-    "colors": [
-      "#f83232ff",
-      "#060606ff"
-    ],
-    "title": "Multivendor E-Commerce POS",
-    "href": MV_ECOMMERCE_URL,
-    "icon": "fa-solid fa-desktop",
-    "label": "MULTIVENDOR E-COMMERCE POS",
-    "designTitle": "Connect vendors and sales.",
-    "description": "Support vendor sales and everyday operations across your marketplace.",
-    "photoTitle": "A connected view of vendor operations.",
-    "image": "enterprise-team.jpg",
-    "alt": "Multivendor point of sale",
-    "imagePosition": "75% center",
-    "related": "marketplace",
-    "relatedTitle": "Connected portal"
   },
   {
     "id": "food-portal",
@@ -352,31 +240,58 @@ export const corporateSolutions = [
     "label": "FOOD MARKETPLACE",
     "designTitle": "Many restaurants. One destination.",
     "description": "Connect restaurants and customers through a shared online ordering experience.",
-    "photoTitle": "Make every restaurant easier to discover.",
+    "photoTitle": "Multivendor Food POS System",
     "image": "food.jpg",
     "alt": "Restaurant food marketplace",
     "imagePosition": "center",
     "related": "food-pos",
     "relatedTitle": "Connected POS"
   },
+]
+
+// RESELLER SIGNUP: same structure as `products` (tabs > groups > page links)
+export const resellerPrograms = [
   {
-    "id": "food-pos",
-    "colors": [
-      "#f83232ff",
-      "#060606ff"
-    ],
-    "title": "Multivendor Food POS",
-    "href": MV_FOOD_URL,
-    "icon": "fa-solid fa-desktop",
-    "label": "FOOD POS",
-    "designTitle": "Keep restaurant sales connected.",
-    "description": "Bring restaurant orders and point-of-sale workflows into one connected experience.",
-    "photoTitle": "Support every restaurant, every day.",
-    "image": "customer-business.jpg",
-    "alt": "Restaurant point of sale",
-    "imagePosition": "25% center",
-    "related": "food-portal",
-    "relatedTitle": "Connected portal"
+    id: 'reseller-website',
+    title: 'Reseller Website',
+    label: 'RESELLER WEBSITE',
+    href: '/reseller-website',
+    image: 'CloudPOS.webp',
+    imageTitle: 'Your own marketplace, ready from day one.',
+    groups: [
+      {
+        title: 'Your Marketplace',
+        items: [
+          { label: 'Your Own Marketplace', href: '/reseller-own-marketplace', icon: 'fa-solid fa-store' },
+          { label: 'No Need to Find Vendors', href: '/reseller-no-vendor-search', icon: 'fa-solid fa-users' },
+          { label: 'Use Zappymart Vendors', href: '/reseller-zappymart-vendors', icon: 'fa-solid fa-boxes-stacked' }
+        ]
+      },
+      {
+        title: 'Your Profit',
+        items: [
+          { label: 'Set Your Own Price', href: '/reseller-set-your-price', icon: 'fa-solid fa-tag' },
+          { label: 'Maximum Profit Margin 100%', href: '/reseller-profit-margin', icon: 'fa-solid fa-arrow-trend-up' }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'reseller-packages',
+    title: 'Resell Cartinno Packages',
+    label: 'RESELL PACKAGES',
+    href: '/reseller-packages',
+    image: 'enterprise-team.jpg',
+    imageTitle: 'Recurring income from every package you sell.',
+    groups: [
+      {
+        title: 'Resell Packages',
+        items: [
+          { label: 'Resell Cartinno Packages', href: '/resell-cartinno-packages', icon: 'fa-solid fa-box-open', badge: 'Recurring income' },
+          { label: 'Earn up to 45% Commission', href: '/reseller-commission', icon: 'fa-solid fa-award' }
+        ]
+      }
+    ]
   }
 ]
 
@@ -404,6 +319,9 @@ export const links = [
   {
     "label": "Pricing",
     "href": "#pricing"
+  },
+  { "label": "Reseller Signup", 
+    "menu": "reseller" 
   },
   {
     "label": "Contact",
