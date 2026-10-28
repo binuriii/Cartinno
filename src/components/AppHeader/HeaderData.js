@@ -395,7 +395,7 @@ export const links = [
   },
   {
     "label": "Clients",
-    "href": "#clients"
+    "href": "/clients"
   },
   {
     "label": "About",
@@ -407,6 +407,6 @@ export const links = [
   },
   {
     "label": "Contact",
-    "href": "#contact"
+    "href": "/contact"
   }
 ]

@@ -1,0 +1,212 @@
+.tb-section,
+.tb-section * {
+  box-sizing: border-box;
+}
+
+.tb-section {
+  --tb-red: #d7454e;
+  --tb-ink: #23232b;
+  --tb-muted: #5b5b66;
+  --tb-line: rgba(35, 35, 43, 0.10);
+
+  --tb-cols: 5;
+  --tb-gap: clamp(14px, 1.5vw, 22px);
+
+  width: 100%;
+  padding: 5vh 3vw 10vh;
+
+  background: #ffffff;
+  color: var(--tb-ink);
+  font-family: inherit;
+}
+
+/* CONTAINER */
+
+.tb-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* SECTION HEADING */
+
+.tb-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+
+.tb-title {
+  margin: 0;
+  color: var(--tb-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.tb-description {
+  max-width: 620px;
+  margin: 18px 0 0;
+  margin-bottom: 35px;
+  color: var(--tb-muted);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: normal;
+}
+
+/* LOGO GRID */
+
+.tb-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 15px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* LOGO ITEMS */
+
+.tb-card {
+  position: relative;
+  flex: 0 0 calc(100% / var(--tb-cols));
+
+  min-width: 0;
+  min-height: 110px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 20px 24px;
+}
+
+/* VERTICAL SEPARATOR */
+
+.tb-card:not(:nth-child(5n)):not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 14%;
+  height: 72%;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+
+.tb-link {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.tb-link:focus-visible {
+  outline: 3px solid rgba(215, 69, 78, 0.35);
+  outline-offset: 3px;
+}
+
+.tb-logo {
+  display: block;
+
+  height: calc(var(--tb-h, 44) * 1px);
+  max-width: 100%;
+  width: auto;
+
+  object-fit: contain;
+
+  /* solid black shape, then faded to light grey like the reference */
+  filter: brightness(0);
+  opacity: 0.35;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.35s ease;
+}
+
+.tb-card:hover .tb-logo {
+  transform: scale(1.04);
+  opacity: 0.8;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .tb-section {
+    --tb-cols: 3;
+    padding: 5vh 4vw 8vh;
+  }
+
+    .tb-card {
+    min-height: 100px;
+    padding: 15px 25px;
+  }
+
+  .tb-card::after {
+    display: none;
+  }
+
+  .tb-card:not(:nth-child(3n)):not(:last-child)::after {
+    display: block;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .tb-section {
+    --tb-cols: 2;
+    padding: 65px 14px 70px;
+  }
+
+  .tb-heading {
+    margin-bottom: 30px;
+  }
+
+  .tb-title {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .tb-description {
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+    .tb-card {
+    min-height: 85px;
+    padding: 14px;
+  }
+
+  .tb-card::after {
+    display: none;
+  }
+
+  .tb-card:nth-child(odd):not(:last-child)::after {
+    display: block;
+  }
+
+  .tb-logo {
+    height: calc(var(--tb-h, 44) * 0.75px);
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .tb-logo {
+    transition: none;
+  }
+}

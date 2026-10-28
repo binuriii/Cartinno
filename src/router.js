@@ -9,6 +9,18 @@ const routes = [
   },
 
   {
+  path: '/clients',
+  name: 'clients',
+  component: () => import('./pages/Clients/Clients.vue')
+  },
+
+  {
+  path: '/contact',
+  name: 'contact',
+  component: () => import('./pages/Contact/Contact.vue')
+  },
+
+  {
   path: '/ecommerce-website',
   name: 'ecommerce-website',
   component: () =>
