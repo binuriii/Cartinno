@@ -1,448 +1,396 @@
+/* ============================================
+   CARTINNO â€” DELIVERY OPERATIONS
+   Editorial gallery / Review Engine sizing
+============================================ */
 
-/* ====================================
-   DELIVERY PEOPLE — EDITORIAL LAYOUT
-==================================== */
-
-.dp-section,
-.dp-section * {
+.do-section,
+.do-section *,
+.do-section *::before,
+.do-section *::after {
   box-sizing: border-box;
 }
 
-/* SECTION */
-
-.dp-section {
-  --dp-ink: #23232b;
-  --dp-muted: #686871;
-  --dp-brand: #d7454e;
+/* FIRST SECTION â€” same outside spacing as GoogleReview */
+.do-section {
+  --do-ink: #23232b;
+  --do-muted: #5b5b66;
+  --do-brand: #d7454e;
 
   position: relative;
   z-index: 20;
   isolation: isolate;
-
   width: 100%;
   margin-top: -55px;
-  padding: 110px 3vw 110px;
-
+  padding: 10vh 3vw 10vh;
   border-radius: 70px 70px 0 0;
-
-  background-color: #ffffff;
-
+  background: #ffffff;
+  color: var(--do-ink);
+  font-family: inherit;
   overflow: hidden;
 }
 
-/* BACKGROUND GRID */
-
-.dp-section::before {
-  
-  position: absolute;
-  inset: 0;
-
-  z-index: -1;
-
-  background-image:
-    linear-gradient(
-      rgba(35, 35, 43, 0.025) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(35, 35, 43, 0.025) 1px,
-      transparent 1px
-    );
-
-  background-size: 12px 12px;
-
-  pointer-events: none;
-}
-
-/* CONTAINER */
-
-.dp-container {
+/* No dotted/grid background */
+.do-container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1350px;
   margin-inline: auto;
 }
 
-/* MAIN GRID */
-
-.dp-layout {
+/* Original editorial arrangement is preserved */
+.do-layout {
   display: grid;
-
-  grid-template-columns:
-    minmax(0, 0.9fr)
-    minmax(0, 1.12fr);
-
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.12fr);
   align-items: start;
-
-  column-gap: clamp(35px, 4vw, 65px);
+  column-gap: clamp(25px, 4vw, 65px);
 }
 
-/* ====================================
-   LEFT COLUMN
-==================================== */
-
-.dp-left {
+.do-left,
+.do-right {
   display: flex;
   flex-direction: column;
-
   min-width: 0;
 }
 
-/* HEADING */
-
-.dp-head {
-  max-width: 520px;
-  margin: 0 0 55px;
+/* Section heading â€” matched to Review Engine */
+.do-head {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 0 clamp(24px, 3vw, 40px);
   text-align: left;
 }
 
-/* EYEBROW */
-
-.dp-eyebrow {
+.do-eyebrow {
   margin: 0 0 18px;
-
-  color: var(--dp-brand);
-
-  font-size: 12px;
+  color: var(--do-brand);
+  font-size: 11px;
   font-weight: 600;
-
+  line-height: 1.6;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-/* TITLE */
-
-.dp-head h2 {
-  max-width: 490px;
-
+.do-title {
+  max-width: 900px;
   margin: 0;
-
-  color: var(--dp-ink);
-
-  font-size: clamp(38px, 4vw, 62px);
+  color: var(--do-ink);
+  font-size: clamp(26px, 4.4vw, 54px);
   font-weight: 450;
-
-  line-height: 1.08;
-  letter-spacing: -0.055em;
-
+  line-height: 1.15;
+  letter-spacing: -0.045em;
   text-align: left;
+  text-wrap: balance;
 }
 
-/* DESCRIPTION */
-
-.dp-description {
-  max-width: 440px;
-
-  margin: 23px 0 0;
-
-  color: var(--dp-muted);
-
+.do-description {
+  max-width: 620px;
+  margin: 18px 0 0;
+  color: var(--do-muted);
   font-size: 15px;
   font-weight: 400;
-
-  line-height: 1.85;
-  letter-spacing: 0;
-
+  line-height: 1.7;
+  letter-spacing: normal;
   text-align: left;
 }
 
-/* ====================================
-   IMAGE STYLES
-==================================== */
-
-.dp-image {
+/* Photography: premium clean cards, dark gradient ONLY at bottom */
+.do-photo {
   position: relative;
-
+  display: block;
+  isolation: isolate;
   width: 100%;
-
   overflow: hidden;
-
-  border-radius: 5px;
-
-  background: #f1f0ed;
+  border-radius: 28px;
+  background: #f2f2f0;
 }
 
-.dp-image img {
+.do-photo img {
+  position: absolute;
+  inset: 0;
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
-  transition:
-    transform 900ms cubic-bezier(
-      0.22,
-      1,
-      0.36,
-      1
-    );
-
+  object-position: center;
+  transition: transform 850ms cubic-bezier(0.22, 1, 0.36, 1);
   user-select: none;
 }
 
-/* LEFT IMAGE */
+/* Top of each photo is untouched; black shading starts near the bottom. */
 
-.dp-image-left {
-  width: 100%;
+
+
+
+.do-photo::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 90%,
+    rgba(0, 0, 0, 0.02) 96%,
+    rgba(0, 0, 0, 0.10) 100%
+  );
+
+  pointer-events: none;
+}
+
+
+
+
+/* The original card titles/descriptions now appear at image bottoms. */
+.do-photo-content {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: clamp(22px, 2.5vw, 34px);
+  color: #ffffff;
+}
+
+.do-photo-number {
+  display: block;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+}
+
+.do-photo-title {
+  max-width: 420px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(20px, 1.9vw, 27px);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.001em;
+}
+
+.do-photo-description {
+  max-width: 440px;
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.93);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* Editorial photo sizes */
+.do-photo-left {
   height: clamp(340px, 39vw, 530px);
 }
 
-.dp-image-left img {
-  object-position: center;
-}
-
-/* ====================================
-   RIGHT COLUMN
-==================================== */
-
-.dp-right {
-  display: flex;
-  flex-direction: column;
-
-  min-width: 0;
-}
-
-/* MAIN IMAGE */
-
-.dp-image-main {
-  width: 100%;
+.do-photo-main {
   height: clamp(390px, 43vw, 600px);
 }
 
-.dp-image-main img {
-  object-position: center;
-}
-
-/* BOTTOM ROW */
-
-.dp-bottom-row {
+.do-bottom-row {
   display: flex;
   justify-content: flex-start;
-
-  margin-top: clamp(32px, 4vw, 55px);
+  margin-top: clamp(16px, 1.6vw, 24px);
 }
 
-/* SMALLER IMAGE */
-
-.dp-image-bottom {
+.do-photo-bottom {
   width: 70%;
-  height: clamp(180px, 20vw, 280px);
+  height: clamp(220px, 22vw, 300px);
 }
 
-.dp-image-bottom img {
-  object-position: center;
+/* Keep the photo legible if card becomes narrow */
+.do-photo-bottom .do-photo-content {
+  padding: 22px;
 }
 
-/* ====================================
-   IMAGE HOVER
-==================================== */
+.do-photo-bottom .do-photo-description {
+  font-size: 13px;
+  line-height: 1.6;
+}
 
-@media (
-  hover: hover
-) and (
-  prefers-reduced-motion: no-preference
-) {
-  .dp-image:hover img {
+/* Subtle, one-time scroll reveal; never hides content without JS */
+@media (prefers-reduced-motion: no-preference) {
+  .do-section.do-ready .do-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--do-reveal-delay, 0ms);
+  }
+
+  .do-section.do-ready .do-reveal.do-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.do-photo-left { --do-reveal-delay: 70ms; }
+.do-photo-main { --do-reveal-delay: 120ms; }
+.do-photo-bottom { --do-reveal-delay: 180ms; }
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .do-photo:hover img {
     transform: scale(1.045);
   }
 }
 
-/* ====================================
-   TABLET
-==================================== */
-
+/* TABLET â€” same first-section spacing as Review Engine */
 @media (max-width: 1024px) {
-
-  .dp-section {
-    margin-top: -50px;
-
-    padding: 85px 4vw 85px;
-
-    border-radius: 45px 45px 0 0;
+  .do-section {
+    margin-top: -45px;
+    padding: 8vh 4vw 8vh;
+    border-radius: 40px 40px 0 0;
   }
 
-  .dp-layout {
+  .do-layout {
     column-gap: 28px;
   }
 
-  .dp-head {
-    margin-bottom: 38px;
+  .do-photo {
+    border-radius: 23px;
   }
 
-  .dp-head h2 {
-    font-size: clamp(32px, 4.4vw, 48px);
+  .do-photo-left { height: 410px; }
+  .do-photo-main { height: 460px; }
+  .do-photo-bottom { width: 78%; height: 260px; }
+
+  .do-photo-content {
+    padding: 22px;
   }
 
-  .dp-description {
-    font-size: 14px;
-    line-height: 1.8;
+  .do-photo-title {
+    font-size: 21px;
   }
 
-  .dp-image-left {
-    height: 390px;
+  .do-photo-description {
+    font-size: 13px;
   }
-
-  .dp-image-main {
-    height: 460px;
-  }
-
-  .dp-image-bottom {
-    width: 75%;
-    height: 220px;
-  }
-
 }
 
-/* ====================================
-   SMALL TABLET
-==================================== */
-
+/* SMALL TABLET â€” stack editorial columns, preserve photo arrangement */
 @media (max-width: 768px) {
-
-  .dp-section {
-    padding: 75px 5% 75px;
-    border-radius: 32px 32px 0 0;
-  }
-
-  .dp-layout {
+  .do-layout {
     grid-template-columns: 1fr;
-    row-gap: 28px;
+    row-gap: 24px;
   }
 
-  .dp-head {
+  .do-head {
     max-width: 620px;
-    margin-bottom: 35px;
   }
 
-  .dp-head h2 {
-    max-width: 560px;
-    font-size: clamp(35px, 6vw, 48px);
-  }
-
-  .dp-description {
-    max-width: 520px;
-  }
-
-  .dp-image-left {
+  .do-photo-left {
     width: 82%;
     height: 430px;
   }
 
-  .dp-right {
+  .do-right {
     align-items: flex-end;
   }
 
-  .dp-image-main {
+  .do-photo-main {
     width: 88%;
     height: 440px;
   }
 
-  .dp-bottom-row {
+  .do-bottom-row {
     width: 100%;
-
-    justify-content: flex-start;
-
-    margin-top: 28px;
+    margin-top: 24px;
   }
 
-  .dp-image-bottom {
-    width: 60%;
-    height: 260px;
+  .do-photo-bottom {
+    width: 62%;
+    height: 285px;
   }
-
 }
 
-/* ====================================
-   MOBILE
-==================================== */
-
-@media (max-width: 540px) {
-
-  .dp-section {
+/* MOBILE â€” exact Review Engine heading + outer spacing */
+@media (max-width: 640px) {
+  .do-section {
     margin-top: -35px;
-
-    padding: 65px 5% 65px;
-
+    padding: 65px 14px 70px;
     border-radius: 24px 24px 0 0;
   }
 
-  .dp-layout {
-    row-gap: 22px;
+  .do-layout {
+    row-gap: 14px;
   }
 
-  .dp-head {
+  .do-head {
     margin-bottom: 30px;
   }
 
-  .dp-head h2 {
-    font-size: clamp(34px, 9vw, 43px);
-    line-height: 1.13;
-    letter-spacing: -0.05em;
+  .do-title {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
   }
 
-  .dp-description {
+  .do-description {
     margin-top: 18px;
-
-    font-size: 14px;
-    line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.55;
   }
 
-  .dp-image {
-    border-radius: 4px;
+  .do-photo {
+    border-radius: 20px;
   }
 
-  .dp-image-left {
-    width: 85%;
-    height: 340px;
+  .do-photo-left {
+    width: 100%;
+    height: 390px;
   }
 
-  .dp-image-main {
-    width: 92%;
-    height: 350px;
+  .do-photo-main {
+    width: 100%;
+    height: 420px;
   }
 
-  .dp-bottom-row {
-    margin-top: 22px;
+  .do-bottom-row {
+    margin-top: 14px;
   }
 
-  .dp-image-bottom {
-    width: 68%;
-    height: 190px;
+  .do-photo-bottom {
+    width: 86%;
+    height: 290px;
   }
 
+  .do-photo-content,
+  .do-photo-bottom .do-photo-content {
+    padding: 24px;
+  }
+
+  .do-photo-title {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .do-photo-description,
+  .do-photo-bottom .do-photo-description {
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
 }
 
-/* ====================================
-   SMALL MOBILE
-==================================== */
-
+/* Very narrow phones: avoid clipping the description */
 @media (max-width: 380px) {
+  .do-photo-left { height: 375px; }
+  .do-photo-main { height: 400px; }
+  .do-photo-bottom { width: 94%; height: 300px; }
 
-  .dp-head h2 {
-    font-size: 32px;
+  .do-photo-content,
+  .do-photo-bottom .do-photo-content {
+    padding: 20px;
   }
-
-  .dp-image-left {
-    height: 285px;
-  }
-
-  .dp-image-main {
-    height: 300px;
-  }
-
-  .dp-image-bottom {
-    height: 160px;
-  }
-
 }
-
-/* ====================================
-   REDUCED MOTION
-==================================== */
 
 @media (prefers-reduced-motion: reduce) {
-  .dp-image img {
+  .do-photo img,
+  .do-reveal {
     transition: none;
+    transform: none;
+    opacity: 1;
   }
 }
