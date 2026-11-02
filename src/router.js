@@ -297,6 +297,13 @@ const routes = [
       import('./pages/Products/FoodWebsite/POSIntegrations/PosIntegrations.vue')
   },
 
+  {
+    path: '/reporting-analytics',
+    name: 'reporting-analytics',
+    component: () =>
+      import('./pages/Products/FoodWebsite/ReportingAnalyticsPage/ReportingAnalyticsPage.vue')
+  },
+
 
 
 
