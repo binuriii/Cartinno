@@ -172,6 +172,14 @@ const routes = [
       import("./pages/Products/CloudPos/FoodPOS/KitchenTabletPage/KitchenTabletPage.vue"),
   },
 
+  {
+    path: "/delivery-app",
+    name: "delivery-app",
+    component: () =>
+      import("./pages/Products/CloudPos/FoodPOS/DeilveryAppPage/DeliveryAppPage.vue"),
+  },
+  
+
   // Commented out to prevent duplicate route conflict:
   // {
   //   path: '/pos-integrations-ecommerce',

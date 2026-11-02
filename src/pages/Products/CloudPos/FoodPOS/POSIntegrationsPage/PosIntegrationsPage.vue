@@ -1,36 +1,32 @@
 <script setup>
 // Shared InnerPages Components
-import Hero from "../../../../../components/InnerPages/Hero/Hero.vue";
 import FAQ from "../../../../../components/InnerPages/FAQ/FAQ.vue";
 import Testimonials from "../../../../../components/InnerPages/Testimonials/Testimonials.vue";
 
-// Import the specific components we created for the POS Integrations page
-import PosSetupSection from "./PosSetupSection/PosSetupSection.vue"; 
-import PosIntegrationGrid from "./PosIntegrationGrid/PosIntegrationGrid.vue";
+// Import the specific components we created for the Delivery App page
+import AppIntro from "./AppIntro/AppIntro.vue"; 
+import AppSolution from "./AppSolution/AppSolution.vue";
 
 // Import Data
 import {
-  posIntegrationsHero,
-  posIntegrationsFAQs,
-} from "./PosIntegrationsPage.js";
+  deliveryFAQs,
+} from "./DeliveryAppPage.js";
 </script>
 
 <template>
-  <main class="pos-page">
-    <!-- HERO SECTION (Using Shared Component) -->
-    <Hero v-bind="posIntegrationsHero" />
+  <main class="delivery-app-page">
+    
+    <!-- HERO SECTION (Using our custom premium blue card Hero) -->
+    <AppIntro />
 
-    <!-- SETUP FEATURE SECTION -->
-    <PosSetupSection />
-
-    <!-- INTEGRATION BENTO GRID SECTION -->
-    <PosIntegrationGrid />
+    <!-- COMPLETE APP SOLUTION SECTION -->
+    <AppSolution />
 
     <!-- FAQ SECTION -->
     <FAQ
       title="Frequently Asked Questions"
-      description="Everything you need to know about Cartinno POS Integrations."
-      :items="posIntegrationsFAQs"
+      description="Everything you need to know about the Cartinno Delivery App."
+      :items="deliveryFAQs"
     />
 
     <!-- TESTIMONIALS SECTION -->
@@ -39,7 +35,7 @@ import {
 </template>
 
 <style scoped>
-.pos-page {
+.delivery-app-page {
   width: 100%;
   overflow-x: hidden;
   background: #ffffff; /* Page base background */
