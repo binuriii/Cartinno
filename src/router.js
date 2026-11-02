@@ -290,6 +290,13 @@ const routes = [
       import('./pages/Products/FoodWebsite/KitchenTablet/KitchenTablet.vue')
   },
 
+  {
+    path: '/pos-integrations',
+    name: 'pos-integrations',
+    component: () =>
+      import('./pages/Products/FoodWebsite/POSIntegrations/PosIntegrations.vue')
+  },
+
 
 
 
