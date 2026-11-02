@@ -19,7 +19,7 @@ export const deliveryHero = {
   backgroundPosition: "center center",
 
   primaryButton: {
-    text: "Get Started",
+    text: "Get a Free Demo",
     link: "/#contact",
   },
 

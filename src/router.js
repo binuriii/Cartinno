@@ -283,6 +283,13 @@ const routes = [
       import('./pages/Products/FoodWebsite/DeliveryApp/DeliveryApp.vue')
   },
 
+  {
+    path: '/kitchen-tablet',
+    name: 'kitchen-tablet',
+    component: () =>
+      import('./pages/Products/FoodWebsite/KitchenTablet/KitchenTablet.vue')
+  },
+
 
 
 

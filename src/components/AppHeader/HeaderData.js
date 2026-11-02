@@ -183,7 +183,7 @@ export const products = [
           },
           {
             "label": "Kitchen Tablet",
-            "href": "#kitchen-tablet",
+            "href": "/kitchen-tablet",
             "icon": "fa-solid fa-tablet-screen-button"
           },
           {
