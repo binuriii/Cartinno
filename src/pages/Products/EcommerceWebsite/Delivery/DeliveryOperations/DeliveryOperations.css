@@ -152,13 +152,9 @@
 
 .dp-image {
   position: relative;
-
   width: 100%;
-
   overflow: hidden;
-
-  border-radius: 5px;
-
+  border-radius: 20px;
   background: #f1f0ed;
 }
 
