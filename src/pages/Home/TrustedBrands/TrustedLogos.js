@@ -14,7 +14,7 @@ export const logos = [
   {
     name: 'STC',
     image: 'stc1.png',
-    href: 'https://www.stc.lk/',
+    href: 'https://stconline.lk',
     h: 55
   },
   {

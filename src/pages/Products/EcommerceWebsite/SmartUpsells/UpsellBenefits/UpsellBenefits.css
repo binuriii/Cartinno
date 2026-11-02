@@ -1,8 +1,3 @@
-
-/* ==========================================
-   SMART UPSELLS BENEFITS SECTION
-========================================== */
-
 .su-section,
 .su-section * {
   box-sizing: border-box;
@@ -25,7 +20,7 @@
   border-radius: 70px 70px 0 0;
 
   /* SECTION SPACING */
-  padding: 10vh 3vw 10vh;
+  padding: 10vh 3vw;
 
   background: #ffffff;
   background-clip: padding-box;
@@ -37,19 +32,11 @@
   isolation: isolate;
 }
 
-/* ==========================================
-   CONTAINER
-========================================== */
-
 .su-container {
   width: 100%;
   max-width: 1350px;
   margin-inline: auto;
 }
-
-/* ==========================================
-   LEFT-ALIGNED SECTION HEADING
-========================================== */
 
 .su-header {
   display: flex;
@@ -93,10 +80,6 @@
   text-align: left;
 }
 
-/* ==========================================
-   MAIN TWO-COLUMN LAYOUT
-========================================== */
-
 .su-layout {
   display: grid;
 
@@ -107,10 +90,6 @@
 
   width: 100%;
 }
-
-/* ==========================================
-   LEFT IMAGE CARD
-========================================== */
 
 .su-image-card {
   position: relative;
@@ -197,10 +176,6 @@
   line-height: 1.6;
 }
 
-/* ==========================================
-   RIGHT BENEFITS - NO ICONS
-========================================== */
-
 .su-benefits {
   display: flex;
   flex-direction: column;
@@ -264,10 +239,6 @@
   text-align: left;
 }
 
-/* ==========================================
-   SCROLL REVEAL ANIMATION
-========================================== */
-
 @media (prefers-reduced-motion: no-preference) {
 
   .su-section:not(.su-visible) .su-image-card {
@@ -286,10 +257,6 @@
   }
 }
 
-/* ==========================================
-   IMAGE HOVER EFFECT
-========================================== */
-
 @media (hover: hover) and (pointer: fine) {
 
   .su-image-card:hover {
@@ -299,10 +266,6 @@
       0 20px 50px rgba(35, 35, 43, 0.09);
   }
 }
-
-/* ==========================================
-   TABLET
-========================================== */
 
 @media (max-width: 1024px) {
 
@@ -337,10 +300,6 @@
   }
 }
 
-/* ==========================================
-   SMALL TABLET
-========================================== */
-
 @media (max-width: 768px) {
 
   .su-layout {
@@ -356,10 +315,6 @@
     gap: 32px;
   }
 }
-
-/* ==========================================
-   MOBILE
-========================================== */
 
 @media (max-width: 640px) {
 
@@ -422,10 +377,6 @@
     line-height: 1.6;
   }
 }
-
-/* ==========================================
-   REDUCED MOTION
-========================================== */
 
 @media (prefers-reduced-motion: reduce) {
 

@@ -1,0 +1,740 @@
+
+/* ==========================================
+   CARTINNO PUSH NOTIFICATION FEATURES
+   GOOGLE REVIEW STYLE
+========================================== */
+
+.pnf-section,
+.pnf-section * {
+  box-sizing: border-box;
+}
+
+.pnf-section {
+  --pnf-red: #d7454e;
+  --pnf-ink: #23232b;
+  --pnf-muted: #5b5b66;
+  --pnf-line: #e6e6e6;
+  --pnf-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  position: relative;
+  z-index: 20;
+
+  width: 100%;
+
+  /* OVERLAP THE SHARED HERO */
+  margin-top: -55px;
+
+  border-radius: 70px 70px 0 0;
+  padding: 10vh 3vw 10vh;
+
+  background: #ffffff;
+  color: var(--pnf-ink);
+  font-family: inherit;
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* CONTAINER */
+
+.pnf-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* HEADING */
+
+.pnf-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  margin-bottom: clamp(24px, 3vw, 40px);
+
+  text-align: left;
+}
+
+.pnf-eyebrow {
+  display: block;
+  margin-bottom: 16px;
+
+  color: var(--pnf-red);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.pnf-title {
+  max-width: 900px;
+  margin: 0;
+
+  color: var(--pnf-ink);
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+
+  text-align: left;
+}
+
+.pnf-title span {
+  display: block;
+}
+
+.pnf-description {
+  max-width: 620px;
+  margin: 18px 0 0;
+
+  color: var(--pnf-muted);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  text-align: left;
+}
+
+/* ==========================================
+   THREE CARD GRID
+========================================== */
+
+.pnf-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: clamp(16px, 1.6vw, 24px);
+  align-items: stretch;
+
+  width: 100%;
+}
+
+/* ==========================================
+   BASE CARD
+========================================== */
+
+.pnf-card {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 550px;
+
+  padding: clamp(22px, 2.5vw, 34px);
+
+  border-radius: 28px;
+  background: #efe6d8;
+  color: var(--pnf-ink);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s var(--pnf-ease),
+    box-shadow 0.35s ease;
+}
+
+/* ==========================================
+   FEATURED MIDDLE CARD
+========================================== */
+
+.pnf-card-featured {
+  background: #6c6268;
+  color: #ffffff;
+}
+
+.pnf-featured-image {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 35%;
+
+  transition: transform 0.7s var(--pnf-ease);
+}
+
+.pnf-featured-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(38, 38, 38, 0.52) 18%,
+    rgba(35, 22, 27, 0.10) 70%,
+    rgba(11, 10, 10, 0.7) 100%
+  );
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   CARD TEXT
+========================================== */
+
+.pnf-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.pnf-card-number {
+  display: block;
+  margin-bottom: 18px;
+
+  color: var(--pnf-red);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.pnf-card-featured .pnf-card-number {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pnf-card-title {
+  max-width: 340px;
+  margin: 0;
+
+  color: inherit;
+  font-size: clamp(20px, 1.9vw, 27px);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.pnf-card-description {
+  max-width: 355px;
+  margin: 13px 0 0;
+  margin-bottom: 35px;
+  color: var(--pnf-muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.pnf-card-featured .pnf-card-description {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ==========================================
+   PREVIEW BOXES
+========================================== */
+
+.pnf-preview {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin-top: auto;
+  padding: 17px;
+
+  border: 1px solid #ededf0;
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 30px rgba(35, 35, 43, 0.05);
+}
+
+.pnf-preview-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  margin-bottom: 17px;
+
+  color: var(--pnf-ink);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.pnf-live-label,
+.pnf-campaign-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #248457;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.pnf-live-label i {
+  display: block;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+  background: #32a06b;
+
+  animation: pnf-pulse 2s ease-in-out infinite;
+}
+
+/* ==========================================
+   LEFT CARD — PUSH NOTIFICATIONS
+========================================== */
+
+.pnf-phone-notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.pnf-notification {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  padding: 12px 10px;
+
+  border: 1px solid #eeeeef;
+  border-radius: 13px;
+
+  background: #f7f7f9;
+
+  animation:
+    pnf-notification-in 0.75s var(--pnf-ease) both;
+
+  animation-delay:
+    calc(0.15s + var(--notification-index) * 0.3s);
+}
+
+.pnf-notification-icon {
+  display: grid;
+  place-items: center;
+
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+
+  border-radius: 10px;
+  background: #ffe6e9;
+  color: var(--pnf-red);
+
+  font-size: 14px;
+}
+
+.pnf-notification-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.pnf-notification-copy strong {
+  color: var(--pnf-ink);
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.pnf-notification-copy span {
+  color: #77737c;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.pnf-notification > small {
+  margin-left: auto;
+
+  color: #aaa6ae;
+  font-size: 8px;
+  white-space: nowrap;
+}
+
+/* LEFT PREVIEW FOOTER */
+
+.pnf-message-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 100%;
+  min-height: 40px;
+
+  margin-top: 14px;
+  padding: 10px;
+
+  border-radius: 999px;
+
+  background: #f5f5f6;
+  color: var(--pnf-ink);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.pnf-message-footer i {
+  color: var(--pnf-red);
+}
+
+/* ==========================================
+   MIDDLE CARD — BOTTOM LABEL
+========================================== */
+
+.pnf-featured-bottom {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+
+  width: 100%;
+  margin-top: auto;
+}
+
+.pnf-featured-bottom > span {
+  max-width: 250px;
+
+  color: #ffffff;
+  font-size: clamp(25px, 3vw, 42px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.pnf-featured-symbol {
+  display: grid;
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--pnf-red);
+
+  font-size: 18px;
+}
+
+/* ==========================================
+   RIGHT CARD — CAMPAIGN PREVIEW
+========================================== */
+
+.pnf-campaign-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 17px 14px;
+  border-radius: 15px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255, 210, 214, 0.7),
+      transparent 65%
+    ),
+    #fff4f0;
+
+  text-align: center;
+
+  animation:
+    pnf-campaign-enter 0.9s var(--pnf-ease) 0.15s both;
+}
+
+.pnf-campaign-icon {
+  display: grid;
+  place-items: center;
+
+  width: 44px;
+  height: 44px;
+  margin-bottom: 12px;
+
+  border-radius: 14px;
+
+  background: var(--pnf-red);
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+.pnf-campaign-eyebrow {
+  margin-bottom: 7px;
+
+  color: var(--pnf-red);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+
+.pnf-campaign-card > strong {
+  max-width: 220px;
+
+  color: var(--pnf-ink);
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.pnf-campaign-card p {
+  max-width: 220px;
+  margin: 9px 0 0;
+
+  color: var(--pnf-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.pnf-campaign-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: 15px;
+  padding: 10px 17px;
+
+  border-radius: 999px;
+
+  background: #23232b;
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* RIGHT PREVIEW FOOTER */
+
+.pnf-sales-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  margin-top: 13px;
+  padding: 11px;
+
+  border-radius: 999px;
+
+  background: #f6f6f7;
+  color: var(--pnf-ink);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.pnf-sales-footer span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.pnf-sales-footer i {
+  color: var(--pnf-red);
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes pnf-notification-in {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pnf-campaign-enter {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.93);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pnf-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* ==========================================
+   HOVER EFFECT
+========================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .pnf-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 15px 35px rgba(35, 35, 43, 0.07);
+  }
+
+  .pnf-card-featured:hover .pnf-featured-image {
+    transform: scale(1.06);
+  }
+
+  .pnf-notification:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 9px 20px rgba(35, 35, 43, 0.06);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+  .pnf-section {
+    margin-top: -45px;
+    padding: 8vh 4vw;
+    border-radius: 40px 40px 0 0;
+  }
+
+  .pnf-cards {
+    gap: 15px;
+  }
+
+  .pnf-card {
+    min-height: 540px;
+    padding: 22px;
+    border-radius: 23px;
+  }
+
+  .pnf-card-title {
+    font-size: 21px;
+  }
+
+  .pnf-card-description {
+    font-size: 12px;
+  }
+
+  .pnf-preview {
+    padding: 13px;
+  }
+
+  .pnf-notification {
+    padding: 10px 8px;
+    gap: 7px;
+  }
+}
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 768px) {
+  .pnf-cards {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .pnf-card-featured {
+    grid-column: span 2;
+    min-height: 440px;
+  }
+
+  .pnf-card-featured .pnf-card-title,
+  .pnf-card-featured .pnf-card-description {
+    max-width: 480px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+  .pnf-section {
+    margin-top: -35px;
+    padding: 65px 14px 70px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .pnf-header {
+    align-items: flex-start;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .pnf-title {
+    font-size: clamp(22px, 6.6vw, 28px);
+  }
+
+  .pnf-description {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .pnf-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .pnf-card,
+  .pnf-card-featured {
+    grid-column: auto;
+    min-height: 510px;
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .pnf-card-title {
+    font-size: 22px;
+  }
+
+  .pnf-card-description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .pnf-card-featured {
+    min-height: 490px;
+  }
+
+  .pnf-featured-bottom > span {
+    font-size: 34px;
+  }
+
+  .pnf-preview {
+    padding: 16px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .pnf-section *,
+  .pnf-section *::before,
+  .pnf-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

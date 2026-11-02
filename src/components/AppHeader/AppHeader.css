@@ -548,3 +548,16 @@
 .site-logo-img:hover {
   cursor: pointer !important;
 }
+
+/* =====================================================
+   RESELLER SIGNUP MENU (keep at the END of the file)
+===================================================== */
+.nav-reseller { position: static; }
+
+.site-header .reseller-mega .product-groups { grid-template-columns: 1fr; }
+.site-header .product-column.is-stacked { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+
+@media (min-width: 1181px) {
+  .site-header .products-mega.reseller-mega { width: min(900px, calc(100vw - 48px)); }
+  .site-header .reseller-mega .products-mega-inner { grid-template-columns: 190px minmax(0, 1fr) 290px; }
+}

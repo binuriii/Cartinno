@@ -1,0 +1,835 @@
+.fmc-benefits,
+.fmc-benefits * {
+  box-sizing: border-box;
+}
+
+.fmc-benefits {
+  --fmc-ink: #23232b;
+  --fmc-muted: #5b5b66;
+  --fmc-red: #d7454e;
+
+  width: 100%;
+  padding: 5vh 3vw 10vh;
+  background: #ffffff;
+  color: var(--fmc-ink);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.fmc-benefits-shell {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* HEADING */
+
+.fmc-benefits-heading {
+  max-width: 1000px;
+  margin: 0 auto clamp(38px, 4.5vw, 58px);
+  text-align: center;
+}
+
+.fmc-benefits-heading h2 {
+  max-width: 1000px;
+  margin: 0;
+
+  color: var(--frb-ink);
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -.045em;
+  text-align: center;
+}
+
+.fmc-benefits-heading p {
+  max-width: 640px;
+  margin: 18px auto 0;
+  color: var(--fmc-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* GRID */
+
+.fmc-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.fmc-benefit-reveal {
+  min-width: 0;
+  grid-column: span 2;
+
+  opacity: 0;
+  transform: translateY(24px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay: var(--fmc-delay, 0ms);
+}
+
+.fmc-benefits--running .fmc-benefit-reveal,
+.fmc-benefits--reduced .fmc-benefit-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* BENEFIT CARD */
+
+.fmc-benefit-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+  padding: 24px 20px 19px;
+
+  border-radius: 27px;
+  overflow: hidden;
+
+  background: linear-gradient(140deg, #f9eeef, #f4e0e4);
+}
+
+.fmc-benefit-card--orders {
+  background: linear-gradient(140deg, #f2eff8, #e9e5f0);
+}
+
+.fmc-benefit-card--returning {
+  background: linear-gradient(145deg, #cff1d9, #c0f4c9);
+  color: #080707;
+}
+
+/* CARD COPY */
+
+.fmc-benefit-copy {
+  padding: 0 4px;
+  margin-bottom: 25px;
+}
+
+.fmc-benefit-eyeline > span:last-child {
+  font-size: 11px;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.fmc-benefit-copy h3 {
+  margin: 0 0 11px;
+  font-size: clamp(20px, 1.8vw, 25px);
+  font-weight: 550;
+  line-height: 1.23;
+  letter-spacing: -0.035em;
+}
+
+.fmc-benefit-copy p {
+  margin: 0;
+  color: #6d616b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.fmc-benefit-card--returning .fmc-benefit-copy p {
+  color: #646364;
+}
+
+/* MINI APP */
+
+.fmc-benefit-app {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  margin-top: auto;
+
+  border: 1px solid #e6dce3;
+  border-radius: 17px;
+  overflow: hidden;
+  isolation: isolate;
+
+  background: #ffffff;
+  color: #302a35;
+
+  box-shadow:
+    0 20px 35px -20px #422d4740,
+    0 3px 8px #35213905;
+}
+
+.fmc-benefit-appbar {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+  height: 39px;
+  padding: 0 15px;
+
+  background: #fdfcfd;
+  border-bottom: 1px solid #f1ebef;
+}
+
+.fmc-benefit-brand {
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.06em;
+}
+
+.fmc-benefit-brand > span {
+  color: var(--fmc-red);
+}
+
+.fmc-benefit-app-label {
+  margin-left: auto;
+  color: #a38d9c;
+  font-size: 6px;
+  letter-spacing: 0.13em;
+}
+
+.fmc-benefit-avatar {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f4e8ed;
+  color: #b26a83;
+  font-size: 8px;
+}
+
+/* APP BODY */
+
+.fmc-benefit-appbody {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 320px;
+  padding: 15px 13px 12px;
+}
+
+.fmc-benefit-screen-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 19px;
+  margin-bottom: 15px;
+}
+
+.fmc-benefit-screen-title > strong {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.fmc-demo-status {
+  max-width: 105px;
+  padding: 4px 7px;
+  border-radius: 99px;
+  background: #f6edf2;
+  color: #a85b78;
+  font-size: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* DISCOVERY SEARCH */
+
+.fmc-discovery-search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+  padding: 9px;
+
+  border: 1px solid #eee7ef;
+  border-radius: 7px;
+
+  color: #a191a3;
+  font-size: 8px;
+}
+
+.fmc-search-symbol {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.fmc-discovery-search > span:last-child {
+  margin-left: auto;
+}
+
+/* RESTAURANT RESULT */
+
+.fmc-restaurant-preview {
+  border: 1px solid #eee6ec;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.fmc-restaurant-preview > img {
+  display: block;
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+}
+
+.fmc-restaurant-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px;
+}
+
+.fmc-restaurant-copy > small {
+  color: #b87990;
+  font-size: 6px;
+  letter-spacing: 0.12em;
+}
+
+.fmc-restaurant-copy > strong {
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+.fmc-restaurant-copy > span {
+  margin-top: 5px;
+  color: #a18a97;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.fmc-discovery-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  background: #f6e9ed;
+  color: #a85b78;
+  font-size: 8px;
+}
+
+.fmc-discovery-link b {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* MENU PREVIEW */
+
+.fmc-menu-feature {
+  position: relative;
+  height: 170px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #e7d8cf;
+}
+
+.fmc-menu-feature > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.fmc-benefits--running .fmc-phase-1 .fmc-menu-feature > img {
+  transform: scale(1.06);
+}
+
+.fmc-menu-feature-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 25px 12px 12px;
+  color: #ffffff;
+  background: linear-gradient(transparent, rgba(26, 20, 24, 0.75));
+}
+
+.fmc-menu-feature-overlay small {
+  font-size: 6px;
+  letter-spacing: 0.12em;
+}
+
+.fmc-menu-feature-overlay strong {
+  font-size: 13px;
+  font-weight: 550;
+}
+
+.fmc-menu-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 2px 8px;
+}
+
+.fmc-menu-details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fmc-menu-details span {
+  color: #a18a97;
+  font-size: 7px;
+}
+
+.fmc-menu-details strong {
+  font-size: 10px;
+  font-weight: 550;
+}
+
+.fmc-menu-details .fmc-menu-arrow {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #f0e9f5;
+  color: #8c789f;
+  font-size: 12px;
+}
+
+.fmc-menu-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 5px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  background: #8c789f;
+  color: #ffffff;
+  font-size: 9px;
+}
+
+.fmc-menu-action b {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.fmc-menu-action--return {
+  background: #bb667f;
+}
+
+/* RETURNING CAMPAIGN */
+
+.fmc-return-promo {
+  position: relative;
+  isolation: isolate;
+  min-height: 145px;
+  padding: 16px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: linear-gradient(120deg, #f4d5db, #f9e9df);
+  color: #49333e;
+}
+
+.fmc-return-promo > small {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: 150px;
+  color: #a36070;
+  font-size: 6px;
+  letter-spacing: 0.13em;
+}
+
+.fmc-return-promo > strong {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: 150px;
+  margin-top: 12px;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+
+.fmc-return-promo > span {
+  position: absolute;
+  top: 20px;
+  right: 12px;
+  z-index: 1;
+  color: #b26e7d;
+  font-size: 17px;
+  font-weight: 600;
+  transform: rotate(7deg);
+}
+
+.fmc-promo-decoration {
+  position: absolute;
+  z-index: 0;
+  right: -20px;
+  bottom: -38px;
+  width: 105px;
+  height: 105px;
+  border: 16px solid rgba(210, 149, 163, 0.23);
+  border-radius: 50%;
+}
+
+.fmc-phase-1 .fmc-promo-decoration {
+  transform: scale(1.2) rotate(35deg);
+}
+
+.fmc-phase-2 .fmc-promo-decoration {
+  transform: scale(0.85) rotate(65deg);
+}
+
+.fmc-return-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 11px;
+  padding: 10px;
+  border: 1px solid #eee5eb;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.fmc-return-avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f4e8ed;
+  color: #b26a83;
+  font-size: 10px;
+}
+
+.fmc-return-message > div {
+  min-width: 0;
+}
+
+.fmc-return-message small {
+  display: block;
+  color: #a18a99;
+  font-size: 6px;
+  letter-spacing: 0.08em;
+}
+
+.fmc-return-message strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.fmc-return-message p {
+  margin: 5px 0 0;
+  color: #a18a97;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+/* APP STATUS AND FOOTER */
+
+.fmc-discovery-foot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 12px;
+  margin-top: 12px;
+  color: #9b8495;
+  font-size: 7px;
+}
+
+.fmc-live-dot {
+  flex-shrink: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #b3889b;
+}
+
+.fmc-benefit-appfooter {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 27px;
+  padding: 7px 15px;
+
+  border-top: 1px solid #f0e9ed;
+  background: #fdfbfd;
+
+  color: #ab97a5;
+  font-size: 6px;
+}
+
+.fmc-benefit-stepdots {
+  display: flex;
+  gap: 4px;
+}
+
+.fmc-benefit-stepdots i {
+  width: 5px;
+  height: 3px;
+  border-radius: 5px;
+  background: #eadfe6;
+  transition:
+    width 0.4s ease,
+    background 0.4s ease;
+}
+
+.fmc-benefit-stepdots .fmc-benefit-step-active {
+  width: 14px;
+  background: #c7879e;
+}
+
+/* FOOTER AND STAGE CONTROLS */
+
+.fmc-benefits-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 27px;
+}
+
+.fmc-benefits-footer > p {
+  max-width: 450px;
+  margin: 0;
+  color: #9b8895;
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.fmc-benefits-controls {
+  display: flex;
+  flex-shrink: 0;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid #ecdee5;
+  border-radius: 99px;
+  background: #fcf9fa;
+}
+
+.fmc-benefits-controls button {
+  padding: 7px 11px;
+  border: 0;
+  border-radius: 99px;
+  background: none;
+  color: #aa8b9a;
+  font: inherit;
+  font-size: 9px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.fmc-benefits-controls button.fmc-benefit-control-active {
+  background: #f1dfe7;
+  color: #a65d7e;
+}
+
+.fmc-benefits-controls button:focus-visible {
+  outline: 2px solid #d7454e;
+  outline-offset: 3px;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .fmc-benefits-grid {
+    gap: 16px;
+  }
+
+  .fmc-benefit-card {
+    padding: 24px 17px 18px;
+  }
+
+  .fmc-benefit-appbody {
+    padding-inline: 12px;
+  }
+
+  .fmc-benefit-copy h3 {
+    font-size: 21px;
+  }
+
+  .fmc-benefit-copy p {
+    font-size: 12px;
+  }
+
+  .fmc-menu-feature {
+    height: 150px;
+  }
+}
+
+/* SMALL TABLET */
+
+@media (max-width: 850px) {
+  .fmc-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fmc-benefit-reveal {
+    grid-column: span 1;
+  }
+
+  .fmc-benefit-reveal--returning {
+    grid-column: span 2;
+  }
+
+  .fmc-benefit-card--returning {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 25px;
+    padding: 28px;
+  }
+
+  .fmc-benefit-card--returning .fmc-benefit-copy {
+    margin: 0;
+  }
+
+  .fmc-benefit-appbody {
+    padding-inline: 18px;
+  }
+
+  .fmc-benefit-appbody {
+    min-height: 300px;
+  }
+
+  .fmc-menu-feature {
+    height: 160px;
+  }
+
+  .fmc-benefits-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 560px) {
+  .fmc-benefits {
+    padding: 65px 14px 70px;
+  }
+
+  .fmc-benefits-heading {
+    margin-bottom: 30px;
+  }
+
+  .fmc-benefits-heading h2 {
+    font-size: clamp(27px, 7vw, 35px);
+  }
+
+  .fmc-benefits-heading p {
+    margin-top: 14px;
+    font-size: 13px;
+  }
+
+  .fmc-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .fmc-benefit-reveal,
+  .fmc-benefit-reveal--returning {
+    grid-column: span 1;
+  }
+
+  .fmc-benefit-card,
+  .fmc-benefit-card--returning {
+    display: flex;
+    padding: 26px 20px 20px;
+    border-radius: 24px;
+    gap: 0;
+  }
+
+  .fmc-benefit-copy {
+    margin-bottom: 25px;
+  }
+
+  .fmc-benefit-copy h3 {
+    font-size: 23px;
+  }
+
+  .fmc-benefit-copy p {
+    font-size: 13px;
+  }
+
+  .fmc-benefit-appbody {
+    padding-inline: 15px;
+    min-height: 320px;
+  }
+
+  .fmc-benefit-app {
+    width: 100%;
+  }
+
+  .fmc-menu-feature {
+    height: 175px;
+  }
+
+  .fmc-benefits-footer {
+    gap: 14px;
+  }
+
+  .fmc-benefits-footer > p {
+    font-size: 9px;
+  }
+
+  .fmc-benefits-controls {
+    max-width: 100%;
+  }
+
+  .fmc-benefits-controls button {
+    padding: 7px 10px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 360px) {
+  .fmc-benefit-card {
+    padding: 23px 13px 14px;
+  }
+
+  .fmc-benefit-appbody {
+    padding-inline: 11px;
+  }
+
+  .fmc-benefit-screen-title > strong {
+    font-size: 10px;
+  }
+
+  .fmc-benefits-controls button {
+    padding-inline: 8px;
+    font-size: 8px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .fmc-benefit-reveal,
+  .fmc-benefit-card *,
+  .fmc-benefit-card *::before,
+  .fmc-benefit-card *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .fmc-benefit-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
