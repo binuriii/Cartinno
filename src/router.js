@@ -304,6 +304,13 @@ const routes = [
       import('./pages/Products/FoodWebsite/ReportingAnalyticsPage/ReportingAnalyticsPage.vue')
   },
 
+  {
+    path: '/food-pos',
+    name: 'food-pos',
+    component: () =>
+      import('./pages/Products/FoodWebsite/PointOfSale/PointOfSale.vue')
+  },
+
 
 
 
