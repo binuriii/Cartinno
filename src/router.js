@@ -276,6 +276,13 @@ const routes = [
       import('./pages/Products/FoodWebsite/LoyaltyAndRewards/LoyaltyAndRewards.vue')
   },
 
+  {
+    path: '/delivery-app',
+    name: 'delivery-app',
+    component: () =>
+      import('./pages/Products/FoodWebsite/DeliveryApp/DeliveryApp.vue')
+  },
+
 
 
 
