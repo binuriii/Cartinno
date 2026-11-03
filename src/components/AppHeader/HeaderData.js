@@ -216,7 +216,7 @@ export const corporateSolutions = [
       "#0a0a0aff"
     ],
     "title": "Multivendor E-Commerce Portal",
-    "href": MV_ECOMMERCE_URL,
+    "href": "/multivendor-ecommerce",
     "icon": "fa-solid fa-store",
     "label": "E-COMMERCE MARKETPLACE",
     "designTitle": "Bring every vendor together.",

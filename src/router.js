@@ -311,6 +311,12 @@ const routes = [
       import('./pages/Products/FoodWebsite/PointOfSale/PointOfSale.vue')
   },
 
+  {
+  path: '/multivendor-ecommerce',
+  name: 'multivendor-ecommerce',
+  component: () =>
+    import('./pages/CorporateSolutions/MultivendorEcommercePortal/MultivendorEcommercePortal.vue')
+  },
 
 
 
