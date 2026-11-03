@@ -1,0 +1,456 @@
+/* ==========================================
+   DELIVERY APP SOLUTION
+   (ORIGINAL COLORS + PUSH NOTIFICATION TYPOGRAPHY)
+========================================== */
+
+.as-section,
+.as-section * {
+  box-sizing: border-box;
+}
+
+.as-section {
+  /* Parana original colors ma thiyala thiyenawa */
+  --as-red: #ef3b49;
+  --as-ink: #2b2b35;
+  --as-muted: #55555e;
+  --as-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  margin-top: -55px;
+  border-radius: 70px 70px 0 0;
+  padding: 10vh 3vw 10vh;
+  background: #ffffff;
+  color: var(--as-ink);
+  font-family: inherit;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* CONTAINER */
+.as-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* HEADING */
+.as-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: clamp(24px, 3vw, 40px);
+  text-align: left;
+}
+
+.as-title {
+  max-width: 900px;
+  margin: 0;
+  color: var(--as-ink);
+  
+  /* PNF Typography */
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+  text-align: left;
+}
+
+.as-title span {
+  display: block;
+}
+
+.as-description {
+  max-width: 620px;
+  margin: 18px 0 0;
+  
+  /* PNF Typography */
+  color: var(--as-muted);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* ==========================================
+   THREE CARD GRID
+========================================== */
+.as-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 1.6vw, 24px);
+  align-items: stretch;
+  width: 100%;
+}
+
+/* ==========================================
+   BASE CARD
+========================================== */
+.as-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 550px;
+  padding: clamp(22px, 2.5vw, 34px);
+  border-radius: 28px;
+  
+  /* Oya update karapu color eka */
+  background: #efe6d8; 
+  color: var(--as-ink);
+  
+  overflow: hidden;
+  transition: transform 0.35s var(--as-ease), box-shadow 0.35s ease;
+}
+
+/* ==========================================
+   FEATURED MIDDLE CARD (WITH IMAGE)
+========================================== */
+.as-card-featured {
+  /* Original dark color */
+  background: #2b2b35; 
+  color: #ffffff;
+}
+
+.as-featured-image {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s var(--as-ease);
+}
+
+.as-featured-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(43, 43, 53, 0.85) 0%,
+    rgba(43, 43, 53, 0.4) 30%,
+    rgba(43, 43, 53, 0.2) 60%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+/* ==========================================
+   CARD TEXT
+========================================== */
+.as-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.as-card-number {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--as-red);
+  
+  /* PNF Typography */
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.as-card-featured .as-card-number {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.as-card-title {
+  max-width: 340px;
+  margin: 0;
+  color: inherit;
+  
+  /* PNF Typography */
+  font-size: clamp(20px, 1.9vw, 27px);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.as-card-description {
+  max-width: 355px;
+  margin: 13px 0 35px;
+  
+  /* PNF Typography */
+  color: var(--as-muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.as-card-featured .as-card-description {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ==========================================
+   PREVIEW BOXES
+========================================== */
+.as-preview {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: auto;
+  padding: 17px;
+  border: 1px solid #ededf0;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(43, 43, 53, 0.05);
+}
+
+.as-preview-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 17px;
+  color: var(--as-ink);
+  
+  /* PNF Typography */
+  font-size: 12px;
+  font-weight: 650; 
+}
+
+.as-live-label,
+.as-campaign-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #248457;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.as-live-label i {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #32a06b;
+  animation: as-pulse 2s ease-in-out infinite;
+}
+
+/* ==========================================
+   LEFT CARD — INTERFACES LIST
+========================================== */
+.as-ui-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.as-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #eeeeef;
+  border-radius: 13px;
+  
+  /* Original inner background */
+  background: #fdfdfd; 
+  animation: as-item-in 0.75s var(--as-ease) both;
+  animation-delay: calc(0.15s + var(--item-index) * 0.2s);
+}
+
+.as-list-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  border-radius: 10px;
+  
+  /* Original icon colors */
+  background: #ffe6e9; 
+  color: var(--as-red);
+  font-size: 12px;
+}
+
+.as-list-copy strong {
+  color: var(--as-ink);
+  
+  /* PNF Typography */
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.as-message-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 40px;
+  margin-top: 14px;
+  border-radius: 999px;
+  background: #f5f5f6;
+  color: var(--as-ink);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ==========================================
+   MIDDLE CARD — BOTTOM LABEL
+========================================== */
+.as-featured-bottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto;
+}
+
+.as-featured-bottom > span {
+  color: #ffffff;
+  
+  /* PNF Typography */
+  font-size: clamp(25px, 3vw, 42px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+/* ==========================================
+   RIGHT CARD — APP PREVIEW
+========================================== */
+.as-campaign-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 17px 14px;
+  border-radius: 15px;
+  
+  /* Original background */
+  background: radial-gradient(circle at top right, rgba(255, 230, 233, 0.7), transparent 65%), #fffaf9; 
+  text-align: center;
+  animation: as-item-in 0.9s var(--as-ease) 0.15s both;
+}
+
+.as-campaign-card > strong {
+  color: var(--as-ink);
+  
+  /* PNF Typography */
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+.as-app-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.as-app-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  
+  /* Original tag styling */
+  background: #ffffff;
+  border: 1px solid #efefef;
+  color: var(--as-ink);
+  
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.as-app-tag i {
+  color: var(--as-red);
+}
+
+.as-sales-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 13px;
+  padding: 11px;
+  border-radius: 999px;
+  background: #f6f6f7;
+  color: var(--as-ink);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.as-sales-footer span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* ==========================================
+   ANIMATIONS & HOVER
+========================================== */
+@keyframes as-item-in {
+  from { opacity: 0; transform: translateY(25px) scale(0.94); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes as-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .as-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(43, 43, 53, 0.07); }
+  .as-card-featured:hover .as-featured-image { transform: scale(1.06); }
+  .as-list-item:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); }
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (max-width: 1024px) {
+  .as-section { margin-top: -45px; padding: 8vh 4vw; border-radius: 40px 40px 0 0; }
+  .as-cards { gap: 15px; }
+  .as-card { min-height: 540px; padding: 22px; border-radius: 23px; }
+  .as-card-title { font-size: 21px; }
+  .as-card-description { font-size: 12px; }
+  .as-preview { padding: 13px; }
+  .as-list-item { padding: 8px; }
+}
+
+@media (max-width: 768px) {
+  .as-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .as-card-featured { grid-column: span 2; min-height: 440px; }
+  .as-card-featured .as-card-title, .as-card-featured .as-card-description { max-width: 480px; }
+}
+
+@media (max-width: 640px) {
+  .as-section { margin-top: -35px; padding: 65px 14px 70px; border-radius: 24px 24px 0 0; }
+  .as-header { margin-bottom: 30px; align-items: flex-start; text-align: left; }
+  .as-title { font-size: clamp(22px, 6.6vw, 28px); }
+  .as-description { margin-top: 18px; font-size: 14px; line-height: 1.55; }
+  .as-cards { grid-template-columns: 1fr; gap: 14px; }
+  .as-card, .as-card-featured { grid-column: auto; min-height: 510px; padding: 24px; border-radius: 20px; }
+  .as-card-title { font-size: 22px; }
+  .as-card-description { font-size: 13px; line-height: 1.6; }
+  .as-card-featured { min-height: 490px; }
+  .as-featured-bottom > span { font-size: 34px; }
+  .as-preview { padding: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .as-section *, .as-section *::before, .as-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

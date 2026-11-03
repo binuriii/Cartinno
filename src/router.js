@@ -276,6 +276,47 @@ const routes = [
       import('./pages/Products/FoodWebsite/LoyaltyAndRewards/LoyaltyAndRewards.vue')
   },
 
+  {
+    path: '/delivery-app',
+    name: 'delivery-app',
+    component: () =>
+      import('./pages/Products/FoodWebsite/DeliveryApp/DeliveryApp.vue')
+  },
+
+  {
+    path: '/kitchen-tablet',
+    name: 'kitchen-tablet',
+    component: () =>
+      import('./pages/Products/FoodWebsite/KitchenTablet/KitchenTablet.vue')
+  },
+
+  {
+    path: '/pos-integrations',
+    name: 'pos-integrations',
+    component: () =>
+      import('./pages/Products/FoodWebsite/POSIntegrations/PosIntegrations.vue')
+  },
+
+  {
+    path: '/reporting-analytics',
+    name: 'reporting-analytics',
+    component: () =>
+      import('./pages/Products/FoodWebsite/ReportingAnalyticsPage/ReportingAnalyticsPage.vue')
+  },
+
+  {
+    path: '/food-pos',
+    name: 'food-pos',
+    component: () =>
+      import('./pages/Products/FoodWebsite/PointOfSale/PointOfSale.vue')
+  },
+
+  {
+  path: '/multivendor-ecommerce',
+  name: 'multivendor-ecommerce',
+  component: () =>
+    import('./pages/CorporateSolutions/MultivendorEcommercePortal/MultivendorEcommercePortal.vue')
+  },
 
 
 

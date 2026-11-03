@@ -113,7 +113,7 @@ export const products = [
         "items": [
           {
             "label": "Point of Sale",
-            "href": "#point-of-sale",
+            "href": "/food-pos",
             "icon": "fa-solid fa-laptop"
           },
           {
@@ -178,17 +178,17 @@ export const products = [
         "items": [
           {
             "label": "Reporting & Analytics",
-            "href": "#reporting-analytics",
+            "href": "/reporting-analytics",
             "icon": "fa-solid fa-chart-pie"
           },
           {
             "label": "Kitchen Tablet",
-            "href": "#kitchen-tablet",
+            "href": "/kitchen-tablet",
             "icon": "fa-solid fa-tablet-screen-button"
           },
           {
             "label": "POS Integrations",
-            "href": "#pos-integrations",
+            "href": "/pos-integrations",
             "icon": "fa-regular fa-credit-card"
           },
           {
@@ -216,7 +216,7 @@ export const corporateSolutions = [
       "#0a0a0aff"
     ],
     "title": "Multivendor E-Commerce Portal",
-    "href": MV_ECOMMERCE_URL,
+    "href": "/multivendor-ecommerce",
     "icon": "fa-solid fa-store",
     "label": "E-COMMERCE MARKETPLACE",
     "designTitle": "Bring every vendor together.",
