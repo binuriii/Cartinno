@@ -235,7 +235,7 @@ export const corporateSolutions = [
       "#0a0a0aff"
     ],
     "title": "Multivendor Food Portal",
-    "href": MV_FOOD_URL,
+    "href": "/multivendor-food",
     "icon": "fa-solid fa-store",
     "label": "FOOD MARKETPLACE",
     "designTitle": "Many restaurants. One destination.",
