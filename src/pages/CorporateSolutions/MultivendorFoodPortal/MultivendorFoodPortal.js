@@ -7,7 +7,7 @@ export const multivendorFoodPortalHero = {
     'Greater Opportunities.'
   ],
   description:
-    'Bring multiple restaurants and food vendors together with Cartinno Multivendor Food Portal. Create a connected food marketplace where customers can discover different vendors, explore menus, and order from one convenient platform.',
+    'Bring multiple restaurants and food vendors together with Cartinno Multivendor Food Portal. Create a connected food marketplace.',
   backgroundImage:
     'https://images.unsplash.com/photo-1775534778375-3f235c466c58?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
   overlayOpacity: 0.4,
