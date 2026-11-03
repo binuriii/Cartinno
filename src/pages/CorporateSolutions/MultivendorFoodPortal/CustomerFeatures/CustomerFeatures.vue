@@ -65,9 +65,7 @@ function selectOrderingTab(index) {
 
           <div class="cuf-panel-top">
             <div class="cuf-panel-copy">
-              <span class="cuf-panel-brand">
-                Cartinno<span class="cuf-brand-dot">.</span>
-              </span>
+
 
               <h3>
                 Good food.
