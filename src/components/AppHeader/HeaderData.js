@@ -157,7 +157,7 @@ export const products = [
           },
           {
             "label": "Delivery",
-            "href": "/delivery",
+            "href": "/food-delivery",
             "icon": "fa-solid fa-truck-fast"
           },
           {
