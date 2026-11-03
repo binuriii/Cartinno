@@ -7,11 +7,11 @@ import Testimonials from '../../../../components/InnerPages/Testimonials/Testimo
 
 import {
   posIntegrationsHero
-} from './PosIntegrations.js'
+} from './FoodPOSIntegrations.js'
 
 import {
   posIntegrationsFAQs
-} from './POSIntegrations.js'
+} from './FoodPOSIntegrations.js'
 import PosIntegrationGrid from './PosIntegrationGrid/PosIntegrationGrid.vue'
 import PosSetupSection from './PosSetupSection/PosSetupSection.vue'
 

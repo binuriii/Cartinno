@@ -1,3 +1,4 @@
+/** Cartinno Delivery Coverage — content and illustrative journey data. */
 export const coverageContent = {
   title: 'Every order.',
   highlight: 'A better delivery journey.',
