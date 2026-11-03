@@ -318,6 +318,13 @@ const routes = [
     import('./pages/CorporateSolutions/MultivendorEcommercePortal/MultivendorEcommercePortal.vue')
   },
 
+  {
+  path: '/multivendor-food',
+  name: 'multivendor-food',
+  component: () =>
+    import('./pages/CorporateSolutions/MultivendorFoodPortal/MultivendorFoodPortal.vue')
+  },
+
 
 
 
