@@ -294,7 +294,7 @@ const routes = [
     path: '/pos-integrations',
     name: 'pos-integrations',
     component: () =>
-      import('./pages/Products/FoodWebsite/POSIntegrations/PosIntegrations.vue')
+      import('./pages/Products/FoodWebsite/FoodPOSIntegrations/FoodPOSIntegrations.vue')
   },
 
   {
