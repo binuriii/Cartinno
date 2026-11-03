@@ -1,0 +1,559 @@
+/* =========================================
+   CARTINNO PRICING COMPARISON TABLE
+========================================= */
+
+.cpr-comparison-section,
+.cpr-comparison-section * {
+  box-sizing: border-box;
+}
+
+.cpr-comparison-section {
+  width: 100%;
+  padding: 30px 3vw 85px;
+  background: #ffffff;
+  color: #23232b;
+  font-family: inherit;
+}
+
+.cpr-comparison-section .cpr-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   COMPARISON TABLE HEADING
+========================================= */
+
+.cpr-table-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 85px 0 40px;
+  text-align: center;
+}
+
+.cpr-table-heading .cpr-eyebrow {
+  margin: 0;
+}
+
+.cpr-table-heading h2 {
+  max-width: 900px;
+  margin: 0;
+  color: var(--cpr-ink);
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+
+.cpr-table-heading p {
+  max-width: 600px;
+  margin: 0;
+  color: var(--cpr-muted);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* =========================================
+   COMPARISON TABLE - CLEAN REFERENCE STYLE
+========================================= */
+
+.cpr-comparison-wrap {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid #d2d2d5;
+  border-radius: 10px 10px 0 0;
+  background: #ffffff;
+  scrollbar-width: thin;
+  scrollbar-color: #c9c9cc transparent;
+}
+
+.cpr-comparison-table {
+  width: 100%;
+  min-width: 980px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #20202a;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.cpr-comparison-table th:first-child,
+.cpr-comparison-table td:first-child {
+  width: 38%;
+}
+
+.cpr-comparison-table thead th:not(:first-child),
+.cpr-comparison-table tbody td {
+  width: 15.5%;
+}
+
+/* COLUMN HEADINGS */
+
+.cpr-comparison-table thead th {
+  height: 48px;
+  padding: 13px 15px;
+  border-right: 1px solid #c9c9cc;
+  border-bottom: 1px solid #c9c9cc;
+  background: #ffffff;
+  color: #58677f;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .10em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.cpr-comparison-table thead th:first-child {
+  background: #ffffff;
+}
+
+.cpr-comparison-table thead th:last-child {
+  border-right: 0;
+}
+
+.cpr-feature-heading > span {
+  color: #58677f;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .10em;
+}
+
+.cpr-plan-heading {
+  display: flex;
+  align-items: center;
+  min-height: 20px;
+}
+
+.cpr-plan-heading h4 {
+  margin: 0;
+  color: #58677f;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .10em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+/* CATEGORY ROWS */
+
+.cpr-category-row th {
+  height: 46px;
+  padding: 13px 15px;
+  background: #f1f1f2;
+  border-right: 1px solid #c9c9cc;
+  border-bottom: 1px solid #c9c9cc;
+  color: #171923;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .035em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.cpr-category-indicator {
+  display: none;
+}
+
+/* FEATURE LABELS */
+
+.cpr-feature-row th.cpr-feature-label {
+  min-height: 48px;
+  padding: 13px 15px;
+  background: #ffffff;
+  border-right: 1px solid #c9c9cc;
+  border-bottom: 1px solid #d5d5d8;
+  color: #292936;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+/* FEATURE CELLS */
+
+.cpr-feature-row td {
+  height: 48px;
+  padding: 11px 15px;
+  background: #ffffff;
+  border-right: 1px solid #c9c9cc;
+  border-bottom: 1px solid #d5d5d8;
+  color: #292936;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.cpr-feature-row:nth-child(even) th.cpr-feature-label,
+.cpr-feature-row:nth-child(even) td {
+  background: #f4f4f5;
+}
+
+.cpr-feature-row td:last-child {
+  border-right: 0;
+}
+
+/* VALUE ALIGNMENT */
+
+.cpr-value {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 25px;
+  gap: 8px;
+}
+
+.cpr-text-value {
+  color: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* INCLUDED */
+
+.cpr-included {
+  display: inline-grid;
+  width: 23px;
+  height: 23px;
+  place-items: center;
+  border-radius: 7px;
+  background: #dff3e7;
+  color: #168044;
+}
+
+.cpr-included svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* NOT INCLUDED */
+
+.cpr-not-included {
+  display: inline-grid;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #9aadc2;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1;
+}
+
+/* FEATURE BADGE */
+
+.cpr-comparison-table .cpr-table-badge {
+  display: inline-block;
+  margin-left: 9px;
+  padding: 4px 10px;
+  border: 1px solid #ffc7ca;
+  border-radius: 30px;
+  background: #fff0f1;
+  color: #d7454e;
+  font-size: 10px;
+  font-weight: 750;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+/* ROW HOVER */
+
+@media (hover: hover) and (pointer: fine) {
+  .cpr-feature-row th.cpr-feature-label,
+  .cpr-feature-row td {
+    transition: background .2s ease;
+  }
+
+  .cpr-feature-row:hover th.cpr-feature-label,
+  .cpr-feature-row:hover td {
+    background: #ededee;
+  }
+}
+
+/* TABLE NOTE */
+
+.cpr-comparison-note {
+  max-width: 750px;
+  margin: 18px auto 0;
+  color: #777780;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .cpr-plan-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cpr-plan-card {
+    min-height: 320px;
+  }
+
+  .cpr-comparison-table {
+    min-width: 960px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 680px) {
+  .cpr-section {
+    padding: 55px 15px 70px;
+  }
+
+  .cpr-heading {
+    margin-bottom: 30px;
+  }
+
+  .cpr-heading h2 {
+    font-size: clamp(27px, 7vw, 36px);
+  }
+
+  .cpr-heading p {
+    font-size: 14px;
+  }
+
+  .cpr-controls {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .cpr-billing-control,
+  .cpr-currency-control {
+    gap: 9px;
+  }
+
+  .cpr-plan-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cpr-plan-card {
+    min-height: 300px;
+    padding: 23px;
+    border-radius: 20px;
+  }
+
+  .cpr-table-heading {
+    margin: 48px 0 27px;
+    gap: 11px;
+  }
+
+  .cpr-table-heading h2 {
+    font-size: clamp(26px, 7vw, 34px);
+    line-height: 1.13;
+  }
+
+  .cpr-table-heading p {
+    font-size: 14px;
+  }
+
+  .cpr-comparison-wrap {
+    border-radius: 10px;
+  }
+
+  /* Keep all five columns readable; swipe horizontally on narrow screens. */
+  .cpr-comparison-table {
+    min-width: 900px;
+  }
+
+  .cpr-comparison-table thead th {
+    height: 48px;
+    padding: 13px 14px;
+    font-size: 11px;
+  }
+
+  .cpr-plan-heading h4,
+  .cpr-feature-heading > span {
+    font-size: 11px;
+  }
+
+  .cpr-feature-row th.cpr-feature-label,
+  .cpr-feature-row td,
+  .cpr-text-value {
+    font-size: 13px;
+  }
+
+  .cpr-category-row th {
+    padding: 13px 14px;
+    font-size: 12px;
+  }
+
+  .cpr-comparison-note {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cpr-plan-card,
+  .cpr-plan-card *,
+  .cpr-comparison-table *,
+  .cpr-comparison-table *::before,
+  .cpr-comparison-table *::after {
+    transition: none !important;
+  }
+
+}
+
+/* =========================================
+   UPDATED COMPARISON TABLE READABILITY
+   Clear, reference-style plan headings
+========================================= */
+
+.cpr-comparison-table {
+  font-size: 14px;
+}
+
+.cpr-comparison-table thead th {
+  height: 46px;
+  padding: 13px 16px;
+  font-size: 11px;
+  letter-spacing: .12em;
+}
+
+.cpr-feature-heading > span,
+.cpr-plan-tag {
+  font-size: 11px;
+}
+
+.cpr-plan-heading {
+  gap: 0;
+}
+
+.cpr-plan-heading h4 {
+  color: #58677f;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .11em;
+}
+
+.cpr-category-row th {
+  height: 48px;
+  padding: 13px 16px;
+  font-size: 12px;
+  letter-spacing: .055em;
+}
+
+.cpr-feature-row th.cpr-feature-label {
+  min-height: 48px;
+  height: auto;
+  padding: 13px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.cpr-feature-row td {
+  min-height: 48px;
+  height: auto;
+  padding: 11px 16px;
+  font-size: 13px;
+}
+
+.cpr-text-value {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.cpr-included {
+  width: 25px;
+  height: 25px;
+  border-radius: 7px;
+}
+
+.cpr-included svg {
+  width: 14px;
+  height: 14px;
+}
+
+.cpr-not-included {
+  font-size: 18px;
+}
+
+.cpr-comparison-table .cpr-table-badge {
+  padding: 5px 10px;
+  font-size: 10px;
+}
+
+@media (max-width: 680px) {
+  .cpr-comparison-table {
+    min-width: 900px;
+  }
+
+  .cpr-comparison-table thead th {
+    height: 52px;
+    padding: 14px 13px;
+    font-size: 11px;
+  }
+
+  .cpr-plan-heading h4 {
+    font-size: 12px;
+  }
+
+  .cpr-feature-row th.cpr-feature-label,
+  .cpr-feature-row td {
+    padding: 12px 13px;
+    font-size: 13px;
+  }
+
+  .cpr-category-row th {
+    padding: 14px 13px;
+    font-size: 12px;
+  }
+
+  .cpr-text-value {
+    font-size: 13px;
+  }
+}
+
+
+/* FINAL TABLE TYPOGRAPHY OVERRIDES */
+.cpr-comparison-table thead th,
+.cpr-comparison-table thead th .cpr-plan-heading h4,
+.cpr-comparison-table thead th .cpr-feature-heading > span {
+  font-weight: 800 !important;
+}
+
+.cpr-comparison-table tbody tr.cpr-category-row th {
+  font-weight: 1500 !important;
+  -webkit-text-stroke: 0.4px currentColor;
+}
+
+.cpr-comparison-table tbody tr.cpr-feature-row th.cpr-feature-label,
+.cpr-comparison-table tbody tr.cpr-feature-row td,
+.cpr-comparison-table tbody tr.cpr-feature-row .cpr-text-value {
+  font-weight: 400 !important;
+}
+
+.cpr-comparison-table .cpr-not-included {
+  font-weight: 750 !important;
+}

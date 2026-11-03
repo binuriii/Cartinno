@@ -25,6 +25,12 @@ const routes = [
   name: 'about',
   component: () => import('./pages/About/About.vue')
   },
+{
+  path: '/pricing',
+  name: 'pricing',
+  component: () =>
+    import('./pages/Pricing/Pricing.vue')
+},
 
   {
   path: '/ecommerce-website',

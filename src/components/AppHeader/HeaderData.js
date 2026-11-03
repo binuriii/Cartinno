@@ -318,7 +318,7 @@ export const links = [
   },
   {
     "label": "Pricing",
-    "href": "#pricing"
+    "href": "/pricing"
   },
   { "label": "Reseller Signup", 
     "menu": "reseller" 
