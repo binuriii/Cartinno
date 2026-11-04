@@ -201,6 +201,13 @@ const routes = [
     import('./pages/Products/EcommerceWebsite/CloudAccess/CloudAccess.vue')
 },
 
+{
+  path: '/daily-operations',
+  name: 'daily-operations',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/DailyOperations/DailyOperations.vue')
+},
+
 
 
   {

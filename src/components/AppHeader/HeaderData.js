@@ -46,7 +46,7 @@ export const products = [
           { "label": "Cloud POS", "href": "/ecommerce-cloud-pos", "icon": "fa-solid fa-desktop" },
           { "label": "Sales Management", "href": "/sales-management", "icon": "fa-solid fa-chart-column" },
           { "label": "Cloud Access", "href": "/cloud-access", "icon": "fa-solid fa-cloud" },
-          { "label": "Daily Operations", "href": "#pos", "icon": "fa-solid fa-gears" },
+          { "label": "Daily Operations", "href": "/daily-operations", "icon": "fa-solid fa-gears" },
           { "label": "Scalable POS", "href": "#pos", "icon": "fa-solid fa-arrow-trend-up" },
           { "label": "Marketing Campaigns", "href": "/marketing-campaigns", "icon": "fa-solid fa-bullhorn" },
           { "label": "Push Notification Marketing", "href": "/push-notification-marketing", "icon": "fa-regular fa-bell" },

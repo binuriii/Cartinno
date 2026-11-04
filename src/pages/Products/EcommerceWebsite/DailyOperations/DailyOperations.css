@@ -1,0 +1,10 @@
+/* DAILY OPERATIONS PAGE — wrapper only. Each section keeps its own styling. */
+.daily-operations-page,
+.daily-operations-page * { box-sizing: border-box; }
+
+.daily-operations-page {
+  width: 100%;
+  overflow-x: clip;
+  background: #ffffff;
+  color: #23232b;
+}
