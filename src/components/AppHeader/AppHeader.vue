@@ -6,7 +6,7 @@ import {
   ref
 } from 'vue'
 
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 import HeaderIcon from './HeaderIcon.vue'
 import './AppHeader.css'
 
@@ -18,6 +18,7 @@ import {
   logoImage
 } from './HeaderData.js'
 
+const router = useRouter()
 const base = import.meta.env.BASE_URL
 
 const resolveHref = (href) => {
@@ -120,6 +121,19 @@ const closeMenu = () => {
 
   openMenu.value = null
   mobileOpen.value = false
+}
+
+// CORPORATE SOLUTION CLICK (navigate to page or open external URL)
+const openCorporate = (item) => {
+  activeCorporate.value = item.id
+
+  if (isInternalRoute(item.href)) {
+    router.push(item.href)
+  } else {
+    window.open(item.href, '_blank', 'noopener')
+  }
+
+  closeMenu()
 }
 
 const toggleMobile = () => {
@@ -506,9 +520,7 @@ const resellerColumns = computed(() => [activeResellerData.value?.groups || []])
                   @focus="
                     activeCorporate = item.id
                   "
-                  @click="
-                    activeCorporate = item.id
-                  "
+                  @click="openCorporate(item)"
                 >
                   <span>
                     {{ item.title }}
@@ -627,87 +639,87 @@ const resellerColumns = computed(() => [activeResellerData.value?.groups || []])
           </Transition>
 
           <!-- RESELLER SIGNUP MEGA MENU -->
-        <Transition name="dropdown">
-          <div
-            v-if="link.menu === 'reseller' && openMenu === 'reseller'"
-            id="header-reseller"
-            class="products-mega reseller-mega"
-            @pointerenter="cancelClose"
-            @click.stop
-          >
-            <div class="products-mega-inner">
+          <Transition name="dropdown">
+            <div
+              v-if="link.menu === 'reseller' && openMenu === 'reseller'"
+              id="header-reseller"
+              class="products-mega reseller-mega"
+              @pointerenter="cancelClose"
+              @click.stop
+            >
+              <div class="products-mega-inner">
 
-              <!-- COLUMN 1: TABS -->
-              <div class="product-tabs">
-                <button
-                  v-for="item in resellerPrograms"
-                  :key="item.id"
-                  type="button"
-                  class="product-tab"
-                  :class="{ active: activeReseller === item.id }"
-                  :aria-pressed="activeReseller === item.id"
-                  @pointerenter="($event.pointerType === 'mouse') && (activeReseller = item.id)"
-                  @focus="activeReseller = item.id"
-                  @click="activeReseller = item.id"
-                >
-                  <span>{{ item.title }}</span>
-                </button>
-              </div>
+                <!-- COLUMN 1: TABS -->
+                <div class="product-tabs">
+                  <button
+                    v-for="item in resellerPrograms"
+                    :key="item.id"
+                    type="button"
+                    class="product-tab"
+                    :class="{ active: activeReseller === item.id }"
+                    :aria-pressed="activeReseller === item.id"
+                    @pointerenter="($event.pointerType === 'mouse') && (activeReseller = item.id)"
+                    @focus="activeReseller = item.id"
+                    @click="activeReseller = item.id"
+                  >
+                    <span>{{ item.title }}</span>
+                  </button>
+                </div>
 
-              <!-- COLUMN 2: PAGE LINKS -->
-              <div class="mega-main" :key="activeResellerData.id">
-                <div class="product-groups">
-                  <div v-for="(column, i) in resellerColumns" :key="i" class="product-column is-stacked">
-                    <section v-for="group in column" :key="group.title" class="product-group">
-                      <h3 class="group-title">{{ group.title }}</h3>
-                      <div class="group-links">
-                        <component
-                          :is="linkComponent(item.href)"
-                          v-for="item in group.items"
-                          :key="item.label"
-                          v-bind="linkProps(item.href)"
-                          class="group-link"
-                          @click="closeMenu"
-                        >
-                          <span class="group-icon"><HeaderIcon :name="item.icon" /></span>
-                          <span class="group-link-copy">
-                            <span class="group-link-name">{{ item.label }}</span>
-                            <span v-if="item.badge" class="item-badge">{{ item.badge }}</span>
-                          </span>
-                        </component>
-                      </div>
-                    </section>
+                <!-- COLUMN 2: PAGE LINKS -->
+                <div class="mega-main" :key="activeResellerData.id">
+                  <div class="product-groups">
+                    <div v-for="(column, i) in resellerColumns" :key="i" class="product-column is-stacked">
+                      <section v-for="group in column" :key="group.title" class="product-group">
+                        <h3 class="group-title">{{ group.title }}</h3>
+                        <div class="group-links">
+                          <component
+                            :is="linkComponent(item.href)"
+                            v-for="item in group.items"
+                            :key="item.label"
+                            v-bind="linkProps(item.href)"
+                            class="group-link"
+                            @click="closeMenu"
+                          >
+                            <span class="group-icon"><HeaderIcon :name="item.icon" /></span>
+                            <span class="group-link-copy">
+                              <span class="group-link-name">{{ item.label }}</span>
+                              <span v-if="item.badge" class="item-badge">{{ item.badge }}</span>
+                            </span>
+                          </component>
+                        </div>
+                      </section>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- COLUMN 3: IMAGE CARD -->
-              <aside class="mega-side" :key="`feature-${activeResellerData.id}`">
-                <component
-                  :is="linkComponent(activeResellerData.href)"
-                  v-bind="linkProps(activeResellerData.href)"
-                  class="mega-feature"
-                  :aria-label="`Explore ${activeResellerData.title}`"
-                  @click="closeMenu"
-                >
-                  <div class="mega-feature-image">
-                    <img :src="`${base}${activeResellerData.image}`" :alt="activeResellerData.title" />
-                  </div>
-                  <div class="mega-feature-copy">
-                    <div class="feature-text">
-                      <span class="feature-label">{{ activeResellerData.label }}</span>
-                      <h3>{{ activeResellerData.imageTitle }}</h3>
+                <!-- COLUMN 3: IMAGE CARD -->
+                <aside class="mega-side" :key="`feature-${activeResellerData.id}`">
+                  <component
+                    :is="linkComponent(activeResellerData.href)"
+                    v-bind="linkProps(activeResellerData.href)"
+                    class="mega-feature"
+                    :aria-label="`Explore ${activeResellerData.title}`"
+                    @click="closeMenu"
+                  >
+                    <div class="mega-feature-image">
+                      <img :src="`${base}${activeResellerData.image}`" :alt="activeResellerData.title" />
                     </div>
-                    <span class="feature-arrow" aria-hidden="true">
-                      <HeaderIcon name="fa-solid fa-arrow-right" />
-                    </span>
-                  </div>
-                </component>
-              </aside>
+                    <div class="mega-feature-copy">
+                      <div class="feature-text">
+                        <span class="feature-label">{{ activeResellerData.label }}</span>
+                        <h3>{{ activeResellerData.imageTitle }}</h3>
+                      </div>
+                      <span class="feature-arrow" aria-hidden="true">
+                        <HeaderIcon name="fa-solid fa-arrow-right" />
+                      </span>
+                    </div>
+                  </component>
+                </aside>
 
+              </div>
             </div>
-          </div>
-        </Transition>
+          </Transition>
 
         </div>
       </nav>

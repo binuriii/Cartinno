@@ -1,0 +1,300 @@
+/* ==========================================
+   APP INTRO HERO
+   (PREMIUM PUSH NOTIFICATION DESIGN)
+========================================== */
+
+.ai-section,
+.ai-section * {
+  box-sizing: border-box;
+}
+
+.ai-section {
+  --ai-ease: cubic-bezier(.22, 1, .36, 1);
+  --ai-ink: #23232b;
+  
+  position: relative;
+  width: 100%;
+  
+  /* Adjusted padding for a Hero section at the top of the page */
+  padding: 12vh 3vw 8vh; 
+  background: #ffffff;
+  font-family: inherit;
+}
+
+.ai-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   MAIN BLUE CARD
+========================================== */
+
+.ai-hero-card {
+  position: relative;
+  isolation: isolate;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(25px, 4vw, 65px);
+
+  width: 100%;
+  min-height: 520px;
+  padding: clamp(30px, 5vw, 70px);
+
+  border-radius: 30px;
+  overflow: hidden;
+
+  /* The exact beautiful gradient from the Push Notifications design */
+  background:
+    repeating-linear-gradient(
+      27deg,
+      transparent 0,
+      transparent 80px,
+      rgba(255, 255, 255, .1) 81px,
+      transparent 82px,
+      transparent 160px
+    ),
+    linear-gradient(
+      110deg,
+      #9ddcf9 0%,
+      #29b0b4 38%,
+      #257dad 76%,
+      #9ddcf9 100%
+    );
+
+  color: #fff;
+}
+
+/* ==========================================
+   LEFT CONTENT
+========================================== */
+
+.ai-main-content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+}
+
+.ai-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #c1efff; /* Light blue accent */
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ai-main-content h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(36px, 4.5vw, 58px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+
+.ai-main-content p {
+  max-width: 440px;
+  margin: 20px 0 0;
+  color: rgba(255,255,255,.94);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* BUTTON */
+.ai-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  
+  margin-top: 35px;
+  padding: 15px 30px;
+  
+  border-radius: 999px;
+  background: #ffffff;
+  color: #257dad; /* Matches the dark blue of the gradient */
+  
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  
+  transition: transform 0.3s var(--ai-ease), box-shadow 0.3s ease;
+}
+
+.ai-button i {
+  transition: transform 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ai-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 70, 75, 0.2);
+  }
+  .ai-button:hover i {
+    transform: translateX(4px);
+  }
+}
+
+/* ==========================================
+   RIGHT VISUAL (FLOATING)
+========================================== */
+
+.ai-visual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.ai-floating-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 70, 75, 0.15));
+}
+
+.ai-image-fallback {
+  width: 100%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.2);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  font-size: 60px;
+  color: #ffffff;
+}
+
+/* ==========================================
+   SCROLL REVEAL & FLOAT ANIMATIONS
+========================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .ai-hero-card {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .8s ease, transform .8s var(--ai-ease);
+  }
+
+  .ai-visible .ai-hero-card {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* IMAGE FLOATS CONTINUOUSLY */
+  .ai-visible .ai-floating-img,
+  .ai-visible .ai-image-fallback {
+    animation: ai-float 5s ease-in-out infinite;
+  }
+}
+
+@keyframes ai-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+  .ai-section {
+    padding: 10vh 4vw 8vh;
+  }
+  .ai-hero-card {
+    min-height: 420px;
+    padding: 40px;
+    gap: 30px;
+  }
+}
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 768px) {
+  .ai-hero-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .ai-main-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ai-main-content p {
+    text-align: center;
+  }
+
+  .ai-visual {
+    order: -1; /* Puts the image on top for mobile */
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+  .ai-section {
+    padding: 80px 14px 60px;
+  }
+
+  .ai-hero-card {
+    padding: 30px 20px;
+    border-radius: 24px;
+    gap: 30px;
+  }
+
+  .ai-main-content h1 {
+    font-size: clamp(32px, 8vw, 42px);
+  }
+
+  .ai-main-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 15px;
+  }
+
+  .ai-button {
+    width: 100%;
+    justify-content: center;
+    margin-top: 25px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-section *,
+  .ai-section *::before,
+  .ai-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .ai-hero-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
