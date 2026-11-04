@@ -44,7 +44,7 @@ export const products = [
         "column": 2,
         "items": [
           { "label": "Cloud POS", "href": "/ecommerce-cloud-pos", "icon": "fa-solid fa-desktop" },
-          { "label": "Sales Management", "href": "#pos", "icon": "fa-solid fa-chart-column" },
+          { "label": "Sales Management", "href": "/sales-management", "icon": "fa-solid fa-chart-column" },
           { "label": "Cloud Access", "href": "#pos", "icon": "fa-solid fa-cloud" },
           { "label": "Daily Operations", "href": "#pos", "icon": "fa-solid fa-gears" },
           { "label": "Scalable POS", "href": "#pos", "icon": "fa-solid fa-arrow-trend-up" },
@@ -157,7 +157,7 @@ export const products = [
           },
           {
             "label": "Delivery",
-            "href": "/delivery",
+            "href": "/food-delivery",
             "icon": "fa-solid fa-truck-fast"
           },
           {
@@ -318,7 +318,7 @@ export const links = [
   },
   {
     "label": "Pricing",
-    "href": "#pricing"
+    "href": "/pricing"
   },
   { "label": "Reseller Signup", 
     "menu": "reseller" 

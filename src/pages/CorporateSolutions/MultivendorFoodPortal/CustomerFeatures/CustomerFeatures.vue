@@ -65,9 +65,7 @@ function selectOrderingTab(index) {
 
           <div class="cuf-panel-top">
             <div class="cuf-panel-copy">
-              <span class="cuf-panel-brand">
-                Cartinno<span class="cuf-brand-dot">.</span>
-              </span>
+
 
               <h3>
                 Good food.
@@ -108,9 +106,7 @@ function selectOrderingTab(index) {
                 :id="`cuf-discovery-tab-${feature.id}`"
                 @click="selectDiscoveryTab(index)"
               >
-                <span class="cuf-tab-number">
-                  {{ feature.number }}
-                </span>
+              
                 <span class="cuf-tab-name">
                   {{ feature.shortTitle }}
                 </span>
@@ -211,9 +207,6 @@ function selectOrderingTab(index) {
                 :id="`cuf-ordering-tab-${feature.id}`"
                 @click="selectOrderingTab(index)"
               >
-                <span class="cuf-tab-number">
-                  {{ feature.number }}
-                </span>
                 <span class="cuf-tab-name">
                   {{ feature.shortTitle }}
                 </span>

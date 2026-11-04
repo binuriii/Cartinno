@@ -1,0 +1,19 @@
+.sales-management-page {
+  width: 100%;
+  background: #ffffff;
+  color: #23232b;
+  font-family: inherit;
+}
+
+.sales-management-page .sm-section,
+.sales-management-page .sm-section *,
+.sales-management-page .sm-section *::before,
+.sales-management-page .sm-section *::after {
+  box-sizing: border-box;
+}
+
+.sales-management-page .sm-container {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
