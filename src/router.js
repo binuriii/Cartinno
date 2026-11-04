@@ -25,6 +25,12 @@ const routes = [
   name: 'about',
   component: () => import('./pages/About/About.vue')
   },
+{
+  path: '/pricing',
+  name: 'pricing',
+  component: () =>
+    import('./pages/Pricing/Pricing.vue')
+},
 
   {
   path: '/ecommerce-website',
@@ -182,6 +188,12 @@ const routes = [
   component: () =>
     import('./pages/Products/EcommerceWebsite/LeadManager/LeadManager.vue')
 },
+{
+  path: '/sales-management',
+  name: 'sales-management',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/SalesManagement/SalesManagement.vue')
+},
 
 
 
@@ -274,6 +286,12 @@ const routes = [
     name: 'loyalty-and-rewards',
     component: () =>
       import('./pages/Products/FoodWebsite/LoyaltyAndRewards/LoyaltyAndRewards.vue')
+  },
+    {
+    path: '/food-delivery',
+    name: 'food-delivery',
+    component: () =>
+      import('./pages/Products/FoodWebsite/Delivery/Delivery.vue')
   },
 
   {
