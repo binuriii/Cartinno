@@ -1,4 +1,3 @@
-
 .do-section,
 .do-section *,
 .do-section *::before,
@@ -6,33 +5,35 @@
   box-sizing: border-box;
 }
 
-/* FIRST SECTION â€” same outside spacing as GoogleReview */
+/* SECTION — same variables, padding, radius and container as .rwb-section */
+
 .do-section {
   --do-ink: #23232b;
   --do-muted: #5b5b66;
   --do-brand: #d7454e;
+  --do-ease: cubic-bezier(.22, 1, .36, 1);
 
   position: relative;
-  z-index: 20;
   isolation: isolate;
   width: 100%;
-  margin-top: -55px;
-  padding: 10vh 3vw 10vh;
-  border-radius: 70px 70px 0 0;
+  margin: 0;
+  padding: 5vh 3vw 10vh;
+
+  border-radius: 0;
   background: #ffffff;
   color: var(--do-ink);
   font-family: inherit;
   overflow: hidden;
 }
 
-/* No dotted/grid background */
 .do-container {
   width: 100%;
   max-width: 1350px;
   margin-inline: auto;
 }
 
-/* Original editorial arrangement is preserved */
+/* Editorial arrangement preserved */
+
 .do-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.12fr);
@@ -47,39 +48,42 @@
   min-width: 0;
 }
 
-/* Section heading â€” matched to Review Engine */
+/* HEADING — same size, weight, spacing and gap as .rwb-heading / .rwb-header */
+
 .do-head {
   width: 100%;
   max-width: 620px;
-  margin: 0 0 clamp(24px, 3vw, 40px);
+  margin: 0 0 clamp(40px, 5vw, 68px);
   text-align: left;
 }
 
 .do-eyebrow {
-  margin: 0 0 18px;
+  margin: 0 0 14px;
   color: var(--do-brand);
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 500;
   line-height: 1.6;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .do-title {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0;
+
   color: var(--do-ink);
   font-size: clamp(26px, 4.4vw, 54px);
   font-weight: 450;
   line-height: 1.15;
-  letter-spacing: -0.045em;
+  letter-spacing: -.045em;
   text-align: left;
   text-wrap: balance;
 }
 
 .do-description {
   max-width: 620px;
-  margin: 18px 0 0;
+  margin: 22px 0 0;
+
   color: var(--do-muted);
   font-size: 15px;
   font-weight: 400;
@@ -88,14 +92,15 @@
   text-align: left;
 }
 
-/* Photography: premium clean cards, dark gradient ONLY at bottom */
+/* PHOTO CARDS — radius matched to rwb cards */
+
 .do-photo {
   position: relative;
   display: block;
   isolation: isolate;
   width: 100%;
   overflow: hidden;
-  border-radius: 28px;
+  border-radius: 30px;
   background: #f2f2f0;
 }
 
@@ -107,7 +112,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 850ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 850ms var(--do-ease);
   user-select: none;
 }
 
@@ -128,7 +133,8 @@
   pointer-events: none;
 }
 
-/* Editorial photo sizes */
+/* Editorial photo sizes (unchanged) */
+
 .do-photo-left {
   height: clamp(340px, 39vw, 530px);
 }
@@ -140,7 +146,7 @@
 .do-bottom-row {
   display: flex;
   justify-content: flex-start;
-  margin-top: clamp(16px, 1.6vw, 24px);
+  margin-top: clamp(14px, 1.5vw, 22px);
 }
 
 .do-photo-bottom {
@@ -148,7 +154,6 @@
   height: clamp(220px, 22vw, 300px);
 }
 
-/* Keep the photo legible if card becomes narrow */
 .do-photo-bottom .do-photo-content {
   padding: 22px;
 }
@@ -158,14 +163,15 @@
   line-height: 1.6;
 }
 
-/* Subtle, one-time scroll reveal; never hides content without JS */
+/* Scroll reveal — same rise motion as rwb */
+
 @media (prefers-reduced-motion: no-preference) {
   .do-section.do-ready .do-reveal {
     opacity: 0;
-    transform: translateY(22px);
+    transform: translateY(40px);
     transition:
-      opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
-      transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+      opacity .85s var(--do-ease),
+      transform .85s var(--do-ease);
     transition-delay: var(--do-reveal-delay, 0ms);
   }
 
@@ -175,9 +181,11 @@
   }
 }
 
-.do-photo-left { --do-reveal-delay: 70ms; }
-.do-photo-main { --do-reveal-delay: 120ms; }
-.do-photo-bottom { --do-reveal-delay: 180ms; }
+.do-photo-left   { --do-reveal-delay: 0ms; }
+.do-photo-main   { --do-reveal-delay: .15s; }
+.do-photo-bottom { --do-reveal-delay: .28s; }
+
+/* HOVER */
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .do-photo:hover img {
@@ -185,24 +193,19 @@
   }
 }
 
-/* TABLET â€” same first-section spacing as Review Engine */
-@media (max-width: 1024px) {
-  .do-section {
-    margin-top: -45px;
-    padding: 8vh 4vw 8vh;
-    border-radius: 40px 40px 0 0;
-  }
+/* TABLET — section padding stays the same as desktop, like rwb */
 
+@media (max-width: 1024px) {
   .do-layout {
-    column-gap: 28px;
+    column-gap: 25px;
   }
 
   .do-photo {
-    border-radius: 23px;
+    border-radius: 24px;
   }
 
-  .do-photo-left { height: 410px; }
-  .do-photo-main { height: 460px; }
+  .do-photo-left   { height: 410px; }
+  .do-photo-main   { height: 460px; }
   .do-photo-bottom { width: 78%; height: 260px; }
 
   .do-photo-content {
@@ -218,7 +221,8 @@
   }
 }
 
-/* SMALL TABLET â€” stack editorial columns, preserve photo arrangement */
+/* SMALL TABLET — stack columns, keep photo arrangement */
+
 @media (max-width: 768px) {
   .do-layout {
     grid-template-columns: 1fr;
@@ -254,12 +258,11 @@
   }
 }
 
-/* MOBILE â€” exact Review Engine heading + outer spacing */
+/* MOBILE — exact rwb section padding, heading size and header gap */
+
 @media (max-width: 640px) {
   .do-section {
-    margin-top: -35px;
-    padding: 65px 14px 70px;
-    border-radius: 24px 24px 0 0;
+    padding: 5vh 3vw 10vh;
   }
 
   .do-layout {
@@ -267,7 +270,7 @@
   }
 
   .do-head {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 
   .do-title {
@@ -276,13 +279,13 @@
   }
 
   .do-description {
-    margin-top: 18px;
-    font-size: 15px;
-    line-height: 1.55;
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 1.7;
   }
 
   .do-photo {
-    border-radius: 20px;
+    border-radius: 21px;
   }
 
   .do-photo-left {
@@ -306,7 +309,7 @@
 
   .do-photo-content,
   .do-photo-bottom .do-photo-content {
-    padding: 24px;
+    padding: 23px;
   }
 
   .do-photo-title {
@@ -322,23 +325,31 @@
   }
 }
 
-/* Very narrow phones: avoid clipping the description */
+/* SMALL MOBILE */
+
 @media (max-width: 380px) {
-  .do-photo-left { height: 375px; }
-  .do-photo-main { height: 400px; }
+  .do-photo-left   { height: 375px; }
+  .do-photo-main   { height: 400px; }
   .do-photo-bottom { width: 94%; height: 300px; }
 
   .do-photo-content,
   .do-photo-bottom .do-photo-content {
-    padding: 20px;
+    padding: 18px;
   }
 }
 
+/* REDUCED MOTION */
+
 @media (prefers-reduced-motion: reduce) {
-  .do-photo img,
+  .do-section *,
+  .do-section *::before,
+  .do-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
   .do-reveal {
-    transition: none;
-    transform: none;
-    opacity: 1;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
