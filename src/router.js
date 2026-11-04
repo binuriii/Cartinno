@@ -208,6 +208,13 @@ const routes = [
     import('./pages/Products/EcommerceWebsite/DailyOperations/DailyOperations.vue')
 },
 
+{
+  path: '/scalable-pos',
+  name: 'Scalable POS',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/ScalablePOS/ScalablePOS.vue')
+},
+
 
 
   {
