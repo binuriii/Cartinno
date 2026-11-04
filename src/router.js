@@ -194,6 +194,12 @@ const routes = [
   component: () =>
     import('./pages/Products/EcommerceWebsite/SalesManagement/SalesManagement.vue')
 },
+{
+  path: '/cloud-access',
+  name: 'cloud-access',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/CloudAccess/CloudAccess.vue')
+},
 
 
 

@@ -143,7 +143,6 @@ onBeforeUnmount(() => observer?.disconnect())
                 <div class="smp-progress-track"><span :style="{ width: `${task.completed / task.total * 100}%` }"></span></div>
               </div>
             </div>
-            <p class="smp-demo-label">Illustrative interface — sample values</p>
           </div>
         </article>
       </div>

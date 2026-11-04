@@ -41,7 +41,7 @@
 .lmj-content h2 {
   margin: 0;
   max-width: 650px;
-  font-size: clamp(26px, 3.6vw, 44px);
+  font-size: clamp(26px, 4.4vw, 54px);
   font-weight: 450;
   line-height: 1.13;
   letter-spacing: -.052em;
@@ -80,7 +80,7 @@
 }
 
 .lmj-feature-copy h3 {
-  font-size: clamp(19px, 1.8vw, 24px);
+  font-size: clamp(20px, 1.9vw, 27px);
   line-height: 1.2;
   letter-spacing: -.044em;
   font-weight: 600;
@@ -112,8 +112,8 @@
 @media (max-width: 640px) {
   .lmj-section { padding: 45px 14px 75px; }
   .lmj-photo { height: 430px; border-radius: 23px; }
-  .lmj-content h2 { font-size: clamp(25px, 6.6vw, 31px); }
-  .lmj-feature-copy h3 { font-size: 20px; }
+  .lmj-content h2 { font-size: clamp(22px, 6.6vw, 28px); }
+  .lmj-feature-copy h3 { font-size: 22px; }
   .lmj-feature-copy p, .lmj-description { font-size: 15px; }
   .lmj-features { gap: 27px; }
 }

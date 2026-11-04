@@ -1,7 +1,7 @@
 /* SECTION 03 — premium photo bento from supplied loyalty reference */
 .lmg-section {width:100%;padding:5vh 3vw 11vh;background:#fff;color:var(--lm-ink);font-family:inherit;overflow:hidden;}
 .lmg-header {margin-bottom:clamp(24px,3vw,40px);}
-.lmg-header h2 {margin:0;max-width:750px;font-size:clamp(26px,3.6vw,44px);font-weight:450;line-height:1.13;letter-spacing:-.052em;}
+.lmg-header h2 {margin:0;max-width:750px;font-size: clamp(26px, 4.4vw, 54px);font-weight:450;line-height:1.13;letter-spacing:-.052em;}
 .lmg-header p {font-size:15px;line-height:1.7;color:#5b5b66;margin:14px 0 0;max-width:650px;}
 .lmg-grid {display:grid;grid-template-columns: minmax(0,1fr) minmax(0,1fr);gap:clamp(14px,1.4vw,20px);align-items:stretch;}
 .lmg-image-card {position:relative;isolation:isolate;overflow:hidden;background:#b6b2ae;border-radius:29px;min-width:0;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;box-sizing:border-box;}
@@ -25,6 +25,6 @@
 .lmg-cta:focus-visible {outline:3px solid #d7454e;outline-offset:3px;}
 @media (max-width:990px) {.lmg-main{min-height:480px;} .lmg-small{min-height:295px;} .lmg-right {grid-template-columns:repeat(2,minmax(0,1fr));}.lmg-image-card{border-radius:23px;}}
 @media (max-width:760px) {.lmg-grid {grid-template-columns:1fr;} .lmg-main {min-height:470px;} .lmg-right {grid-template-rows:300px auto;} .lmg-small{min-height:300px;} }
-@media (max-width:640px) {.lmg-section{padding:40px 14px 85px;} .lmg-header h2{font-size:clamp(25px,6.6vw,31px);} .lmg-header p{font-size:15px;} .lmg-main {min-height:390px;padding:23px;} .lmg-main h3 {font-size:29px;} .lmg-right {grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:240px auto;gap:12px;} .lmg-small {min-height:240px;border-radius:20px;padding:17px;} .lmg-small h3{font-size:17px;line-height:1.19;} .lmg-cta {min-height:115px;border-radius:20px;padding:19px;} .lmg-cta strong{font-size:19px;} .lmg-cta small{font-size:12px;} .lmg-arrow{width:42px;height:42px;flex-basis:42px;} }
+@media (max-width:640px) {.lmg-section{padding:40px 14px 85px;} .lmg-header h2{font-size: clamp(22px, 6.6vw, 28px); } .lmg-header p{font-size:15px;} .lmg-main {min-height:390px;padding:23px;} .lmg-main h3 {font-size:29px;} .lmg-right {grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:240px auto;gap:12px;} .lmg-small {min-height:240px;border-radius:20px;padding:17px;} .lmg-small h3{font-size:17px;line-height:1.19;} .lmg-cta {min-height:115px;border-radius:20px;padding:19px;} .lmg-cta strong{font-size:19px;} .lmg-cta small{font-size:12px;} .lmg-arrow{width:42px;height:42px;flex-basis:42px;} }
 @media (max-width:410px) { .lmg-right {grid-template-rows:220px auto;} .lmg-small{min-height:220px;} .lmg-small h3{font-size:15.5px;} }
 @media (prefers-reduced-motion:reduce) {.lmg-image-card img,.lmg-cta,.lmg-arrow {transition:none!important;transform:none!important;} }
