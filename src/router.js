@@ -188,6 +188,12 @@ const routes = [
   component: () =>
     import('./pages/Products/EcommerceWebsite/LeadManager/LeadManager.vue')
 },
+{
+  path: '/sales-management',
+  name: 'sales-management',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/SalesManagement/SalesManagement.vue')
+},
 
 
 
