@@ -1,0 +1,25 @@
+.cloud-access-page, .cloud-access-page * { box-sizing: border-box; }
+.cloud-access-page {
+  --lm-ink: #23232b;
+  --lm-muted: #5b5b66;
+  --lm-red: #d7454e;
+  --lm-peach: #fff0e8;
+  --lm-green: #e8f6ee;
+  --lm-line: rgba(35,35,43,.10);
+  width: 100%;
+  background: #fff;
+  color: var(--lm-ink);
+  font-family: inherit;
+  overflow: hidden;
+}
+.cloud-access-page button, .cloud-access-page a { font: inherit; }
+.cloud-access-page .lm-container { max-width: 1350px; width: 100%; margin-inline: auto; }
+.cloud-access-page .ca-motion-ready [data-cloud-reveal] {
+  opacity: 0; transform: translateY(25px);
+  transition: opacity .85s ease, transform .85s cubic-bezier(.2,.7,.2,1);
+}
+.cloud-access-page .ca-motion-ready [data-cloud-reveal].ca-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .cloud-access-page .ca-motion-ready [data-cloud-reveal] { opacity: 1 !important; transform: none !important; }
+  .cloud-access-page *, .cloud-access-page *::before, .cloud-access-page *::after { animation: none !important; transition-duration: .01ms !important; }
+}

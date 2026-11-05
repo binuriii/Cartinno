@@ -194,6 +194,26 @@ const routes = [
   component: () =>
     import('./pages/Products/EcommerceWebsite/SalesManagement/SalesManagement.vue')
 },
+{
+  path: '/cloud-access',
+  name: 'cloud-access',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/CloudAccess/CloudAccess.vue')
+},
+
+{
+  path: '/daily-operations',
+  name: 'daily-operations',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/DailyOperations/DailyOperations.vue')
+},
+
+{
+  path: '/scalable-pos',
+  name: 'Scalable POS',
+  component: () =>
+    import('./pages/Products/EcommerceWebsite/ScalablePOS/ScalablePOS.vue')
+},
 
 
 

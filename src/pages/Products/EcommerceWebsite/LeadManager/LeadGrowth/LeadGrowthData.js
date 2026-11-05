@@ -1,7 +1,6 @@
 export const leadGrowthContent = {
   title1: 'Small conversations.',
   title2: 'Big opportunities.',
-  description: 'Give every connection room to grow, with a clearer view of what matters next.',
   ctaTitle: 'Grow with Cartinno',
   ctaDescription: 'Find a better way to nurture leads and grow your business.',
   ctaHref: '/#demo'

@@ -1,8 +1,7 @@
 export const leadOverviewContent = {
   title1: 'Every Lead.',
   title2: 'Every Connection Matters.',
-  description:
-    'Bring customer details, conversations, and next steps into one clearer view. Stay organized and focus on the opportunities that matter most.'
+
 }
 
 export const leadOverviewCards = [

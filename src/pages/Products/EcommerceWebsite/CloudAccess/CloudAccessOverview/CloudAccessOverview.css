@@ -1,0 +1,54 @@
+.cao-section{position:relative;z-index:20;width:100%;margin-top:-55px;border-radius:70px 70px 0 0;background:#fff;padding:10vh 3vw 10vh;overflow:hidden;font-family:inherit;color:var(--lm-ink)}
+.cao-heading{text-align:left;margin-bottom:clamp(26px,3vw,40px)}
+.cao-heading h2{margin:0;max-width:940px;font-size: clamp(26px, 4.4vw, 54px);font-weight:450;line-height:1.13;letter-spacing:-.05em}
+.cao-heading p{margin:18px 0 0;max-width:620px;font-size:15px;color:#60606a;line-height:1.75}
+.cao-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:clamp(16px,1.5vw,24px)}
+.cao-card{position:relative;isolation:isolate;min-width:0;min-height:510px;border-radius:29px;padding:clamp(25px,2.4vw,35px);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .35s ease,transform .35s ease}
+.cao-card:hover{transform:translateY(-5px);box-shadow:0 18px 35px rgba(48,31,36,.09)}
+.cao-card-soft{background:#d4e2f7}
+.cao-copy h3{max-width:310px;margin:0;font-weight:590;font-size:clamp(20px,1.85vw,25px);letter-spacing:-.043em;line-height:1.18}
+.cao-copy p{max-width:330px;margin:14px 0 0;font-size:13px;line-height:1.7;color:#54515a}
+.cao-profile-preview,.cao-progress-preview{position:relative;width:100%;margin-top:auto;border-radius:22px;background:#fff;padding:clamp(17px,2vw,22px);border:1px solid #fff9;box-shadow:0 13px 30px #5533220a}
+.cao-preview-title{display:flex;justify-content:space-between;gap:8px;align-items:center;color:#292733;font-weight:700;font-size:12px;margin-bottom:17px}
+.cao-preview-title svg{width:17px;height:17px;color:#d7454e}
+.cao-live{display:inline-flex;align-items:center;gap:6px;background:#e9f7f0;color:#408769;font-size:10px;padding:5px 8px;border-radius:99px;font-weight:650}
+.cao-live i{width:6px;height:6px;background:#57bb8d;border-radius:50%;animation:cao-pulse 2.7s ease-in-out infinite}
+.cao-profile-row{display:flex;gap:10px;align-items:center;background:#f8f8fa;padding:13px;border-radius:13px}
+.cao-avatar{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:12px;background:#ffe3e7;color:#bd4d59;font-weight:800;font-size:13px}
+.cao-name{display:flex;flex:1;min-width:0;flex-direction:column;gap:4px}
+.cao-name strong{font-size:12px}.cao-name small{font-size:10px;color:#77727c}
+.cao-muted-icon{width:16px;height:16px;flex:0 0 16px;color:#a4a0a6}
+.cao-profile-divider{margin:17px 0 12px;background:#ebebef;height:1px}
+.cao-detail{display:flex;align-items:center;gap:9px;margin:11px 0;color:#605b66;font-size:11px}
+.cao-detail svg{width:14px;height:14px;color:#bd737a}
+.cao-lead-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.cao-lead-tags span{padding:7px 9px;background:#fff2eb;color:#b16f63;border-radius:7px;font-size:10px;font-weight:650}
+.cao-view-action{display:flex;align-items:center;justify-content:center;gap:7px;background:#f6f6f8;border-radius:99px;padding:12px;margin-top:14px;font-size:11px;font-weight:700}
+.cao-view-action svg{width:13px;height:13px;color:#d7454e}
+.cao-photo-card{padding:30px 32px;background:linear-gradient(130deg,#8a8792,#404652);color:#fff}
+.cao-photo-card>img{width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;z-index:-2;transition:transform .8s cubic-bezier(.2,.75,.2,1)}
+.cao-photo-card:hover>img{transform:scale(1.065)}
+.cao-photo-scrim{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#0b1019a8 0%,#161d2960 30%,#15141906 58%,#161b20c9 100%)}
+.cao-photo-text h3{margin:0;font-size:clamp(20px,1.85vw,25px);font-weight:600;line-height:1.22;letter-spacing:-.04em}
+.cao-photo-text p{max-width:300px;margin:12px 0 0;font-size:12.5px;line-height:1.62;color:#fffffff0}
+.cao-photo-bottom{display:flex;gap:11px;justify-content:space-between;align-items:end;margin-top:auto}
+.cao-photo-bottom strong{max-width:270px;font-size:clamp(27px,2.7vw,37px);line-height:1.06;letter-spacing:-.055em;font-weight:720}
+.cao-heart{width:49px;height:49px;border-radius:50%;background:#fff;color:#d7454e;display:grid;place-items:center;flex:0 0 49px;animation:cao-float 4s ease-in-out infinite}
+.cao-heart svg{width:22px;height:22px;fill:#d7454e;stroke-width:1px}
+.cao-timeline{display:flex;flex-direction:column;gap:0;padding:3px 0 4px}
+.cao-event{display:flex;align-items:flex-start;gap:12px;min-height:68px;position:relative}
+.cao-event:not(:last-child):after{content:'';width:1px;background:#e5e4e8;position:absolute;left:15px;top:33px;bottom:-3px}
+.cao-dot{display:grid;place-items:center;flex:0 0 31px;width:31px;height:31px;border-radius:50%;color:#4b9d78;background:#e5f6ec}
+.cao-dot svg{width:15px;height:15px}
+.cao-event.upcoming .cao-dot{background:#fff1e6;color:#d78a57;animation:cao-pulse 2.8s ease-in-out infinite}
+.cao-event>span:last-child{display:flex;flex-direction:column;gap:4px;padding-top:2px}
+.cao-event strong{font-size:12px;color:#302d35}.cao-event small{font-size:10px;color:#807c82}
+.cao-progress-footer{display:flex;align-items:center;justify-content:center;gap:9px;padding:12px 8px;border-radius:99px;background:#f7f7f8;font-size:10px;font-weight:670;color:#51505a;white-space:nowrap}
+.cao-progress-footer svg{width:13px;height:13px;color:#d7454e;flex:0 0 13px}
+@keyframes cao-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.14)}}@keyframes cao-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(max-width:980px){.cao-card{min-height:470px;padding:23px}.cao-copy h3{font-size:22px}.cao-profile-preview,.cao-progress-preview{padding:15px}}
+@media(max-width:780px){.cao-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cao-photo-card{order:3;grid-column:span 2;min-height:360px}.cao-photo-text p{max-width:440px}}
+@media(max-width:640px){.cao-section{margin-top:-35px;border-radius:24px 24px 0 0;padding:65px 14px 70px}.cao-heading h2{font-size:clamp(25px,6.6vw,31px)}.cao-heading p{font-size:15px}.cao-grid{grid-template-columns:1fr;gap:15px}.cao-card,.cao-photo-card{grid-column:auto;order:initial;min-height:455px;border-radius:23px;padding:24px}.cao-photo-card{min-height:450px}.cao-copy h3{font-size:22px}}
+@media(max-width:1024px){.cao-section{margin-top:-45px;border-radius:40px 40px 0 0;padding:8vh 4vw 9vh}}
+@media(max-width:640px){.cao-section{margin-top:-35px;border-radius:24px 24px 0 0;padding:65px 14px 70px}.cao-heading p{font-size:15px}.cao-card{min-height:455px}}
+@media(prefers-reduced-motion:reduce){.cao-heart,.cao-live i,.cao-event.upcoming .cao-dot{animation:none}.cao-card,.cao-photo-card>img{transition:none}}
