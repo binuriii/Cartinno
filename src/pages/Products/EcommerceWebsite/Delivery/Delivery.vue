@@ -25,11 +25,10 @@ import './Delivery.css'
     <!-- ROUNDED SECTION OVERLAPPING HERO -->
     <DeliveryPeople />
 
+    <DeliveryCoverage />
+    
     <!-- DELIVERY WORKFLOW -->
     <DeliveryOperations />
-
-    <!-- CONNECTED DELIVERY JOURNEY -->
-    <DeliveryCoverage />
 
     <!-- SHARED FAQ -->
     <FAQ

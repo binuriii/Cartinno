@@ -15,8 +15,8 @@ import './Delivery.css'
   <main class="delivery-page">
     <Hero v-bind="deliveryHero" />
     <DeliveryPeople />
-    <DeliveryOperations />
     <DeliveryCoverage />
+    <DeliveryOperations />
     <FAQ
       title="Frequently Asked Questions"
       description="Everything you need to know about Cartinno Food Delivery."

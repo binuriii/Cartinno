@@ -552,18 +552,7 @@ onBeforeUnmount(() => {
           </div>
         </div>
       </div>
-
-      <!-- BENEFITS -->
-      <div class="dc-highlights">
-        <div
-          v-for="item in coverageHighlights"
-          :key="item.title"
-          class="dc-highlight"
-        >
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.description }}</p>
-        </div>
-      </div>
+      
     </div>
   </section>
 </template>
