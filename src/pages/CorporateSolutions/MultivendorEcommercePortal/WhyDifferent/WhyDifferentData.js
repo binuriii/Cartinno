@@ -13,7 +13,7 @@ export const whyDifferentBenefits = [
     description:
       'Improve your online visibility and help more customers discover your business.',
     image:
-      'https://images.unsplash.com/photo-1771054243991-e7b2d194ac96?w=1200&auto=format&fit=crop&q=85',
+      'https://images.unsplash.com/photo-1782729433731-ffb628a64b6c?w=1200&auto=format&fit=crop&q=85',
     imageAlt: 'Digital analytics and SEO performance displayed on a laptop'
   },
   {
