@@ -1,8 +1,7 @@
 export const scalablePOSStoryContent = {
-  headingFirst: 'Growth brings new possibilities.',
-  headingSecond: 'Your POS should be ready.',
-  description: 'From your first checkout to a growing network of stores, keep the essential parts of your business connected while your operation becomes more capable.',
-  image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=2070&auto=format&fit=crop&q=85',
+  headingFirst: 'Grow with confidence.',
+headingSecond: 'Stay ready to scale.',
+  image: 'https://images.unsplash.com/photo-1677078610152-8a627d8ced8d?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
   imageAlt: 'Retail team using a point of sale system in a modern store',
   photoCaption: 'One connected platform for every stage of growth.'
 }

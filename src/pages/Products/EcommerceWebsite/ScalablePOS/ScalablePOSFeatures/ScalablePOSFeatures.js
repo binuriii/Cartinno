@@ -1,7 +1,6 @@
 export const scalablePOSFeaturesContent = {
-  headingFirst: 'Start with what you need.',
-  headingSecond: 'Scale when you are ready.',
-  description: 'Build your POS around the way your business works today, then add capabilities, users and locations as your needs evolve.'
+  headingFirst: 'Start simple.',
+  headingSecond: 'Scale with confidence.', 
 }
 export const scalablePOSFeatureCards = [
   { id: 'create', title: 'Start with the essentials', description: 'Set up the core tools for sales, payments and everyday store operations.', variant: 'green' },

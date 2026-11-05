@@ -1,5 +1,5 @@
 /* SECTION 03 — INTERACTIVE THREE-STEP POS JOURNEY */
-.grj-section { position: relative; isolation: isolate; overflow: hidden; margin: 0; padding: 9vh 3vw 11vh; border-radius: 0; background: #faf7f6; color: #23232b; }
+.grj-section { position: relative; isolation: isolate; overflow: hidden; margin: 0; padding: 9vh 3vw 11vh; border-radius: 0; background: #ffffff; color: #23232b; }
 .grj-shell { display: grid; grid-template-columns: minmax(0,.95fr) minmax(0,1.05fr); align-items: center; gap: clamp(36px,5vw,76px); width: 100%; max-width: 1350px; margin-inline: auto; }
 .grj-copy { min-width: 0; }
 .grj-copy h2 { max-width: 640px; margin: 0; font-size: clamp(26px,4.4vw,54px); font-weight: 450; line-height: 1.15; letter-spacing: -.045em; text-wrap: balance; }

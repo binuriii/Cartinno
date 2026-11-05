@@ -199,11 +199,9 @@ onBeforeUnmount(() => {
                 @click="selectStep(index)"
               >{{ step.number }}</button>
             </div>
-            <button v-if="!reducedMotion" class="grj-motion-toggle" type="button" @click="toggleAutoplay">
-              {{ autoplay ? 'Pause preview' : 'Play preview' }}
-            </button>
+           
           </div>
-          <small class="grj-demo-caption">Illustrative Cartinno Scalable POS experience</small>
+
         </div>
       </div>
     </section>
