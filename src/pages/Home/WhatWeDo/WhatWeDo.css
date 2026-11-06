@@ -616,3 +616,55 @@
     -webkit-transform: translateZ(0) scale(1.025);
   }
 }
+
+/* =====================================================
+   HEADING: same look as desktop on tablet & mobile
+   ===================================================== */
+
+.wwd-process-header h2{
+  font-size:clamp(46px, 3.8vw, 54px);   /* same as desktop */
+  font-weight:450;
+  line-height:1.1;
+  letter-spacing:-0.045em;
+}
+
+/* Tablets (iPad Mini, iPad Air) portrait: stack info above the cards */
+@media (min-width:761px) and (max-width:834px) and (orientation:portrait){
+  .wwd-process{padding:3vh 4% 5vh}
+  .wwd-process-header{margin-bottom:40px}
+
+  .wwd-process-layout{display:flex;flex-direction:column;gap:30px}
+
+  .wwd-process-info{
+    min-height:0;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    align-items:end;
+    gap:20px;
+    padding:0;
+  }
+  .wwd-process-counter-current{font-size:clamp(48px, 8vw, 64px)}
+  .wwd-process-description{max-width:34ch;font-size:14px}
+
+  .wwd-process-card{
+    flex:0 0 clamp(340px, 56vw, 460px);
+    height:clamp(460px, 66vw, 540px);
+  }
+}
+
+/* Mobile */
+@media (max-width:760px){
+  .wwd-process-header{margin-bottom:34px}
+  .wwd-process-header h2{font-size:34px}      /* same size as monitor minimum */
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .wwd-process-header{margin-bottom:28px}
+  .wwd-process-header h2{font-size:34px}      /* overrides the 22-28px rule */
+}
+
+/* Very small phones (iPhone SE, 320-360px) so it doesn't overflow */
+@media (max-width:360px){
+  .wwd-process-header h2{font-size:34px}
+}
