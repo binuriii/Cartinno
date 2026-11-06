@@ -181,7 +181,7 @@
    ===================================================== */
 
 /* ---------- Base safety ---------- */
-html, body{overflow-x:hidden}
+html, body{overflow-x:clip}
 .hero{width:100%;min-height:100vh;min-height:100svh}
 .hero img{max-width:100%}
 
@@ -241,7 +241,7 @@ html, body{overflow-x:hidden}
   }
   .hero-trust{flex-direction:column;gap:8px}
   .hero-trust-text{white-space:normal;text-align:center}
-  .hero-title{letter-spacing:-.035em}
+  .hero-title{font-size:clamp(38px, 6vw, 55px);letter-spacing:-.035em}
 
   /* BUTTONS: side by side, compact, not full width */
   .hero-actions{

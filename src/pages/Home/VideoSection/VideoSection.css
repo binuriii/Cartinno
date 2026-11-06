@@ -880,7 +880,7 @@ section#case-studies.vs {
 
 /* Tablet (iPad Mini, iPad Air) */
 @media (min-width:761px) and (max-width:1100px){
-  section#case-studies.vs{padding:3vh 4% 5vh}
+  section#case-studies.vs{padding:5vh 4% 5vh}
   .vs-grid{margin-top:40px}
 }
 

@@ -630,7 +630,7 @@
 
 /* Tablets (iPad Mini, iPad Air) portrait: stack info above the cards */
 @media (min-width:761px) and (max-width:834px) and (orientation:portrait){
-  .wwd-process{padding:3vh 4% 5vh}
+  .wwd-process{padding:5vh 4% 5vh}
   .wwd-process-header{margin-bottom:40px}
 
   .wwd-process-layout{display:flex;flex-direction:column;gap:30px}

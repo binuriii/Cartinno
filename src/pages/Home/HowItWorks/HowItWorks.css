@@ -1072,7 +1072,7 @@
 
 /* Tablet (iPad Mini, iPad Air) */
 @media (min-width:761px) and (max-width:1100px){
-  .hiw{padding:3vh 4% 5vh}
+  .hiw{padding:5vh 4% 5vh}
   .hiw-head{margin-bottom:40px}
 }
 
