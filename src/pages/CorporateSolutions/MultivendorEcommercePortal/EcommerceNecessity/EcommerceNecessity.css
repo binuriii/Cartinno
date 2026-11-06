@@ -561,3 +561,89 @@
     transform: none !important;
   }
 }
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  section.ecn-section{padding:3vh 4% 5vh}
+  section.ecn-section .ecn-header{margin-bottom:40px}
+  section.ecn-section .ecn-heading{font-size:46px;line-height:1.1}
+}
+
+/* Mobile (overrides the 22-28px rule) */
+@media (max-width:640px){
+  section.ecn-section{padding:3vh 14px 5vh}
+  section.ecn-section .ecn-header{margin-bottom:28px}
+  section.ecn-section .ecn-heading{font-size:34px;line-height:1.15}
+  section.ecn-section .ecn-description{margin:16px 0 0;font-size:15px}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  section.ecn-section .ecn-heading{font-size:34px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  section.ecn-section .ecn-heading{font-size:34px}
+}
+
+/* =====================================================
+   MOBILE LAYOUT FIX (640px and below)
+   Row 1: big image
+   Row 2: two small images side by side
+   Row 3: green card
+   Row 4: benefits list
+   ===================================================== */
+@media (max-width:640px){
+  section.ecn-section .ecn-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    grid-template-rows:auto;
+    gap:12px;
+  }
+
+  section.ecn-section .ecn-main-image{
+    grid-column:1 / -1;
+    grid-row:1;
+    height:300px;
+    min-height:0;
+  }
+
+  section.ecn-section .ecn-top-image{
+    grid-column:1;
+    grid-row:2;
+    height:190px;
+  }
+
+  section.ecn-section .ecn-right-image{
+    grid-column:2;
+    grid-row:2;
+    height:190px;
+  }
+
+  section.ecn-section .ecn-highlight-card{
+    grid-column:1 / -1;
+    grid-row:3;
+    min-height:0;
+    gap:18px;
+    padding:24px;
+  }
+  section.ecn-section .ecn-highlight-card h3{max-width:100%;font-size:24px}
+  section.ecn-section .ecn-highlight-card p{max-width:100%;margin-top:0;font-size:14px}
+
+  section.ecn-section .ecn-benefits{
+    grid-column:1 / -1;
+    grid-row:4;
+    margin-top:8px;
+  }
+}
+
+/* Small phones */
+@media (max-width:380px){
+  section.ecn-section .ecn-main-image{height:260px}
+  section.ecn-section .ecn-top-image,
+  section.ecn-section .ecn-right-image{height:160px}
+}
