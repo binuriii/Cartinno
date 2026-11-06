@@ -175,3 +175,135 @@
     transform: none;
   }
 }
+
+/* =====================================================
+   FINAL RESPONSIVE BLOCK (paste at the very end)
+   ===================================================== */
+
+/* ---------- Base safety ---------- */
+html, body{overflow-x:hidden}
+.hero{width:100%;min-height:100vh;min-height:100svh}
+.hero img{max-width:100%}
+
+/* ---------- Large screens ---------- */
+@media (min-width:1440px){
+  .hero{--card-h:clamp(240px, 17vw, 340px)}
+  .hero-title{max-width:1100px}
+  .hero-text{max-width:660px;font-size:16px}
+}
+@media (min-width:1920px){
+  .hero{--card-h:clamp(280px, 16vw, 380px);--pad-top:170px}
+  .hero-title{font-size:clamp(68px, 4.2vw, 88px);max-width:1200px}
+  .hero-text{max-width:720px;font-size:17px}
+  .hero-btn{font-size:15px;padding:16px 32px}
+}
+@media (min-width:2560px){
+  .hero{--card-h:clamp(340px, 15vw, 460px);--pad-top:210px}
+  .hero-title{font-size:clamp(88px, 4vw, 112px);max-width:1500px}
+  .hero-text{max-width:880px;font-size:20px}
+  .hero-avatar{width:60px;height:60px}
+  .hero-trust-text{font-size:18px}
+  .hero-btn{font-size:17px;padding:18px 38px}
+}
+
+/* ---------- Tablets landscape ---------- */
+@media (min-width:835px) and (max-width:1180px) and (orientation:landscape){
+  .hero{--card-h:19vw;--gap:16px;--pad-top:110px}
+  .hero-title{font-size:clamp(46px, 6vw, 64px);max-width:860px}
+  .hero-text{font-size:16px;max-width:600px}
+  .hero-btn{font-size:15px;padding:14px 30px}
+}
+
+/* ---------- iPad Mini / tablets portrait (601px - 834px) ---------- */
+@media (min-width:601px) and (max-width:834px) and (orientation:portrait){
+  .hero{--card-h:24vw;--gap:14px;--pad-top:130px;min-height:auto}
+  .hero-content{flex:none;padding:var(--pad-top) 32px 52px}
+  .hero-trust{flex-direction:row;gap:12px}
+  .hero-trust-text{white-space:normal;font-size:15px}
+  .hero-title{font-size:clamp(44px, 8vw, 60px);line-height:1.08;max-width:680px}
+  .hero-text{font-size:16px;max-width:560px}
+  .hero-actions{flex-direction:row;width:auto;gap:12px;margin-top:30px}
+  .hero-btn{width:auto;font-size:15px;padding:14px 30px}
+}
+
+/* ---------- Phones (up to 600px) ---------- */
+@media (max-width:600px){
+  .hero{
+    --card-h:34vw;
+    --pad-top:96px;
+    --speed-row1:110s;
+    --speed-row2:130s;
+    min-height:auto;            /* removes the big empty gap above the cards */
+  }
+  .hero-content{
+    flex:none;
+    padding:var(--pad-top) 16px 48px;
+  }
+  .hero-trust{flex-direction:column;gap:8px}
+  .hero-trust-text{white-space:normal;text-align:center}
+  .hero-title{letter-spacing:-.035em}
+
+  /* BUTTONS: side by side, compact, not full width */
+  .hero-actions{
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    width:auto;
+    gap:10px;
+    margin-top:22px;
+  }
+  .hero-btn{
+    width:auto;
+    flex:0 1 auto;
+    justify-content:center;
+    text-align:center;
+    padding:11px 22px;
+    font-size:13.5px;
+    line-height:1.2;
+  }
+}
+
+/* ---------- Small phones (up to 375px) ---------- */
+@media (max-width:375px){
+  .hero{--card-h:36vw;--pad-top:88px;--gap:8px}
+  .hero-content{padding-left:14px;padding-right:14px}
+  .hero-title{font-size:clamp(26px, 8.4vw, 30px);line-height:1.15}
+  .hero-text{font-size:12.5px;line-height:1.65}
+  .hero-btn{padding:10px 18px;font-size:13px}
+  .hero-avatar{width:36px;height:36px;margin-left:-10px}
+}
+
+/* ---------- Very small phones (up to 320px) ---------- */
+@media (max-width:320px){
+  .hero{--card-h:38vw;--pad-top:80px}
+  .hero-title{font-size:25px}
+  .hero-text{font-size:12px}
+  .hero-actions{flex-direction:column}
+  .hero-btn{font-size:12.5px;padding:10px 28px}
+}
+
+/* ---------- Landscape phones ---------- */
+@media (max-height:500px) and (orientation:landscape){
+  .hero{min-height:auto;--pad-top:70px;--card-h:26vh}
+  .hero-content{padding-bottom:24px}
+  .hero-title{font-size:clamp(24px, 5vw, 36px);margin-top:12px}
+  .hero-text{margin-top:10px;max-width:520px}
+  .hero-actions{flex-direction:row;width:auto;margin-top:16px}
+  .hero-btn{width:auto}
+  .hero-trust{flex-direction:row}
+}
+
+/* ---------- Notch / safe area ---------- */
+@supports (padding:max(0px)){
+  .hero-content{
+    padding-left:max(16px, env(safe-area-inset-left));
+    padding-right:max(16px, env(safe-area-inset-right));
+  }
+}
+
+/* ---------- Touch devices: no sticky hover ---------- */
+@media (hover:none){
+  .hero-btn:hover{transform:none}
+  .hero-avatar:hover{transform:none;box-shadow:0 4px 14px rgba(40,20,60,.14)}
+}
