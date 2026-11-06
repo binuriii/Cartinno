@@ -757,3 +757,14 @@
 @media (max-width:360px){
   .gchi-section.gchi-section .gchi-heading{font-size:34px}
 }
+
+/* TABLET ONLY: show full media images, no cropping */
+@media (min-width:641px) and (max-width:1024px){
+  .gchi-section.gchi-section .gchi-media{
+    height:auto;
+  }
+  .gchi-section.gchi-section .gchi-custom-image{
+    height:auto;
+    object-fit:contain;
+  }
+}
