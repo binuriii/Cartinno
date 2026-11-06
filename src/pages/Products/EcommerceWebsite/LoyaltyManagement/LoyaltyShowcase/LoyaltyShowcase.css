@@ -381,3 +381,32 @@
   .lsc-chart > span { transform: scaleY(1) !important; }
   .lsc-confetti { display: none; }
 }
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  .lsc-section.lsc-section{padding:3vh 4% 5vh}
+  .lsc-section.lsc-section .lsc-head{margin-bottom:40px}
+  .lsc-section.lsc-section .lsc-head h2{font-size:46px;line-height:1.1}
+}
+
+/* Mobile (overrides the 22-28px rule above) */
+@media (max-width:640px){
+  .lsc-section.lsc-section{padding:3vh 14px 5vh}
+  .lsc-section.lsc-section .lsc-head{margin-bottom:28px}
+  .lsc-section.lsc-section .lsc-head h2{font-size:34px;line-height:1.15}
+  .lsc-section.lsc-section .lsc-intro{font-size:15px;margin-top:16px}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .lsc-section.lsc-section .lsc-head h2{font-size:34px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .lsc-section.lsc-section .lsc-head h2{font-size:34px}
+}
