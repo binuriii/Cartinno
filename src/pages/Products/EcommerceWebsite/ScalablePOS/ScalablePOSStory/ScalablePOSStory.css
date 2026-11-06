@@ -1,0 +1,63 @@
+/* SECTION 02 — PHOTO AND THREE EDITORIAL CARDS */
+.gr-section {
+  --gr-ink: #23232b; --gr-red: #d7454e; --gr-muted: #5b5b66;
+  --gr-shell: 1350px; --gr-heading-size: clamp(26px,4.4vw,54px);
+  --gr-card-title-size: clamp(20px,1.9vw,27px); --gr-grid-gap: clamp(16px,1.6vw,24px);
+  color: var(--gr-ink); font-family: inherit;
+}
+.gr-section,.gr-section * { box-sizing: border-box; }
+.gr-section { position: relative; padding: 5vh 3vw 10vh; }
+.gr-shell { width: 100%; max-width: var(--gr-shell); margin-inline: auto; }
+.gr-heading { margin-bottom: clamp(24px,3vw,40px); }
+.gr-heading h2 { margin: 0; font-size: var(--gr-heading-size); font-weight: 450; line-height: 1.15; letter-spacing: -.045em; text-wrap: balance; }
+.gr-heading h2 span { display: block; }
+.gr-heading p { max-width: 620px; margin: 18px 0 0; color: var(--gr-muted); font-size: 15px; font-weight: 400; line-height: 1.7; }
+.gr-heading--center { max-width: 1000px; margin-inline: auto; text-align: center; }
+.gr-heading--center p { margin-inline: auto; }
+.gr-section h3 { margin: 0; font-size: var(--gr-card-title-size); font-weight: 550; line-height: 1.25; letter-spacing: -.035em; }
+.gr-story-copy p { margin: 12px 0 0; color: var(--gr-muted); font-size: 14px; line-height: 1.65; }
+.gr-tone--rose { --gr-card-bg: rgba(245,218,223,.4); --gr-accent: #ac5c69; }
+.gr-tone--pearl { --gr-card-bg: rgba(227,229,237,.45); --gr-accent: #686d86; }
+.gr-tone--sand { --gr-card-bg: rgba(222,216,209,.65); --gr-accent: #796553; }
+.gr-story { background: #ffffff; }
+.gr-story-photo { margin: 0; overflow: hidden; border-radius: 30px; background: #eee7df; }
+.gr-story-photo img { display: block; width: 100%; height: 580px; object-fit: cover; object-position: center; }
+.gr-story-photo figcaption { display: flex; align-items: center; gap: 12px; padding: 18px 24px; color: #66564e; background: #f3ece6; font-size: 14px; line-height: 1.5; }
+.gr-story-photo figcaption span { color: var(--gr-red); font-size: 24px; }
+.gr-story-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: var(--gr-grid-gap); margin-top: 24px; }
+.gr-story-card { position: relative; min-width: 0; padding: clamp(24px,2.5vw,34px); border: 1px solid rgba(100,80,80,.08); border-radius: 24px; background: var(--gr-card-bg); backdrop-filter: blur(12px); transition: border-color .3s,box-shadow .3s; }
+.gr-editorial-number { display: block; margin-bottom: 32px; color: var(--gr-accent); font-size: clamp(48px,5vw,68px); font-weight: 300; line-height: 1; letter-spacing: -.075em; font-variant-numeric: lining-nums; }
+.gr-story-copy h3 { max-width: 310px; }
+.pos-reveal-ready { opacity: 0; transform: translateY(20px); transition: opacity .65s ease var(--gr-delay,0ms),transform .65s cubic-bezier(.2,.8,.2,1) var(--gr-delay,0ms); }
+.pos-revealed { opacity: 1; transform: none; }
+@media (hover:hover) {
+  .gr-story-photo:hover img { transform: scale(1.025); }
+  .gr-story-photo img { transition: transform 1s cubic-bezier(.2,.8,.2,1); }
+  .gr-story-card:hover { border-color: rgba(120,85,85,.22); box-shadow: 0 12px 30px rgba(40,30,30,.035); }
+}
+@media (max-width:1024px) {
+  .gr-section { padding: 5vh 4vw 8vh; }
+  .gr-story-grid { gap: 15px; }
+  .gr-story-card { padding: 24px; }
+  .gr-story-copy h3 { font-size: 21px; }
+  .gr-story-photo img { height: 440px; }
+}
+@media (max-width:700px) {
+  .gr-story-grid { grid-template-columns: 1fr; }
+  .gr-story-card { display: grid; grid-template-columns: 55px 1fr; gap: 22px; }
+  .gr-editorial-number { margin: 0; font-size: 44px; }
+}
+@media (max-width:640px) {
+  .gr-section { padding: 35px 14px 70px; }
+  .gr-heading { margin-bottom: 30px; }
+  .gr-heading h2 { font-size: clamp(22px,6.6vw,28px); }
+  .gr-heading p { font-size: 15px; line-height: 1.55; }
+  .gr-story-copy h3 { font-size: 22px; }
+  .gr-story-copy p { font-size: 13px; line-height: 1.6; }
+  .gr-story-photo { border-radius: 20px; }
+  .gr-story-photo img { height: 240px; }
+  .gr-story-photo figcaption { padding: 14px 18px; font-size: 12px; }
+  .gr-story-grid { margin-top: 18px; gap: 14px; }
+  .gr-story-card { padding: 24px 20px; gap: 18px; border-radius: 20px; }
+  .pos-reveal-ready { --gr-delay: 0ms !important; }
+}

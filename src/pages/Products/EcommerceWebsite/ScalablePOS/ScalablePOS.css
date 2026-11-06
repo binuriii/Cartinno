@@ -1,0 +1,20 @@
+.scalable-pos-page {
+  --pos-ink: #23232b;
+  --pos-red: #d7454e;
+  --pos-muted: #5b5b66;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-width: 0;
+  color: var(--pos-ink);
+  background: #fff;
+  font-family: inherit;
+}
+.scalable-pos-page *,
+.scalable-pos-page *::before,
+.scalable-pos-page *::after { box-sizing: border-box; }
+.scalable-pos-page button:focus-visible,
+.scalable-pos-page a:focus-visible {
+  outline: 3px solid rgba(215,69,78,.6);
+  outline-offset: 4px;
+}
