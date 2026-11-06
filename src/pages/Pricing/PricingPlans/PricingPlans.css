@@ -523,3 +523,47 @@
     border-radius: 20px;
   }
 }
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:681px) and (max-width:1100px){
+  .cpr-section{padding:5vh 4% 5vh}
+  .cpr-heading{margin-bottom:40px}
+  .cpr-heading h2{font-size:46px;line-height:1.1}
+}
+
+/* Mobile (overrides the 27-36px rule) */
+@media (max-width:680px){
+  .cpr-section{padding:3vh 15px 5vh}
+  .cpr-heading{margin-bottom:28px}
+  .cpr-heading h2{font-size:34px;line-height:1.15}
+  .cpr-heading p{font-size:15px;line-height:1.6}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .cpr-heading h2{font-size:34px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .cpr-heading h2{font-size:34px}
+}
+
+/* Tablet */
+@media (min-width:681px) and (max-width:1100px){
+  section.cpr-section{padding:5vh 4% 5vh}
+  section.cpr-section .cpr-heading{margin-bottom:40px}
+  section.cpr-section .cpr-heading h2{font-size:46px;line-height:1.1}
+}
+
+/* Mobile */
+@media (max-width:680px){
+  section.cpr-section{padding:3vh 15px 1vh}
+  section.cpr-section .cpr-heading{margin-bottom:28px}
+  section.cpr-section .cpr-heading h2{font-size:34px;line-height:1.15}
+  section.cpr-section .cpr-heading p{font-size:15px;line-height:1.6}
+}
