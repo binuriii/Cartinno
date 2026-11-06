@@ -6,7 +6,7 @@ export const googleReviewContent = {
     'Build a stronger online reputation, connect with more customers, and turn great experiences into lasting trust.',
 
   featuredImage:
-    'https://images.unsplash.com/photo-1790274742392-083002458455?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDE%3D',
+    'https://images.unsplash.com/photo-1639726925176-3f2442a1d73d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
 
   featuredImageAlt:
     'People working together and sharing a positive experience'

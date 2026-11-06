@@ -290,16 +290,12 @@ onBeforeUnmount(() => {
                 </div>
 
                 <img
-                  src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&auto=format&fit=crop&q=80"
+                  src="https://images.unsplash.com/photo-1748197399118-b4bca0c39987?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
                   alt="Restaurant interior preview"
                   loading="lazy"
                 />
 
                 <div class="rf-phone-body">
-
-                  <span>
-                    YOUR EXPERIENCE
-                  </span>
 
                   <h4>
                     Every review matters.

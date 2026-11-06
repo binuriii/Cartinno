@@ -51,8 +51,7 @@ export const reviewEngineHero = {
   rotatingWords: [
     'Built on Trust.',
     'Powered by Reviews.',
-    'Ready to Grow.',
-    'Stronger with Cartinno.'
+    'Ready to Grow.'
   ],
 
   description:
