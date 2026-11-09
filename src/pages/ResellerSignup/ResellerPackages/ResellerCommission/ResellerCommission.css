@@ -1,0 +1,436 @@
+
+/* =====================================
+   RESELLER COMMISSION SECTION
+   BUSINESS SUPPORT TYPOGRAPHY STYLE
+===================================== */
+
+.rc-commission-section,
+.rc-commission-section * {
+  box-sizing: border-box;
+}
+
+.rc-commission-section {
+  --rc-red: #d7454e;
+  --rc-ink: #23232b;
+  --rc-muted: #5b5b66;
+
+  position: relative;
+  z-index: 2;
+  width: 100%;
+
+  padding: 10vh 3vw 3vh;
+
+  background: #ffffff;
+  color: var(--rc-ink);
+
+  scroll-margin-top: 105px;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.rc-commission-inner {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* =====================================
+   SECTION HEADING
+===================================== */
+
+.rc-commission-heading {
+  max-width: 850px;
+  margin: 0 auto clamp(28px, 3vw, 42px);
+  text-align: center;
+}
+
+.rc-commission-heading > span {
+  display: none;
+}
+
+.rc-commission-heading h2 {
+  margin: 0 0 18px;
+
+  color: var(--rc-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.rc-commission-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: var(--rc-muted);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* =====================================
+   COMMISSION GRID
+===================================== */
+
+.rc-commission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: clamp(16px, 2vw, 28px);
+  align-items: stretch;
+}
+
+/* PANELS AND IMAGE */
+
+.rc-commission-panel,
+.rc-commission-image {
+  min-width: 0;
+  min-height: 385px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+/* =====================================
+   COMMISSION PANELS
+===================================== */
+
+.rc-commission-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+
+  background: #fce375;
+}
+
+.rc-commission-panel h3 {
+  margin: 0 0 13px;
+
+  color: var(--rc-ink);
+
+  font-size: clamp(20px, 1.8vw, 25px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+.rc-commission-panel > p {
+  margin: 0;
+
+  color: var(--rc-muted);
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* =====================================
+   EARNINGS WIDGET
+===================================== */
+
+.rc-earnings-widget,
+.rc-growth-widget {
+  margin-top: auto;
+  padding: 22px 20px 18px;
+
+  border: 1px solid rgba(35, 35, 43, 0.06);
+  border-radius: 22px;
+
+  background: #ffffff;
+}
+
+.rc-widget-label {
+  display: block;
+  margin-bottom: 17px;
+
+  color: #777680;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.rc-widget-row,
+.rc-growth-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rc-widget-icon,
+.rc-growth-mark {
+  display: grid;
+  flex: 0 0 42px;
+
+  width: 42px;
+  height: 42px;
+
+  place-items: center;
+
+  border-radius: 13px;
+  background: #fde7e8;
+  color: var(--rc-red);
+
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.rc-widget-row strong,
+.rc-widget-row small,
+.rc-growth-brand strong,
+.rc-growth-brand small {
+  display: block;
+}
+
+.rc-widget-row strong,
+.rc-growth-brand strong {
+  color: #292832;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.rc-widget-row small,
+.rc-growth-brand small {
+  margin-top: 4px;
+  color: #777680;
+  font-size: 10px;
+}
+
+.rc-widget-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 20px 0 15px;
+  padding: 15px 10px;
+
+  border-radius: 15px;
+  background: #f8f7f7;
+}
+
+.rc-widget-highlight strong {
+  color: var(--rc-red);
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.rc-widget-highlight span {
+  margin-top: 7px;
+  color: #666571;
+  font-size: 11px;
+}
+
+.rc-widget-foot {
+  padding-top: 13px;
+
+  border-top: 1px solid #e9e7e7;
+
+  color: #777680;
+  font-size: 10px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+/* =====================================
+   IMAGE PANEL
+===================================== */
+
+.rc-commission-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 28px;
+
+  color: #ffffff;
+  background-position: center;
+  background-size: cover;
+
+  transition: transform 0.3s ease;
+}
+
+.rc-image-kicker {
+  align-self: flex-start;
+
+  padding: 9px 13px;
+
+  border: 1px solid #ffffff88;
+  border-radius: 30px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.rc-commission-image h3 {
+  max-width: 390px;
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: clamp(22px, 2vw, 28px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.rc-commission-image p {
+  max-width: 390px;
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* =====================================
+   GROWTH WIDGET
+===================================== */
+
+.rc-growth-widget {
+  padding: 22px 20px;
+}
+
+.rc-growth-mark {
+  background: #f1f0f0;
+  color: var(--rc-red);
+  font-size: 21px;
+}
+
+.rc-growth-points {
+  display: grid;
+  gap: 12px;
+
+  margin: 22px 0 17px;
+}
+
+.rc-growth-points div {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  color: #565560;
+
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.rc-growth-points div span {
+  color: var(--rc-red);
+  font-weight: 900;
+}
+
+.rc-growth-bottom {
+  padding-top: 14px;
+
+  border-top: 1px solid #e9e7e7;
+
+  color: #565560;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1024px) {
+  .rc-commission-section {
+    padding: 8vh 4vw 3vh;
+  }
+
+  .rc-commission-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rc-commission-image {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    min-height: 420px;
+  }
+
+  .rc-commission-panel {
+    min-height: 365px;
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 640px) {
+  .rc-commission-section {
+    padding: 56px 14px 25px;
+  }
+
+  .rc-commission-heading {
+    margin-bottom: 30px;
+  }
+
+  .rc-commission-heading h2 {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .rc-commission-heading p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .rc-commission-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .rc-commission-image {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 350px;
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .rc-commission-panel {
+    min-height: 385px;
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .rc-commission-panel h3 {
+    font-size: 21px;
+  }
+
+  .rc-commission-panel > p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .rc-commission-image h3 {
+    font-size: 22px;
+  }
+
+  .rc-commission-image p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rc-commission-section *,
+  .rc-commission-section *::before,
+  .rc-commission-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
