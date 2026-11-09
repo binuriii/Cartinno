@@ -249,52 +249,94 @@ export const corporateSolutions = [
   },
 ]
 
-// RESELLER SIGNUP: same structure as `products` (tabs > groups > page links)
+// RESELLER SIGNUP MEGA MENU
 export const resellerPrograms = [
   {
     id: 'reseller-website',
     title: 'Reseller Website',
-    label: 'RESELLER WEBSITE',
     href: '/reseller-website',
+
+    label: 'RESELLER WEBSITE',
+    designTitle: 'Launch your own marketplace.',
+    description:
+      'Build your own online marketplace, connect with vendors and grow your profit.',
     image: 'CloudPOS.webp',
-    imageTitle: 'Your own marketplace, ready from day one.',
+    photoTitle: 'Your Own Reseller Website',
+    alt: 'Reseller managing an online marketplace',
+    imagePosition: 'center',
+
     groups: [
       {
-        title: 'Your Marketplace',
+        title: 'YOUR MARKETPLACE',
         items: [
-          { label: 'Your Own Marketplace', href: '/reseller-own-marketplace', icon: 'fa-solid fa-store' },
-          { label: 'No Need to Find Vendors', href: '/reseller-no-vendor-search', icon: 'fa-solid fa-users' },
-          { label: 'Use Zappymart Vendors', href: '/reseller-zappymart-vendors', icon: 'fa-solid fa-boxes-stacked' }
+          {
+            label: 'Your Own Marketplace',
+            href: '/reseller-website#your-own-marketplace',
+            icon: 'fa-solid fa-store'
+          },
+          {
+            label: 'No Need to Find Vendors',
+            href: '/reseller-website#no-vendor-search',
+            icon: 'fa-solid fa-users'
+          },
+          {
+            label: 'Use Zappymart Vendors',
+            href: '/reseller-website#zappymart-vendors',
+            icon: 'fa-solid fa-boxes-stacked'
+          }
         ]
       },
       {
-        title: 'Your Profit',
+        title: 'YOUR PROFIT',
         items: [
-          { label: 'Set Your Own Price', href: '/reseller-set-your-price', icon: 'fa-solid fa-tag' },
-          { label: 'Maximum Profit Margin 100%', href: '/reseller-profit-margin', icon: 'fa-solid fa-arrow-trend-up' }
+          {
+            label: 'Set Your Own Price',
+            href: '/reseller-website#set-your-price',
+            icon: 'fa-solid fa-tag'
+          },
+          {
+            label: 'Maximum Profit Margin 100%',
+            href: '/reseller-website#profit-margin',
+            icon: 'fa-solid fa-arrow-trend-up'
+          }
         ]
       }
     ]
   },
+
   {
     id: 'reseller-packages',
     title: 'Resell Cartinno Packages',
-    label: 'RESELL PACKAGES',
     href: '/reseller-packages',
+
+    label: 'RESELLER PROGRAM',
+    designTitle: 'Grow your income with Cartinno.',
+    description:
+      'Resell Cartinno packages and build recurring business opportunities.',
     image: 'enterprise-team.jpg',
-    imageTitle: 'Recurring income from every package you sell.',
+    photoTitle: 'Cartinno Reseller Packages',
+    alt: 'Business team working together',
+    imagePosition: 'center',
+
     groups: [
       {
-        title: 'Resell Packages',
+        title: 'RESELL PACKAGES',
         items: [
-          { label: 'Resell Cartinno Packages', href: '/resell-cartinno-packages', icon: 'fa-solid fa-box-open', badge: 'Recurring income' },
-          { label: 'Earn up to 45% Commission', href: '/reseller-commission', icon: 'fa-solid fa-award' }
+          {
+            label: 'Resell Cartinno Packages',
+            href: '/reseller-packages#resell-packages',
+            icon: 'fa-solid fa-box-open'
+          },
+          {
+            label: 'Earn up to 45% Commission',
+            href: '/reseller-packages#reseller-commission',
+            icon: 'fa-solid fa-award'
+          }
         ]
       }
     ]
   }
 ]
-
 export const links = [
   {
     "label": "Home",

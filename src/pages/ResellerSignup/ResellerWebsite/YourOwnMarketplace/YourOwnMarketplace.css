@@ -1,0 +1,437 @@
+/* =====================================
+   YOUR OWN MARKETPLACE SECTION
+   MATCHED WITH RESELLER PACKAGES TYPOGRAPHY
+   (unique ymp- prefix, so it never collides with other sections)
+===================================== */
+
+.ymp-section,
+.ymp-section * {
+  box-sizing: border-box;
+}
+
+.ymp-section {
+  --ymp-ink: #23232b;
+  --ymp-muted: #5b5b66;
+  --ymp-panel: #e4eddc;
+  --ymp-accent: #4f7a4a;
+  --ymp-tint: #eef4e9;
+
+  position: relative;
+  z-index: 2;
+  width: 100%;
+
+  padding: 10vh 3vw 3vh;
+
+  background: #ffffff;
+  color: var(--ymp-ink);
+  font-family: inherit;
+
+  scroll-margin-top: 105px;
+  overflow: hidden;
+}
+
+/* FIRST SECTION: overlaps the hero, same as Reseller Packages */
+
+.ymp-section {
+  z-index: 20;
+  margin-top: -55px;
+  border-radius: 50px 50px 0 0;
+  isolation: isolate;
+}
+
+/* CONTAINER */
+
+.ymp-inner {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* =====================================
+   SECTION HEADING
+===================================== */
+
+.ymp-heading {
+  max-width: 850px;
+  margin: 0 0 clamp(28px, 3vw, 42px);
+  text-align: left;
+}
+
+.ymp-heading > span {
+  display: none;
+}
+
+.ymp-heading h2 {
+  max-width: 650px;
+  margin: 0 0 18px;
+
+  color: var(--ymp-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.ymp-heading p {
+  max-width: 650px;
+  margin: 0;
+
+  color: var(--ymp-muted);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* =====================================
+   THREE COLUMN GRID
+===================================== */
+
+.ymp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  align-items: stretch;
+}
+
+.ymp-panel,
+.ymp-photo {
+  position: relative;
+  min-width: 0;
+  min-height: 440px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+/* =====================================
+   INFORMATION PANELS
+===================================== */
+
+.ymp-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px;
+
+  background: var(--ymp-panel);
+}
+
+.ymp-panel-copy {
+  position: relative;
+  padding-top: 26px;
+}
+
+.ymp-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  color: #77767f;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.ymp-panel h3 {
+  margin: 0 0 13px;
+
+  color: var(--ymp-ink);
+
+  font-size: clamp(20px, 1.8vw, 25px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+.ymp-panel-copy > p {
+  margin: 0;
+
+  color: var(--ymp-muted);
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* =====================================
+   MINI UI WIDGET
+===================================== */
+
+.ymp-ui {
+  padding: 22px 20px 14px;
+
+  border: 1px solid rgba(35, 35, 43, 0.06);
+  border-radius: 22px;
+
+  background: #ffffff;
+}
+
+.ymp-ui-label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #777680;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.ymp-ui-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 11px 0;
+
+  border-top: 1px solid #e9e7e7;
+}
+
+.ymp-ui-icon {
+  display: grid;
+  flex: 0 0 34px;
+
+  width: 34px;
+  height: 34px;
+
+  place-items: center;
+
+  border-radius: 11px;
+  background: var(--ymp-tint);
+  color: var(--ymp-accent);
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.ymp-ui-row b,
+.ymp-ui-row small {
+  display: block;
+}
+
+.ymp-ui-row b {
+  margin-bottom: 4px;
+
+  color: #292832;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ymp-ui-row small {
+  color: #777680;
+  font-size: 10px;
+}
+
+.ymp-summary-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  padding: 10px 0;
+
+  border-top: 1px solid #e9e7e7;
+
+  color: #565560;
+
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.ymp-summary-row span {
+  color: var(--ymp-accent);
+  font-weight: 700;
+}
+
+/* =====================================
+   IMAGE CARD
+===================================== */
+
+.ymp-photo {
+  background: #29282d;
+  isolation: isolate;
+}
+
+.ymp-photo > img {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+.ymp-photo:hover > img {
+  transform: scale(1.06);
+}
+
+.ymp-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(24, 25, 31, 0.08) 30%,
+    rgba(24, 25, 31, 0.78) 100%
+  );
+}
+
+.ymp-photo-copy {
+  position: absolute;
+  z-index: 1;
+  right: 28px;
+  bottom: 28px;
+  left: 28px;
+
+  color: #ffffff;
+}
+
+.ymp-photo-copy > span {
+  display: block;
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.ymp-photo-copy h3 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: clamp(22px, 2vw, 28px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.ymp-photo-copy p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1024px) {
+  .ymp-section {
+    padding: 8vh 4vw 3vh;
+  }
+
+  .ymp-section {
+    margin-top: -24px;
+    border-radius: 40px 40px 0 0;
+  }
+
+  .ymp-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ymp-photo {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    min-height: 420px;
+  }
+
+  .ymp-panel {
+    min-height: 400px;
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 640px) {
+  .ymp-section {
+    padding: 56px 14px 25px;
+  }
+
+  .ymp-section {
+    margin-top: -16px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .ymp-heading {
+    margin-bottom: 30px;
+  }
+
+  .ymp-heading h2 {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .ymp-heading p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .ymp-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .ymp-photo {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 350px;
+    border-radius: 18px;
+  }
+
+  .ymp-panel {
+    min-height: 0;
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .ymp-panel h3 {
+    font-size: 21px;
+  }
+
+  .ymp-panel-copy > p,
+  .ymp-photo-copy p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .ymp-photo-copy {
+    right: 22px;
+    bottom: 22px;
+    left: 22px;
+  }
+
+  .ymp-photo-copy h3 {
+    font-size: 22px;
+  }
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ymp-section *,
+  .ymp-section *::before,
+  .ymp-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

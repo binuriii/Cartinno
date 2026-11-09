@@ -1,0 +1,293 @@
+/* =====================================
+   RESELLER GUIDES SECTION
+   MATCHED WITH RESELLER PACKAGES GUIDES
+===================================== */
+
+.rwg-section,
+.rwg-section * {
+  box-sizing: border-box;
+}
+
+.rwg-section {
+  width: 100%;
+  padding: 10vh 3vw 3vh;
+  background: #ffffff;
+  color: #23232b;
+  font-family: inherit;
+}
+
+.rwg-inner {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.rwg-heading {
+  max-width: 850px;
+  margin: 0 0 clamp(28px, 3vw, 42px);
+  text-align: left;
+}
+
+.rwg-heading > span {
+  display: none;
+}
+
+.rwg-heading h2 {
+  margin: 0;
+  color: #23232b;
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.rwg-grid {
+  display: grid;
+  grid-template-columns: 1.18fr 1.18fr;
+  gap: clamp(16px, 2vw, 28px);
+  min-height: 560px;
+}
+
+.rwg-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  overflow: hidden;
+  align-items: flex-end;
+  border-radius: 24px;
+  background-color: #d8d5d0;
+  color: #ffffff;
+  isolation: isolate;
+  transition: transform 0.35s ease;
+}
+
+.rwg-card > img {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.rwg-card::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: '';
+  background: linear-gradient(
+    0deg,
+    rgba(15, 15, 18, 0.68),
+    rgba(15, 15, 18, 0) 72%
+  );
+}
+
+.rwg-card:hover {
+  transform: translateY(-4px);
+}
+
+.rwg-card-featured {
+  min-height: 560px;
+}
+
+.rwg-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(0, 1fr) 112px;
+  gap: clamp(16px, 2vw, 28px);
+  min-width: 0;
+}
+
+.rwg-card-small {
+  min-height: 0;
+}
+
+.rwg-card-copy {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: clamp(22px, 2.2vw, 29px);
+}
+
+.rwg-card-copy h3 {
+  max-width: 520px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(20px, 1.8vw, 25px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+.rwg-card-copy p {
+  max-width: 480px;
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.rwg-card-small .rwg-card-copy {
+  padding: 22px;
+}
+
+.rwg-card-small .rwg-card-copy h3 {
+  font-size: clamp(18px, 1.6vw, 22px);
+}
+
+.rwg-card-small .rwg-card-copy p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.rwg-cta {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 27px 22px 31px;
+  border-radius: 24px;
+  background: #f4ec92;
+  color: #23232b;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.rwg-cta:hover {
+  background: #efdc70;
+  transform: translateY(-3px);
+}
+
+.rwg-cta-copy strong,
+.rwg-cta-copy small {
+  display: block;
+}
+
+.rwg-cta-copy strong {
+  font-size: clamp(16px, 1.5vw, 19px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+.rwg-cta-copy small {
+  margin-top: 5px;
+  color: #55535a;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.rwg-cta-arrow {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffffff;
+  font-size: 28px;
+  line-height: 1;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .rwg-section {
+    padding: 8vh 4vw 3vh;
+  }
+
+  .rwg-grid {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .rwg-card-featured {
+    min-height: 440px;
+  }
+
+  .rwg-side {
+    min-height: 330px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .rwg-section {
+    padding: 56px 14px 25px;
+  }
+
+  .rwg-heading {
+    margin-bottom: 25px;
+  }
+
+  .rwg-grid,
+  .rwg-side {
+    gap: 14px;
+  }
+
+  .rwg-card-featured {
+    min-height: 390px;
+  }
+
+  .rwg-side {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 280px) auto;
+  }
+
+  .rwg-card {
+    border-radius: 18px;
+  }
+
+  .rwg-card-copy {
+    padding: 22px;
+  }
+
+  .rwg-card-copy h3 {
+    font-size: 20px;
+  }
+
+  .rwg-card-copy p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .rwg-card-small .rwg-card-copy h3 {
+    font-size: 19px;
+  }
+
+  .rwg-card-small .rwg-card-copy p {
+    font-size: 12px;
+  }
+
+  .rwg-cta {
+    padding: 19px;
+    border-radius: 18px;
+    gap: 14px;
+  }
+
+  .rwg-cta-copy strong {
+    font-size: 16px;
+  }
+
+  .rwg-cta-copy small {
+    font-size: 12px;
+  }
+
+  .rwg-cta-arrow {
+    flex-basis: 42px;
+    width: 42px;
+    height: 42px;
+    font-size: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rwg-card,
+  .rwg-cta {
+    transition: none;
+  }
+}

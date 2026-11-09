@@ -1,0 +1,344 @@
+/* =====================================
+   SET YOUR OWN PRICE SECTION
+   MATCHED WITH RESELLER PACKAGES TYPOGRAPHY
+   (unique syp- prefix, so it never collides with other sections)
+===================================== */
+
+.syp-section,
+.syp-section * {
+  box-sizing: border-box;
+}
+
+.syp-section {
+  --syp-ink: #23232b;
+  --syp-muted: #5b5b66;
+
+  position: relative;
+  z-index: 2;
+  width: 100%;
+
+  padding: 10vh 3vw 3vh;
+
+  background: #ffffff;
+  color: var(--syp-ink);
+  font-family: inherit;
+
+  scroll-margin-top: 105px;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.syp-inner {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* =====================================
+   SECTION HEADING
+===================================== */
+
+.syp-heading {
+  max-width: 850px;
+  margin: 0 auto clamp(28px, 3vw, 42px);
+  text-align: center;
+}
+
+.syp-heading > span {
+  display: none;
+}
+
+.syp-heading h2 {
+  max-width: 650px;
+  margin: 0 auto 18px;
+
+  color: var(--syp-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.syp-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: var(--syp-muted);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* =====================================
+   SHOWCASE GRID
+===================================== */
+
+.syp-grid {
+  display: grid;
+  grid-template-columns: 1.9fr 1fr 1fr;
+  gap: clamp(16px, 2vw, 28px);
+  align-items: stretch;
+}
+
+.syp-main,
+.syp-card {
+  position: relative;
+  min-width: 0;
+  min-height: 385px;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  border-radius: 24px;
+  background: #9185aa;
+  color: #ffffff;
+}
+
+.syp-main {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+}
+
+.syp-main .syp-copy {
+  order: 1;
+}
+
+.syp-main .syp-image {
+  order: 2;
+}
+
+/* IMAGE LEFT VARIATION */
+
+.syp-grid.is-image-left .syp-main .syp-image {
+  order: 1;
+}
+
+.syp-grid.is-image-left .syp-main .syp-copy {
+  order: 2;
+}
+
+/* =====================================
+   CARD CONTENT
+===================================== */
+
+.syp-copy {
+  min-width: 0;
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.syp-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.syp-card-index {
+  color: #f7f8f2;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.syp-card-label {
+  padding: 8px 13px;
+
+  border: 1px solid #ffffff66;
+  border-radius: 30px;
+
+  color: #f6f7f0;
+
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.syp-card-bottom {
+  margin-top: auto;
+}
+
+.syp-card-bottom h3 {
+  margin: 0 0 16px;
+
+  color: #ffffff;
+
+  font-size: clamp(20px, 1.8vw, 25px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+.syp-card-bottom p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* =====================================
+   CARD IMAGE
+===================================== */
+
+.syp-image {
+  width: 100%;
+  height: 100%;
+  min-height: 385px;
+  overflow: hidden;
+}
+
+.syp-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+.syp-main:hover .syp-image img {
+  transform: scale(1.06);
+}
+
+/* =====================================
+   SUPPORTING CARDS
+===================================== */
+
+.syp-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px;
+}
+
+.syp-card.support-card-2 {
+  background: #796d94;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1024px) {
+  .syp-section {
+    padding: 8vh 4vw 3vh;
+  }
+
+  .syp-grid {
+    grid-template-columns: 1.4fr 1fr;
+  }
+
+  .syp-main {
+    grid-row: span 2;
+  }
+
+  .syp-main,
+  .syp-card {
+    min-height: 365px;
+  }
+
+  .syp-image {
+    min-height: 365px;
+  }
+
+  .syp-copy,
+  .syp-card {
+    padding: 24px;
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 640px) {
+  .syp-section {
+    padding: 56px 14px 25px;
+  }
+
+  .syp-heading {
+    margin-bottom: 30px;
+  }
+
+  .syp-heading h2 {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .syp-heading p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .syp-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .syp-main {
+    grid-row: auto;
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .syp-grid.is-image-left .syp-main .syp-image,
+  .syp-grid.is-image-left .syp-main .syp-copy,
+  .syp-main .syp-copy,
+  .syp-main .syp-image {
+    order: initial;
+  }
+
+  .syp-image {
+    height: 260px;
+    min-height: 260px;
+  }
+
+  .syp-copy {
+    min-height: 290px;
+    padding: 22px;
+  }
+
+  .syp-card {
+    min-height: 220px;
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .syp-card-top {
+    gap: 10px;
+  }
+
+  .syp-card-bottom h3 {
+    font-size: 21px;
+  }
+
+  .syp-card-bottom p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .syp-section *,
+  .syp-section *::before,
+  .syp-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
