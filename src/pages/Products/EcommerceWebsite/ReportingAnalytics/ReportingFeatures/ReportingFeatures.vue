@@ -469,10 +469,6 @@ onBeforeUnmount(() => {
 
       </div>
 
-      <p class="rpa-demo-note">
-        Illustrative reporting and analytics previews.
-      </p>
-
     </div>
   </section>
 </template>
