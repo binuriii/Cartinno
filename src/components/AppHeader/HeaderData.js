@@ -295,7 +295,7 @@ export const resellerPrograms = [
             icon: 'fa-solid fa-tag'
           },
           {
-            label: 'Maximum Profit Margin 100%',
+            label: 'Maximum Profit Margin',
             href: '/reseller-website#profit-margin',
             icon: 'fa-solid fa-arrow-trend-up'
           }

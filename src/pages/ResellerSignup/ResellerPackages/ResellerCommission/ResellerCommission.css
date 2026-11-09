@@ -434,3 +434,65 @@
     transition: none !important;
   }
 }
+
+/* =====================================================
+   RESELLER COMMISSION — TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .rc-commission-section {
+    padding: 3vh 4% 5vh;
+  }
+
+  .rc-commission-heading {
+    margin-bottom: 40px;
+  }
+
+  .rc-commission-heading h2 {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  .rc-commission-panel h3,
+  .rc-commission-image h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .rc-commission-panel > p,
+  .rc-commission-image p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .rc-commission-section {
+    padding: 3vh 14px 5vh;
+  }
+
+  .rc-commission-heading {
+    margin-bottom: 28px;
+  }
+
+  .rc-commission-heading h2 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .rc-commission-heading h2 {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .rc-commission-heading h2 {
+    font-size: 32px;
+  }
+}
