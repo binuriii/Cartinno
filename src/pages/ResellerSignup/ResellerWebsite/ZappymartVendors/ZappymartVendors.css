@@ -44,9 +44,10 @@
 
 .zmv-heading {
   max-width: 850px;
-  margin: 0 auto clamp(28px, 3vw, 42px);
-  text-align: center;
+  margin: 0 0 clamp(28px, 3vw, 42px);
+  text-align: left;
 }
+
 
 .zmv-heading > span {
   display: none;
@@ -54,7 +55,7 @@
 
 .zmv-heading h2 {
   max-width: 650px;
-  margin: 0 auto 18px;
+  margin: 0 0 18px;
 
   color: var(--zmv-ink);
 
@@ -66,7 +67,7 @@
 
 .zmv-heading p {
   max-width: 650px;
-  margin: 0 auto;
+  margin: 0;
 
   color: var(--zmv-muted);
 
@@ -74,10 +75,6 @@
   font-weight: 400;
   line-height: 1.7;
 }
-
-/* =====================================
-   THREE COLUMN GRID
-===================================== */
 
 .zmv-grid {
   display: grid;
