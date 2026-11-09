@@ -694,3 +694,65 @@
   .ab-phone { transform: rotate(-16deg) !important; }
   .ab-floating-notification { transform: rotate(5deg) !important; }
 }
+
+/* =====================================================
+   APP BENEFITS: TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .ab-section {
+    padding: 3vh 4% 5vh;
+  }
+
+  .ab-header {
+    margin-bottom: 40px;
+  }
+
+  .ab-title {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  .ab-main-content h3,
+  .ab-info-content h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .ab-main-content p,
+  .ab-info-content p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .ab-section {
+    padding: 3vh 14px 5vh;
+  }
+
+  .ab-header {
+    margin-bottom: 28px;
+  }
+
+  .ab-title {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .ab-title {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .ab-title {
+    font-size: 32px;
+  }
+}

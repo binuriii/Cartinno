@@ -850,3 +850,63 @@
     width: 70px;
   }
 }
+
+/* =====================================================
+   RESTAURANT SALES SECTION: TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .rs-section {
+    padding: 6vh 4% 5vh;
+  }
+
+  .rs-header {
+    margin-bottom: 40px;
+  }
+
+  .rs-title {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  .rs-card h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .rs-card-top h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .rs-section {
+    padding: 56px 14px 25px;
+  }
+
+  .rs-header {
+    margin-bottom: 28px;
+  }
+
+  .rs-title {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .rs-title {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .rs-title {
+    font-size: 32px;
+  }
+}

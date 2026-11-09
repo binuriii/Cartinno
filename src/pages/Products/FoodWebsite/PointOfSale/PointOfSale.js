@@ -42,7 +42,6 @@ export const posHero = {
 
   rotatingWords: [
     "Built for Service.",
-    "Connected to Everything.",
     "Powered by Cartinno.",
     "Ready for Growth.",
   ],

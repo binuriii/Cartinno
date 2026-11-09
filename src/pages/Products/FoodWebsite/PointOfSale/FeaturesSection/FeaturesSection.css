@@ -437,3 +437,65 @@
     transform: none;
   }
 }
+
+/* =====================================================
+   HEADING SIZES: TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .fs-section {
+    padding: 6vh 4% 5vh;
+  }
+
+  .fs-section .fs-header {
+    margin-bottom: 40px;
+  }
+
+  .fs-section .fs-main-title {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  /* Timeline feature headings */
+  .fs-section.fs-section .fs-title {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  /* Timeline descriptions */
+  .fs-section.fs-section .fs-description {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .fs-section {
+    padding: 56px 14px 25px;
+  }
+
+  .fs-section .fs-header {
+    margin-bottom: 28px;
+  }
+
+  .fs-section .fs-main-title {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .fs-section .fs-main-title {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .fs-section .fs-main-title {
+    font-size: 32px;
+  }
+}
