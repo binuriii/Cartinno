@@ -2,7 +2,7 @@ export const registryStoryContent = {
   "headingFirst": "Every celebration has a story.",
   "headingSecond": "Help them make it unforgettable.",
   "description": "From a new home to a new beginning, make giving feel more personal and keep the people who matter connected.",
-  "image": "https://plus.unsplash.com/premium_photo-1661544367400-dd6a7352cfeb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+  "image": "https://images.unsplash.com/photo-1625552187571-7ee60ac43d2b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
   "imageAlt": "Beautifully wrapped gifts ready to celebrate a special occasion",
   "photoCaption": "Thoughtful gifting, beautifully connected."
 }

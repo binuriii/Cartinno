@@ -1,5 +1,5 @@
 /* SECTION 03 â€” INTERACTIVE HOW-IT-WORKS WITH MOVING REGISTRY PREVIEW */
-.grj-section { position: relative; overflow: hidden; padding: 9vh 3vw 11vh; background: #faf7f6; color: #23232b; }
+.grj-section { position: relative; overflow: hidden; padding: 9vh 3vw 11vh; background: #ffffff; color: #23232b; }
 .grj-shell { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: clamp(48px,6vw,90px); width: 100%; max-width: 1350px; margin-inline: auto; }
 .grj-copy h2 { max-width: 640px; margin: 0; font-size: clamp(26px,4.4vw,54px); font-weight: 450; line-height: 1.15; letter-spacing: -.045em; text-wrap: balance; }
 .grj-copy h2 span { display: block; color: #28282a; }
