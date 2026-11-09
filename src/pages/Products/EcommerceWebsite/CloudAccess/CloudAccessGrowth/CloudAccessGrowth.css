@@ -27,3 +27,32 @@
 @media(max-width:640px){.cag-section{padding:40px 14px 85px}.cag-header h2{font-size:clamp(25px,6.6vw,31px)}.cag-header p{font-size:15px}.cag-main{min-height:390px;padding:23px}.cag-main h3{font-size:29px}.cag-right{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:240px auto;gap:12px}.cag-small{min-height:240px;border-radius:20px;padding:17px}.cag-small h3{font-size:17px;line-height:1.19}.cag-cta{min-height:115px;border-radius:20px;padding:19px}.cag-cta strong{font-size:19px}.cag-cta small{font-size:12px}.cag-arrow{width:42px;height:42px;flex-basis:42px}}
 @media(max-width:410px){.cag-right{grid-template-rows:220px auto}.cag-small{min-height:220px}.cag-small h3{font-size:15.5px}}
 @media(prefers-reduced-motion:reduce){.cag-image-card img,.cag-cta,.cag-arrow{transition:none!important;transform:none!important}}
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  .cag-section.cag-section{padding:3vh 4% 5vh}
+  .cag-section.cag-section .cag-header{margin-bottom:40px}
+  .cag-section.cag-section .cag-header h2{font-size:46px;line-height:1.1}
+}
+
+/* Mobile (overrides the 25-31px rule) */
+@media (max-width:640px){
+  .cag-section.cag-section{padding:3vh 14px 5vh}
+  .cag-section.cag-section .cag-header{margin-bottom:28px}
+  .cag-section.cag-section .cag-header h2{font-size:32px;line-height:1.15}
+  .cag-section.cag-section .cag-header p{font-size:15px}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .cag-section.cag-section .cag-header h2{font-size:32px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .cag-section.cag-section .cag-header h2{font-size:32px}
+}
