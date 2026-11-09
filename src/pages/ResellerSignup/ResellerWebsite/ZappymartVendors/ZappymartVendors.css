@@ -1,29 +1,418 @@
+/* =====================================
+   ZAPPYMART VENDORS SECTION
+   MATCHED WITH RESELLER PACKAGES TYPOGRAPHY
+   (unique zmv- prefix, so it never collides with other sections)
+===================================== */
 
-.reseller-feature-section{padding:78px 24px 88px;background:#edf4f7;color:#23232b;scroll-margin-top:105px;transition:background .3s ease}
-.reseller-feature-inner{max-width:1388px;margin:0 auto}
-.reseller-section-head{max-width:690px;text-align:left;margin:0 0 52px}
-.reseller-section-eyebrow{display:inline-block;font-size:10px;letter-spacing:.16em;font-weight:800;color:#507789;margin-bottom:12px}
-.reseller-section-head h2{font-size:clamp(32px,3.4vw,49px);line-height:1.12;letter-spacing:-.055em;margin:0 0 15px;color:#23232b}
-.reseller-section-head p{font-size:14px;line-height:1.75;color:#666571;margin:0;max-width:640px}
-.reseller-showcase-grid{display:grid;grid-template-columns:1.9fr 1fr 1fr;gap:20px;align-items:stretch}
-.reseller-showcase-main,.reseller-showcase-card{min-height:420px;border-radius:30px;overflow:hidden;background:#648b9d;color:#fff}
-.reseller-showcase-main{display:grid;grid-template-columns:.92fr 1.08fr}
-.reseller-showcase-main .reseller-showcase-copy{order:1}
-.reseller-showcase-main .reseller-showcase-image{order:2}
-.reseller-showcase-grid.image-left .reseller-showcase-main .reseller-showcase-image{order:1}
-.reseller-showcase-grid.image-left .reseller-showcase-main .reseller-showcase-copy{order:2}
-.reseller-showcase-copy{padding:34px 30px 32px;display:flex;flex-direction:column;min-width:0}
-.reseller-card-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.reseller-card-index{font-size:11px;font-weight:800;color:#f7f8f2;letter-spacing:.04em}
-.reseller-card-label{font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#f6f7f0;border:1px solid #ffffff66;border-radius:30px;padding:8px 13px}
-.reseller-card-bottom{margin-top:auto}
-.reseller-card-bottom h3{font-size:clamp(22px,2vw,29px);line-height:1.18;letter-spacing:-.045em;color:#fff;margin:0 0 17px}
-.reseller-card-bottom p{font-size:13px;line-height:1.78;color:#f5f6ef;margin:0}
-.reseller-showcase-image{height:100%;min-height:420px;overflow:hidden}
-.reseller-showcase-image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .6s ease}
-.reseller-showcase-main:hover .reseller-showcase-image img{transform:scale(1.045)}
-.reseller-showcase-card{padding:34px 30px;display:flex;flex-direction:column;background:#648b9d}
-.reseller-showcase-card.support-card-2{background:#507789}
-.reseller-showcase-card .reseller-card-bottom h3{font-size:clamp(21px,1.8vw,27px)}
-@media(max-width:1050px){.reseller-showcase-grid{grid-template-columns:1.4fr 1fr}.reseller-showcase-main{grid-row:span 2}.reseller-showcase-card{min-height:200px}}
-@media(max-width:700px){.reseller-feature-section{padding:58px 18px 65px}.reseller-section-head{margin-bottom:30px}.reseller-showcase-grid{grid-template-columns:1fr;gap:14px}.reseller-showcase-main{grid-template-columns:1fr;min-height:0}.reseller-showcase-grid.image-left .reseller-showcase-main .reseller-showcase-image,.reseller-showcase-grid.image-left .reseller-showcase-main .reseller-showcase-copy,.reseller-showcase-main .reseller-showcase-copy,.reseller-showcase-main .reseller-showcase-image{order:initial}.reseller-showcase-image{height:260px;min-height:260px}.reseller-showcase-copy{min-height:290px;padding:26px 24px}.reseller-showcase-card{min-height:220px;padding:26px 24px}}
+.zmv-section,
+.zmv-section * {
+  box-sizing: border-box;
+}
+
+.zmv-section {
+  --zmv-ink: #23232b;
+  --zmv-muted: #5b5b66;
+  --zmv-panel: #dcebf2;
+  --zmv-accent: #3f7a93;
+  --zmv-tint: #e8f2f7;
+
+  position: relative;
+  z-index: 2;
+  width: 100%;
+
+  padding: 10vh 3vw 3vh;
+
+  background: #ffffff;
+  color: var(--zmv-ink);
+  font-family: inherit;
+
+  scroll-margin-top: 105px;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.zmv-inner {
+  width: 100%;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+
+/* =====================================
+   SECTION HEADING
+===================================== */
+
+.zmv-heading {
+  max-width: 850px;
+  margin: 0 auto clamp(28px, 3vw, 42px);
+  text-align: center;
+}
+
+.zmv-heading > span {
+  display: none;
+}
+
+.zmv-heading h2 {
+  max-width: 650px;
+  margin: 0 auto 18px;
+
+  color: var(--zmv-ink);
+
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.zmv-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: var(--zmv-muted);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* =====================================
+   THREE COLUMN GRID
+===================================== */
+
+.zmv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  align-items: stretch;
+}
+
+.zmv-panel,
+.zmv-photo {
+  position: relative;
+  min-width: 0;
+  min-height: 440px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+/* =====================================
+   INFORMATION PANELS
+===================================== */
+
+.zmv-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px;
+
+  background: var(--zmv-panel);
+}
+
+.zmv-panel-copy {
+  position: relative;
+  padding-top: 26px;
+}
+
+.zmv-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  color: #77767f;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.zmv-panel h3 {
+  margin: 0 0 13px;
+
+  color: var(--zmv-ink);
+
+  font-size: clamp(20px, 1.8vw, 25px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+.zmv-panel-copy > p {
+  margin: 0;
+
+  color: var(--zmv-muted);
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* =====================================
+   MINI UI WIDGET
+===================================== */
+
+.zmv-ui {
+  padding: 22px 20px 14px;
+
+  border: 1px solid rgba(35, 35, 43, 0.06);
+  border-radius: 22px;
+
+  background: #ffffff;
+}
+
+.zmv-ui-label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #777680;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.zmv-ui-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 11px 0;
+
+  border-top: 1px solid #e9e7e7;
+}
+
+.zmv-ui-icon {
+  display: grid;
+  flex: 0 0 34px;
+
+  width: 34px;
+  height: 34px;
+
+  place-items: center;
+
+  border-radius: 11px;
+  background: var(--zmv-tint);
+  color: var(--zmv-accent);
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.zmv-ui-row b,
+.zmv-ui-row small {
+  display: block;
+}
+
+.zmv-ui-row b {
+  margin-bottom: 4px;
+
+  color: #292832;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.zmv-ui-row small {
+  color: #777680;
+  font-size: 10px;
+}
+
+.zmv-summary-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  padding: 10px 0;
+
+  border-top: 1px solid #e9e7e7;
+
+  color: #565560;
+
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.zmv-summary-row span {
+  color: var(--zmv-accent);
+  font-weight: 700;
+}
+
+/* =====================================
+   IMAGE CARD
+===================================== */
+
+.zmv-photo {
+  background: #29282d;
+  isolation: isolate;
+}
+
+.zmv-photo > img {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+.zmv-photo:hover > img {
+  transform: scale(1.06);
+}
+
+.zmv-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(24, 25, 31, 0.08) 30%,
+    rgba(24, 25, 31, 0.78) 100%
+  );
+}
+
+.zmv-photo-copy {
+  position: absolute;
+  z-index: 1;
+  right: 28px;
+  bottom: 28px;
+  left: 28px;
+
+  color: #ffffff;
+}
+
+.zmv-photo-copy > span {
+  display: block;
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.zmv-photo-copy h3 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: clamp(22px, 2vw, 28px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.zmv-photo-copy p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1024px) {
+  .zmv-section {
+    padding: 8vh 4vw 3vh;
+  }
+
+  .zmv-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .zmv-photo {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    min-height: 420px;
+  }
+
+  .zmv-panel {
+    min-height: 400px;
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 640px) {
+  .zmv-section {
+    padding: 56px 14px 25px;
+  }
+
+  .zmv-heading {
+    margin-bottom: 30px;
+  }
+
+  .zmv-heading h2 {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .zmv-heading p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .zmv-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .zmv-photo {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 350px;
+    border-radius: 18px;
+  }
+
+  .zmv-panel {
+    min-height: 0;
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .zmv-panel h3 {
+    font-size: 21px;
+  }
+
+  .zmv-panel-copy > p,
+  .zmv-photo-copy p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .zmv-photo-copy {
+    right: 22px;
+    bottom: 22px;
+    left: 22px;
+  }
+
+  .zmv-photo-copy h3 {
+    font-size: 22px;
+  }
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .zmv-section *,
+  .zmv-section *::before,
+  .zmv-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -16,14 +16,14 @@ import './ResellerWebsitePage.css'
   <main class="reseller-website-page">
     <Hero v-bind="resellerWebsiteHero" />
 
-    <!-- Five detailed sections alternate between the two supplied visual styles. -->
+    <!-- Five detailed sections alternate between the two card layouts. -->
     <YourOwnMarketplace />
     <NoNeedToFindVendors />
     <ZappymartVendors />
     <SetYourOwnPrice />
     <MaximumProfitMargin />
 
-    <!-- Final visual guide section based on the latest supplied reference -->
+    <!-- Guides section -->
     <ResellerGuides />
 
     <FAQ

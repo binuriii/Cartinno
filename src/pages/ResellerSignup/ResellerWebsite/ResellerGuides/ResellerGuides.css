@@ -1,28 +1,293 @@
-.reseller-guides-section{background:#fff;padding:82px 24px 90px;color:#23232b}
-.reseller-guides-inner{max-width:1430px;margin:0 auto}
-.reseller-guides-heading{max-width:720px;margin:0 0 36px}
-.reseller-guides-heading>span{display:block;color:#d7454e;font-size:10px;font-weight:800;letter-spacing:.17em;margin-bottom:13px}
-.reseller-guides-heading h2{margin:0;font-size:clamp(35px,4vw,52px);line-height:1.1;letter-spacing:-.055em;font-weight:750;color:#23232b}
-.reseller-guides-layout{display:grid;grid-template-columns:1.35fr 1.35fr;gap:20px;min-height:560px}
-.reseller-guides-feature,.reseller-guides-small-card{position:relative;min-width:0;overflow:hidden;border-radius:26px;background:#29282d;isolation:isolate}
-.reseller-guides-feature{min-height:560px}
-.reseller-guides-feature>img,.reseller-guides-small-card>img{position:absolute;z-index:-1;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .65s ease}
-.reseller-guides-feature:hover>img,.reseller-guides-small-card:hover>img{transform:scale(1.045)}
-.reseller-guides-feature:after,.reseller-guides-small-card:after{content:"";position:absolute;z-index:0;inset:0;background:linear-gradient(180deg,rgba(15,15,18,0) 35%,rgba(15,15,18,.82) 100%)}
-.reseller-guides-card-copy{position:absolute;z-index:1;left:30px;right:28px;bottom:28px;color:#fff}
-.reseller-guides-card-copy h3{margin:0 0 10px;color:#fff;font-size:clamp(21px,2vw,27px);line-height:1.2;letter-spacing:-.04em;font-weight:750}
-.reseller-guides-card-copy p{max-width:520px;margin:0;color:rgba(255,255,255,.9);font-size:12px;line-height:1.7}
-.reseller-guides-side{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 112px;gap:20px;min-height:560px}
-.reseller-guides-small-card{min-height:0}
-.reseller-guides-small-card .reseller-guides-card-copy{left:25px;right:22px;bottom:24px}
-.reseller-guides-small-card .reseller-guides-card-copy h3{font-size:clamp(19px,1.7vw,24px)}
-.reseller-guides-small-card .reseller-guides-card-copy p{font-size:11px}
-.reseller-guides-cta{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 30px;border-radius:25px;background:#f5e895;text-decoration:none;color:#23232b;transition:background .2s ease,transform .2s ease}
-.reseller-guides-cta:hover{background:#f0df75;transform:translateY(-2px)}
-.reseller-guides-cta-copy{display:flex;flex-direction:column;gap:7px}
-.reseller-guides-cta-copy strong{font-size:18px;font-weight:750;letter-spacing:-.03em}
-.reseller-guides-cta-copy small{font-size:12px;color:#56535d;line-height:1.5}
-.reseller-guides-cta-arrow{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;border-radius:50%;background:#fff;font-size:30px;line-height:1;color:#23232b}
-@media(max-width:900px){.reseller-guides-section{padding:68px 22px 76px}.reseller-guides-layout{gap:14px;min-height:480px}.reseller-guides-feature{min-height:480px}.reseller-guides-side{min-height:480px;gap:14px;grid-template-rows:1fr 100px}.reseller-guides-card-copy{left:22px;right:20px;bottom:22px}.reseller-guides-cta{padding:18px 20px}}
-@media(max-width:650px){.reseller-guides-section{padding:58px 18px 64px}.reseller-guides-heading{margin-bottom:25px}.reseller-guides-heading h2{font-size:clamp(32px,8.5vw,42px)}.reseller-guides-layout{grid-template-columns:1fr;min-height:0}.reseller-guides-feature{min-height:430px}.reseller-guides-side{min-height:0;grid-template-rows:350px 350px 100px;gap:13px}.reseller-guides-small-card{min-height:350px}.reseller-guides-cta{grid-column:1/-1;border-radius:20px;padding:17px 19px}.reseller-guides-card-copy{left:23px;right:21px;bottom:23px}}
-@media(max-width:420px){.reseller-guides-side{grid-template-columns:1fr;grid-template-rows:340px 340px 105px}.reseller-guides-small-card{min-height:340px}.reseller-guides-cta-arrow{width:42px;height:42px;flex-basis:42px}}
+/* =====================================
+   RESELLER GUIDES SECTION
+   MATCHED WITH RESELLER PACKAGES GUIDES
+===================================== */
+
+.rwg-section,
+.rwg-section * {
+  box-sizing: border-box;
+}
+
+.rwg-section {
+  width: 100%;
+  padding: 10vh 3vw 3vh;
+  background: #ffffff;
+  color: #23232b;
+  font-family: inherit;
+}
+
+.rwg-inner {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.rwg-heading {
+  max-width: 850px;
+  margin: 0 0 clamp(28px, 3vw, 42px);
+  text-align: left;
+}
+
+.rwg-heading > span {
+  display: none;
+}
+
+.rwg-heading h2 {
+  margin: 0;
+  color: #23232b;
+  font-size: clamp(26px, 4.4vw, 54px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.rwg-grid {
+  display: grid;
+  grid-template-columns: 1.18fr 1.18fr;
+  gap: clamp(16px, 2vw, 28px);
+  min-height: 560px;
+}
+
+.rwg-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  overflow: hidden;
+  align-items: flex-end;
+  border-radius: 24px;
+  background-color: #d8d5d0;
+  color: #ffffff;
+  isolation: isolate;
+  transition: transform 0.35s ease;
+}
+
+.rwg-card > img {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.rwg-card::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: '';
+  background: linear-gradient(
+    0deg,
+    rgba(15, 15, 18, 0.68),
+    rgba(15, 15, 18, 0) 72%
+  );
+}
+
+.rwg-card:hover {
+  transform: translateY(-4px);
+}
+
+.rwg-card-featured {
+  min-height: 560px;
+}
+
+.rwg-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(0, 1fr) 112px;
+  gap: clamp(16px, 2vw, 28px);
+  min-width: 0;
+}
+
+.rwg-card-small {
+  min-height: 0;
+}
+
+.rwg-card-copy {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: clamp(22px, 2.2vw, 29px);
+}
+
+.rwg-card-copy h3 {
+  max-width: 520px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(20px, 1.8vw, 25px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+.rwg-card-copy p {
+  max-width: 480px;
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.rwg-card-small .rwg-card-copy {
+  padding: 22px;
+}
+
+.rwg-card-small .rwg-card-copy h3 {
+  font-size: clamp(18px, 1.6vw, 22px);
+}
+
+.rwg-card-small .rwg-card-copy p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.rwg-cta {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 27px 22px 31px;
+  border-radius: 24px;
+  background: #ddf3bd;
+  color: #23232b;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.rwg-cta:hover {
+  background: #efdc70;
+  transform: translateY(-3px);
+}
+
+.rwg-cta-copy strong,
+.rwg-cta-copy small {
+  display: block;
+}
+
+.rwg-cta-copy strong {
+  font-size: clamp(16px, 1.5vw, 19px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+.rwg-cta-copy small {
+  margin-top: 5px;
+  color: #55535a;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.rwg-cta-arrow {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffffff;
+  font-size: 28px;
+  line-height: 1;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .rwg-section {
+    padding: 8vh 4vw 3vh;
+  }
+
+  .rwg-grid {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .rwg-card-featured {
+    min-height: 440px;
+  }
+
+  .rwg-side {
+    min-height: 330px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .rwg-section {
+    padding: 56px 14px 25px;
+  }
+
+  .rwg-heading {
+    margin-bottom: 25px;
+  }
+
+  .rwg-grid,
+  .rwg-side {
+    gap: 14px;
+  }
+
+  .rwg-card-featured {
+    min-height: 390px;
+  }
+
+  .rwg-side {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 280px) auto;
+  }
+
+  .rwg-card {
+    border-radius: 18px;
+  }
+
+  .rwg-card-copy {
+    padding: 22px;
+  }
+
+  .rwg-card-copy h3 {
+    font-size: 20px;
+  }
+
+  .rwg-card-copy p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .rwg-card-small .rwg-card-copy h3 {
+    font-size: 19px;
+  }
+
+  .rwg-card-small .rwg-card-copy p {
+    font-size: 12px;
+  }
+
+  .rwg-cta {
+    padding: 19px;
+    border-radius: 18px;
+    gap: 14px;
+  }
+
+  .rwg-cta-copy strong {
+    font-size: 16px;
+  }
+
+  .rwg-cta-copy small {
+    font-size: 12px;
+  }
+
+  .rwg-cta-arrow {
+    flex-basis: 42px;
+    width: 42px;
+    height: 42px;
+    font-size: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rwg-card,
+  .rwg-cta {
+    transition: none;
+  }
+}
