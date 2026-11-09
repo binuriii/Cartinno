@@ -524,3 +524,27 @@
     transition: none;
   }
 }
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  .omb-section.omb-section{padding:3vh 4% 5vh}
+  .omb-section.omb-section .omb-header{margin-bottom:40px}
+  .omb-section.omb-section .omb-heading{font-size:46px;line-height:1.1}
+}
+
+/* Mobile (overrides the 22-28px rule) */
+@media (max-width:640px){
+  .omb-section.omb-section{padding:3vh 14px 5vh}
+  .omb-section.omb-section .omb-header{margin-bottom:28px}
+  .omb-section.omb-section .omb-heading{font-size:32px;line-height:1.15}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .omb-section.omb-section .omb-heading{font-size:32px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .omb-section.omb-section .omb-heading{font-size:32px}
+}
