@@ -388,16 +388,16 @@
 @media (max-width:640px){
   .mbn-section.mbn-section{padding:56px 14px 5vh}
   .mbn-section.mbn-section .mbn-header-right{margin-bottom:6px}
-  .mbn-section.mbn-section .mbn-title{font-size:34px;line-height:1.15}
+  .mbn-section.mbn-section .mbn-title{font-size:32px;line-height:1.15}
   .mbn-section.mbn-section .mbn-description{font-size:15px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .mbn-section.mbn-section .mbn-title{font-size:34px}
+  .mbn-section.mbn-section .mbn-title{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .mbn-section.mbn-section .mbn-title{font-size:34px}
+  .mbn-section.mbn-section .mbn-title{font-size:32px}
 }

@@ -564,16 +564,16 @@
 @media (max-width:640px){
   section.wd-section{padding:3vh 14px 5vh}
   section.wd-section .wd-header{margin-bottom:28px}
-  section.wd-section .wd-heading{font-size:34px;line-height:1.15}
+  section.wd-section .wd-heading{font-size:32px;line-height:1.15}
   section.wd-section .wd-description{font-size:15px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  section.wd-section .wd-heading{font-size:34px}
+  section.wd-section .wd-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  section.wd-section .wd-heading{font-size:34px}
+  section.wd-section .wd-heading{font-size:32px}
 }

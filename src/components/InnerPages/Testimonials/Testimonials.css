@@ -745,16 +745,16 @@
     align-items:flex-end;
     margin-bottom:28px;
   }
-  .ts-header h2{font-size:34px;line-height:1.15}
+  .ts-header h2{font-size:32px;line-height:1.15}
   .ts-description{margin-top:14px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .ts-header h2{font-size:34px}
+  .ts-header h2{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .ts-header h2{font-size:34px}
+  .ts-header h2{font-size:32px}
 }

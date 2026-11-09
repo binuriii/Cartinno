@@ -704,16 +704,16 @@
 @media (max-width:640px){
   .dc-section.dc-section{padding:3vh 14px 5vh}
   .dc-section.dc-section .dc-header{margin-bottom:28px}
-  .dc-section.dc-section .dc-heading{font-size:34px;line-height:1.15}
+  .dc-section.dc-section .dc-heading{font-size:32px;line-height:1.15}
   .dc-section.dc-section .dc-description{font-size:15px;margin-top:16px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .dc-section.dc-section .dc-heading{font-size:34px}
+  .dc-section.dc-section .dc-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .dc-section.dc-section .dc-heading{font-size:34px}
+  .dc-section.dc-section .dc-heading{font-size:32px}
 }

@@ -369,18 +369,18 @@
 @media (max-width:640px){
   .do-section.do-section{padding:3vh 14px 5vh}
   .do-section.do-section .do-head{margin-bottom:28px}
-  .do-section.do-section .do-title{font-size:34px;line-height:1.15}
+  .do-section.do-section .do-title{font-size:32px;line-height:1.15}
   .do-section.do-section .do-description{font-size:15px;margin-top:16px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .do-section.do-section .do-title{font-size:34px}
+  .do-section.do-section .do-title{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .do-section.do-section .do-title{font-size:34px}
+  .do-section.do-section .do-title{font-size:32px}
 }
 
 /* Full-width stacked photos on tablet & mobile */

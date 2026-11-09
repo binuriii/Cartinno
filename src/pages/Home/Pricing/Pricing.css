@@ -711,7 +711,7 @@
   .pr{padding:3vh 14px 5vh}
   .pr-heading{margin-bottom:34px}
   .pr-title{
-    font-size:34px;
+    font-size:32px;
     font-weight:450;
     line-height:1.15;
     letter-spacing:-0.045em;
@@ -721,12 +721,12 @@
 /* Small mobile */
 @media (max-width:480px){
   .pr-heading{margin-bottom:28px}
-  .pr-title{font-size:34px}
+  .pr-title{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .pr-title{font-size:34px}
+  .pr-title{font-size:32px}
 }
 
 /* =====================================================

@@ -577,7 +577,7 @@
 /* Mobile (overrides the 22-28px rule) */
 @media (max-width:430px){
   .cl{padding:3vh 5% 5vh}
-  .cl-head{margin-bottom:34px}
+  .cl-head{margin-bottom:32px}
   .cl-head h2{
     font-size:34px;
     line-height:1.15;
@@ -587,10 +587,10 @@
 /* Small mobile */
 @media (max-width:390px){
   .cl-head{margin-bottom:28px}
-  .cl-head h2{font-size:34px}
+  .cl-head h2{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .cl-head h2{font-size:34px}
+  .cl-head h2{font-size:32px}
 }

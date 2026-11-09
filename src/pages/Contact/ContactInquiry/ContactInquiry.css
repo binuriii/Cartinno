@@ -644,16 +644,16 @@
 @media (max-width:640px){
   section.ci-section{padding:3vh 14px 5vh}
   section.ci-section .ci-header{margin-bottom:28px}
-  section.ci-section .ci-title{font-size:34px;line-height:1.15}
+  section.ci-section .ci-title{font-size:32px;line-height:1.15}
   section.ci-section .ci-description{max-width:100%;font-size:15px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  section.ci-section .ci-title{font-size:34px}
+  section.ci-section .ci-title{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  section.ci-section .ci-title{font-size:34px}
+  section.ci-section .ci-title{font-size:32px}
 }

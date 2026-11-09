@@ -1044,18 +1044,18 @@
 @media (max-width:640px){
   .mhw-section.mhw-section{padding:56px 14px 5vh}
   .mhw-section.mhw-section .mhw-header{margin-bottom:28px}
-  .mhw-section.mhw-section .mhw-heading{font-size:34px;line-height:1.15}
+  .mhw-section.mhw-section .mhw-heading{font-size:32px;line-height:1.15}
   .mhw-section.mhw-section .mhw-intro{font-size:15px;margin-top:16px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .mhw-section.mhw-section .mhw-heading{font-size:34px}
+  .mhw-section.mhw-section .mhw-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .mhw-section.mhw-section .mhw-heading{font-size:34px}
+  .mhw-section.mhw-section .mhw-heading{font-size:32px}
 }
 
 /* Stop the bottom of the section from being clipped on tablet & mobile */

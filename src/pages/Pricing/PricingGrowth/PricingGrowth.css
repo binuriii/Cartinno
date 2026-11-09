@@ -388,15 +388,15 @@
 @media (max-width:640px){
   .pgs-section{padding:3vh 14px 5vh}
   .pgs-header{margin-bottom:28px}
-  .pgs-heading{font-size:34px;line-height:1.15}
+  .pgs-heading{font-size:32px;line-height:1.15}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .pgs-heading{font-size:34px}
+  .pgs-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .pgs-heading{font-size:34px}
+  .pgs-heading{font-size:32px}
 }

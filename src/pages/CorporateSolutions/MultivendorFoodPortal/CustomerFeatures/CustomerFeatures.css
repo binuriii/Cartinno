@@ -699,16 +699,16 @@
 @media (max-width:640px){
   section.cuf-section{padding:3vh 14px 5vh}
   section.cuf-section .cuf-header{margin-bottom:28px}
-  section.cuf-section .cuf-heading{font-size:34px;line-height:1.15}
+  section.cuf-section .cuf-heading{font-size:32px;line-height:1.15}
   section.cuf-section .cuf-intro{font-size:15px;margin-top:16px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  section.cuf-section .cuf-heading{font-size:34px}
+  section.cuf-section .cuf-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  section.cuf-section .cuf-heading{font-size:34px}
+  section.cuf-section .cuf-heading{font-size:32px}
 }

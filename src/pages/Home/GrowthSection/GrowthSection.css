@@ -1401,16 +1401,16 @@
 @media (max-width:760px){
   .growth{padding:3vh 4% 5vh}
   .growth-intro{margin-bottom:34px}
-  .growth h2{font-size:34px}
+  .growth h2{font-size:32px}
 }
 
 /* Small mobile (overrides the 22-28px rule) */
 @media (max-width:480px){
   .growth-intro{margin-bottom:28px}
-  .growth h2{font-size:34px}
+  .growth h2{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .growth h2{font-size:34px}
+  .growth h2{font-size:32px}
 }

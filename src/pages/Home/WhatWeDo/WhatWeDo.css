@@ -655,7 +655,7 @@
 /* Mobile */
 @media (max-width:760px){
   .wwd-process-header{margin-bottom:34px}
-  .wwd-process-header h2{font-size:34px}      /* same size as monitor minimum */
+  .wwd-process-header h2{font-size:32px}      /* same size as monitor minimum */
 }
 
 /* Small mobile */
@@ -666,5 +666,5 @@
 
 /* Very small phones (iPhone SE, 320-360px) so it doesn't overflow */
 @media (max-width:360px){
-  .wwd-process-header h2{font-size:34px}
+  .wwd-process-header h2{font-size:32px}
 }

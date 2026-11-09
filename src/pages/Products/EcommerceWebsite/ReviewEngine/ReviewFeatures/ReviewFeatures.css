@@ -1339,15 +1339,15 @@
 @media (max-width:640px){
   .rf-section.rf-section{padding:3vh 14px 5vh}
   .rf-section.rf-section .rf-header{margin-bottom:28px}
-  .rf-section.rf-section .rf-title{font-size:34px;line-height:1.15}
+  .rf-section.rf-section .rf-title{font-size:32px;line-height:1.15}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .rf-section.rf-section .rf-title{font-size:34px}
+  .rf-section.rf-section .rf-title{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .rf-section.rf-section .rf-title{font-size:34px}
+  .rf-section.rf-section .rf-title{font-size:32px}
 }

@@ -744,18 +744,18 @@
 @media (max-width:640px){
   .gchi-section.gchi-section{padding:3vh 14px 5vh}
   .gchi-section.gchi-section .gchi-header{margin-bottom:28px}
-  .gchi-section.gchi-section .gchi-heading{font-size:34px;line-height:1.15}
+  .gchi-section.gchi-section .gchi-heading{font-size:32px;line-height:1.15}
   .gchi-section.gchi-section .gchi-intro{font-size:15px;margin-top:16px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .gchi-section.gchi-section .gchi-heading{font-size:34px}
+  .gchi-section.gchi-section .gchi-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .gchi-section.gchi-section .gchi-heading{font-size:34px}
+  .gchi-section.gchi-section .gchi-heading{font-size:32px}
 }
 
 /* TABLET ONLY: show full media images, no cropping */

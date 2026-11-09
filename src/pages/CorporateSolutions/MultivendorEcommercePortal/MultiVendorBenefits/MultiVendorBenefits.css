@@ -1039,16 +1039,16 @@
 @media (max-width:560px){
   section.mvb-section{padding:3vh 14px 5vh}
   section.mvb-section .mvb-heading{margin-bottom:28px}
-  section.mvb-section .mvb-heading h2{font-size:34px;line-height:1.15}
+  section.mvb-section .mvb-heading h2{font-size:32px;line-height:1.15}
   section.mvb-section .mvb-heading p{font-size:15px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  section.mvb-section .mvb-heading h2{font-size:34px}
+  section.mvb-section .mvb-heading h2{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  section.mvb-section .mvb-heading h2{font-size:34px}
+  section.mvb-section .mvb-heading h2{font-size:32px}
 }

@@ -461,15 +461,15 @@
 /* Mobile (overrides the 22-28px rule above) */
 @media (max-width:640px){
   .lbf-section.lbf-section{padding:3vh 14px 5vh}
-  .lbf-section.lbf-section .lbf-copy h2{font-size:34px;line-height:1.15;margin-bottom:28px}
+  .lbf-section.lbf-section .lbf-copy h2{font-size:32px;line-height:1.15;margin-bottom:28px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .lbf-section.lbf-section .lbf-copy h2{font-size:34px}
+  .lbf-section.lbf-section .lbf-copy h2{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .lbf-section.lbf-section .lbf-copy h2{font-size:34px}
+  .lbf-section.lbf-section .lbf-copy h2{font-size:32px}
 }

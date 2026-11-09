@@ -577,18 +577,18 @@
 @media (max-width:640px){
   section.ecn-section{padding:3vh 14px 5vh}
   section.ecn-section .ecn-header{margin-bottom:28px}
-  section.ecn-section .ecn-heading{font-size:34px;line-height:1.15}
+  section.ecn-section .ecn-heading{font-size:32px;line-height:1.15}
   section.ecn-section .ecn-description{margin:16px 0 0;font-size:15px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  section.ecn-section .ecn-heading{font-size:34px}
+  section.ecn-section .ecn-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  section.ecn-section .ecn-heading{font-size:34px}
+  section.ecn-section .ecn-heading{font-size:32px}
 }
 
 /* =====================================================

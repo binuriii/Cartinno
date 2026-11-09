@@ -888,17 +888,17 @@ section#case-studies.vs {
 @media (max-width:760px){
   section#case-studies.vs{padding:3vh 4% 5vh}
   .vs-grid{margin-top:34px}
-  .vs-title{font-size:34px}
+  .vs-title{font-size:32px}
 }
 
 /* Small mobile (overrides the 22-28px rule) */
 @media (max-width:480px){
   .vs-grid{margin-top:28px}
   .trusted{padding:6vh 4% 3vh}
-  .vs-title{font-size:34px}
+  .vs-title{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .vs-title{font-size:34px}
+  .vs-title{font-size:32px}
 }

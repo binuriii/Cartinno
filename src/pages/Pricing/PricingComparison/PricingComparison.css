@@ -573,15 +573,15 @@
 @media (max-width:680px){
   .cpr-comparison-section{padding:3vh 15px 5vh}
   .cpr-table-heading{margin:34px 0 28px}
-  .cpr-table-heading h2{font-size:34px;line-height:1.15}
+  .cpr-table-heading h2{font-size:32px;line-height:1.15}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .cpr-table-heading h2{font-size:34px}
+  .cpr-table-heading h2{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .cpr-table-heading h2{font-size:34px}
+  .cpr-table-heading h2{font-size:32px}
 }

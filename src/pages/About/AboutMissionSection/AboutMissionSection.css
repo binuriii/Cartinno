@@ -353,7 +353,7 @@
 @media (max-width:640px){
   .ams-section{padding:3vh 14px 5vh}
   .ams-heading{margin-bottom:28px}
-  .ams-heading-title{font-size:34px;line-height:1.15}
+  .ams-heading-title{font-size:32px;line-height:1.15}
   .ams-heading-description{margin-top:18px}
 
   /* Button: compact instead of full width */
@@ -366,10 +366,10 @@
 
 /* Small mobile */
 @media (max-width:480px){
-  .ams-heading-title{font-size:34px}
+  .ams-heading-title{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .ams-heading-title{font-size:34px}
+  .ams-heading-title{font-size:32px}
 }

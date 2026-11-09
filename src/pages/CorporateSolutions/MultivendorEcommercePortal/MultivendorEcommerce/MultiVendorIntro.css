@@ -313,17 +313,17 @@
 @media (max-width:640px){
   section.mvi-section{padding:56px 14px 5vh}
   section.mvi-section .mvi-top{margin-bottom:28px}
-  section.mvi-section .mvi-heading{font-size:34px;line-height:1.15}
+  section.mvi-section .mvi-heading{font-size:32px;line-height:1.15}
   section.mvi-section .mvi-description{font-size:14px}
   section.mvi-section .mvi-tag{font-size:11px}
 }
 
 /* Small mobile (overrides the 32px rule) */
 @media (max-width:480px){
-  section.mvi-section .mvi-heading{font-size:34px}
+  section.mvi-section .mvi-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  section.mvi-section .mvi-heading{font-size:34px}
+  section.mvi-section .mvi-heading{font-size:32px}
 }

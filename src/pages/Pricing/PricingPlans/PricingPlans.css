@@ -539,18 +539,18 @@
 @media (max-width:680px){
   .cpr-section{padding:3vh 15px 5vh}
   .cpr-heading{margin-bottom:28px}
-  .cpr-heading h2{font-size:34px;line-height:1.15}
+  .cpr-heading h2{font-size:32px;line-height:1.15}
   .cpr-heading p{font-size:15px;line-height:1.6}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .cpr-heading h2{font-size:34px}
+  .cpr-heading h2{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .cpr-heading h2{font-size:34px}
+  .cpr-heading h2{font-size:32px}
 }
 
 /* Tablet */
@@ -564,6 +564,6 @@
 @media (max-width:680px){
   section.cpr-section{padding:3vh 15px 1vh}
   section.cpr-section .cpr-heading{margin-bottom:28px}
-  section.cpr-section .cpr-heading h2{font-size:34px;line-height:1.15}
+  section.cpr-section .cpr-heading h2{font-size:32px;line-height:1.15}
   section.cpr-section .cpr-heading p{font-size:15px;line-height:1.6}
 }

@@ -555,15 +555,15 @@
 @media (max-width:640px){
   .rpb-section{padding:3vh 14px 5vh}
   .rpb-header{margin-bottom:28px}
-  .rpb-heading{font-size:34px;line-height:1.15}
+  .rpb-heading{font-size:32px;line-height:1.15}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .rpb-heading{font-size:34px}
+  .rpb-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .rpb-heading{font-size:34px}
+  .rpb-heading{font-size:32px}
 }

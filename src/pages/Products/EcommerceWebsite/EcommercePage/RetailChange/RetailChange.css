@@ -709,15 +709,15 @@
 @media (max-width:640px){
   section.rc-section{padding:3vh 14px 5vh}
   section.rc-section .rc-section-heading{margin-bottom:28px}
-  section.rc-section .rc-section-title{font-size:34px;line-height:1.15}
+  section.rc-section .rc-section-title{font-size:32px;line-height:1.15}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  section.rc-section .rc-section-title{font-size:34px}
+  section.rc-section .rc-section-title{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  section.rc-section .rc-section-title{font-size:34px}
+  section.rc-section .rc-section-title{font-size:32px}
 }

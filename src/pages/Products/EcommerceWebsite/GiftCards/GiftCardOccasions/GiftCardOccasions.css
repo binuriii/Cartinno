@@ -563,16 +563,16 @@
 @media (max-width:640px){
   .gco-section.gco-section{padding:3vh 14px 5vh}
   .gco-section.gco-section .gco-header{margin-bottom:28px}
-  .gco-section.gco-section .gco-heading{font-size:34px;line-height:1.15}
+  .gco-section.gco-section .gco-heading{font-size:32px;line-height:1.15}
   .gco-section.gco-section .gco-description{font-size:15px;margin-top:16px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .gco-section.gco-section .gco-heading{font-size:34px}
+  .gco-section.gco-section .gco-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .gco-section.gco-section .gco-heading{font-size:34px}
+  .gco-section.gco-section .gco-heading{font-size:32px}
 }

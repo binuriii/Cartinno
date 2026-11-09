@@ -1541,16 +1541,16 @@
 @media (max-width:640px){
   .ro-section.ro-section{padding:3vh 14px 5vh}
   .ro-section.ro-section .ro-header{margin-bottom:28px}
-  .ro-section.ro-section .ro-heading{font-size:34px;line-height:1.15}
+  .ro-section.ro-section .ro-heading{font-size:32px;line-height:1.15}
   .ro-section.ro-section .ro-description{margin-top:16px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .ro-section.ro-section .ro-heading{font-size:34px}
+  .ro-section.ro-section .ro-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .ro-section.ro-section .ro-heading{font-size:34px}
+  .ro-section.ro-section .ro-heading{font-size:32px}
 }

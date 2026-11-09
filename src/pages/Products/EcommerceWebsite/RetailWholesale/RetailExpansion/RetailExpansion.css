@@ -498,18 +498,18 @@
 @media (max-width:640px){
   .re-section.re-section{padding:56px 14px 5vh}
   .re-section.re-section .re-header{margin-bottom:28px}
-  .re-section.re-section .re-heading{font-size:34px;line-height:1.15}
+  .re-section.re-section .re-heading{font-size:32px;line-height:1.15}
   .re-section.re-section .re-description{font-size:15px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .re-section.re-section .re-heading{font-size:34px}
+  .re-section.re-section .re-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .re-section.re-section .re-heading{font-size:34px}
+  .re-section.re-section .re-heading{font-size:32px}
 }
 
 /* =====================================================

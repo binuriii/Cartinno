@@ -381,15 +381,15 @@
 @media (max-width:640px){
   section.ec-compare{padding:3vh 14px 5vh}
   section.ec-compare .ec-compare-heading{margin-bottom:28px}
-  section.ec-compare .ec-compare-title{font-size:34px;line-height:1.15}
+  section.ec-compare .ec-compare-title{font-size:32px;line-height:1.15}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  section.ec-compare .ec-compare-title{font-size:34px}
+  section.ec-compare .ec-compare-title{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  section.ec-compare .ec-compare-title{font-size:34px}
+  section.ec-compare .ec-compare-title{font-size:32px}
 }

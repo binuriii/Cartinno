@@ -300,17 +300,17 @@
 @media (max-width:640px){
   .faq-section{padding:3vh 14px 5vh}
   .faq-header{margin-bottom:34px}
-  .faq-heading{font-size:34px;line-height:1.15}
+  .faq-heading{font-size:32px;line-height:1.15}
   .faq-description{margin-top:18px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
   .faq-header{margin-bottom:28px}
-  .faq-heading{font-size:34px}
+  .faq-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .faq-heading{font-size:34px}
+  .faq-heading{font-size:32px}
 }

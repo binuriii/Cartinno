@@ -709,18 +709,18 @@
 @media (max-width:640px){
   .gr-section.gr-section{padding:56px 14px 5vh}
   .gr-section.gr-section .gr-header{margin-bottom:28px}
-  .gr-section.gr-section .gr-title{font-size:34px;line-height:1.15}
+  .gr-section.gr-section .gr-title{font-size:32px;line-height:1.15}
   .gr-section.gr-section .gr-description{font-size:15px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .gr-section.gr-section .gr-title{font-size:34px}
+  .gr-section.gr-section .gr-title{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .gr-section.gr-section .gr-title{font-size:34px}
+  .gr-section.gr-section .gr-title{font-size:32px}
 }
 
 /* =====================================================

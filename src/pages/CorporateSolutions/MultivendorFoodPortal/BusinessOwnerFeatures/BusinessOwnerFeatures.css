@@ -810,16 +810,16 @@
 @media (max-width:640px){
   section.bof-section{padding:56px 14px 25px}
   section.bof-section .bof-header{margin-bottom:28px}
-  section.bof-section .bof-header h2{font-size:34px;line-height:1.15}
+  section.bof-section .bof-header h2{font-size:32px;line-height:1.15}
   section.bof-section .bof-header p{font-size:15px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  section.bof-section .bof-header h2{font-size:34px}
+  section.bof-section .bof-header h2{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  section.bof-section .bof-header h2{font-size:34px}
+  section.bof-section .bof-header h2{font-size:32px}
 }

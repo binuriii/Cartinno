@@ -1474,17 +1474,17 @@
 @media (max-width:560px){
   .auu-section{padding:3vh 14px 5vh}
   .auu-header{margin-bottom:28px}
-  .auu-heading{font-size:34px;line-height:1.15}
+  .auu-heading{font-size:32px;line-height:1.15}
   .auu-description{margin-top:14px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .auu-heading{font-size:34px}
+  .auu-heading{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
   .auu-section{padding-inline:12px}
-  .auu-heading{font-size:34px}
+  .auu-heading{font-size:32px}
 }

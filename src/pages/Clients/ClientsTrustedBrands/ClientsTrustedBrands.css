@@ -226,16 +226,16 @@
 @media (max-width:640px){
   .tb-section{padding:3vh 14px 5vh}
   .tb-heading{margin-bottom:28px}
-  .tb-title{font-size:34px;line-height:1.15}
+  .tb-title{font-size:32px;line-height:1.15}
   .tb-description{margin-top:18px}
 }
 
 /* Small mobile */
 @media (max-width:480px){
-  .tb-title{font-size:34px}
+  .tb-title{font-size:32px}
 }
 
 /* Very small phones (iPhone SE, 320-360px) */
 @media (max-width:360px){
-  .tb-title{font-size:34px}
+  .tb-title{font-size:32px}
 }
