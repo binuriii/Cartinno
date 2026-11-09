@@ -5,7 +5,7 @@ export const yourOwnMarketplaceData = {
   "title2": "Under Your Own Business",
   "lead": "Launch a ready online store under your own business name, choose the products you want to sell and set your own prices.",
   "description": "The programme provides your own reseller website and a dedicated admin panel to manage your store, product selection and selling prices without first investing in product stock.",
-  "image": "http://localhost:5173/Cartinno/Products/BrandedRestaurantApp/BerryBlissBowlAppMockup.webp",
+  "image": "./Products/BrandedRestaurantApp/BerryBlissBowlAppMockup.webp",
   "theme": "sage",
   "imageSide": "right",
   "benefits": [
