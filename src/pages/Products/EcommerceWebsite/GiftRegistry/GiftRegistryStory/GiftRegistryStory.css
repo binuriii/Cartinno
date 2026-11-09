@@ -16,10 +16,10 @@
   isolation: isolate;
 
   width: 100%;
-  padding: 8vh 3vw 10vh;
+  padding: 5vh 3vw 10vh;
 
   color: var(--grs-ink);
-  background: #faf8f7;
+  background: #ffffff;
   font-family: inherit;
 }
 

@@ -738,3 +738,82 @@
     transition: none !important;
   }
 }
+
+/* =====================================================
+   PUSH NOTIFICATION FEATURES: TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .pnf-section {
+    padding: 6vh 4% 5vh;
+  }
+
+  .pnf-section .pnf-header {
+    margin-bottom: 40px;
+  }
+
+  .pnf-section .pnf-title {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  /* Card headings */
+  .pnf-section.pnf-section .pnf-card-title {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  /* Card descriptions */
+  .pnf-section.pnf-section .pnf-card-description {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .pnf-section {
+    padding: 56px 14px 25px;
+  }
+
+  .pnf-section .pnf-header {
+    margin-bottom: 28px;
+  }
+
+  .pnf-section .pnf-title {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .pnf-section .pnf-title {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .pnf-section .pnf-title {
+    font-size: 32px;
+  }
+}
+
+/* =====================================================
+   TABLET: THREE ROW CARD LAYOUT
+   ===================================================== */
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .pnf-section .pnf-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .pnf-section .pnf-card,
+  .pnf-section .pnf-card-featured {
+    grid-column: auto;
+    min-height: 440px;
+  }
+}

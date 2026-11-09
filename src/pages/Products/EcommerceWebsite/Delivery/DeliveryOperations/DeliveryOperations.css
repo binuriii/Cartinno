@@ -353,3 +353,42 @@
     transform: none !important;
   }
 }
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  .do-section.do-section{padding:3vh 4% 5vh}
+  .do-section.do-section .do-head{margin-bottom:40px}
+  .do-section.do-section .do-title{font-size:46px;line-height:1.1}
+}
+
+/* Mobile (overrides the 22-28px rule above) */
+@media (max-width:640px){
+  .do-section.do-section{padding:3vh 14px 5vh}
+  .do-section.do-section .do-head{margin-bottom:28px}
+  .do-section.do-section .do-title{font-size:32px;line-height:1.15}
+  .do-section.do-section .do-description{font-size:15px;margin-top:16px}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .do-section.do-section .do-title{font-size:32px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .do-section.do-section .do-title{font-size:32px}
+}
+
+/* Full-width stacked photos on tablet & mobile */
+@media (max-width:768px){
+  .do-section.do-section .do-photo-left,
+  .do-section.do-section .do-photo-main,
+  .do-section.do-section .do-photo-bottom{
+    width:100%;
+  }
+  .do-section.do-section .do-right{align-items:stretch}
+}

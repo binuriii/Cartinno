@@ -8,7 +8,7 @@ export const aboutUsHero = {
   },
   secondaryButton: null,
   image:
-    'https://images.unsplash.com/photo-1677078610152-8a627d8ced8d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
+    'https://images.unsplash.com/photo-1677078610152-8a627d8ced8d?w=1200&auto=format&fit=crop&q=85',
   imageAlt: 'A collaborative team working together in a modern workspace',
   imagePosition: 'center center',
   stat: {

@@ -34,7 +34,7 @@
   isolation: isolate;
 
   color: var(--grf-ink);
-  background: #f7f7f8;
+  background: #ffffff;
   font-family: inherit;
 }
 
@@ -125,7 +125,7 @@
 
 .grf-card--green {
   color: var(--grf-ink);
-  background: #fbecee;
+  background: #f0f7e5;
 }
 
 .grf-card--yellow {
@@ -916,7 +916,7 @@
 .gr-tone--sand { --gr-card-bg: rgba(222, 216, 209, .65); --gr-accent: #796553; --gr-soft: #eee6dc; --gr-bar: #c9beb2; }
 
 /* SECTION 03: full image and translucent editorial cards. */
-.gr-story { background: #faf8f7; }
+.gr-story { background: #ffffff; }
 .gr-story-photo { margin: 0; overflow: hidden; border-radius: 30px; background: #eee7df; }
 .gr-story-photo img {
   width: 100%;
@@ -950,7 +950,7 @@
 
 
 /* JOURNEY: flat section edge and a three-scene Cartinno preview. */
-.gift-registry-page .grj-section { position: relative; isolation: isolate; overflow: hidden; margin: 0; padding: 9vh 3vw 11vh; border-radius: 0; background: #faf7f6; color: #23232b; }
+.gift-registry-page .grj-section { position: relative; isolation: isolate; overflow: hidden; margin: 0; padding: 9vh 3vw 11vh; border-radius: 0; background: #ffffff; color: #23232b; }
 .grj-shell { display: grid; grid-template-columns: minmax(0,.95fr) minmax(0,1.05fr); align-items: center; gap: clamp(36px,5vw,76px); width: 100%; max-width: 1350px; margin-inline: auto; }
 .grj-copy { min-width: 0; }
 .grj-copy h2 { max-width: 640px; margin: 0; text-wrap: balance; }
@@ -1163,4 +1163,53 @@
   .grj-section *, .grj-section *::before, .grj-section *::after { animation: none !important; transition: none !important; }
   .grj-preview-product, .grj-scene-success { opacity: 1; transform: none; }
   .grj-step-progress { display: none; }
+}
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  .grf-section.grf-section{padding-top:8vh}
+  .gr-section.gr-section{padding-top:3vh}
+  .gift-registry-page .grj-section.grj-section{padding-top:3vh}
+
+  .grf-section.grf-section .grf-heading{margin-bottom:40px}
+  .gr-section.gr-section .gr-heading{margin-bottom:40px}
+
+  .grf-section.grf-section .grf-heading h2,
+  .gr-section.gr-section .gr-heading h2,
+  .gift-registry-page .grj-section.grj-section .grj-copy h2{font-size:46px;line-height:1.1}
+}
+
+/* Mobile (overrides the 22-28px rule above) */
+@media (max-width:640px){
+  .grf-section.grf-section{padding-top:6vh}
+  .gr-section.gr-section{padding-top:3vh}
+  .gift-registry-page .grj-section.grj-section{padding-top:3vh}
+
+  .grf-section.grf-section .grf-heading{margin-bottom:28px}
+  .gr-section.gr-section .gr-heading{margin-bottom:28px}
+
+  .grf-section.grf-section .grf-heading h2,
+  .gr-section.gr-section .gr-heading h2,
+  .gift-registry-page .grj-section.grj-section .grj-copy h2{font-size:34px;line-height:1.15}
+
+  .grf-section.grf-section .grf-heading p{font-size:15px}
+  .gr-section.gr-section .gr-heading p{font-size:15px;margin-top:16px}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .grf-section.grf-section .grf-heading h2,
+  .gr-section.gr-section .gr-heading h2,
+  .gift-registry-page .grj-section.grj-section .grj-copy h2{font-size:34px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .grf-section.grf-section .grf-heading h2,
+  .gr-section.gr-section .gr-heading h2,
+  .gift-registry-page .grj-section.grj-section .grj-copy h2{font-size:34px}
 }

@@ -359,3 +359,57 @@
     transition: none;
   }
 }
+
+/* =====================================
+   TABLET (iPad Mini, iPad Air)
+===================================== */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .oof-section.oof-section {
+    padding: 6vh 4% 5vh;
+  }
+
+  .oof-section.oof-section .oof-header {
+    margin-bottom: 40px;
+  }
+
+  .oof-section.oof-section .oof-heading {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+@media (max-width: 640px) {
+  .oof-section.oof-section {
+    padding: 5vh 14px 5vh;
+  }
+
+  .oof-section.oof-section .oof-header {
+    margin-bottom: 28px;
+  }
+
+  .oof-section.oof-section .oof-heading {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+@media (max-width: 480px) {
+  .oof-section.oof-section .oof-heading {
+    font-size: 32px;
+  }
+}
+
+/* =====================================
+   VERY SMALL PHONES (iPhone SE)
+===================================== */
+@media (max-width: 360px) {
+  .oof-section.oof-section .oof-heading {
+    font-size: 32px;
+  }
+}

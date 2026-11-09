@@ -413,3 +413,65 @@
     transition: none !important;
   }
 }
+
+/* =====================================================
+   ZAPPYMART VENDORS — TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .zmv-section {
+    padding: 3vh 4% 5vh;
+  }
+
+  .zmv-heading {
+    margin-bottom: 40px;
+  }
+
+  .zmv-heading h2 {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  .zmv-panel h3,
+  .zmv-photo-copy h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .zmv-panel-copy > p,
+  .zmv-photo-copy p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .zmv-section {
+    padding: 3vh 14px 5vh;
+  }
+
+  .zmv-heading {
+    margin-bottom: 28px;
+  }
+
+  .zmv-heading h2 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .zmv-heading h2 {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .zmv-heading h2 {
+    font-size: 32px;
+  }
+}

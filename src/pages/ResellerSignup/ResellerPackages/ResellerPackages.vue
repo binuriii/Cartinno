@@ -54,7 +54,6 @@ import './ResellerPackagesPage.css'
                 <strong>Grow with Cartinno</strong>
                 <small>Talk to our team about becoming a product reseller.</small>
               </span>
-              <span class="rpg-guides-arrow" aria-hidden="true">›</span>
             </a>
           </div>
         </div>

@@ -827,3 +827,65 @@
     animation: none;
   }
 }
+
+/* =====================================================
+   HEADING SIZES: TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .aipf-section {
+    padding: 6vh 4% 5vh;
+  }
+
+  .aipf-section .aipf-header {
+    margin-bottom: 40px;
+  }
+
+  .aipf-section .aipf-heading {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  /* Benefit headings */
+  .aipf-section.aipf-section .aipf-benefit-title {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  /* Benefit descriptions */
+  .aipf-section.aipf-section .aipf-benefit-description {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .aipf-section {
+    padding: 56px 14px 25px;
+  }
+
+  .aipf-section .aipf-header {
+    margin-bottom: 28px;
+  }
+
+  .aipf-section .aipf-heading {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .aipf-section .aipf-heading {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .aipf-section .aipf-heading {
+    font-size: 32px;
+  }
+}

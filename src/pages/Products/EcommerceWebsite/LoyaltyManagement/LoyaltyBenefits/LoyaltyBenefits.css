@@ -4,7 +4,7 @@
 
 .lbf-section {
   width: 100%;
-  padding: 7vh 3vw 11vh;
+  padding: 5vh 3vw 7vh;
   background: #ffffff;
   color: #23232b;
 }
@@ -446,4 +446,30 @@
   .lbf-menu.is-visible .lbf-badge,
   .lbf-likes .lbf-svg,
   .lbf-badge .lbf-svg { animation: none !important; }
+}
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  .lbf-section.lbf-section{padding:3vh 4% 5vh}
+  .lbf-section.lbf-section .lbf-copy h2{font-size:46px;line-height:1.1;margin-bottom:40px}
+}
+
+/* Mobile (overrides the 22-28px rule above) */
+@media (max-width:640px){
+  .lbf-section.lbf-section{padding:3vh 14px 5vh}
+  .lbf-section.lbf-section .lbf-copy h2{font-size:32px;line-height:1.15;margin-bottom:28px}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .lbf-section.lbf-section .lbf-copy h2{font-size:32px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .lbf-section.lbf-section .lbf-copy h2{font-size:32px}
 }

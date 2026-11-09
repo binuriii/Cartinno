@@ -1197,3 +1197,65 @@
     transition: none !important;
   }
 }
+
+/* =====================================================
+   HEADING SIZES: TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .lf-section {
+    padding: 3vh 4% 5vh;
+  }
+
+  .lf-header {
+    margin-bottom: 40px;
+  }
+
+  .lf-heading {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  /* Panel headings */
+  .lf-section.lf-section .lf-panel-copy h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  /* Panel descriptions */
+  .lf-section.lf-section .lf-panel-copy p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .lf-section {
+    padding: 3vh 14px 5vh;
+  }
+
+  .lf-header {
+    margin-bottom: 28px;
+  }
+
+  .lf-heading {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .lf-heading {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .lf-heading {
+    font-size: 32px;
+  }
+}

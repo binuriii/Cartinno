@@ -569,3 +569,65 @@
     transition: none;
   }
 }
+
+/* =====================================================
+   HEADING SIZES: TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .ben-section {
+    padding: 12vh 4% 5vh;
+  }
+
+  .ben-section .ben-header {
+    margin-bottom: 40px;
+  }
+
+  .ben-section .ben-heading {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  /* Card headings */
+  .ben-section.ben-section .ben-card-title {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  /* Card descriptions */
+  .ben-section.ben-section .ben-card-description {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .ben-section {
+    padding: 100px 14px 25px;
+  }
+
+  .ben-section .ben-header {
+    margin-bottom: 28px;
+  }
+
+  .ben-section .ben-heading {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .ben-section .ben-heading {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .ben-section .ben-heading {
+    font-size: 32px;
+  }
+}

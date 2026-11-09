@@ -1371,3 +1371,39 @@
     transform: none !important;
   }
 }
+
+/* =====================================================
+   WAB SECTION — RESPONSIVE HEADING & SPACING
+   Desktop unchanged
+===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .wab-section.wab-section {
+    padding: 3vh 4% 5vh;
+  }
+
+  .wab-section.wab-section .wab-heading {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .wab-section.wab-section {
+    padding: 3vh 14px 5vh;
+  }
+
+  .wab-section.wab-section .wab-heading {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small and very small phones */
+@media (max-width: 480px) {
+  .wab-section.wab-section .wab-heading {
+    font-size: 32px;
+  }
+}

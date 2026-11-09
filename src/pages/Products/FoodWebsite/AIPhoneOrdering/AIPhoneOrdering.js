@@ -4,9 +4,7 @@ export const aiPhoneOrderingHero = {
   rotatingWords: [
     'A New Order.',
     'Answered Smarter.',
-    'Ready Around the Clock.',
-    'Connected with Cartinno.'
-  ],
+    'Ready Anytime.'  ],
 
   description:
     'Make ordering easier with Cartinno AI Phone Ordering. Help customers place food orders over the phone, handle incoming calls more efficiently, and give your restaurant team more time to focus on great service.',

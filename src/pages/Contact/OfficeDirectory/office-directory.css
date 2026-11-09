@@ -266,3 +266,94 @@
     border-radius: 18px;
   }
 }
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  section.co-section{padding:3vh 4% 5vh}
+  section.co-section .co-heading{margin-bottom:40px}
+  section.co-section .co-title{font-size:46px;line-height:1.1}
+}
+
+/* Mobile (overrides the 22-28px rule) */
+@media (max-width:640px){
+  section.co-section{padding:3vh 14px 5vh}
+  section.co-section .co-heading{margin-bottom:28px}
+  section.co-section .co-title{font-size:32px;line-height:1.15}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  section.co-section .co-title{font-size:32px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  section.co-section .co-title{font-size:32px}
+}
+
+/* =====================================================
+   MOBILE: compact 2-column country list + "show all"
+   (must stay at the end of the file)
+===================================================== */
+.co-countries-toggle { display: none; }
+
+@media (max-width: 640px) {
+  .co-countries {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .co-country {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .co-country-flag {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .co-country-name { font-size: 14px; }
+  .co-country-phone { font-size: 13px; }
+
+  /* hide extra countries until the user taps "Show all" */
+  .co-countries:not(.is-expanded) .co-country.is-extra {
+    display: none;
+  }
+
+  .co-countries-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    margin-top: 14px;
+    padding: 0 20px;
+    border: 1px solid var(--co-line);
+    border-radius: 999px;
+    background: #ffffff;
+    color: var(--co-ink);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .co-countries-toggle:hover,
+  .co-countries-toggle:focus-visible {
+    color: var(--co-red);
+    border-color: var(--co-red);
+  }
+}

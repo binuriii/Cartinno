@@ -996,3 +996,35 @@
     transform: none !important;
   }
 }
+
+/* =====================================
+   RESPONSIVE SECTION SPACING & HEADING
+===================================== */
+
+@media (min-width: 641px) and (max-width: 1100px) {
+  .rsb-section.rsb-section {
+    padding: 3vh 4% 5vh;
+  }
+
+  .rsb-section.rsb-section .rsb-heading {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 640px) {
+  .rsb-section.rsb-section {
+    padding: 3vh 14px 5vh;
+  }
+
+  .rsb-section.rsb-section .rsb-heading {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 480px) {
+  .rsb-section.rsb-section .rsb-heading {
+    font-size: 32px;
+  }
+}

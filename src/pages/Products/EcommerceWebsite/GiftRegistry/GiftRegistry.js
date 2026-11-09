@@ -36,7 +36,7 @@ export const registryStoryContent = {
   headingFirst: 'Every moment matters.',
   headingSecond: 'Make it unforgettable.',
   "description": "From a new home to a new beginning, make giving feel more personal and keep the people who matter connected.",
-  "image": "https://plus.unsplash.com/premium_photo-1661544367400-dd6a7352cfeb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+  "image": "gift.jpg",
   "imageAlt": "Beautifully wrapped gifts ready to celebrate a special occasion",
   "photoCaption": "Thoughtful gifting, beautifully connected."
 }
@@ -92,7 +92,7 @@ export const registryJourneySteps = [
 ]
 
 export const registryJourneyImages = {
-  cover: 'https://plus.unsplash.com/premium_photo-1661544367400-dd6a7352cfeb?auto=format&fit=crop&w=1000&q=85'
+  cover: 'gift.jpg'
 }
 
 // Each caption matches the actual product photograph.

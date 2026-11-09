@@ -291,3 +291,63 @@
     transition: none;
   }
 }
+
+/* =====================================================
+   RESELLER GUIDES — TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .rwg-section {
+    padding: 3vh 4% 5vh;
+  }
+
+  .rwg-heading {
+    margin-bottom: 40px;
+  }
+
+  .rwg-heading h2 {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  .rwg-card-copy h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .rwg-card-copy p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .rwg-section {
+    padding: 3vh 14px 5vh;
+  }
+
+  .rwg-heading {
+    margin-bottom: 28px;
+  }
+
+  .rwg-heading h2 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .rwg-heading h2 {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .rwg-heading h2 {
+    font-size: 32px;
+  }
+}

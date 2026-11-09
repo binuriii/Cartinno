@@ -1432,3 +1432,39 @@
     transform: none !important;
   }
 }
+
+/* =====================================================
+   FBB SECTION — TABLET & MOBILE ONLY
+   Desktop unchanged
+===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .fbb-section.fbb-section {
+    padding: 3vh 4% 5vh;
+  }
+
+  .fbb-section.fbb-section .fbb-heading {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .fbb-section.fbb-section {
+    padding: 3vh 14px 5vh;
+  }
+
+  .fbb-section.fbb-section .fbb-heading {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small and very small phones */
+@media (max-width: 480px) {
+  .fbb-section.fbb-section .fbb-heading {
+    font-size: 32px;
+  }
+}

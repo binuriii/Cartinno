@@ -736,3 +736,60 @@
     animation: none;
   }
 }
+
+/* =====================================================
+   PIG SECTION: TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .pig-section {
+    padding: 6vh 4% 5vh;
+  }
+
+  .pig-header {
+    margin-bottom: 40px;
+  }
+
+  .pig-title {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  .pig-card-top h3,
+  .pig-card-bottom-left h3,
+  .pig-card-bottom-right h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .pig-section {
+    padding: 56px 14px 25px;
+  }
+
+  .pig-header {
+    margin-bottom: 28px;
+  }
+
+  .pig-title {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .pig-title {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .pig-title {
+    font-size: 32px;
+  }
+}

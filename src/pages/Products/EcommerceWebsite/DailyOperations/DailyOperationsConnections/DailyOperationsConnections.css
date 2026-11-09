@@ -1,5 +1,5 @@
 .cpc-section,.cpc-section *{box-sizing:border-box}
-.cpc-section{--cpc-ink:#23232b;--cpc-muted:#5b5b66;--cpc-ease:cubic-bezier(.2,.8,.2,1);width:100%;padding:6vh 3vw 10vh;background:#fff;color:var(--cpc-ink);font-family:inherit;overflow:hidden}
+.cpc-section{--cpc-ink:#23232b;--cpc-muted:#5b5b66;--cpc-ease:cubic-bezier(.2,.8,.2,1);width:100%;padding:5vh 3vw 10vh;background:#fff;color:var(--cpc-ink);font-family:inherit;overflow:hidden}
 .cpc-container{width:100%;max-width:1350px;margin-inline:auto}
 .cpc-title{margin:0 0 clamp(28px,4vw,56px);font-size:clamp(26px,4.4vw,54px);font-weight:450;line-height:1.15;letter-spacing:-.045em}
 .cpc-line{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}.cpc-line>span{display:block}
@@ -39,3 +39,29 @@
 @media(max-width:640px){.cpc-section{padding:45px 14px 70px}.cpc-title{font-size:clamp(22px,6.6vw,28px)}.cpc-photo{height:400px;border-radius:22px}.cpc-cards{gap:12px}.cpc-card{height:240px;border-radius:22px}.cpc-card h3{padding:20px 16px;font-size:16px}.cpc-call{left:14px;bottom:14px;width:calc(100% - 28px)}}
 @media(max-width:420px){.cpc-cards{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.cpc-section *,.cpc-section *:before,.cpc-section *:after{animation:none!important;transition:none!important}.cpc-call{opacity:1}}
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  .cpc-section.cpc-section{padding:3vh 4% 5vh}
+  .cpc-section.cpc-section .cpc-title{font-size:46px;line-height:1.1;margin-bottom:40px}
+}
+
+/* Mobile (overrides the 22-28px rule) */
+@media (max-width:640px){
+  .cpc-section.cpc-section{padding:3vh 14px 5vh}
+  .cpc-section.cpc-section .cpc-title{font-size:32px;line-height:1.15;margin-bottom:28px}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .cpc-section.cpc-section .cpc-title{font-size:32px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .cpc-section.cpc-section .cpc-title{font-size:32px}
+}

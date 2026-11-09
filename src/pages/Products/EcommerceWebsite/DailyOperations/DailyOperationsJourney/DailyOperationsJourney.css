@@ -67,3 +67,32 @@
 @media(max-width:860px){.cpj-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-bottom:8px}.cpj-tab{border-radius:18px;background:#f6f5f3}.cpj-tab span{display:none}.cpj-tab.is-active{background:var(--tint)}.cpj-panel.is-first,.cpj-panel.is-last{border-radius:24px}.cpj-panel-inner{grid-template-columns:1fr}.cpj-copy p{max-width:none}}
 @media(max-width:640px){.cpj-section{padding:45px 14px 70px}.cpj-title{font-size:clamp(22px,6.6vw,28px)}.cpj-description{font-size:15px;line-height:1.55}.cpj-panel{border-radius:20px}.cpj-stage{padding:20px 16px 74px;min-height:0}.cpj-card{padding:16px}.cpj-box{width:76px;height:54px;font-size:16px}.cpj-wire{width:64px}}
 @media(prefers-reduced-motion:reduce){.cpj-section *,.cpj-section *:before,.cpj-section *:after{animation:none!important;transition:none!important}.cpj-options li:after{opacity:1}.cpj-radio{background:#ff8a5c;border-color:#ff8a5c}.cpj-radio svg{opacity:1;transform:none}.cpj-status-a{display:none}.cpj-status-b{opacity:1}.cpj-checks li,.cpj-ready,.cpj-add{opacity:1}}
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  .cpj-section.cpj-section{padding:3vh 4% 5vh}
+  .cpj-section.cpj-section .cpj-header{margin-bottom:40px}
+  .cpj-section.cpj-section .cpj-title{font-size:46px;line-height:1.1}
+}
+
+/* Mobile (overrides the 22-28px rule) */
+@media (max-width:640px){
+  .cpj-section.cpj-section{padding:3vh 14px 5vh}
+  .cpj-section.cpj-section .cpj-header{margin-bottom:28px}
+  .cpj-section.cpj-section .cpj-title{font-size:32px;line-height:1.15}
+  .cpj-section.cpj-section .cpj-description{font-size:15px}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .cpj-section.cpj-section .cpj-title{font-size:32px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .cpj-section.cpj-section .cpj-title{font-size:32px}
+}

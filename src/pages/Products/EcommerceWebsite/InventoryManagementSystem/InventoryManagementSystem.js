@@ -4,7 +4,6 @@ export const inventoryManagementHero = {
   rotatingWords: [
     'Always in Control.',
     'Smarter Than Ever.',
-    'Connected Everywhere.',
     'Ready for Growth.'
   ],
 

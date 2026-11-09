@@ -390,3 +390,110 @@
   position: absolute;
   inset: 0;
 }
+
+/* =====================================================
+   RESPONSIVE FIXES (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:431px) and (max-width:1100px){
+  section.inner-hero{min-height:0}
+  section.inner-hero .inner-hero-container{
+    padding-left:4%;
+    padding-right:4%;
+    padding-top: 180px;
+    padding-bottom:150px;
+  }
+  section.inner-hero .inner-hero-title{font-size:clamp(50px, 8vw, 66px)}
+  section.inner-hero .inner-hero-description{font-size:15px}
+}
+
+/* Mobile */
+@media (max-width:430px){
+  section.inner-hero{min-height:0}
+  section.inner-hero .inner-hero-title{font-size:clamp(40px, 12.4vw, 66px)}
+  section.inner-hero .inner-hero-container{padding-top: 134px; padding-bottom:94px}
+
+  /* Buttons: side by side, compact, not full width */
+  section.inner-hero .inner-hero-actions{
+    width:auto;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
+  section.inner-hero .inner-hero-btn{
+    width:auto;
+    min-height:0;
+    padding:11px 22px;
+    font-size:13.5px;
+    gap:10px;
+  }
+  section.inner-hero .inner-hero-btn-icon{width:24px;height:24px;font-size:10px}
+}
+
+/* Small phones */
+@media (max-width:375px){
+  section.inner-hero .inner-hero-title{font-size:30px}
+  section.inner-hero .inner-hero-container{padding-left:14px;padding-right:14px}
+  section.inner-hero .inner-hero-btn{padding:10px 18px;font-size:13px}
+}
+
+/* Very small phones */
+@media (max-width:320px){
+  section.inner-hero .inner-hero-actions{flex-direction:column}
+  section.inner-hero .inner-hero-btn{padding:10px 28px}
+}
+
+/* Landscape phones */
+@media (max-height:500px) and (orientation:landscape){
+  section.inner-hero{--ih-pad-top:70px}
+  section.inner-hero .inner-hero-container{padding-bottom:40px}
+}
+
+/* Touch devices: no sticky hover */
+@media (hover:none){
+  .inner-hero-btn:hover{transform:none}
+}
+
+/* =====================================================
+   FIX: rotating word cut off on mobile / tablet
+   ===================================================== */
+
+/* Phones: allow two lines for the changing word */
+@media (max-width:430px){
+  section.inner-hero .inner-hero-title{
+    font-size:clamp(34px, 10vw, 44px);   /* smaller so it fits better */
+  }
+  section.inner-hero .inner-hero-changing{
+    height:2.4em;                         /* room for 2 lines */
+  }
+  section.inner-hero .inner-hero-word{
+    line-height:1.1;
+  }
+}
+
+/* Tablets */
+@media (min-width:431px) and (max-width:1100px){
+  section.inner-hero .inner-hero-changing{
+    height:1.35em;                        /* one line is fine here */
+  }
+}
+
+/* =====================================================
+   FIX: rotating word, one line, no extra gap
+   ===================================================== */
+
+@media (max-width:430px){
+  section.inner-hero .inner-hero-title{
+    font-size:clamp(38px, 8.2vw, 34px);
+    gap:0;
+  }
+  section.inner-hero .inner-hero-changing{
+    height:1.3em;              /* one line only */
+  }
+  section.inner-hero .inner-hero-word{
+    white-space:nowrap;        /* never wraps, so it is never cut */
+    line-height:1.1;
+  }
+}

@@ -8,7 +8,7 @@ export const contactHero = {
   },
   secondaryButton: null,
   image:
-    'https://images.unsplash.com/photo-1759978200438-38971e248641?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
+    'https://images.unsplash.com/photo-1759978200438-38971e248641?w=1200&auto=format&fit=crop&q=85',
   imageAlt: 'Cartinno team ready to help your business',
   imagePosition: 'center center',
   stat: {

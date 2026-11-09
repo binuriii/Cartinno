@@ -279,7 +279,7 @@
   padding: clamp(22px, 2.5vw, 36px);
 
   border-radius: 30px;
-  background: #a9eff5;
+  background: #f7e0c7;
   color: var(--wd-ink);
 }
 
@@ -547,4 +547,33 @@
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  section.wd-section{padding:3vh 4% 5vh}
+  section.wd-section .wd-header{margin-bottom:40px}
+  section.wd-section .wd-heading{font-size:46px;line-height:1.1}
+}
+
+/* Mobile (overrides the 22-28px rule) */
+@media (max-width:640px){
+  section.wd-section{padding:3vh 14px 5vh}
+  section.wd-section .wd-header{margin-bottom:28px}
+  section.wd-section .wd-heading{font-size:32px;line-height:1.15}
+  section.wd-section .wd-description{font-size:15px}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  section.wd-section .wd-heading{font-size:32px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  section.wd-section .wd-heading{font-size:32px}
 }

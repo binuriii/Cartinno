@@ -833,3 +833,65 @@
     transform: none;
   }
 }
+
+/* =====================================================
+   HEADING SIZES: TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .fmc-benefits {
+    padding: 3vh 4% 5vh;
+  }
+
+  .fmc-benefits .fmc-benefits-heading {
+    margin-bottom: 40px;
+  }
+
+  .fmc-benefits .fmc-benefits-heading h2 {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  /* Benefit card headings */
+  .fmc-benefits.fmc-benefits .fmc-benefit-copy h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  /* Benefit card descriptions */
+  .fmc-benefits.fmc-benefits .fmc-benefit-copy p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .fmc-benefits {
+    padding: 3vh 14px 5vh;
+  }
+
+  .fmc-benefits .fmc-benefits-heading {
+    margin-bottom: 28px;
+  }
+
+  .fmc-benefits .fmc-benefits-heading h2 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .fmc-benefits .fmc-benefits-heading h2 {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .fmc-benefits .fmc-benefits-heading h2 {
+    font-size: 32px;
+  }
+}
