@@ -14,7 +14,6 @@
   width: 100%;
   margin-top: -55px;
   padding: 10vh 3vw 6vh;
-  border-radius: 70px 70px 0 0;
   background: #ffffff;
   background-clip: padding-box;
   color: var(--mbn-ink);
@@ -372,4 +371,33 @@
   .mbn-main-button {
     transition: none;
   }
+}
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  .mbn-section.mbn-section{padding:6vh 4% 5vh}
+  .mbn-section.mbn-section .mbn-header-right{margin-bottom:18px}
+  .mbn-section.mbn-section .mbn-title{font-size:46px;line-height:1.1}
+}
+
+/* Mobile (overrides the 22-28px rule) */
+@media (max-width:640px){
+  .mbn-section.mbn-section{padding:56px 14px 5vh}
+  .mbn-section.mbn-section .mbn-header-right{margin-bottom:6px}
+  .mbn-section.mbn-section .mbn-title{font-size:34px;line-height:1.15}
+  .mbn-section.mbn-section .mbn-description{font-size:15px}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .mbn-section.mbn-section .mbn-title{font-size:34px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .mbn-section.mbn-section .mbn-title{font-size:34px}
 }
