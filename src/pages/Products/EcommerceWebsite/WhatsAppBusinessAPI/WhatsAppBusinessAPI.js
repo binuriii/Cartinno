@@ -3,8 +3,7 @@ export const whatsappBusinessHero = {
 
   rotatingWords: [
     'Closer to Customers.',
-    'Connected on WhatsApp.',
-    'Conversations Made Simple.',
+    'WhatsApp Connected.',
     'Ready to Grow.'
   ],
 
