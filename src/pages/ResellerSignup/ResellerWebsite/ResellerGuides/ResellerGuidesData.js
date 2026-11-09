@@ -2,7 +2,7 @@ export const resellerGuidesData = {
   eyebrow: 'KEEP LEARNING',
   title: 'Explore our guides to growing your online store',
   featured: {
-    image: '    https://i.pinimg.com/1200x/52/a0/16/52a01635f8859ed17cb88621ed1c229b.jpg',
+    image: './food.jpg',
     alt: 'Customer enjoying a meal at a restaurant',
     title: 'Build a reseller business customers love',
     description: 'Create a clear storefront, choose products that suit your audience and give customers a smooth way to shop.'
