@@ -469,3 +469,38 @@
     transition: none;
   }
 }
+
+/* =====================================================
+   FBF SECTION — RESPONSIVE HEADING & SPACING
+===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .fbf-section.fbf-section {
+    padding: 6vh 4% 5vh;
+  }
+
+  .fbf-section.fbf-section .fbf-heading {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .fbf-section.fbf-section {
+    padding: 56px 14px 5vh;
+  }
+
+  .fbf-section.fbf-section .fbf-heading {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .fbf-section.fbf-section .fbf-heading {
+    font-size: 32px;
+  }
+}
