@@ -398,7 +398,7 @@
 
 /* Tablet (iPad Mini, iPad Air) */
 @media (min-width:431px) and (max-width:1100px){
-  .hero-two{--ht-pad-top:clamp(96px, 14vw, 130px)}
+  .hero-two{--ht-pad-top:clamp(156px, 54vw, 160px)}
   .hero-two-container{padding-left:4%;padding-right:4%;padding-bottom:40px}
   .hero-two-title{font-size:clamp(40px, 7vw, 56px)}
   .hero-two-description{font-size:15px}
@@ -408,7 +408,7 @@
 /* Mobile */
 @media (max-width:430px){
   .hero-two-title{font-size:clamp(30px, 8.4vw, 36px)}
-
+  .hero-two{--ht-pad-top:clamp(126px, 44vw, 140px)}
   /* Buttons: side by side, compact, not full width */
   .hero-two-actions{
     width:auto;

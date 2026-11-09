@@ -561,3 +561,150 @@
   .site-header .products-mega.reseller-mega { width: min(900px, calc(100vw - 48px)); }
   .site-header .reseller-mega .products-mega-inner { grid-template-columns: 190px minmax(0, 1fr) 290px; }
 }
+
+/* =====================================================
+   RESPONSIVE OVERRIDES  (keep at the very END of file)
+   Desktop        : >= 1025px  (hover mega menus)
+   Tablet / Phone : <= 1024px  (hamburger menu)
+   iPad mini portrait 744/768 | iPhone 14 390 / landscape 844
+===================================================== */
+
+.site-header {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+.site-header a,
+.site-header button { touch-action: manipulation; }
+.mega-backdrop { cursor: pointer; } /* iOS needs this for tap-to-close */
+
+/* ---------- Laptop / iPad mini landscape (1025–1180) ---------- */
+@media (min-width: 1025px) and (max-width: 1180px) {
+  .site-header .site-bar { gap: 10px; padding: 8px 10px 8px 18px; }
+  .site-header .site-nav { gap: 0; min-width: 0; }
+  .site-header .nav-link { font-size: 12.5px; padding: 12px 7px; gap: 6px; }
+  .site-header .site-cta { padding: 0 16px; font-size: 13px; }
+}
+
+/* ---------- Don't leave hover styles "stuck" on touch screens ---------- */
+@media (hover: none) {
+  .site-header .nav-link:hover:not(.is-open) { background: transparent; color: #292b32; }
+  .site-header .nav-button:hover .nav-chevron:not(.is-open) { transform: translateY(-2px) rotate(45deg); }
+  .site-header .mega-feature:hover,
+  .site-header .corporate-feature:hover { transform: none; box-shadow: none; }
+  .site-header .mega-feature:hover .mega-feature-image img,
+  .site-header .corporate-photo:hover img { transform: none; }
+}
+
+/* =====================================================
+   TABLET + PHONE  (<= 1024px)
+===================================================== */
+@media (max-width: 1024px) {
+  .site-header {
+    top: calc(12px + env(safe-area-inset-top, 0px));
+    padding: 0 max(12px, env(safe-area-inset-right, 0px)) 0 max(12px, env(safe-area-inset-left, 0px));
+    --corporate-card-h: 240px;
+  }
+
+  /* bar */
+  .site-header .site-bar { min-height: 58px; padding: 8px 9px 8px 18px; gap: 10px; }
+  .site-header .site-logo-img { height: 27px; }
+  .site-header .site-nav { display: none; }
+  .site-header .site-demo { display: none; }
+  .site-header .site-actions { margin-left: auto; }
+  .site-header .site-cta { min-height: 40px; padding: 0 18px; font-size: 13px; }
+  .site-header .site-menu-toggle {
+    display: inline-flex; align-items: center; justify-content: center; flex: none;
+    width: 44px; height: 44px; order: 3; border: 1px solid #e5e4e6; border-radius: 50%;
+    background: #fff; color: #292b32; font-size: 20px; cursor: pointer;
+  }
+
+  /* slide-down panel */
+  .site-header .site-nav.is-mobile-open {
+    display: flex; position: absolute; top: calc(100% + 10px); left: 0; right: 0;
+    flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0;
+    padding: 8px 16px 16px; background: #fff; border: 1px solid #ececee; border-radius: 20px;
+    max-height: calc(100vh - 100px);
+    max-height: calc(100dvh - 100px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+    overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+    box-shadow: 0 18px 40px rgba(20, 18, 30, 0.14);
+  }
+  .site-header .nav-item { display: block; width: 100%; border-bottom: 1px solid #f0f0f2; }
+  .site-header .nav-item:last-child { border-bottom: 0; }
+  .site-header .nav-link {
+    width: 100%; min-height: 48px; justify-content: space-between;
+    padding: 12px 6px; font-size: 15px; border-radius: 10px;
+  }
+
+  /* mega menus become inline accordions inside the panel */
+  .site-header .products-mega,
+  .site-header .products-mega.reseller-mega,
+  .site-header .corporate-mega {
+    position: static; top: auto; left: auto; transform: none;
+    width: 100%; max-height: none; overflow: visible; animation: none;
+  }
+  .site-header .products-mega-inner {
+    grid-template-columns: 1fr; gap: 16px; padding: 6px 0 14px;
+    background: transparent; border: 0; border-radius: 0; box-shadow: none; overflow: visible;
+  }
+
+  /* tabs -> pills */
+  .site-header .product-tabs { flex-direction: row; flex-wrap: wrap; gap: 8px; padding: 0; }
+  .site-header .product-tab,
+  .site-header .product-tab:first-child,
+  .site-header .product-tab:not(:first-child) {
+    flex: 1 1 calc(50% - 8px); min-height: 44px; padding: 10px 14px;
+    border: 1px solid #e1e2e4; border-radius: 10px; text-align: center; font-size: 14px;
+  }
+  .site-header .product-tab::after { display: none; }
+  .site-header .product-tab.active { color: #d7454e; background: #fcebed; border-color: #f0b3b7; }
+
+  /* groups */
+  .site-header .mega-main { padding: 0; border: 0; }
+  .site-header .mega-side { display: none; }
+  .site-header .product-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 24px; }
+  .site-header .product-column.is-stacked { gap: 20px; }
+  .site-header .group-link { min-height: 44px; padding: 8px; }
+  .site-header .group-link-name { font-size: 14px; }
+
+  /* corporate */
+  .site-header .corporate-mega {
+    grid-template-columns: 1fr; gap: 16px; padding: 6px 0 14px;
+    background: transparent; border: 0; box-shadow: none;
+  }
+  .site-header .corporate-mega-links { padding: 0 0 12px; border-right: 0; border-bottom: 1px solid #e8e9eb; }
+  .site-header .corporate-main-link { min-height: 44px; }
+}
+
+/* ---------- Large phones / iPhone 14 (<= 620) ---------- */
+@media (max-width: 620px) {
+  .site-header .product-groups { grid-template-columns: 1fr; }
+  .site-header .corporate-feature-grid { grid-template-columns: 1fr; }
+  .site-header .corporate-feature { width: 100%; max-width: none; }
+  .site-header { --corporate-card-h: 200px; }
+}
+
+/* ---------- iPhone 14 portrait and smaller (<= 480) ---------- */
+@media (max-width: 480px) {
+  .site-header .site-bar { padding: 8px 8px 8px 16px; }
+  .site-header .site-nav.is-mobile-open { padding: 6px 12px 14px; }
+  .site-header .product-tab,
+  .site-header .product-tab:first-child,
+  .site-header .product-tab:not(:first-child) { flex: 1 1 100%; }
+}
+
+/* ---------- Small phones: SE, Galaxy (<= 380) ---------- */
+@media (max-width: 380px) {
+  .site-header { padding-left: 8px; padding-right: 8px; }
+  .site-header .site-logo-img { height: 24px; }
+  .site-header .site-cta { padding: 0 12px; font-size: 12px; }
+  .site-header .site-menu-toggle { width: 40px; height: 40px; }
+}
+
+/* ---------- Landscape phones (short screens) ---------- */
+@media (max-width: 1024px) and (max-height: 500px) {
+  .site-header { top: calc(8px + env(safe-area-inset-top, 0px)); }
+  .site-header .site-bar { min-height: 50px; }
+  .site-header .site-nav.is-mobile-open { max-height: calc(100dvh - 76px); }
+  .site-header .product-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
