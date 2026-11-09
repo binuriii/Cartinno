@@ -451,3 +451,32 @@
 .mcb-body { flex:1; }
 
 .mcb-appbar,.mcb-app-footer { flex-shrink:0; }
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  .mcb-v2.mcb-v2{padding:3vh 4% 5vh}
+  .mcb-v2.mcb-v2 .mcb-heading{margin-bottom:40px}
+  .mcb-v2.mcb-v2 .mcb-heading h2{font-size:46px;line-height:1.1}
+}
+
+/* Mobile */
+@media (max-width:640px){
+  .mcb-v2.mcb-v2{padding:3vh 14px 5vh}
+  .mcb-v2.mcb-v2 .mcb-heading{margin-bottom:28px}
+  .mcb-v2.mcb-v2 .mcb-heading h2{font-size:32px;line-height:1.15}
+  .mcb-v2.mcb-v2 .mcb-heading p{font-size:15px}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .mcb-v2.mcb-v2 .mcb-heading h2{font-size:32px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .mcb-v2.mcb-v2 .mcb-heading h2{font-size:32px}
+}

@@ -36,13 +36,12 @@ onBeforeUnmount(() => dialog.value?.close?.())
           <button type="button" class="mci-card" @click="openIdea(idea,$event)" :aria-label="'Read campaign idea: '+idea.title">
             <img :src="idea.image" :alt="idea.alt" :style="{ objectPosition:idea.position }" width="1200" height="800" loading="lazy" decoding="async">
             <span class="mci-shade" aria-hidden="true"></span>
-            <span class="mci-open" aria-hidden="true">↗</span>
-            <span class="mci-copy"><small>{{ idea.category }}</small><strong>{{ idea.title }}</strong><span class="mci-read">Explore the idea <span aria-hidden="true">→</span></span></span>
+            <span class="mci-open" aria-hidden="true"></span>
+            <span class="mci-copy"><small>{{ idea.category }}</small><strong>{{ idea.title }}</strong></span>
           </button>
         </div>
         <a class="mci-cta" :href="content.ctaLink" data-mc-reveal>
           <span><strong>{{ content.ctaTitle }}</strong><small>{{ content.ctaDescription }}</small></span>
-          <span class="mci-cta-arrow" aria-hidden="true">↗</span>
         </a>
       </div>
     </div>
