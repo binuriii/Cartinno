@@ -21,6 +21,19 @@ const routes = [
   },
 
   {
+  path: '/reseller-website',
+  name: 'reseller-website',
+  component: () =>
+    import('./pages/ResellerSignup/ResellerWebsite/ResellerWebsite.vue')
+},
+{
+  path: '/reseller-packages',
+  name: 'reseller-packages',
+  component: () =>
+    import('./pages/ResellerSignup/ResellerPackages/ResellerPackages.vue')
+},
+
+  {
   path: '/about',
   name: 'about',
   component: () => import('./pages/About/About.vue')
