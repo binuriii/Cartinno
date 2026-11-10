@@ -1,8 +1,7 @@
 export const dailyOperationsHero = {
   fixedLine: 'Run Your Business,',
   rotatingWords: [
-    'Without the Daily Hassle.',
-    'With Every Task Connected.',
+    'Without the Hassle.',
     'With More Control.',
     'Smarter with Cartinno.'
   ],

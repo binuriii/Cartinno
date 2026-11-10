@@ -4,8 +4,6 @@ export const cloudPOSHero = {
 
   rotatingWords: [
     'Smarter Than Ever.',
-    'Connected Everywhere.',
-    'Simplified with Cartinno.',
     'Ready to Grow.'
   ],
 

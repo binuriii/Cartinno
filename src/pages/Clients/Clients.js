@@ -9,7 +9,7 @@ export const clientsHero = {
     link: '/#demo'
   },
   secondaryButton: null,
-  image: `https://images.unsplash.com/photo-1648824571682-109acc138294?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D`,
+  image: `https://images.unsplash.com/photo-1648824571682-109acc138294?w=1200&auto=format&fit=crop&q=85`,
   imageAlt: 'Cartinno clients',
   imagePosition: 'center center',
   stat: {

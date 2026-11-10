@@ -682,3 +682,65 @@
     transition: none !important;
   }
 }
+
+/* =====================================================
+   KITCHEN BENTO GRID: TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .kb-section {
+    padding: 3vh 4% 5vh;
+  }
+
+  .kb-header {
+    margin-bottom: 40px;
+  }
+
+  .kb-heading {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  .kb-card-title,
+  .kb-card-top .kb-card-title {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .kb-card-description,
+  .kb-card-top .kb-card-description {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .kb-section {
+    padding: 3vh 14px 5vh;
+  }
+
+  .kb-header {
+    margin-bottom: 28px;
+  }
+
+  .kb-heading {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .kb-heading {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .kb-heading {
+    font-size: 32px;
+  }
+}

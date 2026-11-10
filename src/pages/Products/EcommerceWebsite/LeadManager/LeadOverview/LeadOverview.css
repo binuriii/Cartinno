@@ -70,3 +70,73 @@
   .lmo-copy h3 { font-size: 22px; }
   .lmo-card { min-height: 455px; }
 }
+
+/* =====================================================
+   LMO SECTION — ROUNDED CORNERS + RESPONSIVE SPACING
+===================================================== */
+
+/* TABLET — iPad Mini / iPad Air */
+@media (min-width: 641px) and (max-width: 1100px) {
+
+  .lmo-section.lmo-section {
+    margin-top: -45px;
+    padding: 6vh 4% 5vh;
+    border-radius: 40px 40px 0 0;
+  }
+
+  .lmo-section.lmo-section .lmo-heading {
+    margin-bottom: 40px;
+  }
+
+  .lmo-section.lmo-section .lmo-heading h2 {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+
+  .lmo-section.lmo-section {
+    margin-top: -35px;
+    padding: 56px 14px 5vh;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .lmo-section.lmo-section .lmo-heading {
+    margin-bottom: 28px;
+  }
+
+  .lmo-section.lmo-section .lmo-heading h2 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .lmo-section.lmo-section .lmo-heading p {
+    font-size: 15px;
+  }
+
+  .lmo-section.lmo-section .lmo-copy h3 {
+    font-size: 22px;
+  }
+
+  .lmo-section.lmo-section .lmo-card {
+    min-height: 455px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+  .lmo-section.lmo-section .lmo-heading h2 {
+    font-size: 32px;
+  }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 360px) {
+
+  .lmo-section.lmo-section .lmo-heading h2 {
+    font-size: 32px;
+  }
+}

@@ -15,6 +15,11 @@ const imagePath = (path) =>
 
 const telHref = (phone) =>
   `tel:${phone.replace(/[^\d+]/g, '')}`
+
+import { ref } from 'vue'
+
+const INITIAL_VISIBLE = 6
+const showAll = ref(false)
 </script>
 
 <template>
@@ -86,11 +91,16 @@ const telHref = (phone) =>
         </div>
       </div>
 
-      <ul class="co-countries">
+      <ul
+        id="co-countries-list"
+        class="co-countries"
+        :class="{ 'is-expanded': showAll }"
+      >
         <li
-          v-for="country in countries"
+          v-for="(country, index) in countries"
           :key="country.id"
           class="co-country"
+          :class="{ 'is-extra': index >= INITIAL_VISIBLE }"
         >
           <span class="co-country-flag">
             <img
@@ -116,6 +126,16 @@ const telHref = (phone) =>
           </span>
         </li>
       </ul>
+
+      <button
+        type="button"
+        class="co-countries-toggle"
+        :aria-expanded="showAll"
+        aria-controls="co-countries-list"
+        @click="showAll = !showAll"
+      >
+        {{ showAll ? 'Show fewer countries' : `Show all ${countries.length} countries` }}
+      </button>
     </div>
   </section>
 </template>

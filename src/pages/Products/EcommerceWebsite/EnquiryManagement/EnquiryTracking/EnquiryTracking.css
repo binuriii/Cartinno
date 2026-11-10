@@ -1,4 +1,4 @@
-.enquiry-page .et-editorial{display:grid;grid-template-columns:1fr 1.24fr;gap:clamp(30px,5vw,80px);align-items:start}.enquiry-page .et-heading{max-width:490px;margin-bottom:38px}.enquiry-page .et-heading p{max-width:450px}.enquiry-page .et-picture{overflow:hidden;border-radius:5px;background:linear-gradient(135deg,#f0e4db,#c3d5ce)}.et-picture img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .9s}.et-picture:hover img{transform:scale(1.025)}.enquiry-page .et-picture-left{aspect-ratio:.88}.enquiry-page .et-picture-large{aspect-ratio:.93}.enquiry-page .et-picture-small{width:68%;aspect-ratio:1.48;margin-top:38px}
+.enquiry-page .et-editorial{display:grid;grid-template-columns:1fr 1.24fr;gap:clamp(30px,5vw,80px);align-items:start}.enquiry-page .et-heading{max-width:490px;margin-bottom:38px}.enquiry-page .et-heading p{max-width:450px}.enquiry-page .et-picture{overflow:hidden;border-radius:35px;background:linear-gradient(135deg,#f0e4db,#c3d5ce)}.et-picture img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .9s}.et-picture:hover img{transform:scale(1.025)}.enquiry-page .et-picture-left{aspect-ratio:.88}.enquiry-page .et-picture-large{aspect-ratio:.93}.enquiry-page .et-picture-small{width:68%;aspect-ratio:1.48;margin-top:38px}
 /* Three numbered cards, using the supplied rose / grey / warm neutral reference. */
 .enquiry-page .et-feature-list {
   display: grid;
@@ -57,3 +57,4 @@
   .enquiry-page .et-feature-card h3 { font-size: 22px; }
   .enquiry-page .et-feature-card p { font-size: 13px; line-height: 1.6; }
 }
+

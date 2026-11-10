@@ -839,3 +839,80 @@
     transition: none;
   }
 }
+
+/* =====================================
+   TABLET (iPad Mini, iPad Air)
+===================================== */
+
+@media (min-width:641px) and (max-width:1100px){
+
+  .lmf-section.lmf-section{
+    padding:6vh 4% 5vh;
+  }
+
+  .lmf-section.lmf-section .lmf-header{
+    margin-bottom:40px;
+  }
+
+  .lmf-section.lmf-section .lmf-heading{
+    font-size:46px;
+    line-height:1.1;
+  }
+
+  /* Benefit headings */
+  .lmf-section.lmf-section .lmf-benefit-title{
+    font-size:28px;
+    line-height:1.25;
+  }
+
+  /* Benefit descriptions */
+  .lmf-section.lmf-section .lmf-benefit-description{
+    font-size:17px;
+    line-height:1.7;
+  }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width:640px){
+
+  .lmf-section.lmf-section{
+    padding:3vh 14px 5vh;
+  }
+
+  .lmf-section.lmf-section .lmf-header{
+    margin-bottom:28px;
+  }
+
+  .lmf-section.lmf-section .lmf-heading{
+    font-size:32px;
+    line-height:1.15;
+  }
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width:480px){
+
+  .lmf-section.lmf-section .lmf-heading{
+    font-size:32px;
+  }
+}
+
+
+/* =====================================
+   VERY SMALL PHONES (320–360px)
+===================================== */
+
+@media (max-width:360px){
+
+  .lmf-section.lmf-section .lmf-heading{
+    font-size:32px;
+  }
+}

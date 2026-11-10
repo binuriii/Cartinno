@@ -738,3 +738,47 @@
     transition: none !important;
   }
 }
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  .pnf-section.pnf-section{padding:6vh 4% 5vh}
+  .pnf-section.pnf-section .pnf-header{margin-bottom:40px}
+  .pnf-section.pnf-section .pnf-title{font-size:46px;line-height:1.1}
+}
+
+/* Mobile */
+@media (max-width:640px){
+  .pnf-section.pnf-section{padding:56px 14px 5vh}
+  .pnf-section.pnf-section .pnf-header{margin-bottom:28px}
+  .pnf-section.pnf-section .pnf-title{font-size:32px;line-height:1.15}
+  .pnf-section.pnf-section .pnf-description{font-size:15px}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .pnf-section.pnf-section .pnf-title{font-size:32px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .pnf-section.pnf-section .pnf-title{font-size:32px}
+}
+
+/* =====================================================
+   TABLET LAYOUT FIX (641px to 768px, e.g. iPad Mini)
+   Row 1: cards 1 and 3 side by side
+   Row 2: the image card, full width
+   ===================================================== */
+@media (min-width:641px) and (max-width:768px){
+  .pnf-section.pnf-section .pnf-cards > .pnf-card:nth-child(1){grid-column:1;grid-row:1}
+  .pnf-section.pnf-section .pnf-cards > .pnf-card:nth-child(3){grid-column:2;grid-row:1}
+  .pnf-section.pnf-section .pnf-cards > .pnf-card-featured{
+    grid-column:1 / -1;
+    grid-row:2;
+    min-height:420px;
+  }
+}

@@ -416,3 +416,65 @@
     transition: none !important;
   }
 }
+
+/* =====================================================
+   MAXIMUM PROFIT MARGIN — TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .mpm-section {
+    padding: 3vh 4% 5vh;
+  }
+
+  .mpm-heading {
+    margin-bottom: 40px;
+  }
+
+  .mpm-heading h2 {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  .mpm-panel h3,
+  .mpm-photo-copy h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .mpm-panel-copy > p,
+  .mpm-photo-copy p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .mpm-section {
+    padding: 3vh 14px 5vh;
+  }
+
+  .mpm-heading {
+    margin-bottom: 28px;
+  }
+
+  .mpm-heading h2 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .mpm-heading h2 {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .mpm-heading h2 {
+    font-size: 32px;
+  }
+}

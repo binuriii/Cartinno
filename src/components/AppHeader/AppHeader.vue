@@ -3,7 +3,8 @@ import {
   computed,
   onBeforeUnmount,
   onMounted,
-  ref
+  ref,
+  watch
 } from 'vue'
 
 import { RouterLink, useRouter } from 'vue-router'
@@ -17,6 +18,8 @@ import {
   resellerPrograms,
   logoImage
 } from './HeaderData.js'
+const DESKTOP_MQ = '(min-width: 1025px)'
+const DESKTOP_HOVER_MQ = '(min-width: 1025px) and (hover: hover)'
 
 const router = useRouter()
 const base = import.meta.env.BASE_URL
@@ -73,42 +76,23 @@ const cancelClose = () => {
 
 // DESKTOP HOVER
 const hoverMenu = (menu, event) => {
-  if (
-    event.pointerType !== 'mouse' ||
-    !window.matchMedia('(min-width: 821px)').matches
-  ) {
-    return
-  }
-
+  if (event.pointerType !== 'mouse' || !window.matchMedia(DESKTOP_MQ).matches) return
   cancelClose()
   openMenu.value = menu || null
 }
 
 const scheduleClose = (event) => {
-  if (
-    event.pointerType !== 'mouse' ||
-    !window.matchMedia('(min-width: 821px)').matches
-  ) {
-    return
-  }
-
+  if (event.pointerType !== 'mouse' || !window.matchMedia(DESKTOP_MQ).matches) return
   cancelClose()
-
   closeTimer = window.setTimeout(() => {
     openMenu.value = null
   }, 180)
 }
 
-// MENU CONTROLS
 const toggleMenu = (menu, event) => {
   cancelClose()
-
   const desktopPointer =
-    event?.detail > 0 &&
-    window.matchMedia(
-      '(min-width: 821px) and (hover: hover)'
-    ).matches
-
+    event?.detail > 0 && window.matchMedia(DESKTOP_HOVER_MQ).matches
   openMenu.value = desktopPointer
     ? menu
     : openMenu.value === menu
@@ -157,30 +141,29 @@ const handleEscape = (event) => {
   }
 }
 
-onMounted(() => {
-  document.addEventListener(
-    'click',
-    handleOutsideClick
-  )
+watch(mobileOpen, (open) => {
+  document.body.style.overflow = open ? 'hidden' : ''
+})
 
-  document.addEventListener(
-    'keydown',
-    handleEscape
-  )
+const handleResize = () => {
+  if (window.matchMedia(DESKTOP_MQ).matches) {
+    mobileOpen.value = false
+    openMenu.value = null
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('click', handleOutsideClick)
+  document.addEventListener('keydown', handleEscape)
+  window.addEventListener('resize', handleResize)
 })
 
 onBeforeUnmount(() => {
   cancelClose()
-
-  document.removeEventListener(
-    'click',
-    handleOutsideClick
-  )
-
-  document.removeEventListener(
-    'keydown',
-    handleEscape
-  )
+  document.body.style.overflow = ''
+  document.removeEventListener('click', handleOutsideClick)
+  document.removeEventListener('keydown', handleEscape)
+  window.removeEventListener('resize', handleResize)
 })
 
 // ACTIVE PRODUCT

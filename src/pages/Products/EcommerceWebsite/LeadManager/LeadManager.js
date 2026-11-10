@@ -2,11 +2,11 @@
 export const leadManagerHero = {
   fixedLine: 'Make Every Lead Count.',
   rotatingWords: [
-    'Build Better Connections.',
-    'Follow Up With Confidence.',
-    'Turn Interest Into Growth.',
-    'Keep Opportunities Moving.'
-  ],
+  'Build Better Links.',
+  'Follow Up With Ease.',
+  'Turn Interest Into Growth.',
+  'Keep Deals Moving.'
+],
   description:
     'Keep potential customers organized, stay connected, and manage every opportunity with Cartinno Lead Manager.',
   backgroundImage:

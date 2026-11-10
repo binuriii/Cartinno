@@ -984,3 +984,77 @@
     transform: none !important;
   }
 }
+
+/* =====================================================
+   HEADING SIZES: TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .apb-section {
+    padding: 3vh 4% 5vh;
+  }
+
+  .apb-section .apb-header {
+    margin-bottom: 40px;
+  }
+
+  .apb-section .apb-heading {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  /* Main card heading */
+  .apb-section.apb-section .apb-main-content h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  /* Main card description */
+  .apb-section.apb-section .apb-main-content p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  /* Bottom card headings */
+  .apb-section.apb-section .apb-card-copy h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  /* Bottom card descriptions */
+  .apb-section.apb-section .apb-card-copy p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .apb-section {
+    padding: 3vh 14px 5vh;
+  }
+
+  .apb-section .apb-header {
+    margin-bottom: 28px;
+  }
+
+  .apb-section .apb-heading {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .apb-section .apb-heading {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .apb-section .apb-heading {
+    font-size: 32px;
+  }
+}

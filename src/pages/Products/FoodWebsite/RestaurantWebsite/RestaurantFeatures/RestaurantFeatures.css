@@ -892,3 +892,55 @@
     border-radius: 7px;
   }
 }
+
+/* =====================================
+   RESPONSIVE SECTION SPACING & HEADING
+===================================== */
+
+@media (min-width: 641px) and (max-width: 1100px) {
+  .rwf-section.rwf-section {
+    padding: 6vh 4% 5vh;
+  }
+
+  .rwf-section.rwf-section .rwf-heading {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 640px) {
+  .rwf-section.rwf-section {
+    padding: 56px 14px 5vh;
+  }
+
+  .rwf-section.rwf-section .rwf-heading {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 480px) {
+  .rwf-section.rwf-section .rwf-heading {
+    font-size: 32px;
+  }
+}
+
+/* =====================================
+   TABLET — INCREASE BENEFIT TEXT SIZE
+===================================== */
+
+@media (min-width: 641px) and (max-width: 1100px) {
+
+  /* Benefit headings */
+  .rwf-section.rwf-section .rwf-benefit-title {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  /* Benefit descriptions */
+  .rwf-section.rwf-section .rwf-benefit-description {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+}

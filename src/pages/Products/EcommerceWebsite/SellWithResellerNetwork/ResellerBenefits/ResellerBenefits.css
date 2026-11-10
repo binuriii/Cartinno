@@ -489,3 +489,31 @@
 .rben-card-one .rben-card-description {
   color: #23232b;
 }
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  .rben-section.rben-section{padding:3vh 4% 5vh}
+  .rben-section.rben-section .rben-header{margin-bottom:40px}
+  .rben-section.rben-section .rben-heading{font-size:46px;line-height:1.1}
+}
+
+/* Mobile (overrides the 22-28px rule above) */
+@media (max-width:640px){
+  .rben-section.rben-section{padding:3vh 14px 5vh}
+  .rben-section.rben-section .rben-header{margin-bottom:28px}
+  .rben-section.rben-section .rben-heading{font-size:34px;line-height:1.15}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .rben-section.rben-section .rben-heading{font-size:34px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .rben-section.rben-section .rben-heading{font-size:34px}
+}

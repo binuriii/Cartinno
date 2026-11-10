@@ -6,11 +6,11 @@
 }
 .marketing-campaigns-page *, .marketing-campaigns-page *::before,
 .marketing-campaigns-page *::after { box-sizing:border-box; }
-.marketing-campaigns-page .mc-section { padding:90px 3vw; }
+.marketing-campaigns-page .mc-section { padding:5vh 3vw 10vh; }
 .marketing-campaigns-page .mc-shell { width:100%; max-width:1350px; margin-inline:auto; }
 .marketing-campaigns-page .mc-heading { margin-bottom:44px; }
 .marketing-campaigns-page .mc-heading h2 {
-  margin:0; font-size:clamp(26px,4.4vw,54px); font-weight:550;
+  margin:0; font-size:clamp(26px,4.4vw,54px); font-weight:450;
   line-height:1.15; letter-spacing:-.045em; text-wrap:balance;
 }
 .marketing-campaigns-page .mc-heading h2 span { display:block; }

@@ -546,3 +546,63 @@
     opacity: 1 !important;
   }
 }
+
+/* =====================================================
+   ANALYTICS SECTION: TABLET & MOBILE RESPONSIVE
+   ===================================================== */
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .as-section {
+    padding: 6vh 4% 5vh;
+  }
+
+  .as-header {
+    margin-bottom: 40px;
+  }
+
+  .as-main-title {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  .as-feature-text h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .as-feature-text p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .as-section {
+    padding: 56px 14px 25px;
+  }
+
+  .as-header {
+    margin-bottom: 28px;
+  }
+
+  .as-main-title {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .as-main-title {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .as-main-title {
+    font-size: 32px;
+  }
+}

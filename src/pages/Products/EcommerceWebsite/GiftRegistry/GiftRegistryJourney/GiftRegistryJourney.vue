@@ -1,4 +1,3 @@
-```vue
 <script setup>
 import { ref } from 'vue'
 import { useRegistryMotion } from '../useRegistryMotion.js'
@@ -124,4 +123,3 @@ useRegistryMotion(sectionRef)
 </template>
 
 <style scoped src="../GiftRegistrySections.css"></style>
-```

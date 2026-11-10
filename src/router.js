@@ -393,10 +393,7 @@ export default createRouter({
   routes,
 
   scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition
-    }
-
+    // Link to a section, e.g. /pricing#faq
     if (to.hash) {
       return {
         el: to.hash,
@@ -404,9 +401,7 @@ export default createRouter({
       }
     }
 
-    return {
-      top: 0,
-      left: 0
-    }
+    // Everything else, including reload and back/forward: go to top
+    return { top: 0, left: 0 }
   }
 })

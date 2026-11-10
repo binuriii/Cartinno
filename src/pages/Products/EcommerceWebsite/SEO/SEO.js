@@ -50,7 +50,6 @@ export const seoHero = {
   fixedLine: 'Get Discovered,',
 
   rotatingWords: [
-    'Reach More Customers.',
     'Grow Your Visibility.',
     'Stand Out Online.',
     'Build Your Presence.'

@@ -52,3 +52,53 @@
 @media(max-width:1024px){.cao-section{margin-top:-45px;border-radius:40px 40px 0 0;padding:8vh 4vw 9vh}}
 @media(max-width:640px){.cao-section{margin-top:-35px;border-radius:24px 24px 0 0;padding:65px 14px 70px}.cao-heading p{font-size:15px}.cao-card{min-height:455px}}
 @media(prefers-reduced-motion:reduce){.cao-heart,.cao-live i,.cao-event.upcoming .cao-dot{animation:none}.cao-card,.cao-photo-card>img{transition:none}}
+
+/* =====================================================
+   HEADING SIZES: tablet & mobile only (desktop unchanged)
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width:641px) and (max-width:1100px){
+  .cao-section.cao-section{padding:6vh 4% 5vh}
+  .cao-section.cao-section .cao-heading{margin-bottom:40px}
+  .cao-section.cao-section .cao-heading h2{font-size:46px;line-height:1.1}
+}
+
+/* Mobile (overrides the 25-31px rule) */
+@media (max-width:640px){
+  .cao-section.cao-section{padding:56px 14px 5vh}
+  .cao-section.cao-section .cao-heading{margin-bottom:28px}
+  .cao-section.cao-section .cao-heading h2{font-size:32px;line-height:1.15}
+  .cao-section.cao-section .cao-heading p{font-size:15px}
+}
+
+/* Small mobile */
+@media (max-width:480px){
+  .cao-section.cao-section .cao-heading h2{font-size:32px}
+}
+
+/* Very small phones (iPhone SE, 320-360px) */
+@media (max-width:360px){
+  .cao-section.cao-section .cao-heading h2{font-size:32px}
+}
+
+/* =====================================================
+   TOP CURVE FIX
+   ===================================================== */
+
+/* Tablet */
+@media (min-width:641px) and (max-width:1100px){
+  .cao-section.cao-section{
+    margin-top:-40px;
+    border-radius:40px 40px 0 0;
+  }
+}
+
+/* Mobile */
+@media (max-width:640px){
+  .cao-section.cao-section{
+    margin-top:-30px;
+    border-radius:28px 28px 0 0;
+    padding-top:56px;
+  }
+}

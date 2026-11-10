@@ -1217,3 +1217,67 @@
     transform: rotate(5deg) !important;
   }
 }
+
+/* =====================================================
+   PUSH NOTIFICATION BENEFITS: TABLET & MOBILE
+   ===================================================== */
+
+/* Tablet (iPad Mini, iPad Air) */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .pnb-section {
+    padding: 3vh 4% 5vh;
+  }
+
+  .pnb-section .pnb-header {
+    margin-bottom: 40px;
+  }
+
+  .pnb-section .pnb-title {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  /* Main feature heading */
+  .pnb-section.pnb-section .pnb-main-content h3,
+  .pnb-section.pnb-section .pnb-info-content h3 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  /* Descriptions */
+  .pnb-section.pnb-section .pnb-main-content p,
+  .pnb-section.pnb-section .pnb-info-content p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .pnb-section {
+    padding: 3vh 14px 5vh;
+  }
+
+  .pnb-section .pnb-header {
+    margin-bottom: 28px;
+  }
+
+  .pnb-section .pnb-title {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .pnb-section .pnb-title {
+    font-size: 32px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .pnb-section .pnb-title {
+    font-size: 32px;
+  }
+}
