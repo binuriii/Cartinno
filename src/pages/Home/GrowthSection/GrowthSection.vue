@@ -92,7 +92,7 @@ const {
             class="growth-button"
           >
             {{ card.cta }}
-            <span aria-hidden="true">→</span>
+            <span aria-hidden="true"></span>
           </RouterLink>
         </div>
 
